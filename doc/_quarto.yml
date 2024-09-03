@@ -36,7 +36,7 @@ format:
     lof: true
     # lot: true
     lang: de
-    keep-tex: true
+    # keep-tex: true
 
   # Figuren
     # fig-pos: 'H'
