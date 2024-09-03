@@ -1,0 +1,21 @@
+
+% Wird für die Tabelle im Titelblatt der Experten verwendet:
+% Array
+\usepackage{array}
+% Neue Definition für Tabelleneinträge
+% linksbündig mit Breitenangabe
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} 
+% zentriert mit Breitenangabe
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} 
+% rechtsbündig mit Breitenangabe
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} 
+
+\usepackage[a4paper, margin=3cm]{geometry}
+
+% Titles take mainfont
+\addtokomafont{disposition}{\rmfamily}
+
+
+
+
+

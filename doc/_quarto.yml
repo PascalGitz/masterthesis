@@ -1,23 +1,82 @@
 project:
   type: book
 
+language:
+  section-title-appendices: "Anhang"
+
 book:
-  title: "doc"
-  author: "Norah Jones"
-  date: "3.9.2024"
+  title: Tragverhalten von Stahlbetontragwerken
+  subtitle: Modellvorstellungen zur nichtlinearen Verformungsberechnung
+  author: Pascal Gitz
+  date: 2025.01.17
+  date-format: full
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
+  # appendices: 
 
 bibliography: references.bib
 
 format:
-  html:
-    theme: cosmo
   pdf:
+    # pdf-engine: latexmk
+  # Titelblatt und Kurzfassung
+    template-partials:
+      - ../config/style/title.tex
+    include-in-header: 
+      - file: ../config/style/styling_nach_hslu.sty
+
+    include-before-body:
+      - file: 01_redlichkeitserklaerung.tex
+      - file: 02_kurzfassung.tex
+
+
+  # Dokument
     documentclass: scrreprt
+    toc-depth: 2
+    lof: true
+    # lot: true
+    lang: de
+    keep-tex: true
+
+  # Figuren
+    # fig-pos: 'H'
+    fig-format: svg
+  
+  # Verlinkungen
+    csl: ../config/style/diabetologia.csl
+    link-citations: True
+    linkcolor: Black
+  
+  # Tabellen
+    tbl-colwidths: [50,50]
+    
+  # Code
+    execute:
+      echo: false
+      warning: false
+  
+  # Font
+    # fontfamily: TeX Gyre Pagella
+    mainfont: TeX Gyre Pagella
+    # sansfont: TeX Gyre Pagella
+    fontsize: 11pt
+    
+
+  docx:
+    lang: de
+    fig-format: svg
+    csl: ../config/style/diabetologia.csl
+    link-citations: true
+    tbl-colwidths: [50,50]
+    echo: false
+    warning: false
 
 
+
+  # html:
+  #   fig-format: svg
+  #   lang: de
+  #   csl: diabetologia.csl
+  #   link-citations: True
+  #   tbl-colwidths: [50,50]
 
