@@ -4,7 +4,7 @@ project:
 book:
   title: "doc"
   author: "Norah Jones"
-  date: "3.8.2024"
+  date: "3.9.2024"
   chapters:
     - index.qmd
     - intro.qmd
