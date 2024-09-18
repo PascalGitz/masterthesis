@@ -12,7 +12,8 @@ book:
   date-format: full
   chapters:
     - index.qmd
-  # appendices: 
+  appendices: 
+    - Traegerrost_Marti.ipynb
 
 bibliography: references.bib
 
@@ -39,7 +40,7 @@ format:
     # keep-tex: true
 
   # Figuren
-    # fig-pos: 'H'
+    fig-pos: 'H'
     fig-format: svg
   
   # Verlinkungen
@@ -52,7 +53,7 @@ format:
     
   # Code
     execute:
-      echo: false
+      # echo: false
       warning: false
   
   # Font
