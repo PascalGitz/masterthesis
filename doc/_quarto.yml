@@ -40,7 +40,7 @@ format:
     # keep-tex: true
 
   # Figuren
-    fig-pos: 'H'
+    # fig-pos: 'H'
     fig-format: svg
   
   # Verlinkungen
@@ -55,6 +55,10 @@ format:
     execute:
       # echo: false
       warning: false
+    highlight-style: monochrome
+    code-block-bg: "#F5F5F5"
+    code-block-border-left: false
+    code-line-numbers: true
   
   # Font
     # fontfamily: TeX Gyre Pagella

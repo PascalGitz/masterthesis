@@ -43,7 +43,7 @@ def set_engineering_style():
 
     plt.rcParams['legend.fontsize'] = 8  # Größe der Legende
     plt.rcParams['legend.frameon'] = False  # Größe der Legende
-    plt.rcParams['figure.figsize'] = (8/2.54, 8/2.54)  # Größe der Figur 6.5 Zoll entspricht der Standardbreite des scrbook latex types
+    plt.rcParams['figure.figsize'] = (6/2.54, 5.4/2.54)  # Größe der Figur 6.5 Zoll entspricht der Standardbreite des scrbook latex types
     plt.rcParams.update({
         "font.family": "serif",
         "font.serif": ["Palatino Linotype"],
