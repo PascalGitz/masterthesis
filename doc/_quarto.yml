@@ -12,8 +12,11 @@ book:
   date-format: full
   chapters:
     - index.qmd
+    - references.qmd
+
   appendices: 
     - Traegerrost_Marti.ipynb
+    - Zweifeldtraeger_Jaeger.ipynb
 
 bibliography: references.bib
 
@@ -55,10 +58,10 @@ format:
     execute:
       # echo: false
       warning: false
-    highlight-style: monochrome
+    highlight-style: kate
     code-block-bg: "#F5F5F5"
     code-block-border-left: false
-    code-line-numbers: true
+    code-line-numbers: false
   
   # Font
     # fontfamily: TeX Gyre Pagella
