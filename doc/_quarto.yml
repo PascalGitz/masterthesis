@@ -27,11 +27,23 @@ format:
     template-partials:
       - ../config/style/title.tex
     include-in-header: 
+      - text: |
+          \usepackage{fvextra}
+          \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
       - file: ../config/style/styling_nach_hslu.sty
 
     include-before-body:
       - file: 01_redlichkeitserklaerung.tex
       - file: 02_kurzfassung.tex
+      - text: |
+          \RecustomVerbatimEnvironment{verbatim}{Verbatim}{
+            showspaces = false,
+            showtabs = false,
+            breaksymbolleft={},
+            breaklines
+            % Note: setting commandchars=\\\{\} here will cause an error 
+          }
+
 
 
   # Dokument
