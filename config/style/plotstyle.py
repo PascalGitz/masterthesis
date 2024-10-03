@@ -1,7 +1,7 @@
 # plot_style.py
 
 import matplotlib.pyplot as plt
-from matplotlib.ticker import ScalarFormatter
+from matplotlib.ticker import ScalarFormatter, MaxNLocator
 import numpy as np
 import IPython
 
@@ -28,7 +28,7 @@ def set_engineering_style():
     # plt.rcParams['axes.spines.right'] = False  # Achse rechts entfernt
     # plt.rcParams['axes.spines.top'] = False  # Achse oben entfernt
 
-    
+
     plt.rcParams['xtick.direction'] = 'in' # Teilstriche innerhalb des Plots
     plt.rcParams['xtick.color'] = 'k' 
     plt.rcParams["xtick.minor.width"] = 0.5 
@@ -63,7 +63,9 @@ def set_engineering_style():
 
 def apply_scientific_notation(ax, y):
     """Applies scientific notation to the y-axis if values exceed a threshold."""
-    if max(abs(y)) > 999 or max(abs(y)) < 0.01:
+    
+    
+    if max(abs(y)) > 999 or max(abs(y)) < 0.1:
         class ScalarFormatterClass(ScalarFormatter):
             def _set_format(self):
                 self.format = "%1.2f"
@@ -71,6 +73,8 @@ def apply_scientific_notation(ax, y):
         yScalarFormatter = ScalarFormatterClass(useMathText=True)
         yScalarFormatter.set_powerlimits((0, 0))
         ax.yaxis.set_major_formatter(yScalarFormatter)
+        ax.xaxis.set_major_locator(MaxNLocator(integer=True))
+        ax.yaxis.set_major_locator(MaxNLocator(integer=True))
 
     else:
         ax.ticklabel_format(style='plain', axis='y')  # Keep regular format
