@@ -13,5 +13,6 @@ from shapely.geometry import Polygon
 
 # plotstyle
 from config.style.plotstyle import set_engineering_style  # Plotstyle
+from config.style.plotstyle import apply_scientific_notation
 
 set_engineering_style()
