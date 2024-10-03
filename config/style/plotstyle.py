@@ -1,6 +1,7 @@
 # plot_style.py
 
 import matplotlib.pyplot as plt
+from matplotlib.ticker import ScalarFormatter
 import numpy as np
 import IPython
 
@@ -8,7 +9,7 @@ def set_engineering_style():
     plt.style.use('ggplot')  # Zurücksetzen auf den Matplotlib-Standardstil
     plt.rcParams['lines.linewidth'] = 0.7  # Linienstärke
     plt.rcParams['lines.markersize'] = 1  # Markergrösse
-    
+        
     plt.rcParams['axes.grid'] = True  # Gitterlinien im Plot
     plt.rcParams['grid.color'] = 'gray'  # Grid Farbe
     plt.rcParams['grid.alpha'] = 0.7  
@@ -52,8 +53,26 @@ def set_engineering_style():
     })
 
     plt.rcParams['figure.subplot.bottom'] = 0.2  # Abstand zwischen Plot und unterem Rand
+    plt.rcParams['figure.subplot.top'] = 0.90  # Abstand zwischen Plot und unterem Rand
+    plt.rcParams['figure.subplot.left'] = 0.2  # Abstand zwischen Plot und unterem Rand
+    plt.rcParams['figure.subplot.right'] = 0.90  # Abstand zwischen Plot und unterem Rand
 
     # creates the plots in Jupyter as svg
     IPython.display.set_matplotlib_formats('svg')
 
 
+def apply_scientific_notation(ax, y):
+    """Applies scientific notation to the y-axis if values exceed a threshold."""
+    if max(abs(y)) > 999 or max(abs(y)) < 0.01:
+        class ScalarFormatterClass(ScalarFormatter):
+            def _set_format(self):
+                self.format = "%1.2f"
+        
+        yScalarFormatter = ScalarFormatterClass(useMathText=True)
+        yScalarFormatter.set_powerlimits((0, 0))
+        ax.yaxis.set_major_formatter(yScalarFormatter)
+
+    else:
+        ax.ticklabel_format(style='plain', axis='y')  # Keep regular format
+
+        
