@@ -5,7 +5,7 @@ os.chdir(os.path.join(os.getcwd(), ".."))
 
 # Packages
 from engicalc import *
-from engicalc.units import *
+import engicalc.units as un
 import numpy as np
 import matplotlib.pyplot as plt
 import sympy as sp

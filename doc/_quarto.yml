@@ -68,7 +68,7 @@ format:
     
   # Code
     execute:
-      # echo: false
+      echo: false
       warning: false
     highlight-style: kate
     code-block-bg: "#F5F5F5"
