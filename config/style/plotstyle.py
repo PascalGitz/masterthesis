@@ -25,9 +25,12 @@ def set_engineering_style():
     plt.rcParams['axes.labelcolor'] = 'k' # Beschriftung schwarz
    
     plt.rcParams['axes.linewidth'] = 0.5 # Achsen schwarz
+    plt.rcParams['axes.formatter.useoffset'] = False  # Disable offset notation (e.g., 1e6)
+    plt.rcParams['axes.formatter.limits'] = (-3, 3)  # Use plain numbers within this range
+    plt.rcParams['axes.formatter.use_mathtext'] = False  # Disable scientific notation
+
     # plt.rcParams['axes.spines.right'] = False  # Achse rechts entfernt
     # plt.rcParams['axes.spines.top'] = False  # Achse oben entfernt
-
 
     plt.rcParams['xtick.direction'] = 'in' # Teilstriche innerhalb des Plots
     plt.rcParams['xtick.color'] = 'k' 
@@ -38,6 +41,7 @@ def set_engineering_style():
     plt.rcParams['ytick.color'] = 'k'
     plt.rcParams["ytick.minor.width"] = 0.5 
     plt.rcParams["ytick.major.width"] = 0.5 
+
 
     plt.rcParams['xtick.labelsize'] = 8  # Größe der x-Achsenbeschriftungen
     plt.rcParams['ytick.labelsize'] = 8  # Größe der y-Achsenbeschriftungen
@@ -65,7 +69,7 @@ def apply_scientific_notation(ax, y):
     """Applies scientific notation to the y-axis if values exceed a threshold."""
     
     
-    if max(abs(y)) > 999 or max(abs(y)) < 0.1:
+    if max(abs(y)) > 999 or np.median(abs(y)) <= 0.1:
         class ScalarFormatterClass(ScalarFormatter):
             def _set_format(self):
                 self.format = "%1.2f"
