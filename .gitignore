@@ -9,3 +9,6 @@
 *.ini
 *.cfd
 *.gra
+*.PRP
+*.FGI
+*.lst
