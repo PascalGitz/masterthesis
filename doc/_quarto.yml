@@ -55,7 +55,7 @@ format:
     # keep-tex: true
 
   # Figuren
-    # fig-pos: 'H'
+    fig-pos: 'H'
     fig-format: svg
   
   # Verlinkungen
