@@ -12,11 +12,12 @@ book:
   date-format: full
   chapters:
     - index.qmd
+    - 04_Einfuehrung.qmd
     - references.qmd
 
   appendices: 
-    - Traegerrost_Marti.ipynb
-    - Zweifeldtraeger_Jaeger.ipynb
+    - A1_Traegerrost_Marti.ipynb
+    - A2_Zweifeldtraeger_Jaeger.ipynb
 
 bibliography: references.bib
 
