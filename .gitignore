@@ -16,3 +16,7 @@
 *.lst
 *.bak
 *.C9P
+*.aux
+*.lof
+*.log
+*.toc
