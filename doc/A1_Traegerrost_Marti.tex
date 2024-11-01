@@ -203,7 +203,7 @@
 \@ifundefined{codebgcolor}{\definecolor{codebgcolor}{HTML}{F5F5F5}}{}
 \makeatother
 \makeatletter
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, enhanced, breakable, colback={codebgcolor}, boxrule=0pt, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, breakable, boxrule=0pt, colback={codebgcolor}, sharp corners, enhanced]}{\end{tcolorbox}}\fi
 \makeatother
 
 \ifLuaTeX
@@ -2306,52 +2306,7 @@ F_{u}& = \frac{978}{12} = 81.5 \ \mathrm{kN} \quad &  \quad &
  \end{aligned}
 \]
 
-\begin{longtable}[]{@{}lll@{}}
-\toprule\noalign{}
-& x & y \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-0 & 0.543478 & -2.723312 \\
-1 & 1.086957 & 87.145969 \\
-2 & 1.086957 & 160.675381 \\
-3 & 3.260870 & 220.588235 \\
-4 & 3.804348 & 277.777778 \\
-5 & 5.978261 & 340.413943 \\
-6 & 10.326087 & 392.156863 \\
-7 & 16.304348 & 460.239651 \\
-8 & 15.760870 & 307.734205 \\
-9 & 7.608696 & 13.616558 \\
-10 & 20.108696 & 503.812636 \\
-11 & 23.913043 & 563.725490 \\
-12 & 27.717391 & 601.851852 \\
-13 & 32.065217 & 639.978214 \\
-14 & 40.760870 & 708.061002 \\
-15 & 42.391304 & 629.084967 \\
-16 & 45.652174 & 702.614379 \\
-17 & 51.086957 & 759.803922 \\
-18 & 62.500000 & 806.100218 \\
-19 & 71.739130 & 833.333333 \\
-20 & 89.673913 & 887.799564 \\
-21 & 88.586957 & 827.886710 \\
-22 & 95.108696 & 890.522876 \\
-23 & 106.521739 & 912.309368 \\
-24 & 118.478261 & 934.095861 \\
-25 & 127.173913 & 947.712418 \\
-26 & 127.173913 & 827.886710 \\
-27 & 130.434783 & 887.799564 \\
-28 & 135.326087 & 939.542484 \\
-29 & 142.391304 & 972.222222 \\
-30 & 151.630435 & 980.392157 \\
-31 & 164.130435 & 980.392157 \\
-32 & 173.913043 & 977.668845 \\
-33 & 183.152174 & 964.052288 \\
-34 & 192.391304 & 950.435730 \\
-35 & 202.173913 & 917.755991 \\
-\end{longtable}
-
-\includegraphics{A1_Traegerrost_Marti_files/mediabag/A3_Versuch_Thoma_files/figure-pdf/cell-13-output-1.pdf}
+\includegraphics{A1_Traegerrost_Marti_files/mediabag/A3_Versuch_Thoma_files/figure-pdf/cell-12-output-1.pdf}
 
 \begin{figure}[H]
 
@@ -2466,7 +2421,7 @@ z& = {d}' - 0.425 \cdot x = 169.48 \ \mathrm{mm} \quad & F_{s}& = A_{s} \cdot \s
 M_{u}& = F_{s} \cdot z = 4.73 \ \mathrm{kNm} \quad & \chi_{u}& = \frac{\varepsilon_{s}}{{d}' - x} = 388.89 \ \frac{1}{\mathrm{km}} \end{aligned}
 \]
 
-\includegraphics{A1_Traegerrost_Marti_files/mediabag/A3_Versuch_Thoma_files/figure-pdf/cell-21-output-1.pdf}
+\includegraphics{A1_Traegerrost_Marti_files/mediabag/A3_Versuch_Thoma_files/figure-pdf/cell-20-output-1.pdf}
 
 \begin{figure}[H]
 
@@ -2530,9 +2485,9 @@ Richtung.}
 
 \end{figure}%
 
-\subsection{Drillsteifigkeit}\label{drillsteifigkeit}
-
 \subsection{Plastische Gelenke}\label{plastische-gelenke}
+
+$15266.666666666666\ \mathrm{kN} \cdot \mathrm{m}$
 
 \[
 \begin{aligned}
@@ -2543,19 +2498,31 @@ Richtung.}
 \[
 \begin{aligned}
 l_{pl}& = 2 \cdot {d}' = 350.0 \ \mathrm{mm} \\ 
+\varepsilon_{cu}& = 5.0 \ \mathrm{‰} \\ 
 \Theta_{max}& = l_{pl} \cdot \left(\frac{\varepsilon_{cu}}{x} - \frac{\varepsilon_{sy}}{{d}' - x}\right) = 0.13 \ \mathrm{rad} \\ 
 \Theta_{max gelenk}& = \frac{\Theta_{max}}{2} = 0.065 \ \mathrm{rad} \end{aligned}
 \]
 
+\subsection{Drillsteifigkeit}\label{drillsteifigkeit}
+
 \[
 \begin{aligned}
-\nu& = 0.2 \quad & k_{r}& = E_{c} \cdot h^{3} \cdot \frac{1}{12 \cdot \left(1 - \nu\right)} \cdot \frac{1}{n_{gelenk}} \cdot 0.2 = 1908.33 \ \frac{\mathrm{kN} \cdot \mathrm{m}}{\mathrm{rad}} \quad &  
+I_{x}& = 4.6 \cdot 10^{-5} = 0.0 \ \mathrm{m}^{4} \\ 
+\nu& = 0.2 \\ 
+G_{c}& = \frac{E_{c}}{2 \cdot \left(\nu + 1\right)} = 9.54 \ \frac{\mathrm{kN}}{\mathrm{mm}^{2}} \\ 
+GI& = \frac{G_{c} \cdot I_{x}}{l_{El}} = 4389.17 \ \frac{\mathrm{kN} \cdot \mathrm{m}}{\mathrm{rad}} \\ 
+GI_{II}& = 0.2 \cdot GI \cdot n_{gelenk} = 1755.67 \ \frac{\mathrm{kN} \cdot \mathrm{m}}{\mathrm{rad}} \end{aligned}
+\]
+
+\[
+\begin{aligned}
+k_{r}& = E_{c} \cdot h^{3} \cdot \frac{1}{12 \cdot \left(1 - \nu\right)} \cdot \frac{1}{n_{gelenk}} \cdot 0.2 = 1908.33 \ \frac{\mathrm{kN} \cdot \mathrm{m}}{\mathrm{rad}} \quad &  \quad &  
  \end{aligned}
 \]
 
 \section{Modellergebnisse}\label{modellergebnisse}
 
-\includegraphics{A1_Traegerrost_Marti_files/mediabag/A3_Versuch_Thoma_files/figure-pdf/cell-27-output-1.pdf}
+\includegraphics{A1_Traegerrost_Marti_files/mediabag/A3_Versuch_Thoma_files/figure-pdf/cell-28-output-1.pdf}
 
 \section{Vergleichsrechnung
 Normalmomentenfliessbedingung}\label{vergleichsrechnung-normalmomentenfliessbedingung}
