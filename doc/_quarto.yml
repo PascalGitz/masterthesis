@@ -16,8 +16,8 @@ book:
     - references.qmd
 
   appendices: 
-    - A1_Traegerrost_Marti.ipynb
     - A2_Zweifeldtraeger_Jaeger.ipynb
+    - A1_Traegerrost_Marti.ipynb
     - A3_Versuch_Thoma.ipynb
 
 bibliography: references.bib
