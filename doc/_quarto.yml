@@ -13,6 +13,7 @@ book:
   chapters:
     - index.qmd
     - 04_Einfuehrung.qmd
+    - 05_modellbildung.qmd
     - references.qmd
 
   appendices: 
