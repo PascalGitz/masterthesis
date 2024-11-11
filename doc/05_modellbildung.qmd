@@ -1,0 +1,138 @@
+# Modellbildung
+
+## Trägerrost
+
+### Torsionssteifigkeit
+
+Das Torsionsverhalten der Stäbe soll das Drillverhalten bei Plattentragwerken nachahmen. Dazu gilt es eine entsprechende Torsionssteifigkeit zu wählen. Im Folgenden wird dazu eine analytische Lösung für eine elastische, gerissene Drillsteifigkeit aufgeziegt. Sowie ein Übertrag der Drillsteifigkeit auf die Torsionssteifigkeit.
+
+Zunächst wird ein infinitesimal kleines Schnittkörperdiagramm eines Plattentragwerks betrachtet. An diesem sind Biegemomente in x und y Richtung, Drillmomente, Membrankräfte sowie Querkräfte in x und y Richtung eingezeichnet. Diese resultieren aus der Integration der Spannungen über die Plattenstärke.
+
+![](../imgs/hda_platte_skd.png)
+
+Ebenso gilt es den Verzerrungszustand zu betrachten, welche in folgendem Bild dargestellt sind.
+
+![](../imgs/hda_platte_verzerrungen.png)
+
+Entsprechend dem klassischen Sandwichmodell, beschrieben in @heinzmann_stringer-tafelmodelle_2012, so können die Biege- und Drillmomente den Deckeln zugeordnet werden. Während die Querkräfte über den Kern abgetragen werden. Die Membrankräfte können ebenfalls dem Kern zugeordnet werden, oder allenfalls gemischt zum Kern und den Deckeln zugeordnet werden.
+
+![](../imgs/hda_sandwich.png)
+
+Dabei gelten die folgenden Voraussetzungen:
+
+-   Die Bewehrung ist orthogonal zueinander verlegt.
+-   Die Bewehrung ist in Richtung des Koordinatensystems angeordnet.
+
+Betrachtet man die Drillmomente gesondert, so entsprechen die Deckel einer Scheibe unter reiner Schubbeanspruchung. Dabei entspricht die Schubkraft: $$
+n_{xy} = \frac{m_{xy}}{d_v} \text{ [kN/m]}
+$$ {#eq-tau_sandwichdeckel}
+
+Die Schubspannungen der Scheibe sind dabei folgend definiert: $$
+\tau_{xy} = \frac{m_{xy}}{d_v \cdot t}  \text{ [kN/m$^2$]}
+$$
+
+Es gilt: $$
+\sigma_{xx} = \sigma_{yy} = 0
+$$
+
+Die Deckelstärke $t$ beträgt den doppelten Abstand von der näherliegenden Plattenoberfläche zum Schwerpunkt der Bewehrungen des jeweiligen Sandwichdeckels. @peter_marti_design_1990
+
+![](../imgs/hda_deckelstaerke.png)
+
+Beispielsweise lässt sich die Deckelstärke für die äussere Lage folgend berechnen:
+
+$$
+t = 2 \cdot c_{nom} + \oslash
+$$
+
+Dabei entspricht $m_{xy}$ dem entsprechenden Drillmoment, $d_v$ dem Hebelarm der inneren Kräfte und $t$ der Deckelstärke.
+
+![](../imgs/hda_deckel.png)
+
+![](../imgs/hda_scheibe_verzerrung.png)
+
+Da es sich um eine gerissene Steifigkeit handelt, entspricht die Dehnung dem Folgenden:
+
+$$
+\eta = \frac{E_s}{E_c} \text{ [-]}
+$$
+
+$$
+\rho_x = \frac{A_{sx}}{A_c} \text{ [-]}
+$$ $$
+\varepsilon_{xx} = \frac{\sigma_{sxx}}{E_s} = \tau_{xy} \left[\frac{1 + \eta \rho_y}{\rho_x^3 \rho_y (1 + \eta \rho_x)}\right]^3 \text{ [-]}
+$$
+
+![Gleichungen aus Dissertation Hda](../imgs/hda_klassisches_druckfeldmodell.png)
+
+Mit der bestimmten Dehnung, folgt die Krümmung zu:
+
+![Berechnung der Krümmung](../imgs/hda_kruemmung_hoehe.png)
+
+$$
+\chi_{xx} = \frac{\varepsilon_{xx,inf} + \varepsilon_{xx,sup}}{d_v} \text{ [1/m]}
+$$
+
+mit
+
+$$
+d_v = h - \frac{t_{sup} - t_{inf}}{2} \text{ [m]}
+$$
+
+Dabei entspricht $h$ der Plattenstärke, sowie $t_{sup}$ und $t_{inf}$ der Deckelstärken.
+
+![](../imgs/hda_kruemmung.png)
+
+Die entsprechende Steifigkeit in $x$ Richtung beträgt dabei beispielsweise:
+
+$$
+K_{xx,II} = \frac{m_{xy}}{\chi_{xx}} \text{ [kNm$^2$ / m]}
+$$
+
+#### Übertrag auf Stab
+
+Da nun die Steifigkeit definiert ist, lässt sich diese auf den einzelnen Stab übertragen. Aufgrund der Modellierung des Plattenelements (2 Dimensionalen Element) als Stabkreuzung gilt es die Stabsteifigkeit doppelt so steif zu modellieren um das entsprechende Drillverhalten abzubilden.
+
+![](../imgs/hda_platte_zu_traegerrost.png)
+
+Dazu wird die Krümmung halbiert:
+
+$$
+\chi_x =\chi_{xx} / 2 \text{ [1/m]}
+$$
+
+$$
+M_x = m_{xy} \cdot b_w \text{ [kNm]}
+$$
+
+Dabei entspricht $l_{El}$ der Elementlänge der Stäbe.
+
+$$
+\varphi_x = \chi_{x} \cdot l_{El} \text{ [rad]}
+$$
+
+$$
+k_{xx,II} = \frac{M_x}{\varphi_x} \text{ [kNm/rad]}
+$$
+
+#### Zusammenfassung
+
+Dehnung des Deckels bestimmen
+
+$$
+\varepsilon_{xx} = \frac{\sigma_{sxx}}{E_s} = \tau_{xy} \left[\frac{1 + \eta \rho_y}{\rho_x^3 \rho_y (1 + \eta \rho_x)}\right]^3 \text{ [-]}
+$$
+
+Krümmung am Plattenelement: $$
+\chi_{xx} = \frac{\varepsilon_{xx,inf} + \varepsilon_{xx,sup}}{d_v} \text{ [1/m]}
+$$
+
+mit
+
+$$
+d_v = h - \frac{t_{sup} - t_{inf}}{2} \text{ [m]}
+$$
+
+$$
+k_{xx,II} = \frac{m_{xy} \cdot b_w}{\chi_{xx} \cdot l_{El}} \text{ [kNm/rad]}
+$$
