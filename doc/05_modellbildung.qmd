@@ -1,10 +1,62 @@
 # Modellbildung
 
-Folgendes Schema beschreibt den allgemeinen Ablauf der Modellierung. Auf die einzelnen Schritte wird vereinzelt eingegangen.
+Folgendes Schema beschreibt den allgemeinen Ablauf der Modellierung. Diese ist grundsätzlich Software unabhängig. 
 
-![Modellierungsschema](../imgs/allg_schema.svg){#fig-allg_schema}
+![Modellierungsschema für Plattentragwerk](../imgs/allg_schema.svg){#fig-allg_schema}
 
-## Trägerrost
+Es wird jedoch vermerkt, dass sämtliche Berechnungen mit der AxisVM-7 Studentenversion durchgeführt worden sind. Die Modellierbarkeit wurde in RFEM-6 ebenfalls zufriedenstellend getestet.
+
+## Statisches System
+
+Modelliert werden die untersuchten Tragwerke stets als Stabtragwerke. Balken werden eindimensional modelliert, Plattentragwerke als Trägerrost. Dabei wird das System in möglichst kleine Stäbe unterteilt. An den Enden der Stäbe werden Stabendgelenke modelliert. Die Stäbe sind zwingend verformungsstarr zu modellieren (Biegestarr, Torsionsstarr, ..), sodass sämtliche Verformungen des Systems aus den Gelenkverbindungen resultieren. Eine Modellierung eines einfachen Balkens ist in der @fig-allg_stat_system aufgezeigt. 
+
+![Beispielsystem eines einfachen Balkens](../imgs/allg_stat_system.svg){#fig-allg_stat_system}
+
+Dabei ist die Elementlänge beschriftet, sowie sind die Stabendgelenke dargestellt.
+
+
+### Elementlänge
+
+Die Elementlänge ist grundsätzlich so klein wie möglich zu wählen. Die Elementlänge ist vergleichbar mit der Netzgrösse bei einer FE-Plattenberechnung. Eine kleine Elementlänge erhöht die Berechnungspräzision, erhöht jedoch ebenfalls die Berechnungsdauer. Als Richtwert sollte die Elementlänge bei Plattentragwerken die Plattenstärke nicht überschreiten. Begründet wird dies mit der Bestimmung des Rotationsvermögens. In diesem wird die Länge des plastischen Gelenks abgeschätzt, welche in etwa dem doppelten der statischen Höhe der Platte entspricht. Allgemein sollte eine Sensitivitätsanalyse durchgeführt werden, bei welcher die Elementlänge variiert wird und der Einfluss auf die Resultate betrachtet wird.
+
+## Steifigkeitsermittlung
+
+In diesem Abschnitt wird auf die Steifigkeiten der Gelenke eingegangen. Wie erwähnt in der Abgrenzung wird nur das Biegeverhalten analysiert. Folglich wird ein Verlauf der Biegesteifigkeit ermittelt, sowie für die Plattentragwerke eine Torsionssteifigkeit des Trägerrosts zur Abbildung der Drillmomente. Die Gelenkbeziehungen lassen sich als Momenten-Verdrehung oder Kraft-Verformungs-Beziehung beschreiben.
+
+### Biegesteifigkeit
+
+Zunächst zur Biegesteifigkeit. Der Querschnitt des Tragwerks wird analysiert und an diesem wird eine Querschnittsanalyse durchgeführt. Dies bedeutet, es werden Stoffgesetze für den Betonstahl und den Beton gewählt. Dabei wird der Querschnitt bei steigender Krümmung betrachtet. Durch das Gleichgewicht der Kräfte kann bei gewählter Krümmung das sich einstellende Biegemoment ermittelt werden.
+
+Beispielsweise für die folgende Analyse wurde ein bilineares Stoffgesetz für den Betonstahl und ein linear-elastisches ideal-plastisches Stoffgesetz für den Beton gewählt. Dabei wurden signifikante Krümmungen gewählt um mit wenig Berechnungsaufwand eine aussagekräftige Momenten-Krümmungs-Beziehung zu bestimmen.
+
+![](../imgs/QS_14.svg)
+
+Dabei wird ein Zustand vor dem Erreichen der Zugfestigkeit des Betons betrachtet.
+
+![](../imgs/QS_14_analyse_1.svg)
+
+Ein Fliessen der Zugbewehrung untersucht.
+
+![](../imgs/QS_14_analyse_3.svg)
+
+Und zum Schluss der Biegewiderstand bestimmt bei plastifizierter Betondruckzone und verfestigter Bewehrung.
+
+![](../imgs/QS_14_analyse_5.svg)
+
+Daraus resultiert beispielsweise eine folgende Momenten-Krümmungs-Beziehung:
+
+![](../imgs/allg_momenten_krummung_tue.svg)
+
+Die Biegesteifigkeit des Querschnitts ist dabei bestimmt. Abschliessend gilt es diese zu einer Gelenkbeziehung zu transformieren. Die folgende Grafik zeigt schematisch die Transformation des Querschnitts auf die Gelenkbeziehung. Es gilt die Krümmungen über die Elementlänge zu integrieren. Vereinfacht wird Krümmung als konstant über die Elementlänge angenommen. Dies ist zielführend bei der Wahl einer kleinen Elementlänge.
+
+![Integration der Krümmung über Elementlänge](../imgs/allg_int_kruemmung.png)
+
+$$
+\varphi_B = l_{El} \cdot \chi_B
+$$
+
+Dabei bedeutet der index $B$ Biegung. Die Darstellung zeigt, dass die Krümmungen über die Elementlänge integriert werden. Es liegt nahe, dass eine kleinere Elementlänge die Präzision erhöht, speziell bei stark variierenden Krümmungen, sprich grossen Momentengradienten.
+
 
 ### Torsionssteifigkeit
 
@@ -140,3 +192,9 @@ $$
 $$
 k_{xx,II} = \frac{m_{xy} \cdot b_w}{\chi_{xx} \cdot l_{El}} \text{ [kNm/rad]}
 $$
+
+### Rotationsvermögen
+
+Das Rotationsvermögen bildet dabei das Abbruchkriterium.
+
+![](../imgs/allg_rotationsvermoegen.png)
