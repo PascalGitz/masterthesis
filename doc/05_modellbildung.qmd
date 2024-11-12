@@ -1,5 +1,9 @@
 # Modellbildung
 
+Folgendes Schema beschreibt den allgemeinen Ablauf der Modellierung. Auf die einzelnen Schritte wird vereinzelt eingegangen.
+
+![Modellierungsschema](../imgs/allg_schema.svg){#fig-allg_schema}
+
 ## Trägerrost
 
 ### Torsionssteifigkeit
