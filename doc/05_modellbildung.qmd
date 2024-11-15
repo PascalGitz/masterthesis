@@ -1,6 +1,6 @@
 # Modellbildung
 
-Folgendes Schema beschreibt den allgemeinen Ablauf der Modellierung. Diese ist grundsätzlich Software unabhängig. 
+Folgendes Schema beschreibt den allgemeinen Ablauf der Modellierung. Diese ist grundsätzlich Software unabhängig.
 
 ![Modellierungsschema für Plattentragwerk](../imgs/allg_schema.svg){#fig-allg_schema}
 
@@ -8,12 +8,11 @@ Es wird jedoch vermerkt, dass sämtliche Berechnungen mit der AxisVM-7 Studenten
 
 ## Statisches System
 
-Modelliert werden die untersuchten Tragwerke stets als Stabtragwerke. Balken werden eindimensional modelliert, Plattentragwerke als Trägerrost. Dabei wird das System in möglichst kleine Stäbe unterteilt. An den Enden der Stäbe werden Stabendgelenke modelliert. Die Stäbe sind zwingend verformungsstarr zu modellieren (Biegestarr, Torsionsstarr, ..), sodass sämtliche Verformungen des Systems aus den Gelenkverbindungen resultieren. Eine Modellierung eines einfachen Balkens ist in der @fig-allg_stat_system aufgezeigt. 
+Modelliert werden die untersuchten Tragwerke stets als Stabtragwerke. Balken werden eindimensional modelliert, Plattentragwerke als Trägerrost. Dabei wird das System in möglichst kleine Stäbe unterteilt. An den Enden der Stäbe werden Stabendgelenke modelliert. Die Stäbe sind zwingend verformungsstarr zu modellieren (Biegestarr, Torsionsstarr, ..), sodass sämtliche Verformungen des Systems aus den Gelenkverbindungen resultieren. Eine Modellierung eines einfachen Balkens ist in der @fig-allg_stat_system aufgezeigt.
 
 ![Beispielsystem eines einfachen Balkens](../imgs/allg_stat_system.svg){#fig-allg_stat_system}
 
 Dabei ist die Elementlänge beschriftet, sowie sind die Stabendgelenke dargestellt.
-
 
 ### Elementlänge
 
@@ -56,7 +55,6 @@ $$
 $$
 
 Dabei bedeutet der index $B$ Biegung. Die Darstellung zeigt, dass die Krümmungen über die Elementlänge integriert werden. Es liegt nahe, dass eine kleinere Elementlänge die Präzision erhöht, speziell bei stark variierenden Krümmungen, sprich grossen Momentengradienten.
-
 
 ### Torsionssteifigkeit
 
@@ -110,23 +108,33 @@ Dabei entspricht $m_{xy}$ dem entsprechenden Drillmoment, $d_v$ dem Hebelarm der
 Da es sich um eine gerissene Steifigkeit handelt, entspricht die Dehnung dem Folgenden:
 
 $$
-\eta = \frac{E_s}{E_c} \text{ [-]}
+n = \frac{E_s}{E_c} \text{ [-]}
 $$
 
 $$
 \rho_x = \frac{A_{sx}}{A_c} \text{ [-]}
-$$ $$
-\varepsilon_{xx} = \frac{\sigma_{sxx}}{E_s} = \tau_{xy} \left[\frac{1 + \eta \rho_y}{\rho_x^3 \rho_y (1 + \eta \rho_x)}\right]^3 \text{ [-]}
 $$
 
-![Gleichungen aus Dissertation Hda](../imgs/hda_klassisches_druckfeldmodell.png)
+Schiebung abhängig der Bewehrungsgehälter in beiden Richtungen. gilt folgendes ?
 
-Mit der bestimmten Dehnung, folgt die Krümmung zu:
+$$
+\gamma_{xy} = \gamma_{yx}
+$$
+
+$$
+\frac{\gamma_{xy}}{2} = \frac{\tau_{xy}}{E_s} \left(\sqrt{\frac{(1+n \rho_x)(1 + n \rho_y)}{\rho_x \rho_y}} + n \right)  \text{ [-]}
+$$
+
+Mit der bestimmten Schiebung, folgt die Krümmung zu:
 
 ![Berechnung der Krümmung](../imgs/hda_kruemmung_hoehe.png)
 
 $$
-\chi_{xx} = \frac{\varepsilon_{xx,inf} + \varepsilon_{xx,sup}}{d_v} \text{ [1/m]}
+\chi_{xy} = \frac{\gamma_{xy,inf} + \gamma_{xy,sup}}{d_v} \text{ [1/m]}
+$$
+
+$$
+\chi_{xy} = \chi_{yx}
 $$
 
 mit
@@ -137,12 +145,10 @@ $$
 
 Dabei entspricht $h$ der Plattenstärke, sowie $t_{sup}$ und $t_{inf}$ der Deckelstärken.
 
-![](../imgs/hda_kruemmung.png)
-
-Die entsprechende Steifigkeit in $x$ Richtung beträgt dabei beispielsweise:
+Die entsprechende Steifigkeit in $x$ Richtung beträgt dabei beispielsweise: welche Bezeichnung sollte hier stehen?
 
 $$
-K_{xx,II} = \frac{m_{xy}}{\chi_{xx}} \text{ [kNm$^2$ / m]}
+K_{xx,II} = \frac{m_{xy}}{\chi_{xy}} \text{ [kNm$^2$ / m]}
 $$
 
 #### Übertrag auf Stab
@@ -176,7 +182,7 @@ $$
 Dehnung des Deckels bestimmen
 
 $$
-\varepsilon_{xx} = \frac{\sigma_{sxx}}{E_s} = \tau_{xy} \left[\frac{1 + \eta \rho_y}{\rho_x^3 \rho_y (1 + \eta \rho_x)}\right]^3 \text{ [-]}
+\varepsilon_{xx} = \frac{\sigma_{sxx}}{E_s} = \tau_{xy} \left[\frac{1 + n \rho_y}{\rho_x^3 \rho_y (1 + n \rho_x)}\right]^3 \text{ [-]}
 $$
 
 Krümmung am Plattenelement: $$
