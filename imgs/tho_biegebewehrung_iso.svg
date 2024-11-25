@@ -109,7 +109,7 @@
   <path
      id="path1"
      d="M 85.93166,105.17213 202.21417,38.03639 M 85.93166,110.46347 202.21417,43.32773 M 105.74651,35.46751 339.62082,170.49493 M 105.74651,40.12764 339.62082,175.15506 m -7.32321,3.47214 v -3.14832 m 0,3.14832 -16.36585,-9.44879 m 16.36585,6.30047 -16.36585,-9.44882 M 98.42329,40.45148 v 3.14831 m 0,-3.14831 16.36583,9.44882 m -16.36583,-6.30051 16.36583,9.44882 m 109.25296,-1.65397 -16.36581,9.44882 m 16.36581,-5.6693 -16.36581,9.44883 m 16.36581,-9.44883 v -3.77952 m -116.28251,70.91528 v -3.77952 l 16.36583,-9.44883 m -16.36583,13.22835 16.36583,-9.44882"
-     style="fill:none;stroke:#000000;stroke-width:0.70866;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
      transform="matrix(1.3333333,0,0,-1.3333333,0,302.36267)" />
   <path
      id="path2"

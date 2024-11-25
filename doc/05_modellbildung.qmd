@@ -1,22 +1,81 @@
-# Modellbildung
+# Makromodellbildung
 
-Folgendes Schema beschreibt den allgemeinen Ablauf der Modellierung. Diese ist grundsätzlich Software unabhängig.
+In diesem Kapitel wird die Modellbildung des Systems beschrieben. Es wird lediglich der allgemeine Modellierungsvorgang beschrieben. Auf Abbruchkriterien, Steifigkeitsermittlungen wird in den folgenden Anwendungsfällen eingegangen. 
 
 ![Modellierungsschema für Plattentragwerk](../imgs/allg_schema.svg){#fig-allg_schema}
 
-Es wird jedoch vermerkt, dass sämtliche Berechnungen mit der AxisVM-7 Studentenversion durchgeführt worden sind. Die Modellierbarkeit wurde in RFEM-6 ebenfalls zufriedenstellend getestet.
+Das Schema in der @fig-allg_schema beschreibt den allgemeinen Ablauf der Modellierung. Diese ist grundsätzlich Software unabhängig. Die Berechnungssoftware muss als einzige Voraussetzung nichtlineare Gelenkbeziehungen berechnen können. Sämtliche Berechnungen in dieser Arbeit wurden mit, der in der Schweiz weit verbreiteten Software, AxisVM in der Version X7 durchgeführt.
 
-## Statisches System
+Das Stabmodell an sich ist nicht komplex. Die Schwierigkeit liegt primär in der Steifigkeitsermittlung, nicht in der eigentlichen Modellierung.
 
-Modelliert werden die untersuchten Tragwerke stets als Stabtragwerke. Balken werden eindimensional modelliert, Plattentragwerke als Trägerrost. Dabei wird das System in möglichst kleine Stäbe unterteilt. An den Enden der Stäbe werden Stabendgelenke modelliert. Die Stäbe sind zwingend verformungsstarr zu modellieren (Biegestarr, Torsionsstarr, ..), sodass sämtliche Verformungen des Systems aus den Gelenkverbindungen resultieren. Eine Modellierung eines einfachen Balkens ist in der @fig-allg_stat_system aufgezeigt.
+## Stabsystem
+
+Das statische System wird folgend an einem Beispiel erläutert. In der @fig-allg_stat_system ist ein einfacher Balken gezeigt, es wirkt eine Streckenlast. Der Balken wird mit starren Stäben modelliert, welche mit Drehfedern gekoppelt sind. In den Drehfedern wird für dieses Beispiel eine linear-elastische Momenten-Verdrehungs-Beziehung um die globale Y-Achse gewählt.
 
 ![Beispielsystem eines einfachen Balkens](../imgs/allg_stat_system.svg){#fig-allg_stat_system}
 
-Dabei ist die Elementlänge beschriftet, sowie sind die Stabendgelenke dargestellt.
+Durch die starren Stäbe folgt eine Biegeverformung wie in der @fig-allg_stat_system_def1 gezeigt. Die Stäbe erfahren eine Starrkörperrotation. Es ist ersichtlich, dass dies nicht der polynomförmigen Biegelinie für einen einfachen Balken entspricht, als numerische Näherung zu dieser jedoch anwendbar ist.
+
+![Verformung des einfachen Balkens](../imgs/allg_stat_system_def1.svg){#fig-allg_stat_system_def1}
+
+Dargestellt ist die analytische Biegelinie in der @fig-allg_stat_system_def2. Die Modellvorstellung mit linear-elastischen Momenten-Verdrehungs-Beziehungen weist offensichtlich keinen Mehrwert zu einer Modellierung mit einem einfachen Stab auf.
+
+![Analytische Biegelinie des einfachen Balkens](../imgs/allg_stat_system_def2.svg){#fig-allg_stat_system_def2}
+
+Der Vorteil dieses Ansatzes liegt darin, dass den Federn mittels eines Diagrammeditors beliebige Momenten-Verdrehungs-Beziehungen hinterlegt werden können. Unter der Prämisse, dass die Verläufe stetig ansteigend sind. Dies ist jedoch eine programmspezifische Limitation von AxisVM-X7.
+
+Es lässt sich festhalten, dass die Steifigkeit des Systems ausschliesslich über die Federeigenschaften gesteuert wird.
+
+Zudem ist ersichtlich, dass mit der Modellierung in Bezug auf Lagerung und Einwirkungen keine Einschränkungen erfolgen.
 
 ### Elementlänge
 
-Die Elementlänge ist grundsätzlich so klein wie möglich zu wählen. Die Elementlänge ist vergleichbar mit der Netzgrösse bei einer FE-Plattenberechnung. Eine kleine Elementlänge erhöht die Berechnungspräzision, erhöht jedoch ebenfalls die Berechnungsdauer. Als Richtwert sollte die Elementlänge bei Plattentragwerken die Plattenstärke nicht überschreiten. Begründet wird dies mit der Bestimmung des Rotationsvermögens. In diesem wird die Länge des plastischen Gelenks abgeschätzt, welche in etwa dem doppelten der statischen Höhe der Platte entspricht. Allgemein sollte eine Sensitivitätsanalyse durchgeführt werden, bei welcher die Elementlänge variiert wird und der Einfluss auf die Resultate betrachtet wird.
+Die Elementlänge definiert die Länge der starren Stäbe, gemessen von Feder zu Feder. 
+
+Aus der @fig-allg_stat_system_def1 wird ersichtlich, dass durch eine Minimierung der Elementlänge $l_{El}$, sich das Biegeverhalten des Systems der analytischen Lösung annähert. Grundsätzlich ist die Elementlänge anhand einer Sensitivitätsanalyse zu bestimmen. Dabei sollten Modelle mit der Variation der Elementlänge berechnet werden und dadurch den Einfluss der Elementlänge bestimmt werden. Mögliche Richtwerte der Elementlänge werden bei den Anwendungsfällen beschrieben.
+
+### Federn
+
+Zunächst wird das Verhalten der Feder illustriert. Verbleibt man beim Einführungsbeispiel gemäss @fig-allg_stat_system bei den Biegeverformungen. Die Drehfeder integriert dabei die Krümmungen. Die Grenzen der Integration wird über eine Einzugslänge definiert.
+
+![Numerische Integration der Krümmungen durch die Feder](../imgs/allg_feder.svg)
+
+Die Einzugslänge ist dabei definiert durch die Hälfte der Distanz bis zum nächsten Gelenk. Die Federn lassen sich in der Software mittels Stabend- und Anfangsgelenken definieren. Den Gelenken lassen sich im zweidimensionalen Raum drei Beziehungen hinterlegen, im dreidimensionalen Raum erweitert sich dies zu deren sechs.
+
+Gelenkdefinitionen im zweidimensionalen Raum:
+
+$$
+F_x(u_z),F_z(u_z),M_y(\varphi_y)
+$$ 
+
+Gelenkdefinitionen im dreidimensionalen Raum:
+
+$$
+F_x(u_x),F_y(u_y),F_z(u_z),M_x(\varphi_x),M_y(\varphi_y),M_z(\varphi_z)
+$$
+
+Dabei stehen $u$ für die Verformung, $F$ für die Kraft, $M$ für das Biegemoment und $\varphi$ für die Verdrehung.
+
+Es wird eine Modellierungsstrategie gewählt bei der an jedem Stab ein Anfang- und ein Endgelenk modelliert wird. Dies bringt den Vorteil, dass die Einzugslängen sich für Randgelenke (Bei Auflagern beispielsweise) nicht unterscheiden. Illustriert ist dies in der @fig-allg_doppelgelenk.
+
+![Modellierungsstrategie der Stabanfang- und Endgelenke](../imgs/allg_doppelgelenk.svg){#fig-allg_doppelgelenk}
+
+
+## Analyse
+In diesem Abschnitt wird auf die Analyse des Systems eingegangen. Es wird stets aus einer Anwenderperspektive beschrieben. 
+
+Sind Stabsystem mit Lagerung, Einwirkungen und nicht-linearen Gelenkbeziehungen (Steifigkeiten) definiert, so lässt sich dies analysieren. Wichtig ist dabei eine nicht-lineare Berechnung durchzuführen, welche Nichtlinearitäten im Material berücksichtigen. 
+
+In AxisVM-X7 gibt es die Möglichkeit kraft- oder weggesteuerte Berechnungen durchzuführen. Sind die Traglast von Interesse so lässt sich mit einer weggesteuerten Berechnung die Inkrementgrössen praktikabler wählen.
+
+## Resultate
+
+In AxisVM lassen sich eine Vielzahl von Resultaten ausgeben. Vor allem interessant sind Schnittgrössen für Stabtragwerke, sowie die relative Gelenkrotation. 
+
+![Relative Gelenkrotation](../imgs/allg_relative_gelenkrot.svg){#fig-allg_relative_gelenkrot}
+
+Die relative Gelenkrotation entspricht der Verdrehung im Gelenk. Daraus lässt sich die Steifigkeit jedes Gelenks bestimmen, betrachtet man die entsprechenden Gelenkbeziehungen.
+
 
 ## Steifigkeitsermittlung
 
