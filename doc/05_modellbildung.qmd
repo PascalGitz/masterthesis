@@ -1,20 +1,10 @@
-# Makromodellbildung
+# Modellbildung 
 
-In diesem Kapitel wird die Modellbildung des Systems beschrieben. Es wird lediglich der allgemeine Modellierungsvorgang beschrieben. Auf Abbruchkriterien, Steifigkeitsermittlungen wird in den folgenden Anwendungsfällen eingegangen. 
-
-![Modellierungsschema für Plattentragwerk](../imgs/allg_schema.svg){#fig-allg_schema}
-
-Das Schema in der @fig-allg_schema beschreibt den allgemeinen Ablauf der Modellierung. Diese ist grundsätzlich Software unabhängig. Die Berechnungssoftware muss als einzige Voraussetzung nichtlineare Gelenkbeziehungen berechnen können. Sämtliche Berechnungen in dieser Arbeit wurden mit, der in der Schweiz weit verbreiteten Software, AxisVM in der Version X7 durchgeführt.
-
-Das Stabmodell an sich ist nicht komplex. Die Schwierigkeit liegt primär in der Steifigkeitsermittlung, nicht in der eigentlichen Modellierung.
-
-## Stabsystem
-
-Das statische System wird folgend an einem Beispiel erläutert. In der @fig-allg_stat_system ist ein einfacher Balken gezeigt, es wirkt eine Streckenlast. Der Balken wird mit starren Stäben modelliert, welche mit Drehfedern gekoppelt sind. In den Drehfedern wird für dieses Beispiel eine linear-elastische Momenten-Verdrehungs-Beziehung um die globale Y-Achse gewählt.
+Um einen Überblick über die Modellbildung zu erhalten wird mit einem Gedankenexperiment gestartet. Dazu dient das statische System in der @fig-allg_stat_system. Es beschreibt einen einfachen Balken mit einer konstanten Streckenlast belastet. Der Balken wird mit starren Stäben modelliert, welche mit Drehfedern gekoppelt sind. In den Drehfedern wird für dieses Beispiel eine linear-elastische Momenten-Verdrehungs-Beziehung um die globale Y-Achse gewählt.
 
 ![Beispielsystem eines einfachen Balkens](../imgs/allg_stat_system.svg){#fig-allg_stat_system}
 
-Durch die starren Stäbe folgt eine Biegeverformung wie in der @fig-allg_stat_system_def1 gezeigt. Die Stäbe erfahren eine Starrkörperrotation. Es ist ersichtlich, dass dies nicht der polynomförmigen Biegelinie für einen einfachen Balken entspricht, als numerische Näherung zu dieser jedoch anwendbar ist.
+Durch die starren Stäbe folgt eine Biegeverformung wie in der @fig-allg_stat_system_def1 gezeigt. Die Stäbe erfahren eine Starrkörperrotation. Es ist ersichtlich, dass dies nicht dem Polygon 4. Grades der analytischen Biegelinie für einen einfachen Balken entspricht, als numerische Näherung zu dieser jedoch anwendbar ist.
 
 ![Verformung des einfachen Balkens](../imgs/allg_stat_system_def1.svg){#fig-allg_stat_system_def1}
 
@@ -24,15 +14,30 @@ Dargestellt ist die analytische Biegelinie in der @fig-allg_stat_system_def2. Di
 
 Der Vorteil dieses Ansatzes liegt darin, dass den Federn mittels eines Diagrammeditors beliebige Momenten-Verdrehungs-Beziehungen hinterlegt werden können. Unter der Prämisse, dass die Verläufe stetig ansteigend sind. Dies ist jedoch eine programmspezifische Limitation von AxisVM-X7.
 
-Es lässt sich festhalten, dass die Steifigkeit des Systems ausschliesslich über die Federeigenschaften gesteuert wird.
+![Einfacher Balken mit nicht-linearen Gelenkeigenschaften](../imgs/allg_gedankenexp.svg){#fig-allg_gedankenexp}
 
-Zudem ist ersichtlich, dass mit der Modellierung in Bezug auf Lagerung und Einwirkungen keine Einschränkungen erfolgen.
+Die Modellbildung kann mit dem Ablaufschema in der @fig-allg_schema verallgemeinert werden. 
+
+![Modellierungsschema](../imgs/allg_schema.svg){#fig-allg_schema}
+
+Dabei wird zwischen dem gesamten statischen System, betitelt mit Makromodellbildung, und mit der Steifigkeitsermittlung, sowie der Definition des Abbruchkriteriums, bezeichnet mit Mikromodellbildung unterschieden.
+
+## Makromodellbildung
+
+Die Makromodellbildung wurde mit dem einleitenden Gedankenexperiment illustriert. In folgendem Abschnitt wird auf modellspezifische Einzelheiten eingegangen. Das Ziel ist es das Modellverhalten zu erläutern. Auf die
+Abbruchkriterien, Steifigkeitsermittlungen, sprich Mikromodellbildung wird in den folgenden Anwendungsfällen eingegangen. 
+
+Das Schema in der @fig-allg_schema beschreibt den allgemeinen Ablauf der Modellierung. Diese ist grundsätzlich Software unabhängig. Die Berechnungssoftware muss als einzige Voraussetzung nichtlineare Gelenkbeziehungen berechnen können. Sämtliche Berechnungen in dieser Arbeit wurden mit, der in der Schweiz weit verbreiteten Software, AxisVM in der Version X7 durchgeführt.
+
+Das Stabmodell an sich ist nicht komplex. Die Schwierigkeit liegt primär in der Steifigkeitsermittlung, nicht in der eigentlichen Modellierung.
 
 ### Elementlänge
 
 Die Elementlänge definiert die Länge der starren Stäbe, gemessen von Feder zu Feder. 
 
 Aus der @fig-allg_stat_system_def1 wird ersichtlich, dass durch eine Minimierung der Elementlänge $l_{El}$, sich das Biegeverhalten des Systems der analytischen Lösung annähert. Grundsätzlich ist die Elementlänge anhand einer Sensitivitätsanalyse zu bestimmen. Dabei sollten Modelle mit der Variation der Elementlänge berechnet werden und dadurch den Einfluss der Elementlänge bestimmt werden. Mögliche Richtwerte der Elementlänge werden bei den Anwendungsfällen beschrieben.
+
+Beschränkt man sich weiter auf das Biegeverhalten, so ist naheliegend, dass bei grossen Biegemomentengradienten eine kleine Elementlänge zu präziseren Resultaten führt.
 
 ### Federn
 
