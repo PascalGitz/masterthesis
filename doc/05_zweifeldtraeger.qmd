@@ -1,13 +1,16 @@
-# Anwendungsbeispiel Zweifeldträger
+# Anwendungsbeispiel Zweifeldträger{#sec-zweifeldtraeger}
 
-Im vorangegangen Kapitel wurde vertieft auf die Makromodellbildung eingegangen. Sowie wurde diese allgemein formuliert. Dabei wurde die Mikromodellbildung aussenvor gelassen. Das Ziel dieses Kapitel ist es an einem konkreten Beispiel die Makromodellbildung aufzuzeigen, sowie speziell auf die Mikromodellbildung einzugehen. Für detaillierte Berechnungen ist @sec-zweifeldtraeger zu konsultieren. Das Beispiel wurde aus den Vorlesungsunterlagen @jager_stahlbeton_2009 entnommen. 
+Im vorangegangen Kapitel wurde vertieft auf die Makromodellbildung eingegangen. Sowie wurde diese allgemein formuliert. Dabei wurde die Mikromodellbildung aussenvor gelassen. 
+
+Das Ziel dieses Kapitel ist es an einem konkreten Beispiel die Makromodellbildung aufzuzeigen, sowie speziell auf die Mikromodellbildung einzugehen. 
+
+Das Beispiel dazu wurde aus den Vorlesungsunterlagen @jager_stahlbeton_2009 entnommen. Für detaillierte Berechnungen ist der @sec-zweifeldtraeger_anhang zu konsultieren. Darin ist die analytische Lösung umfangreich beschrieben. Sowie die numerische Näherung mit der beschriebenen Modellbildung aufgezeigt. Hier werden die wichtigsten Erkenntnisse zusammengefasst beschrieben.
 
 ## Aufgabenbeschrieb
 
 Zunächst wird auf die Grundlagen des Beispiels eingegangen. Die @fig-jag_system zeigt ein statisches System eines Zweifeldträgers mit den entsprechenden Abmessungen. Der Zweifeldträger wird mit einer konstanten Streckenlast $q$ belastet. 
 
 ![Statisches system des Zweifeldträgers](../imgs/jag_system.svg){#fig-jag_system}
-
 
 Der dazugehörige Querschnitt ist in der @fig-jag_system_qs dargestellt. Dargestellt ist die Biegebewehrung mit entsprechendem Durchmesser.
 
@@ -17,7 +20,7 @@ Das übergeordnete Ziel ist es das Last-Verformungs-Verhalten (An der Stelle des
 
 ### Materialeigenschaften
 
-Die Betonstähle werden durch die Spannungs-Dehnungs-Diagramme, gemäss der @fig-jag_stress_strain_b500a_bearb definiert.
+Die Betonstähle werden durch die Spannungs-Dehnungs-Diagramme, gemäss der @fig-jag_stress_strain_b500a_bearb definiert. Es wird ein bilinearer Verlauf für den B500A und ein trilinearer Verlauf für den B500C angesetzt.
 
 ::: {#fig-jag_stress_strain_steel-ncol=2}
 
@@ -27,6 +30,23 @@ Die Betonstähle werden durch die Spannungs-Dehnungs-Diagramme, gemäss der @fig
 
 Spannungs-Dehnungs-Diagramme der beiden Betonstähle
 :::
+
+## Modellbildung
+
+### Makromodellbildung
+
+Es wird eine Elementlänge von $10cm$ gewählt. 
+
+### Mikromodellbildung
+
+Es wird ausschliesslich das Biegeverhalten untersucht. Dazu wird eine Querschnittsanalyse durchgeführt. Dazu wird am Querschnitt bei steigender Krümmung der Biegewiderstand bestimmt. Dies führt zu einer Momenten-Krümmungs-Beziehung. 
+
+
+Die Krümmung gilt es mit der Einzugslänge, illustriert in der @fig-allg_feder, zu multiplizieren um die Verdrehung zu erhalten.
+
+
+
+
 
 
 
