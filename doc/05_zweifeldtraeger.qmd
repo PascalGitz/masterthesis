@@ -1,0 +1,34 @@
+# Anwendungsbeispiel Zweifeldträger
+
+Im vorangegangen Kapitel wurde vertieft auf die Makromodellbildung eingegangen. Sowie wurde diese allgemein formuliert. Dabei wurde die Mikromodellbildung aussenvor gelassen. Das Ziel dieses Kapitel ist es an einem konkreten Beispiel die Makromodellbildung aufzuzeigen, sowie speziell auf die Mikromodellbildung einzugehen. Für detaillierte Berechnungen ist @sec-zweifeldtraeger zu konsultieren. Das Beispiel wurde aus den Vorlesungsunterlagen @jager_stahlbeton_2009 entnommen. 
+
+## Aufgabenbeschrieb
+
+Zunächst wird auf die Grundlagen des Beispiels eingegangen. Die @fig-jag_system zeigt ein statisches System eines Zweifeldträgers mit den entsprechenden Abmessungen. Der Zweifeldträger wird mit einer konstanten Streckenlast $q$ belastet. 
+
+![Statisches system des Zweifeldträgers](../imgs/jag_system.svg){#fig-jag_system}
+
+
+Der dazugehörige Querschnitt ist in der @fig-jag_system_qs dargestellt. Dargestellt ist die Biegebewehrung mit entsprechendem Durchmesser.
+
+![Querschnitt des Zweifeldträgers](../imgs/jag_system_qs.svg){#fig-jag_system_qs}
+
+Das übergeordnete Ziel ist es das Last-Verformungs-Verhalten (An der Stelle des Verformungsvektors $w_m$, gemäss der @fig-jag_system) des Tragwerks für zwei unterschiedlich duktile Betonstähle zu berechnen. Sprich damit den Einfluss der Duktilität auf das Tragverhalten zu zeigen.
+
+### Materialeigenschaften
+
+Die Betonstähle werden durch die Spannungs-Dehnungs-Diagramme, gemäss der @fig-jag_stress_strain_b500a_bearb definiert.
+
+::: {#fig-jag_stress_strain_steel-ncol=2}
+
+![Spannungs-Dehnungs-Beziehungen des Betonstahls B500A](../imgs/jag_stress_strain_b500a_bearb.svg){#fig-jag_stress_strain_b500a_bearb}
+
+![Spannungs-Dehnungs-Beziehungen des Betonstahls B500C](../imgs/jag_stress_strain_b500c.svg){#fig-jag_stress_strain_b500c}
+
+Spannungs-Dehnungs-Diagramme der beiden Betonstähle
+:::
+
+
+
+
+

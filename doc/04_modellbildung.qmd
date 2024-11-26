@@ -18,9 +18,10 @@ Der Vorteil dieses Ansatzes liegt darin, dass den Federn anstelle der elastische
 
 Mit dem angepassten System resultiert der qualitative Verlauf der Biegelinie gemäss der @fig-allg_stat_system_def_nl. Es ist ersichtlich, dass sich das System in den Randbereichen steifer verhält als in der Feldmitte. Beziehungsweise ist das System bei niedrigeren Biegemomenten steifer.
 
-![Bieglinie des einfachen Balkens mit nicht-linearen Federn](../imgs/allg_stat_system_def_nl.svg){#fig-allg_stat_system_def_nl}
+![Bieglinie des einfachen Balkens mit nicht-linearen Federn, ergänzt mit elastischer Biegelinie](../imgs/allg_stat_system_def_nl.svg){#fig-allg_stat_system_def_nl}
 
-Das Gedankenexperiment lässt sich mit der Erkenntnis abschliessen, dass das System an sich nicht komplex ist. Die qualität der gewünschten Resultate jedoch einzig von der Bestimmung der Federsteifigkeiten abhängt.
+
+Das Gedankenexperiment lässt sich mit der Kernaussage abschliessen, dass das System an sich nicht komplex ist. Die qualität der gewünschten Resultate jedoch einzig von der Bestimmung der Federsteifigkeiten abhängt.
 
 ## Berechnungsschema
 
@@ -66,7 +67,7 @@ $$
 
 Dabei steht $u_i$ für die Verformung, $F_i$ für die Kraft, $M_i$ für das Biegemoment und $\varphi_i$ für die Verdrehung und der Index $i$ für die entsprechende Richtung. Dies verdeutlicht, dass mit der richtigen Wahl der Federbeziehungen das nicht-lineare Querkraft-, Normalkraft- und Biegeverhalten modelliert werden kann. Die Schwierigkeit liegt jedoch offensichtlich in der richtigen Wahl der Federbeziehungen.
 
-Modelliert wird in AxisVM-X7 nicht mit einer Feder, sondern mit einem Stabgelenk. Das Stabgelenk ist im Gegensatz zur Feder unendlich klein, was die Präzision des Systems verbessert. Zudem reduziert sich der Modellierungsaufwand. Die Federn werden fortan mit Stabgelenken beschrieben.
+Modelliert wird in AxisVM-X7 nicht mit einer Feder, sondern mit einem Stabgelenk. Das Stabgelenk ist im Gegensatz zur Feder unendlich klein, was die Präzision des Systems verbessert. Zudem reduziert sich der Modellierungsaufwand. Die Federn werden fortan als Stabgelenke bezeichnet.
 
 Des Weiteren wird eine Modellierungsstrategie gewählt bei der an jedem Stab ein Anfang- und ein Endgelenk modelliert wird. Dies bringt den Vorteil, dass die Einzugslängen sich für Randgelenke, bei Auflagern beispielsweise, nicht unterscheiden. Illustriert ist dies in der @fig-allg_doppelgelenk.
 
@@ -81,7 +82,7 @@ In AxisVM-X7 gibt es die Möglichkeit kraft- oder weggesteuerte Berechnungen dur
 
 ### Resultate
 
-Nach der nicht-linearen Analyse lassen sich eine Vielzahl von Resultaten ausgeben. Die starren Stäbe weisen die üblichen Schnittkräfte auf. Lagerreaktion lassen sich darstellen. Zudem besteht die Möglichkeit zur Darstellung der relativen Gelenkrotation der Stabgelenke. Die Definition der relativen Gelenkrotation ist in der @fig-allg_relative_gelenkrot aufgezeigt.
+Nach der nicht-linearen Analyse lassen sich eine Vielzahl von Resultaten ausgeben. Die starren Stäbe weisen die üblichen Schnittkräfte auf. Lagerreaktion lassen sich darstellen. Zudem besteht die Möglichkeit zur Darstellung der relativen Gelenkrotation der Stabgelenke. Die Definition der relativen Gelenkrotation $\theta_R$ ist in der @fig-allg_relative_gelenkrot aufgezeigt.
 
 ![Relative Gelenkrotation am verformten System](../imgs/allg_relative_gelenkrot.svg){#fig-allg_relative_gelenkrot}
 

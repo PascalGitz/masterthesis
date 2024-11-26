@@ -12,14 +12,14 @@ book:
   date-format: full
   chapters:
     - index.qmd
-    - 05_modellbildung.qmd
-    - 04_Einfuehrung.qmd
+    - 04_modellbildung.qmd
+    - 05_zweifeldtraeger.qmd
     - references.qmd
 
   appendices: 
-    - A4_Quadratplatte.ipynb
     - A2_Zweifeldtraeger_Jaeger.ipynb
     - A1_Traegerrost_Marti.ipynb
+    - A4_Quadratplatte.ipynb
     - A3_Versuch_Thoma.ipynb
 
 bibliography: references.bib
