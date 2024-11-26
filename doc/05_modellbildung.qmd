@@ -12,7 +12,7 @@ Die Modellvorstellung mit linear-elastischen Momenten-Verdrehungs-Beziehungen we
 
 ![Analytische Biegelinie des einfachen Balkens](../imgs/allg_stat_system_def2.svg){#fig-allg_stat_system_def2}
 
-Der Vorteil dieses Ansatzes liegt darin, dass den Federn anstelle der elastischen Beziehung, auch nicht-lineare Federbeziehungen hinterlegt werden können. Dadurch können nicht-lineare Bieglinien numerisch approximiert werden. Die Erweiterung des Modells ist schematisch in der @fig-allg_gedankenexp illustriert.
+Der Vorteil dieses Ansatzes liegt darin, dass den Federn anstelle der elastischen Beziehung, auch nicht-lineare Federbeziehungen hinterlegt werden können. Dadurch können nicht-lineare Biegelinien numerisch approximiert werden. Die Erweiterung des Modells ist schematisch in der @fig-allg_gedankenexp illustriert.
 
 ![Einfacher Balken mit nicht-linearen Federeigenschaften](../imgs/allg_gedankenexp.svg){#fig-allg_gedankenexp}
 
@@ -28,12 +28,11 @@ Die Modellbildung kann mit dem Ablaufschema in der @fig-allg_schema verallgemein
 
 ![Modellierungsschema](../imgs/allg_schema.svg){#fig-allg_schema}
 
-Dabei wird zwischen dem gesamten statischen System, betitelt mit Makromodellbildung, und mit der Steifigkeitsermittlung, sowie der Definition des Abbruchkriteriums, bezeichnet mit Mikromodellbildung, unterschieden.
+Dabei wird zwischen dem gesamten statischen System, betitelt mit Makromodellbildung, und der Steifigkeitsermittlung, sowie der Definition des Abbruchkriteriums, bezeichnet mit Mikromodellbildung, unterschieden.
 
 ## Makromodellbildung
 
-Die Makromodellbildung wurde mit dem einleitenden Gedankenexperiment illustriert. In folgendem Abschnitt wird auf modellspezifische Einzelheiten eingegangen. Das Ziel ist es das Modellverhalten zu erläutern. Auf die
-Abbruchkriterien, Steifigkeitsermittlungen, sprich Mikromodellbildung wird in den folgenden Anwendungsfällen eingegangen. 
+Die Makromodellbildung wurde mit dem einleitenden Gedankenexperiment illustriert. In folgendem Abschnitt wird auf modellspezifische Einzelheiten eingegangen. Das Ziel ist es das Modellverhalten zu erläutern. Auf die Abbruchkriterien, Steifigkeitsermittlungen, sprich Mikromodellbildung wird in den folgenden Anwendungsfällen eingegangen. 
 
 ### Elementlänge
 
@@ -47,9 +46,9 @@ Betrachtet man das Biegetragverhalten, so ist naheliegend, dass bei grossen Bieg
 
 ### Federn
 
-Die Feder verbindet die starren Stäbe, wie in der @fig-allg_stat_system gezeigt. Zunächst wird das Verhalten der Feder illustriert. Verbleibt man beim Gedankenexperiment bei den Biegeverformungen, so integriert die Drehfeder die Biegekrümmungen zu einer Biegeverdrehung. Die Grenzen der Integration wird über eine Einzugslänge definiert. Die Einzugslänge ist dabei definiert durch die Hälfte der Distanz bis zum nächsten Gelenk. 
+Die Feder verbindet die starren Stäbe, wie in der @fig-allg_stat_system gezeigt. Zunächst wird das Verhalten der Feder illustriert. Verbleibt man beim Gedankenexperiment bei den Biegeverformungen, so integriert die Drehfeder die Biegekrümmungen zu einer Biegeverdrehung. Die Grenzen der Integration werden über eine Einzugslänge definiert. Die Einzugslänge ist dabei definiert durch die Hälfte der Distanz bis zum nächsten Gelenk. 
 
-![Numerische Integration der Krümmungen durch die Feder](../imgs/allg_feder.svg)
+![Numerische Integration der Krümmungen mittels den Feder](../imgs/allg_feder.svg)
 
 Generell lassen sich den Federn entsprechend den Freiheitsgraden Beziehungen hinterlegen. Im zweidimensionalen Raum entspricht dies drei Beziehungen, im dreidimensionalen Raum erweitert sich dies zu deren sechs.
 
@@ -65,7 +64,7 @@ $$
 F_x(u_x),F_y(u_y),F_z(u_z),M_x(\varphi_x),M_y(\varphi_y),M_z(\varphi_z)
 $$
 
-Dabei steht $u_i$ für die Verformung, $F_i$ für die Kraft, $M_i$ für das Biegemoment und $\varphi_i$ für die Verdrehung und der Index $i$ für die entsprechende Richtung.
+Dabei steht $u_i$ für die Verformung, $F_i$ für die Kraft, $M_i$ für das Biegemoment und $\varphi_i$ für die Verdrehung und der Index $i$ für die entsprechende Richtung. Dies verdeutlicht, dass mit der richtigen Wahl der Federbeziehungen das nicht-lineare Querkraft-, Normalkraft- und Biegeverhalten modelliert werden kann. Die Schwierigkeit liegt jedoch offensichtlich in der richtigen Wahl der Federbeziehungen.
 
 Modelliert wird in AxisVM-X7 nicht mit einer Feder, sondern mit einem Stabgelenk. Das Stabgelenk ist im Gegensatz zur Feder unendlich klein, was die Präzision des Systems verbessert. Zudem reduziert sich der Modellierungsaufwand. Die Federn werden fortan mit Stabgelenken beschrieben.
 
@@ -86,4 +85,4 @@ Nach der nicht-linearen Analyse lassen sich eine Vielzahl von Resultaten ausgebe
 
 ![Relative Gelenkrotation am verformten System](../imgs/allg_relative_gelenkrot.svg){#fig-allg_relative_gelenkrot}
 
-Diese ist von besonderem Interesse, da daraus die Steifigkeit des Gelenks abgelesen werden kann. Somit kann für jedes Gelenk die Position in der Momenten-Verdrehungs-Beziehung ermittelt werden und eine Aussage auf den Zustand gegebn werden.
+Diese ist von besonderem Interesse, da daraus die Steifigkeit des Gelenks abgelesen werden kann. Somit kann für jedes Gelenk die Position in der Momenten-Verdrehungs-Beziehung ermittelt werden und eine Aussage auf den Zustand gegeben werden.
