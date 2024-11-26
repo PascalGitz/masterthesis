@@ -49,7 +49,7 @@ Betrachtet man das Biegetragverhalten, so ist naheliegend, dass bei grossen Bieg
 
 Die Feder verbindet die starren Stäbe, wie in der @fig-allg_stat_system gezeigt. Zunächst wird das Verhalten der Feder illustriert. Verbleibt man beim Gedankenexperiment bei den Biegeverformungen, so integriert die Drehfeder die Biegekrümmungen zu einer Biegeverdrehung. Die Grenzen der Integration werden über eine Einzugslänge definiert. Die Einzugslänge ist dabei definiert durch die Hälfte der Distanz bis zum nächsten Gelenk. 
 
-![Numerische Integration der Krümmungen mittels den Feder](../imgs/allg_feder.svg)
+![Numerische Integration der Krümmungen mittels den Feder](../imgs/allg_feder.svg){#fig-allg_feder}
 
 Generell lassen sich den Federn entsprechend den Freiheitsgraden Beziehungen hinterlegen. Im zweidimensionalen Raum entspricht dies drei Beziehungen, im dreidimensionalen Raum erweitert sich dies zu deren sechs.
 
