@@ -4,20 +4,25 @@ Um einen Überblick über die Modellbildung zu erhalten wird mit einem Gedankene
 
 ![Beispielsystem eines einfachen Balkens](../imgs/allg_stat_system.svg){#fig-allg_stat_system}
 
-Durch die Streckenlast folgt eine Biegeverformung wie in der @fig-allg_stat_system_def1 gezeigt. Die Stäbe erfahren eine Starrkörperrotation. Vergleicht man die @fig-allg_stat_system_def1 mit der @fig-allg_stat_system_def2, so ist ersichtlich, dass dies nicht dem Polygon 4. Grades der analytischen Biegelinie für einen einfachen Balken entspricht, als numerische Näherung zu dieser jedoch anwendbar ist. Zudem ist hier festzuhalten, dass die Steifigkeit des Systems ausschliesslich über die Federsteifigkeit definiert ist.
+Durch die Streckenlast folgt eine Biegeverformung wie in der @fig-allg_stat_system_def1 gezeigt. Die Stäbe erfahren eine Starrkörperrotation. Vergleicht man die @fig-allg_stat_system_def1 mit der @fig-allg_stat_system_def2, so ist ersichtlich, dass dies nicht dem Polygon 4. Grades der analytischen Biegelinie für einen einfachen Balken entspricht, als numerische Näherung zu dieser jedoch anwendbar ist. 
 
-![Verformung des einfachen Balkens](../imgs/allg_stat_system_def1.svg){#fig-allg_stat_system_def1}
+![Bieglinie des einfachen Balkens mit linear elastischen Federn](../imgs/allg_stat_system_def1.svg){#fig-allg_stat_system_def1}
 
 Die Modellvorstellung mit linear-elastischen Momenten-Verdrehungs-Beziehungen weist in erster Linie keinen Mehrwert zu einer Modellierung mit einem einzelnen Stab auf.
 
 ![Analytische Biegelinie des einfachen Balkens](../imgs/allg_stat_system_def2.svg){#fig-allg_stat_system_def2}
 
-Der Vorteil dieses Ansatzes liegt darin, dass den Federn mittels eines Diagrammeditors beliebige Momenten-Verdrehungs-Beziehungen hinterlegt werden können. Unter der Prämisse, dass die Verläufe stetig ansteigend sind. Dies ist jedoch eine programmspezifische Limitation von AxisVM-X7.
-Die Erweiterung des Modells ist in der @fig-allg_gedankenexp illustriert.
+Der Vorteil dieses Ansatzes liegt darin, dass den Federn anstelle der elastischen Beziehung, auch nicht-lineare Federbeziehungen hinterlegt werden können. Dadurch können nicht-lineare Bieglinien numerisch approximiert werden. Die Erweiterung des Modells ist schematisch in der @fig-allg_gedankenexp illustriert.
 
 ![Einfacher Balken mit nicht-linearen Federeigenschaften](../imgs/allg_gedankenexp.svg){#fig-allg_gedankenexp}
 
-Das Gedankenexperiment lässt sich mit der Erkenntnis abschliessen, dass das System an sich nicht komplex ist, die Schwierigkeit jedoch in der Mikromodellbildung liegt, sprich in der Ermittlung der Federsteifigkeiten.
+Mit dem angepassten System resultiert der qualitative Verlauf der Biegelinie gemäss der @fig-allg_stat_system_def_nl. Es ist ersichtlich, dass sich das System in den Randbereichen steifer verhält als in der Feldmitte. Beziehungsweise ist das System bei niedrigeren Biegemomenten steifer.
+
+![Bieglinie des einfachen Balkens mit nicht-linearen Federn](../imgs/allg_stat_system_def_nl.svg){#fig-allg_stat_system_def_nl}
+
+Das Gedankenexperiment lässt sich mit der Erkenntnis abschliessen, dass das System an sich nicht komplex ist. Die qualität der gewünschten Resultate jedoch einzig von der Bestimmung der Federsteifigkeiten abhängt.
+
+## Berechnungsschema
 
 Die Modellbildung kann mit dem Ablaufschema in der @fig-allg_schema verallgemeinert werden. Diese ist grundsätzlich Software unabhängig. Die FE-Software muss lediglich in der Lage sein, nichtlineare Federsteifigkeiten berechnen zu können.
 
@@ -42,9 +47,7 @@ Betrachtet man das Biegetragverhalten, so ist naheliegend, dass bei grossen Bieg
 
 ### Federn
 
-Die Feder verbindet die starren Stäbe, wie in der @fig-allg_stat_system gezeigt. 
-
-Zunächst wird das Verhalten der Feder illustriert. Verbleibt man beim Gedankenexperiment bei den Biegeverformungen, so integriert die Drehfeder die Biegekrümmungen zu einer Biegeverdrehung. Die Grenzen der Integration wird über eine Einzugslänge definiert. Die Einzugslänge ist dabei definiert durch die Hälfte der Distanz bis zum nächsten Gelenk. 
+Die Feder verbindet die starren Stäbe, wie in der @fig-allg_stat_system gezeigt. Zunächst wird das Verhalten der Feder illustriert. Verbleibt man beim Gedankenexperiment bei den Biegeverformungen, so integriert die Drehfeder die Biegekrümmungen zu einer Biegeverdrehung. Die Grenzen der Integration wird über eine Einzugslänge definiert. Die Einzugslänge ist dabei definiert durch die Hälfte der Distanz bis zum nächsten Gelenk. 
 
 ![Numerische Integration der Krümmungen durch die Feder](../imgs/allg_feder.svg)
 
@@ -64,24 +67,23 @@ $$
 
 Dabei steht $u_i$ für die Verformung, $F_i$ für die Kraft, $M_i$ für das Biegemoment und $\varphi_i$ für die Verdrehung und der Index $i$ für die entsprechende Richtung.
 
-Modelliert wird in AxisVM-X7 nicht mit einer Feder, sondern mit einem Stabgelenk. Das Stabgelenk ist im Gegensatz zur Feder unendlich klein, was die Präzision des Systems verbessert. Zudem reduziert sich der Modellierungsaufwand. Die Federn werden daher in der restlichen Thesis als Gelenke bezeichnet. 
+Modelliert wird in AxisVM-X7 nicht mit einer Feder, sondern mit einem Stabgelenk. Das Stabgelenk ist im Gegensatz zur Feder unendlich klein, was die Präzision des Systems verbessert. Zudem reduziert sich der Modellierungsaufwand. Die Federn werden fortan mit Stabgelenken beschrieben.
 
 Des Weiteren wird eine Modellierungsstrategie gewählt bei der an jedem Stab ein Anfang- und ein Endgelenk modelliert wird. Dies bringt den Vorteil, dass die Einzugslängen sich für Randgelenke, bei Auflagern beispielsweise, nicht unterscheiden. Illustriert ist dies in der @fig-allg_doppelgelenk.
 
 ![Modellierungsstrategie der Stabanfang- und Endgelenke](../imgs/allg_doppelgelenk.svg){#fig-allg_doppelgelenk}
 
 
-## Analyse
-In diesem Abschnitt wird auf die Analyse des Systems eingegangen. Es wird stets aus einer Anwenderperspektive beschrieben. 
+### Analyse
 
-Sind Stabsystem mit Lagerung, Einwirkungen und nicht-linearen Gelenkbeziehungen (Steifigkeiten) definiert, so lässt sich dies analysieren. Wichtig ist dabei eine nicht-lineare Berechnung durchzuführen, welche Nichtlinearitäten im Material berücksichtigen. 
+Auf einen vertieften Beschrieb des Lösungsalgorithmus des nicht-linearen Systems wird verzichtet. In AxisVM-X7 ist der Newton-Rhapson-Algorithmus implementiert zur iterativen Lösung des Systems.
 
 In AxisVM-X7 gibt es die Möglichkeit kraft- oder weggesteuerte Berechnungen durchzuführen. Sind die Traglast von Interesse so lässt sich mit einer weggesteuerten Berechnung die Inkrementgrössen praktikabler wählen.
 
-## Resultate
+### Resultate
 
-In AxisVM lassen sich eine Vielzahl von Resultaten ausgeben. Vor allem interessant sind Schnittgrössen für Stabtragwerke, sowie die relative Gelenkrotation. 
+Nach der nicht-linearen Analyse lassen sich eine Vielzahl von Resultaten ausgeben. Die starren Stäbe weisen die üblichen Schnittkräfte auf. Lagerreaktion lassen sich darstellen. Zudem besteht die Möglichkeit zur Darstellung der relativen Gelenkrotation der Stabgelenke. Die Definition der relativen Gelenkrotation ist in der @fig-allg_relative_gelenkrot aufgezeigt.
 
-![Relative Gelenkrotation](../imgs/allg_relative_gelenkrot.svg){#fig-allg_relative_gelenkrot}
+![Relative Gelenkrotation am verformten System](../imgs/allg_relative_gelenkrot.svg){#fig-allg_relative_gelenkrot}
 
-Die relative Gelenkrotation entspricht der Verdrehung im Gelenk. Daraus lässt sich die Steifigkeit jedes Gelenks bestimmen, betrachtet man die entsprechenden Gelenkbeziehungen.
+Diese ist von besonderem Interesse, da daraus die Steifigkeit des Gelenks abgelesen werden kann. Somit kann für jedes Gelenk die Position in der Momenten-Verdrehungs-Beziehung ermittelt werden und eine Aussage auf den Zustand gegebn werden.
