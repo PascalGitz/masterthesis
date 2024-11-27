@@ -21,11 +21,11 @@ Mit dem angepassten System resultiert der qualitative Verlauf der Biegelinie gem
 ![Bieglinie des einfachen Balkens mit nicht-linearen Federn, ergänzt mit elastischer Biegelinie](../imgs/allg_stat_system_def_nl.svg){#fig-allg_stat_system_def_nl}
 
 
-Das Gedankenexperiment lässt sich mit der Kernaussage abschliessen, dass das System an sich nicht komplex ist. Die qualität der gewünschten Resultate jedoch einzig von der Bestimmung der Federsteifigkeiten abhängt.
+Das Gedankenexperiment lässt sich mit der Kernaussage abschliessen, dass das System an sich nicht komplex ist. Die Qualität der gewünschten Resultate jedoch einzig von der Bestimmung der Federsteifigkeiten abhängt.
 
 ## Berechnungsschema
 
-Die Modellbildung kann mit dem Ablaufschema in der @fig-allg_schema verallgemeinert werden. Diese ist grundsätzlich Software unabhängig. Die FE-Software muss lediglich in der Lage sein, nichtlineare Federsteifigkeiten berechnen zu können.
+Die Modellbildung kann mit dem Ablaufschema gemäss der @fig-allg_schema verallgemeinert werden. Diese ist grundsätzlich Software unabhängig. Die FE-Software muss lediglich in der Lage sein, nichtlineare Federsteifigkeiten berechnen zu können.
 
 ![Modellierungsschema](../imgs/allg_schema.svg){#fig-allg_schema}
 
