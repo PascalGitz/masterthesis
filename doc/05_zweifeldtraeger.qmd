@@ -35,19 +35,55 @@ Spannungs-Dehnungs-Diagramme der beiden Betonstähle
 
 ### Makromodellbildung
 
-Es wird eine Elementlänge von $10cm$ gewählt. 
+Das System ist in biegestarre Stäbe unterteilt und mit Stabanfang- und Endgelenken versehen. Wie in @fig-allg_doppelgelenk gezeigt, wird die Modellierungsstrategie mit Stabanfang- und Endgelenken verfolgt. 
+
+![Statisches System mit schematischer Stabunterteilung](../imgs/jag_makrosystem.svg){#fig-jag_makrosystem}
+
+Die @fig-jag_makrosystem zeigt das System mit den Doppelgelenken. Die effektive Stabeinteilung ist nicht dargestellt.
 
 ### Mikromodellbildung
 
-Es wird ausschliesslich das Biegeverhalten untersucht. Dazu wird eine Querschnittsanalyse durchgeführt. Dazu wird am Querschnitt bei steigender Krümmung der Biegewiderstand bestimmt. Dies führt zu einer Momenten-Krümmungs-Beziehung. 
+#### Biegesteifigkeit
 
+Es wird ausschliesslich das Biegeverhalten untersucht. Dazu wird eine Querschnittsanalyse durchgeführt. Der Querschnitt ist bei steigender Krümmung zu untersuchen. Mittels den Gleichgewichstbedingungen kann das Biegemoment für die entsprechende Krümmung bestimmt werden. Dies führt zu einer Momenten-Krümmungs-Beziehung. 
 
-Die Krümmung gilt es mit der Einzugslänge, illustriert in der @fig-allg_feder, zu multiplizieren um die Verdrehung zu erhalten.
+Konkret ist in diesem Beispiel das Fliessmoment und der Biegewiderstand vereinfacht an den folgenden Querschnitten bestimmt worden. Gezeigt in der @fig-jag_qs_fliessen und @fig-jag_qs_widerstand. Dabei erreicht der Stahl die Fliessspannung, der Beton wird als vollständig plastifiziert angenommen.
 
+![Querschnittsanalyse zur Bestimmung des Fliessmoments und der Fliesskrümmung, Stahl erreicht Fliessgrenze, Beton ist völlig plastifiziert](../imgs/jag_qs_fliessen.svg){#fig-jag_qs_fliessen}
 
+Bei der Bestimmung der Bruchkrümmung fliesst das Zuggurtmodell mit ein. Im @sec-zweifeldtraeger_anhang ist die Berücksichtigung dazu umfangreich aufgezeigt. Die Grundüberlegung liegt dabei, dass sich der Beton ebenfalls am Spannungsabtrag beteiligt über die Verbundwirkung des Betonstahls zum Beton. Dazu wird basierend auf dem Zuggurtmodell ein Zugglied untersucht, speziell dessen Dehnungszustands. Anhand diesem wird eine mittlere Dehnung ermittelt. Mit dieser mittleren Dehnung ist hier die Bruchkrümmung ermittelt.
 
+![Querschnittsanalyse zur Bestimmung des Biegewiderstands und der Bruchkrümmung, Stahl erreicht die Spannung entsprechend der mittleren Dehnung des Zugglieds, Beton ist völlig plastifiziert](../imgs/jag_qs_widerstand.svg){#fig-jag_qs_widerstand}
 
+Die Krümmung gilt es mit der Einzugslänge, illustriert in der @fig-allg_feder, zu multiplizieren um die Verdrehung zu erhalten. 
 
+#### Abbruchkriterium
+
+Es wird ein Abbruchkriterium definiert gemäss der Modellvorstellung in @fig-jag_plast_rot. Dabei muss die Summe der relativen Gelenkrotationen der Gelenke innerhalb der Länge des plastischen Gelenks kleiner als das Rotationsvermögen sein.
+
+$$
+\Theta_{max} \geq \sum_{i=1}^n \Theta_i
+$${#eq-abbruchkriterium}
+
+Dabei ist zwingend der ideal-plastische Verlauf am Ende der Momenten-Verdrehungs-Beziehung zu hinterlegen, da einzelne Gelenke innerhalb der plastischen Länge die Bruchverdrehung deutlich überschreiten können. In der Summe diese jedoch kleiner als das Rotationsvermögen sein müssen.
+
+Die @fig-jag_abbruchkrit illustriert die plastische Gelenklänge für das System. 
+
+![Definition des Abbruchkriteriums, Gelenke innerhalb der Länge des plastischen Gelenks](../imgs/jag_abbruchkrit.svg){#fig-jag_abbruchkrit}
+
+## Resultate
+
+Das Anwendungsbeispiel wird mit den Berechnungsresultaten abgeschlossen. Dazu ist das gesuchte Last-Verformungs-Diagramm in der @fig-jag_q_w gezeigt. Aufgezeigt ist die analytische Lösung und die numerische mittels dem nicht-linearen FE-Modell.
+
+![Last-Feldmittendurchbiegung-Diagramm für beide Betonstähle, analytisch gelöst und mit der FEM-Lösung nachgerechnet](../imgs/jag_q_w.svg){#fig-jag_q_w}
+
+Die Verläufe für den kaltverformten Betonstahl B500A sind deckungsgleich. Lediglich kleine Differenzen bei der prognostizierten Traglast. Die analytische Lösung beschreibt eine um 5 % höhere Traglast. Da das FE-Modell lediglich eine Näherung beschreibt ist dieses Resultat zufriedenstellend.
+
+Die Verläufe für den naturharten Stahl B500C zeigen gleichbleibendes Verhalten bis zu einer Verformung von 145mm. Exakt an diesem Punkt erreicht das Gelenkpaar beim Auflager die Bruchkrümmung $\varphi_u$. Ab dann folgt im FE-Modell der ideal-plastische Bereich. Dies spiegelt sich im Last-Verformungs-Verhalten wieder. 
+
+An diesem Verhalten lässt sich das Abbruchkriterium verdeutlichen. Wären in den Momenten-Verdrehungs-Beziehungen keine ideal-plastischen Verläufe hinterlegt, so läge die prognostizierte Verformung beim Erreichen der Traglast lediglich bei 50% der Verformung der analytischen Lösung.
+
+Insgesamt weichen die numerischen Näherung weniger als 8% von der analytischen Lösung ab.
 
 
 
