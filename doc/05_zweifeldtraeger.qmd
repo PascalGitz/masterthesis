@@ -85,6 +85,11 @@ An diesem Verhalten lässt sich das Abbruchkriterium verdeutlichen. Wären in de
 
 Insgesamt weichen die numerischen Näherung weniger als 8% von der analytischen Lösung ab.
 
+## Fazit
+
+Die dargestellen Resultate zeigen, dass sich die analytische Lösung zuverlässig annähern lässt. Das Modell zeigt, dass die aufwändige analytische Lösung, speziell die Systemanalye mit wenig Modellierungsaufwand ersetzt werden kann. Zudem ist aufgezeigt, dass die Steifigkeitsermittlung basierend auf den analytischen Modellen problemlos in das FE-Modell integriert werden. Dies erhöht die Nachvollziehbarkeit des Modells beträchtlich, da der Ingenieur die Modellsteifigkeit direkt steuert und über meist bekannte Ansätze berechnen kann.
+
+
 
 
 
