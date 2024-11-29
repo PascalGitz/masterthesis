@@ -4,7 +4,7 @@ Im vorangegangen Kapitel wurde vertieft auf die Makromodellbildung eingegangen. 
 
 Das Ziel dieses Kapitel ist es an einem konkreten Beispiel die Makromodellbildung aufzuzeigen, sowie speziell auf die Mikromodellbildung einzugehen. 
 
-Das Beispiel dazu wurde aus den Vorlesungsunterlagen @jager_stahlbeton_2009 entnommen. Für detaillierte Berechnungen ist der @sec-zweifeldtraeger_anhang zu konsultieren. Darin ist die analytische Lösung umfangreich beschrieben. Sowie die numerische Näherung mit der beschriebenen Modellbildung aufgezeigt. Hier werden die wichtigsten Erkenntnisse zusammengefasst beschrieben.
+Das Beispiel dazu wurde aus den Vorlesungsunterlagen @jager_stahlbeton_2009 entnommen. Für die detaillierte analytische Berechnungen ist der @sec-zweifeldtraeger_anhang zu konsultieren. Sowie ist die numerische Näherung mit der beschriebenen Modellbildung aufgezeigt. Hier werden die wichtigsten Erkenntnisse zusammengefasst beschrieben.
 
 ## Aufgabenbeschrieb
 

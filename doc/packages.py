@@ -4,7 +4,7 @@ import os
 os.chdir(os.path.join(os.getcwd(), ".."))
 
 # Packages
-from engicalc import *
+from engicalc import put_out
 import engicalc.units as un
 import numpy as np
 import matplotlib.pyplot as plt
