@@ -15,11 +15,11 @@ book:
     - 04_modellbildung.qmd
     - 05_zweifeldtraeger.qmd
     - 06_traegerrost.ipynb
+    - 07_quadratplatte.ipynb
     - references.qmd
 
   appendices: 
     - A2_Zweifeldtraeger_Jaeger.ipynb
-    - A4_Quadratplatte.ipynb
     - A3_Versuch_Thoma.ipynb
 
 bibliography: references.bib
