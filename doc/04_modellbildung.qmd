@@ -57,13 +57,13 @@ Gelenkdefinitionen im zweidimensionalen Raum:
 
 $$
 F_x(u_z),F_z(u_z),M_y(\varphi_y)
-$$ 
+$${#eq-zweidim_gelenkfunktionen} 
 
 Gelenkdefinitionen im dreidimensionalen Raum:
 
 $$
 F_x(u_x),F_y(u_y),F_z(u_z),M_x(\varphi_x),M_y(\varphi_y),M_z(\varphi_z)
-$$
+$${#eq-dreidim_gelenkfunktionen}
 
 Dabei steht $u_i$ für die Verformung, $F_i$ für die Kraft, $M_i$ für das Biegemoment und $\varphi_i$ für die Verdrehung und der Index $i$ für die entsprechende Richtung. Dies verdeutlicht, dass mit der richtigen Wahl der Federbeziehungen das nicht-lineare Querkraft-, Normalkraft- und Biegeverhalten modelliert werden kann. Die Schwierigkeit liegt jedoch offensichtlich in der richtigen Wahl der Federbeziehungen.
 

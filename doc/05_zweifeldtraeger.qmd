@@ -1,4 +1,4 @@
-# Anwendungsbeispiel Zweifeldträger{#sec-zweifeldtraeger}
+# Anwendung an einem Zweifeldträger{#sec-zweifeldtraeger}
 
 Im vorangegangen Kapitel wurde vertieft auf die Makromodellbildung eingegangen. Sowie wurde diese allgemein formuliert. Dabei wurde die Mikromodellbildung aussenvor gelassen. 
 
@@ -62,7 +62,7 @@ Die Krümmung gilt es mit der Einzugslänge, illustriert in der @fig-allg_feder,
 Es wird ein Abbruchkriterium definiert gemäss der Modellvorstellung in @fig-jag_plast_rot. Dabei muss die Summe der relativen Gelenkrotationen der Gelenke innerhalb der Länge des plastischen Gelenks kleiner als das Rotationsvermögen sein.
 
 $$
-\Theta_{max} \geq \sum_{i=1}^n \Theta_i
+\varphi_{max} \geq \sum_{i=1}^n \varphi_i
 $${#eq-abbruchkriterium}
 
 Dabei ist zwingend der ideal-plastische Verlauf am Ende der Momenten-Verdrehungs-Beziehung zu hinterlegen, da einzelne Gelenke innerhalb der plastischen Länge die Bruchverdrehung deutlich überschreiten können. In der Summe diese jedoch kleiner als das Rotationsvermögen sein müssen.
