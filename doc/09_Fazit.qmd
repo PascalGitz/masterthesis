@@ -1,0 +1,19 @@
+# Zusammenfassung und Schlussfolgerung
+## Zusammenfassung
+
+Allgemeine Modellbildung
+
+Zweifeldträger Biegetragverhalten top
+
+Torsionsweicher Trägerrost Traglast problemlos modellierbar.
+
+Traglast einer Quadratplatte problemlos modellierbar. Allgemeine Geometrien erweiterbar. 
+
+## Schlussfolgerung
+
+Praxisorientiert? Präzision der Resultate? Nachvollziehbarkeit?Stärken und Schwächen
+
+## Ausblick
+
+Probates Mittel zur Optimierung von Tragwerken. Materialeinsparung. Thematik der Nachhaltigkeit aufzugreifen. Die Arbeit hat gezeigt wie das Tragverhalten von Plattentragwerken mit Trägerrosten approximiert werden kann. Interessant hinsichtlich Materialeinsparung wäre jedoch die effektive Ausführung von Kassettendecken. Der Schalungsaufwand erhöht sich, der Materialverbrauch geht deutlich zurück. 
+

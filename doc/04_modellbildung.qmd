@@ -1,4 +1,4 @@
-# Modellbildung 
+# Allgemeine Modellbildung 
 
 Um einen Überblick über die Modellbildung zu erhalten wird mit einem Gedankenexperiment gestartet. Dazu dient das statische System in der @fig-allg_stat_system als Grundlage. Es beschreibt einen einfachen Balken mit einer konstanten Streckenlast belastet. Der Balken wird mit starren Stäben modelliert, welche mit Drehfedern gekoppelt sind. In den Drehfedern ist eine linear-elastische Momenten-Verdrehungs-Beziehung um die globale Y-Achse hinterlegt.
 
@@ -87,3 +87,9 @@ Nach der nicht-linearen Analyse lassen sich eine Vielzahl von Resultaten ausgebe
 ![Relative Gelenkrotation am verformten System](../imgs/allg_relative_gelenkrot.svg){#fig-allg_relative_gelenkrot}
 
 Diese ist von besonderem Interesse, da daraus die Steifigkeit des Gelenks abgelesen werden kann. Somit kann für jedes Gelenk die Position in der Momenten-Verdrehungs-Beziehung ermittelt werden und eine Aussage auf den Zustand gegeben werden.
+
+
+## Mikromodellbildung
+
+Die Mikromodellbildung beinhaltet die Steifigkeitsermittlung und das Abbruchkriterium. Die Mikromodellbildung ist anwendungsspezifisch. Aus diesem Grund ist diese bei den Anwendungsbeispielen ausführlich beschrieben. Die Anwendungsbeispiele zeigen die Mikromodellbildung für das Biegetragverhalten. Bei den Plattenbeispielen ist das Biegetragverhalten und das Drilltragverhalten beschrieben.
+

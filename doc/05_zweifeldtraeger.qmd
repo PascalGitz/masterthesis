@@ -31,7 +31,20 @@ Die Betonstähle werden durch die Spannungs-Dehnungs-Diagramme, gemäss der @fig
 Spannungs-Dehnungs-Diagramme der beiden Betonstähle
 :::
 
-## Modellbildung
+## Analytische Lösung
+
+Die analytische Lösung erweist sich als umfangreich. Deshalb ist die detaillierte Berechnung in den @sec-zweifeldtraeger_anhang verschoben. Das Vorgehen wird dennoch beschrieben.
+
+Betrachtet man das System, dargestellt in der @fig-jag_system, unter steigender Belastung, so ist naheliegend, dass sich über dem Mittelauflager zuerst ein plastisches Gelenk bildet. Falls genügend Rotationsvermögen vorhanden ist, bildet sich in Feldmitte ebenfalls ein plastisches Gelenk. Aufgezeigt ist der Mechanismus in der @fig-jag_mechanismus.
+
+![Mechanismus des Zweifeldträgers mit eingezeichnetem Verdrehungswinkel](../imgs/jag_mechanismus.svg){#fig-jag_mechanismus}
+
+Eine zentrale Grösse ist folglich das Rotationsvermögen der plastischen Gelenke. Um dieses abzuschätzen wird ein Zugglied analysiert. Für den Zustand des Fliessens der Bewehrung und den Zustand beim Erreichen der Zugfestigkeit wird eine mittlere Dehnung über das Zugglied ermittelt. Mit der Dehnungsdifferenz dieser Zustände lässt sich das Rotationsvermögen bestimmen.
+
+Gefolgt wird die Grenzzustandbetrachtung des Zugglieds von der eigentlichen Systemanalyse. Es sind Zustände gewählt welche sich signifikant auf die Last-Verformungs-Kurve auswirken. Dabei wird für jeden Zustand die erforderliche Belastung $q$ ermittelt. Die zugehörige Verformung $w_m$ wird unter der Berücksichtigung einer konstanten gerissenen Biegesteifigkeit $EI_{II}$ bestimmt. Zudem wird bei den plastischen Gelenken jeweils der Rotationsbedarf mit dem Rotationsvermögen verglichen.
+
+
+## NLFE-Modell
 
 ### Makromodellbildung
 
@@ -71,7 +84,7 @@ Die @fig-jag_abbruchkrit illustriert die plastische Gelenklänge für das System
 
 ![Definition des Abbruchkriteriums, Gelenke innerhalb der Länge des plastischen Gelenks](../imgs/jag_abbruchkrit.svg){#fig-jag_abbruchkrit}
 
-## Resultate
+### Resultate
 
 Das Anwendungsbeispiel wird mit den Berechnungsresultaten abgeschlossen. Dazu ist das gesuchte Last-Verformungs-Diagramm in der @fig-jag_q_w gezeigt. Aufgezeigt ist die analytische Lösung und die numerische mittels dem nicht-linearen FE-Modell.
 
