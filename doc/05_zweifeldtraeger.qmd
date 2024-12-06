@@ -12,6 +12,7 @@ Zunächst wird auf die Grundlagen des Beispiels eingegangen. Die @fig-jag_system
 
 ![Statisches system des Zweifeldträgers](../imgs/jag_system.svg){#fig-jag_system}
 
+
 Der dazugehörige Querschnitt ist in der @fig-jag_system_qs dargestellt. Dargestellt ist die Biegebewehrung mit entsprechendem Durchmesser.
 
 ![Querschnitt des Zweifeldträgers](../imgs/jag_system_qs.svg){#fig-jag_system_qs}
@@ -55,6 +56,8 @@ Das System ist in biegestarre Stäbe unterteilt und mit Stabanfang- und Endgelen
 Die @fig-jag_makrosystem zeigt das System mit den Doppelgelenken. Die effektive Stabeinteilung ist nicht dargestellt.
 
 Das System ist für beide Stähle mit einer Streckenlast von 30 kN/m belastet. Diese ist deutlich grösser gewählt als die analytisch ermittelte. 
+
+![Detailansicht des statischen Modells aus AxisVM](../imgs/jag_output_b500c%20(2).jpg){#fig-jag_output_b500c2}
 
 ### Mikromodellbildung
 
