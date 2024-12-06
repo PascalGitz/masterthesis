@@ -54,6 +54,8 @@ Das System ist in biegestarre Stäbe unterteilt und mit Stabanfang- und Endgelen
 
 Die @fig-jag_makrosystem zeigt das System mit den Doppelgelenken. Die effektive Stabeinteilung ist nicht dargestellt.
 
+Das System ist für beide Stähle mit einer Streckenlast von 30 kN/m belastet. Diese ist deutlich grösser gewählt als die analytisch ermittelte. 
+
 ### Mikromodellbildung
 
 #### Biegesteifigkeit
@@ -97,6 +99,39 @@ Die Verläufe für den naturharten Stahl B500C zeigen gleichbleibendes Verhalten
 An diesem Verhalten lässt sich das Abbruchkriterium verdeutlichen. Wären in den Momenten-Verdrehungs-Beziehungen keine ideal-plastischen Verläufe hinterlegt, so läge die prognostizierte Verformung beim Erreichen der Traglast lediglich bei 50% der Verformung der analytischen Lösung.
 
 Insgesamt weichen die numerischen Näherung weniger als 8% von der analytischen Lösung ab.
+
+#### Kaltverformter Stahl
+
+![Biegemomentenverlauf B500A, Lastfaktor xx](../imgs/jag_b500a_1.svg){#fig-jag_b500a_1}
+
+![Verformungsverlauf B500A, Lastfaktor xx](../imgs/jag_b500a_3.svg){#fig-jag_b500a_3}
+
+![Biegemomentenverlauf B500A, Lastfaktor xx](../imgs/jag_b500a_4.svg){#fig-jag_b500a_4}
+
+![Verformungsverlauf B500A, Lastfaktor xx](../imgs/jag_b500a_6.svg){#fig-jag_b500a_6}
+
+![Relative Gelenkrotation B500A, Lastfaktor xx](../imgs/jag_b500a_7.svg){#fig-jag_b500a_7}
+
+
+#### Naturharter Stahl
+
+![Biegemomentenverlauf B500C, Lastfaktor xx](../imgs/jag_b500c_1.svg){#fig-jag_b500c_1}
+
+![Verformungsverlauf B500C, Lastfaktor xx](../imgs/jag_b500c_3.svg){#fig-jag_b500c_3}
+
+![Biegemomentenverlauf B500C, Lastfaktor xx](../imgs/jag_b500c_4.svg){#fig-jag_b500c_4}
+
+![Verformungsverlauf B500C, Lastfaktor xx](../imgs/jag_b500c_6.svg){#fig-jag_b500c_6}
+
+![Biegemomentenverlauf B500C, Lastfaktor xx](../imgs/jag_b500c_7.svg){#fig-jag_b500c_7}
+
+![Verformungsverlauf B500C, Lastfaktor xx](../imgs/jag_b500c_9.svg){#fig-jag_b500c_9}
+
+![Biegemomentenverlauf B500C, Lastfaktor xx](../imgs/jag_b500c_10.svg){#fig-jag_b500c_10}
+
+![Verformungsverlauf B500C, Lastfaktor xx](../imgs/jag_b500c_12.svg){#fig-jag_b500c_12}
+
+![Relative Gelenkrotation B500C, Lastfaktor xx](../imgs/jag_b500c_13.svg){#fig-jag_b500c_13}
 
 ## Fazit
 
