@@ -102,6 +102,14 @@ Das übergeordnete Ziel ist die Bestimmung der Steifigkeit an einem Platteneleme
 
 ![Spannungen am Plattenelement](../imgs/allg_platte_spannungen.svg){#fig-allg_platte_spannungen}
 
+$$
+\begin{aligned}
+&m_{xx} = \int_{-h/2}^{h/2} \sigma_{xx} \cdot z dz \quad
+&m_{yy} = \int_{-h/2}^{h/2} \sigma_{yy} \cdot z dz \quad
+&m_{xy} = \int_{-h/2}^{h/2} \tau_{xy} \cdot z dz \quad
+\end{aligned}
+$${#eq-sg_platte}
+
 ![Schnittgrössen am Plattenelement](../imgs/allg_platte_sg.svg){#fig-allg_platte_sg}
 
 ![Kinematische Grössen am Plattenelement](../imgs/allg_platte_kin.svg){#fig-allg_platte_kin}
@@ -112,9 +120,9 @@ Das übergeordnete Ziel ist die Bestimmung der Steifigkeit an einem Platteneleme
 
 $$
 \begin{aligned}
-&N_x = \int_A \sigma_x dA \quad
+% &N_x = \int_A \sigma_x dA \quad
 &M_y = \int_A z \cdot \sigma_x dA \quad
-&M_z = \int_A y \cdot \sigma_x dA
+% &M_z = \int_A y \cdot \sigma_x dA
 \end{aligned}
 $${#eq-sg_normal_balken}
 
@@ -123,18 +131,19 @@ $${#eq-sg_normal_balken}
 
 $$
 \begin{aligned}
-&V_y = \int_A \tau_yx dA \quad
-&V_z = \int_A \tau_zx dA \quad
-&M_x = T = \int_A \left(z \cdot \tau_yx - y \cdot \tau_zx\right) dA
+% &V_y = \int_A \tau_yx dA \quad
+% &V_z = \int_A \tau_zx dA \quad
+&M_x = T = \int_A \left(z \cdot \tau_{yx} - y \cdot \tau_{zx}\right) dA
 \end{aligned}
 $${#eq-sg_schub_balken}
 
 
-
-
+Das Ziel ist es die X-Ebene des Plattenelements in ein Balkenelement zu transformieren.
 
 
 ### Biegesteifigkeit
+
+Vergleicht aus der @eq-sg_platte und @eq-sg_normal_balken das Biegemoment $m_{xx}$ und $M_y$ so ist deren Definition analog. Daraus folgt, dass die Biegesteifigkeit von Plattenelementen auf Balken übertragen werden kann, wie auch umgekehrt. 
 
 
 Die Biegesteifigkeit kann im Modell mit einer Momenten-Krümmungs-Beziehung hergeleitet werden. Dazu sind für den Betonstahl und den Beton Spannungs-Dehnungs-Beziehungen zu modellieren. Anhand dieser kann der Querschnitt bei steigender Krümmung, dargestellt in der @fig-allg_qs_analyse, untersucht werden. 
@@ -145,7 +154,8 @@ Dieses Vorgehen ist gültig bei Stabtragwerken, beispielsweise beim Zweifeldträ
 
 ### Torsionssteifigkeit
 
-Die Torsionssteifigkeit dient in dieser Arbeit einzig der Abbildung von Drillmomenten im Trägerrost bei der Nachrechnung von Plattentragwerken.
+ Dabei stellt man fest, dass das Torsionsmoment $M_x$ und das Drillmoment $m_{xy}$ unterschiedlich definiert sind. Es fehlen die vertikal gerichteten Schubspannungen im Plattenelement.
+
 
 #### ungerissene Drillsteifigkeit
 
