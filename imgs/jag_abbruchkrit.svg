@@ -64,7 +64,7 @@
        id="clipPath41">
       <path
          d="M -0.00426,-8.5e-4 V 85.04022 H 425.20111 V -8.5e-4 H -0.00426"
-         transform="matrix(1,0,0,-1,-159.57579,21.755741)"
+         transform="matrix(1,0,0,-1,-158.70126,21.755741)"
          clip-rule="evenodd"
          id="path41" />
     </clipPath>
@@ -311,14 +311,14 @@
      xml:space="preserve"
      transform="matrix(1.3333333,0,0,1.3333333,201.88483,78.8664)"
      clip-path="url(#clipPath40)"><tspan
-       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0916px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        x="0"
        y="0"
-       id="tspan39">Θ</tspan></text>
+       id="tspan39">φ</tspan></text>
   <text
      id="text40"
      xml:space="preserve"
-     transform="matrix(1.3333333,0,0,1.3333333,212.76772,84.378213)"
+     transform="matrix(1.3333333,0,0,1.3333333,211.60168,84.378213)"
      clip-path="url(#clipPath41)"><tspan
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.00428px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        x="0"

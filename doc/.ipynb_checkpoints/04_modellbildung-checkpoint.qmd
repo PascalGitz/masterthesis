@@ -78,7 +78,7 @@ Des Weiteren wird eine Modellierungsstrategie gewählt bei der an jedem Stab ein
 
 Auf einen vertieften Beschrieb des Lösungsalgorithmus des nicht-linearen Systems wird verzichtet. In AxisVM-X7 ist der Newton-Rhapson-Algorithmus implementiert zur iterativen Lösung des Systems.
 
-Als Nutzer ist die Tatsache wertvoll, dass eine nicht-lineare Berechnung in Lastinkrementen funktioniert. Es wird ein definierter Anteil der Last auf das System gebracht, die Steifigkeit der Gelenke aus den Zustandslinien der Schnittgrössen ermittelt und versucht die Differenz zwischen den inneren Kräften und den Einwirkungen zu minimieren.
+In AxisVM-X7 gibt es die Möglichkeit kraft- oder weggesteuerte Berechnungen durchzuführen. Sind die Traglast von Interesse so lässt sich mit einer weggesteuerten Berechnung die Inkrementgrössen praktikabler wählen.
 
 ### Resultate
 
@@ -91,48 +91,32 @@ Diese ist von besonderem Interesse, da daraus die Steifigkeit des Gelenks abgele
 
 ## Querschnittsmodellbildung
 
-Die Querschnittsmodellbildung lässt sich allgemein an einem Plattenausschnitt beschreiben. Daraus lässt sich die Anwendung an Stabtragwerken, wie beispielsweise dem Zweifeldträger, sowie die Anwendung eines Trägerrosts an Plattentragwerken ableiten.
+Die Querschnittsmodellbildung lässt sich allgemein an einem Plattenausschnitt beschreiben. Daraus lässt sich die Anwendung an Stabtragwerken, wie beispielsweise dem Zweifeldträger, sowie die Anwendung an Plattentragwerken aufzeigen.
 
 Dazu ist der Querschnitt gemäss der @fig-allg_qs_mikro gewählt. Der Streifen der Stahlbetonplatte weist eine Streifenbreite $b_w$ und eine Höhe $h$ auf. 
 
+
 ![Beispielquerschnitt der allgemeinen Querschnittsmodellbildung](../imgs/allg_qs_mikro.svg){#fig-allg_qs_mikro}
 
-Grundüberlegung der Transformation eines Plattenelements auf ein Balkenelement. In der @fig-allg_platte_zu_balken_sg ist ein Plattenelement und ein Balkenelement zu sehen. Das Ziel ist es die Steifigkeit am Plattenelement in der X-Richtung zu bestimmen und auf ein Balkenelement zu übertragen. Die Schnittflächen sind dabei grau hinterlegt.
-
-![Schnittgrössen am Plattenelement links, Schnittgrössen am Balkenelement rechts](../imgs/allg_platte_zu_balken_sg.svg){#fig-allg_platte_zu_balken_sg}
-
-Dabei sind die Spannungen beim Plattenelement gemäss der @fig-allg_platte_spannungen definiert.
+Das übergeordnete Ziel ist die Bestimmung der Steifigkeit an einem Plattenelement, welche auf ein Stabtragwerk transformiert wird, sprich auf den Trägerrost. Dazu sind zunächst die grundlegenden Schnittgrössen des Plattenelements und eines Balkenelements zu betrachten.
 
 ![Spannungen am Plattenelement](../imgs/allg_platte_spannungen.svg){#fig-allg_platte_spannungen}
 
-Die kinematischen Grössen des Plattenelements zeigt die @fig-allg_platte_kin.
+$$
+\begin{aligned}
+&m_{xx} = \int_{-h/2}^{h/2} \sigma_{xx} \cdot z dz \quad
+&m_{yy} = \int_{-h/2}^{h/2} \sigma_{yy} \cdot z dz \quad
+&m_{xy} = \int_{-h/2}^{h/2} \tau_{xy} \cdot z dz \quad
+\end{aligned}
+$${#eq-sg_platte}
+
+![Schnittgrössen am Plattenelement](../imgs/allg_platte_sg.svg){#fig-allg_platte_sg}
 
 ![Kinematische Grössen am Plattenelement](../imgs/allg_platte_kin.svg){#fig-allg_platte_kin}
 
 
-Die Normalspannungen des Balkenelements sind in der @fig-allg_balken_normal gezeigt.
 
 ![Normalspannungen am Balken](../imgs/allg_balken_normal.svg){#fig-allg_balken_normal}
-
-Die Schubspannungen des Balkenelements sind in der @fig-allg_balken_normal gezeigt.
-
-![Schubspannungen am Balken](../imgs/allg_balken_schub.svg){#fig-allg_balken_schub}
-
-Die kinematischen Grössen des Plattenelements zeigt die @fig-allg_balken_kin.
-
-![Kinematische Grössen am Balken](../imgs/allg_balken_kin.svg){#fig-allg_balken_kin}
-
-
-### Biegesteifigkeit
-
-Betrachtet man die Spannungen am Plattenelement, übt Gleichgewicht an diesem, so folgt die für das Biegemoment an der grau hinterlegten Fläche, die Beziehung gemäss der @eq-sg_platte_normal. 
-$$
-\begin{aligned}
-&m_{xx} = \int_{-h/2}^{h/2} \sigma_{xx} \cdot z dz \quad
-% &m_{yy} = \int_{-h/2}^{h/2} \sigma_{yy} \cdot z dz \quad
-% &m_{xy} = \int_{-h/2}^{h/2} \tau_{xy} \cdot z dz \quad
-\end{aligned}
-$${#eq-sg_platte_normal}
 
 $$
 \begin{aligned}
@@ -142,35 +126,8 @@ $$
 \end{aligned}
 $${#eq-sg_normal_balken}
 
+![Schubspannungen am Balken](../imgs/allg_balken_schub.svg){#fig-allg_balken_schub}
 
-Vergleicht aus der @eq-sg_platte_normal und @eq-sg_normal_balken die Biegemomente $m_{xx}$ und $M_y$ so ist deren Definition analog. Daraus folgt, dass die Biegesteifigkeit von Plattenelementen auf Balken übertragen werden kann, wie auch umgekehrt. 
-
-Generell kann die Biegesteifigkeit anhand einer Momenten-Krümmungs-Beziehung beschrieben werden. Dazu sind für den Betonstahl und den Beton Spannungs-Dehnungs-Beziehungen zu modellieren. Anhand dieser kann der Querschnitt bei steigender Krümmung, dargestellt in der @fig-allg_qs_analyse, untersucht werden. 
-
-![Querschnittsanalyse des Beispielquerschnitts, Dehnungsebenen](../imgs/allg_qs_analyse.svg){#fig-allg_qs_analyse}
-
-Die @eq-zweidim_gelenkfunktionen verdeutlicht, dass eine Momenten-Verdrehungs-Beziehung gefordert ist. Wie die @fig-allg_feder zeigt, entspricht die Verderhung der Integration der Krümmung über die Einzugslänge. Folglich lässt sich die Momenten-Verdrehungs-Beziehung durch Multiplikation der Krümmung mit der Einzugslänge ermitteln.
-
-$$
-M_y(\varphi_y) = M_y(\chi_y \cdot l_{Einzug})
-$${#eq-chi_to_phi_y}
-
-
-Hält man sich an die Modellierungsstrategie, gemäss der @fig-allg_doppelgelenk, so ist die Einzugslänge durch die @eq-einzug_doppelgelenk definiert.
-
-$$
-l_{Einzug} = \frac{l_{El}}{2}
-$${#eq-einzug_doppelgelenk}
-
-Es ist selbstverständlich, dass die Momenten-Verdrehungs-Beziehung nur für den analysierten Querschnitt gilt. Bei einer Querschnittsänderung ist eine angepasste Momenten-Verdrehungs-Beziehung zu bestimmen. 
-
-### Torsionssteifigkeit
-
-$$
-\begin{aligned}
-&m_{xy} = \int_{-h/2}^{h/2} \tau_{xy} \cdot z dz \quad
-\end{aligned}
-$${#eq-sg_platte_drill}
 
 $$
 \begin{aligned}
@@ -180,82 +137,27 @@ $$
 \end{aligned}
 $${#eq-sg_schub_balken}
 
-Dabei stellt man fest, dass das Torsionsmoment $M_x$ und das Drillmoment $m_{xy}$ unterschiedlich definiert sind. Es fehlen die vertikal gerichteten Schubspannungen im Plattenelement. 
 
-Der Einfluss dieser Tatsache lässt sich an einem einfachen Beispiel illustrieren. Betrachtet man einen unendlich schmalen Streifen $t << b$, dargestellt in der @fig-allg_torsion_balken_vs_platte.
+Das Ziel ist es die X-Ebene des Plattenelements in ein Balkenelement zu transformieren.
 
-![Torsionsträgheitsmoment für einen unendlich schmalen Streifen, darunter für ein unendlich schmales Plattenelement, nachgezeichnet nach @blaauwendraad_plates_2010](../imgs/allg_torsion_balken_vs_platte.svg){#fig-allg_torsion_balken_vs_platte}
 
-$$
-\begin{aligned}
-I_t = \frac{bt^3}{3} \quad 
-i_{xy} = \frac{t^3}{6}
-\end{aligned}
-$${#eq-torsion_streifen}
+### Biegesteifigkeit
 
-Das Torsionsträgheitsmoment des Balkenelements $I_t$ und das auf die Einheitslänge bezogene Torsionsträgheitsmoment des Plattenelements in X-Richtung $i_{xy}$ unterscheiden sich um den Faktor 2. Der Faktor 2 ist zudem konstant. Dies lässt sich erklären, dass sich beim Balkenquerschnitt der Schubfluss in Y Richtung zu gleichen Teilen am Torsionsmoment beteiligt, wie der in X gerichtete Schubfluss. Der vertikale Schubfluss verläuft zwar nur über die Querschnittshöhe $t$, besitzt jedoch den deutlich grösseren Hebelarm, während der horizontale Schubfluss über die gesamte Breite $b$ verläuft, mit einem jedoch deutlich kleineren Hebelarm. Die @eq-schubfluss_balken beschreibt diese Tatsache.
+Vergleicht aus der @eq-sg_platte und @eq-sg_normal_balken das Biegemoment $m_{xx}$ und $M_y$ so ist deren Definition analog. Daraus folgt, dass die Biegesteifigkeit von Plattenelementen auf Balken übertragen werden kann, wie auch umgekehrt. 
 
-$$
-M_{x,vert} = q_{zx} \cdot t \cdot b/2 = M_{x,horiz} = q_{yx} \cdot b \cdot t/2 = M_x / 2
-$${#eq-schubfluss_balken}
 
-Die Quintessenz ist somit, dass eine am Plattenelement hergeleitete Drillsteifigkeit mit dem Faktor 2 zu multiplizieren ist um die gleichwertige Torsionssteifigkeit am Balken zu erhalten. Beschrieben ist diese Tatsache ebenfalls in @blaauwendraad_plates_2010 Seite 389.
+Die Biegesteifigkeit kann im Modell mit einer Momenten-Krümmungs-Beziehung hergeleitet werden. Dazu sind für den Betonstahl und den Beton Spannungs-Dehnungs-Beziehungen zu modellieren. Anhand dieser kann der Querschnitt bei steigender Krümmung, dargestellt in der @fig-allg_qs_analyse, untersucht werden. 
+
+![Querschnittsanalyse des Beispielquerschnitts, Dehnungsebenen](../imgs/allg_qs_analyse.svg){#fig-allg_qs_analyse}
+
+Dieses Vorgehen ist gültig bei Stabtragwerken, beispielsweise beim Zweifeldträger, sowie für die Nachrechnung von Plattentragwerken. Bei den Plattentragwerken ist die Querschnittsbreite anhand der Trägerrostteilung zu bestimmen.
+
+### Torsionssteifigkeit
+
+ Dabei stellt man fest, dass das Torsionsmoment $M_x$ und das Drillmoment $m_{xy}$ unterschiedlich definiert sind. Es fehlen die vertikal gerichteten Schubspannungen im Plattenelement. Der Einfluss dieser Tatsache lässt sich an einem einfachen Beispiel illustrieren.
 
 
 #### ungerissene Drillsteifigkeit
-
-Mit dem vorangegangen Beschrieb ist die Transformation der Drillsteifigkeit auf die Torsionssteifigkeit geklärt. Nun gilt es die Drillsteifigkeit am Plattenelement zu bestimmen.
-
-Betrachtet man die kinematischen Grössen in @fig-allg_platte_kin, so lässt sich die Beziehung zwischen Biegemoment und Krümmung aufstellen. Dies ist für ein homogenes, isotropes Plattenelement in der @eq-ung_drill gezeigt. 
-
-$$
-m_{xy} = G i_{xy} \cdot \chi_{xy}
-$${#eq-ung_drill}
-
-$$
-G = \frac{E}{2(1-\nu)}
-$${#eq-schubmodul}
-
-$$
-i_{xy} = \frac{h^3}{6}
-$${#eq-traegheitsmoment_platte}
-
-#### gerissene Drillsteifigkeit
-
-Die gerissene Drillsteifigkeit wird mittels dem klassischen Sandwichmodell bestimmt. Das klassische Sandwichmodell ist in @heinzmann_stringer-tafelmodelle_2012 beschrieben. Mittels diesem ist das Plattenelement in ein Kern und zwei Deckel zu unterteilen. Den Deckeln sind die Biege- und Drillmomente zugeordnet, dem Kern die Querkraft.
-
-![klassiches Sandwichmodell](../imgs/allg_sandwich.svg){#fig-allg_sandwich}
-
-Dabei sind die Biegemomente als Kräftepaar auf die Deckelaufgeteilt.
-
-Betrachtet man die Drillmomente gesondert, so stellt sich ein Schubfluss entlang der Deckel ein. Die Deckel sind als Scheiben unter reiner Schubbeanspruchung zu betrachten.
-
-
-![Aufteilung der Drillmomente auf die Deckel gemäss dem klassischen Sandwichmodell](../imgs/allg_drill_deckel.svg){#fig-allg_drill_deckel}
-
-
-
-![Scheibe unter reinem Schub, rechts im Verzerrungszustand](../imgs/allg_scheibe_schubfluss.svg){#fig-allg_scheibe_schubfluss}
-
-
-$$
-\tau_{xy} = \frac{n_{xy}}{t}
-$$
-
-$t$ Deckelstärke
-
-
-
-Dazu gilt es ein Rissmoment zu bestimmen. Das Rissmoment gibt den Übergang zwischen der ungerissenen und der gerissenen Drillsteifigkeit an. Vereinfacht kann das Rissmoment aus der Biegeanalyse angesetzt werden.
-
-$$
-M_r = \frac{h^2\cdot b}{6}\cdot f_ct
-$$
-
-
-$$
-M_x(\varphi_x) = b_w \cdot m_{xy}(\chi_{xy}\cdot l_{Einzug}) \cdot 2
-$$
 
 
 
