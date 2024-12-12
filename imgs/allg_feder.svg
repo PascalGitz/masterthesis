@@ -19,7 +19,7 @@
        id="clipPath21">
       <path
          d="M -0.00426,-0.00169 V 170.08044 H 425.20111 V -0.00169 H -0.00426"
-         transform="matrix(1,0,0,-1,-198.71949,157.9294)"
+         transform="matrix(1,0,0,-1,-201.27069,155.94514)"
          clip-rule="evenodd"
          id="path21" />
     </clipPath>
@@ -28,7 +28,7 @@
        id="clipPath22">
       <path
          d="M -0.00426,-0.00169 V 170.08044 H 425.20111 V -0.00169 H -0.00426"
-         transform="matrix(1,0,0,-1,-201.71497,153.79553)"
+         transform="matrix(1,0,0,-1,-204.26617,151.81128)"
          clip-rule="evenodd"
          id="path22" />
     </clipPath>
@@ -178,7 +178,7 @@
   <text
      id="text20"
      xml:space="preserve"
-     transform="matrix(1.3333333,0,0,1.3333333,264.95932,16.199467)"
+     transform="matrix(1.3333333,0,0,1.3333333,268.36091,18.845147)"
      clip-path="url(#clipPath21)"><tspan
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        x="0"
@@ -187,13 +187,13 @@
   <text
      id="text21"
      xml:space="preserve"
-     transform="matrix(1.3333333,0,0,1.3333333,268.95329,21.711293)"
+     transform="matrix(1.3333333,0,0,1.3333333,272.35488,24.35696)"
      clip-path="url(#clipPath22)"><tspan
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.00428px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       x="0 1.6691898 5.0075693 7.0069947 9.34266 12.3448 14.680465 17.346365 19.345791 21.01498 23.68088"
+       x="0 3.6686151 5.3378048 8.6761847 11.342085 14.680465"
        y="0"
        sodipodi:role="line"
-       id="tspan21">integration</tspan></text>
+       id="tspan21">Einzug</tspan></text>
   <path
      id="path23"
      d="m 70.51674,121.12711 c 0,3.13105 -2.53822,5.66928 -5.66928,5.66928 m 0,0 c -3.13108,0 -5.6693,-2.53823 -5.6693,-5.66928 m 0,0 c 0,-3.13108 2.53822,-5.6693 5.6693,-5.6693 m 0,0 c 3.13106,0 5.66928,2.53822 5.66928,5.6693"

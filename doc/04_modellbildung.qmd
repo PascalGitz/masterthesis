@@ -91,9 +91,35 @@ Diese ist von besonderem Interesse, da daraus die Steifigkeit des Gelenks abgele
 
 ## Querschnittsmodellbildung
 
-Die Querschnittsmodellbildung lässt sich allgemein an einem Plattenausschnitt beschreiben. Daraus lässt sich die Anwendung an Stabtragwerken, wie beispielsweise dem Zweifeldträger, sowie die Anwendung eines Trägerrosts an Plattentragwerken ableiten.
+### Stabquerschnitt
 
-Dazu ist der Querschnitt gemäss der @fig-allg_qs_mikro gewählt. Der Streifen der Stahlbetonplatte weist eine Streifenbreite $b_w$ und eine Höhe $h$ auf. 
+Die Querschnittsmodellbildung ist für einen Stabquerschnitt und ein Plattenquerschnitt gesondert zu betrachten.
+
+#### Biegesteifigkeit
+
+Generell kann die Biegesteifigkeit anhand einer Momenten-Krümmungs-Beziehung beschrieben werden. Dazu sind für den Betonstahl und den Beton Spannungs-Dehnungs-Beziehungen zu modellieren. Anhand dieser kann der Querschnitt bei steigender Krümmung, dargestellt in der @fig-allg_qs_analyse, untersucht werden. 
+
+![Querschnittsanalyse des Beispielquerschnitts, Dehnungsebenen](../imgs/allg_qs_analyse.svg){#fig-allg_qs_analyse}
+
+Die @eq-zweidim_gelenkfunktionen verdeutlicht, dass eine Momenten-Verdrehungs-Beziehung gefordert ist. Wie die @fig-allg_feder zeigt, entspricht die Verdrehung der Integration der Krümmung über die Einzugslänge. Folglich lässt sich die Momenten-Verdrehungs-Beziehung durch Multiplikation der Krümmung mit der Einzugslänge ermitteln.
+
+$$
+M_y(\varphi_y) = M_y(\chi_y \cdot l_{Einzug})
+$${#eq-chi_to_phi_y}
+
+
+Hält man sich an die Modellierungsstrategie, gemäss der @fig-allg_doppelgelenk, so ist die Einzugslänge durch die @eq-einzug_doppelgelenk definiert.
+
+$$
+l_{Einzug} = \frac{l_{El}}{2}
+$${#eq-einzug_doppelgelenk}
+
+Es ist selbstverständlich, dass die Momenten-Verdrehungs-Beziehung nur für den analysierten Querschnitt gilt. Bei einer Querschnittsänderung ist eine angepasste Momenten-Verdrehungs-Beziehung zu bestimmen. 
+
+
+### Plattenquerschnitt
+
+Die Querschnittsmodellbildung lässt sich allgemein an einem Plattenausschnitt beschreiben. Dazu ist der Querschnitt gemäss der @fig-allg_qs_mikro gewählt. Der Streifen der Stahlbetonplatte weist eine Streifenbreite $b_w$ und eine Höhe $h$ auf. 
 
 ![Beispielquerschnitt der allgemeinen Querschnittsmodellbildung](../imgs/allg_qs_mikro.svg){#fig-allg_qs_mikro}
 
@@ -123,12 +149,12 @@ Die kinematischen Grössen des Plattenelements zeigt die @fig-allg_balken_kin.
 ![Kinematische Grössen am Balken](../imgs/allg_balken_kin.svg){#fig-allg_balken_kin}
 
 
-### Biegesteifigkeit
+#### Biegesteifigkeit
 
 Betrachtet man die Spannungen am Plattenelement, übt Gleichgewicht an diesem, so folgt die für das Biegemoment an der grau hinterlegten Fläche, die Beziehung gemäss der @eq-sg_platte_normal. 
 $$
 \begin{aligned}
-&m_{xx} = \int_{-h/2}^{h/2} \sigma_{xx} \cdot z dz \quad
+&m_{xx} = \int_{-h/2}^{h/2} z \cdot \sigma_{xx}  dz \quad
 % &m_{yy} = \int_{-h/2}^{h/2} \sigma_{yy} \cdot z dz \quad
 % &m_{xy} = \int_{-h/2}^{h/2} \tau_{xy} \cdot z dz \quad
 \end{aligned}
@@ -143,32 +169,18 @@ $$
 $${#eq-sg_normal_balken}
 
 
-Vergleicht aus der @eq-sg_platte_normal und @eq-sg_normal_balken die Biegemomente $m_{xx}$ und $M_y$ so ist deren Definition analog. Daraus folgt, dass die Biegesteifigkeit von Plattenelementen auf Balken übertragen werden kann, wie auch umgekehrt. 
-
-Generell kann die Biegesteifigkeit anhand einer Momenten-Krümmungs-Beziehung beschrieben werden. Dazu sind für den Betonstahl und den Beton Spannungs-Dehnungs-Beziehungen zu modellieren. Anhand dieser kann der Querschnitt bei steigender Krümmung, dargestellt in der @fig-allg_qs_analyse, untersucht werden. 
-
-![Querschnittsanalyse des Beispielquerschnitts, Dehnungsebenen](../imgs/allg_qs_analyse.svg){#fig-allg_qs_analyse}
-
-Die @eq-zweidim_gelenkfunktionen verdeutlicht, dass eine Momenten-Verdrehungs-Beziehung gefordert ist. Wie die @fig-allg_feder zeigt, entspricht die Verderhung der Integration der Krümmung über die Einzugslänge. Folglich lässt sich die Momenten-Verdrehungs-Beziehung durch Multiplikation der Krümmung mit der Einzugslänge ermitteln.
+Vergleicht aus der @eq-sg_platte_normal und @eq-sg_normal_balken die Biegemomente $m_{xx}$ und $M_y$ so ist deren Definition analog. Daraus folgt, dass die Biegesteifigkeit von Plattenelementen direkt übertragbar ist. Es folgt die Transformationsbeziehung gemäss der @eq-transformation_biegung. Diese ist analog der @eq-chi_to_phi_y für einen Querschnitt der Breite $b_w$
 
 $$
-M_y(\varphi_y) = M_y(\chi_y \cdot l_{Einzug})
-$${#eq-chi_to_phi_y}
+M_y(\varphi_y) = b_w \cdot m_{xy}(\chi_{xy}\cdot l_{Einzug})
+$${#eq-transformation_biegung}
 
 
-Hält man sich an die Modellierungsstrategie, gemäss der @fig-allg_doppelgelenk, so ist die Einzugslänge durch die @eq-einzug_doppelgelenk definiert.
-
-$$
-l_{Einzug} = \frac{l_{El}}{2}
-$${#eq-einzug_doppelgelenk}
-
-Es ist selbstverständlich, dass die Momenten-Verdrehungs-Beziehung nur für den analysierten Querschnitt gilt. Bei einer Querschnittsänderung ist eine angepasste Momenten-Verdrehungs-Beziehung zu bestimmen. 
-
-### Torsionssteifigkeit
+#### Torsionssteifigkeit
 
 $$
 \begin{aligned}
-&m_{xy} = \int_{-h/2}^{h/2} \tau_{xy} \cdot z dz \quad
+&m_{xy} = \int_{-h/2}^{h/2} z \cdot \tau_{xy}  dz \quad
 \end{aligned}
 $${#eq-sg_platte_drill}
 
@@ -202,15 +214,22 @@ $${#eq-schubfluss_balken}
 Die Quintessenz ist somit, dass eine am Plattenelement hergeleitete Drillsteifigkeit mit dem Faktor 2 zu multiplizieren ist um die gleichwertige Torsionssteifigkeit am Balken zu erhalten. Beschrieben ist diese Tatsache ebenfalls in @blaauwendraad_plates_2010 Seite 389.
 
 
-#### ungerissene Drillsteifigkeit
+Transformieren lässt sich die Momenten-Krümmungs-Beziehung des Plattenelements in die des Balkenelements mit der @eq-transformation_drill.
+
+$$
+M_x(\varphi_x) = b_w \cdot m_{xy}(\chi_{xy}\cdot l_{Einzug}) \cdot 2
+$${#eq-transformation_drill}
+
+
+##### Ungerissene Drillsteifigkeit
 
 Mit dem vorangegangen Beschrieb ist die Transformation der Drillsteifigkeit auf die Torsionssteifigkeit geklärt. Nun gilt es die Drillsteifigkeit am Plattenelement zu bestimmen.
 
-Betrachtet man die kinematischen Grössen in @fig-allg_platte_kin, so lässt sich die Beziehung zwischen Biegemoment und Krümmung aufstellen. Dies ist für ein homogenes, isotropes Plattenelement in der @eq-ung_drill gezeigt. 
+Betrachtet man die kinematischen Grössen in @fig-allg_platte_kin, so lässt sich die Beziehung zwischen Biegemoment und Krümmung aufstellen. Dies ist für ein homogenes, isotropes Plattenelement in der @eq-ung_drillsteifigkeit gezeigt. 
 
 $$
 m_{xy} = G i_{xy} \cdot \chi_{xy}
-$${#eq-ung_drill}
+$${#eq-drillmoment_von_kruemmung}
 
 $$
 G = \frac{E}{2(1-\nu)}
@@ -220,13 +239,25 @@ $$
 i_{xy} = \frac{h^3}{6}
 $${#eq-traegheitsmoment_platte}
 
-#### gerissene Drillsteifigkeit
+
+$$
+G i_{xy} = \frac{h^3 E}{12(1-\nu)}
+$${#eq-ung_drillsteifigkeit}
+
+
+Das Rissmoment lässt sich bestimmen durch die Substitution der Schubspannung mit der Betonzugfestigkeit. Dazu folgt das Rissmoment entsprechend einer Biegeanalyse
+
+$$
+m_{xy,r} = f_{ct} \cdot \frac{h^2}{6}
+$${#eq-rissdrillmoment}
+
+##### Gerissene Drillsteifigkeit
 
 Die gerissene Drillsteifigkeit wird mittels dem klassischen Sandwichmodell bestimmt. Das klassische Sandwichmodell ist in @heinzmann_stringer-tafelmodelle_2012 beschrieben. Mittels diesem ist das Plattenelement in ein Kern und zwei Deckel zu unterteilen. Den Deckeln sind die Biege- und Drillmomente zugeordnet, dem Kern die Querkraft.
 
 ![klassiches Sandwichmodell](../imgs/allg_sandwich.svg){#fig-allg_sandwich}
 
-Dabei sind die Biegemomente als Kräftepaar auf die Deckelaufgeteilt.
+Dabei sind die Biegemomente als Kräftepaar auf die Deckel aufgeteilt.
 
 Betrachtet man die Drillmomente gesondert, so stellt sich ein Schubfluss entlang der Deckel ein. Die Deckel sind als Scheiben unter reiner Schubbeanspruchung zu betrachten.
 
@@ -238,24 +269,44 @@ Betrachtet man die Drillmomente gesondert, so stellt sich ein Schubfluss entlang
 ![Scheibe unter reinem Schub, rechts im Verzerrungszustand](../imgs/allg_scheibe_schubfluss.svg){#fig-allg_scheibe_schubfluss}
 
 
+
+$$
+n_{xy} = \frac{m_{xy}}{d_v} = n_{yx} = \frac{m_{yx}}{d_v}
+$${#eq-schubfluss_scheibe}
+
+
 $$
 \tau_{xy} = \frac{n_{xy}}{t}
-$$
+$${#eq-schubspannung_scheibe}
 
 $t$ Deckelstärke
 
 
+![Definition der Deckelstärke](../imgs/allg_sandwich_deckelstaerke.svg){#fig-allg_sandwich_deckelstaerke}
 
-Dazu gilt es ein Rissmoment zu bestimmen. Das Rissmoment gibt den Übergang zwischen der ungerissenen und der gerissenen Drillsteifigkeit an. Vereinfacht kann das Rissmoment aus der Biegeanalyse angesetzt werden.
-
-$$
-M_r = \frac{h^2\cdot b}{6}\cdot f_ct
-$$
-
+Die Schiebung einer gerissenen Scheibe lässt sich anhand des klassischen Druckfeldmodells bestimmen. Dieses ist ebenfalls in @heinzmann_stringer-tafelmodelle_2012 beschrieben. 
 
 $$
-M_x(\varphi_x) = b_w \cdot m_{xy}(\chi_{xy}\cdot l_{Einzug}) \cdot 2
+\gamma_{xy} = 2 \frac{\tau_{xy}}{E_s}\cdot \left(\sqrt{\frac{(1+n\rho_x)(1+n\rho_y)}{\rho_x \rho_y}+n} \right)
+$${#eq-schiebung_klass_druckfeldmodell}
+
+Mit der @eq-schiebung_klass_druckfeldmodell lässt sich die Schiebung einer gerissenen Scheibe beschreiben. Diese ist Abhängig von der Bewehrung des Deckels und kann für den oberen und unteren Deckel gesondert betrachtet werden.
+
+![Ansicht des Sandwichmodells, resultierende Dehnungsebene durch die Schiebung des oberen und unteren Deckels](../imgs/allg_sandwich_kruemmung.svg){#fig-allg_sandwich_kruemmung}
+
 $$
+\chi_{xy} = \frac{\gamma_{xyt}+ \gamma_{xyb}}{d_v}
+$${#eq-kruemmung_sandwich}
+
+
+Abschliessend kann die Momenten-Verdrehungs-Beziehung mit der @eq-transformation_drill bestimmt werden.
+
+
+
+
+
+
+
 
 
 

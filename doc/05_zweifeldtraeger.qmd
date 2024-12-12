@@ -1,8 +1,8 @@
-# Anwendung an einem Zweifeldträger{#sec-zweifeldtraeger}
+# Anwendung Zweifeldträger{#sec-zweifeldtraeger}
 
-Im vorangegangen Kapitel wurde vertieft auf die Makromodellbildung eingegangen. Sowie wurde diese allgemein formuliert. Dabei wurde die Mikromodellbildung aussenvor gelassen. 
+Im vorangegangen Kapitel wurde vertieft auf die Systemmodellbildung eingegangen. Sowie wurde diese allgemein formuliert. Dabei wurde die Querschnittsmodellbildung aussenvor gelassen. 
 
-Das Ziel dieses Kapitel ist es an einem konkreten Beispiel die Makromodellbildung aufzuzeigen, sowie speziell auf die Mikromodellbildung einzugehen. 
+Das Ziel dieses Kapitel ist es an einem konkreten Beispiel die Systemmodellbildung aufzuzeigen, sowie speziell auf die Querschnittsmodellbildung einzugehen. 
 
 Das Beispiel dazu wurde aus den Vorlesungsunterlagen @jager_stahlbeton_2009 entnommen. Für die detaillierte analytische Berechnungen ist der @sec-zweifeldtraeger_anhang zu konsultieren. Sowie ist die numerische Näherung mit der beschriebenen Modellbildung aufgezeigt. Hier werden die wichtigsten Erkenntnisse zusammengefasst beschrieben.
 
@@ -21,11 +21,11 @@ Das übergeordnete Ziel ist es das Last-Verformungs-Verhalten (An der Stelle des
 
 ### Materialeigenschaften
 
-Die Betonstähle werden durch die Spannungs-Dehnungs-Diagramme, gemäss der @fig-jag_stress_strain_b500a_bearb definiert. Es wird ein bilinearer Verlauf für den B500A und ein trilinearer Verlauf für den B500C angesetzt.
+Die Betonstähle werden durch die Spannungs-Dehnungs-Diagramme, gemäss der @fig-jag_stress_strain_b500a definiert. Es wird ein bilinearer Verlauf für den B500A und ein trilinearer Verlauf für den B500C angesetzt.
 
 ::: {#fig-jag_stress_strain_steel-ncol=2}
 
-![Spannungs-Dehnungs-Beziehungen des Betonstahls B500A](../imgs/jag_stress_strain_b500a_bearb.svg){#fig-jag_stress_strain_b500a_bearb}
+![Spannungs-Dehnungs-Beziehungen des Betonstahls B500A](../imgs/jag_stress_strain_b500a.svg){#fig-jag_stress_strain_b500a}
 
 ![Spannungs-Dehnungs-Beziehungen des Betonstahls B500C](../imgs/jag_stress_strain_b500c.svg){#fig-jag_stress_strain_b500c}
 
@@ -47,7 +47,7 @@ Gefolgt wird die Grenzzustandbetrachtung des Zugglieds von der eigentlichen Syst
 
 ## NLFE-Modell
 
-### Makromodellbildung
+### Systemmodellbildung
 
 Das System ist in biegestarre Stäbe unterteilt und mit Stabanfang- und Endgelenken versehen. Wie in @fig-allg_doppelgelenk gezeigt, wird die Modellierungsstrategie mit Stabanfang- und Endgelenken verfolgt. 
 
@@ -57,9 +57,9 @@ Die @fig-jag_makrosystem zeigt das System mit den Doppelgelenken. Die effektive 
 
 Das System ist für beide Stähle mit einer Streckenlast von 30 kN/m belastet. Diese ist deutlich grösser gewählt als die analytisch ermittelte. 
 
-![Detailansicht des statischen Modells aus AxisVM](../imgs/jag_output_b500c%20(2).jpg){#fig-jag_output_b500c2}
+![Detailansicht des statischen Modells ](../imgs/jag_makro_detail.svg){#fig-jag_makro_detail}
 
-### Mikromodellbildung
+### Querschnittsmodellbildung
 
 #### Biegesteifigkeit
 
@@ -105,36 +105,30 @@ Insgesamt weichen die numerischen Näherung weniger als 8% von der analytischen 
 
 #### Kaltverformter Stahl
 
-![Biegemomentenverlauf B500A, Lastfaktor xx](../imgs/jag_b500a_1.svg){#fig-jag_b500a_1}
+![Resultate für den Lastfaktor 0.494](../imgs/jag_b500a_lpa_0494.svg){#fig-jag_b500a_lpa_0494}
 
-![Verformungsverlauf B500A, Lastfaktor xx](../imgs/jag_b500a_3.svg){#fig-jag_b500a_3}
+![Resultate für den Lastfaktor 0.504](../imgs/jag_b500a_lpa_0504.svg){#fig-jag_b500a_lpa_0504}
 
-![Biegemomentenverlauf B500A, Lastfaktor xx](../imgs/jag_b500a_4.svg){#fig-jag_b500a_4}
+Die relativen Gelenkrotationen in der Summe über die plastische Länge entsprechen dem plastischen Rotationsvermögen.
 
-![Verformungsverlauf B500A, Lastfaktor xx](../imgs/jag_b500a_6.svg){#fig-jag_b500a_6}
-
-![Relative Gelenkrotation B500A, Lastfaktor xx](../imgs/jag_b500a_7.svg){#fig-jag_b500a_7}
+![Relative Gelenkrotation für den Lastfaktor 0.504](../imgs/jag_b500a_lpa_0504_rot.svg){#fig-jag_b500a_lpa_0504_rot}
 
 
 #### Naturharter Stahl
 
-![Biegemomentenverlauf B500C, Lastfaktor xx](../imgs/jag_b500c_1.svg){#fig-jag_b500c_1}
+![Resultate für den Lastfaktor 0.433](../imgs/jag_b500c_lpa_0433.svg){#fig-jag_b500c_lpa_0433}
 
-![Verformungsverlauf B500C, Lastfaktor xx](../imgs/jag_b500c_3.svg){#fig-jag_b500c_3}
+![Resultate für den Lastfaktor 0.597](../imgs/jag_b500c_lpa_0597.svg){#fig-jag_b500c_lpa_0597}
 
-![Biegemomentenverlauf B500C, Lastfaktor xx](../imgs/jag_b500c_4.svg){#fig-jag_b500c_4}
+![Resultate für den Lastfaktor 0.619](../imgs/jag_b500c_lpa_0619.svg){#fig-jag_b500c_lpa_0619}
 
-![Verformungsverlauf B500C, Lastfaktor xx](../imgs/jag_b500c_6.svg){#fig-jag_b500c_6}
+![Resultate für den Lastfaktor 0.634](../imgs/jag_b500c_lpa_0634.svg){#fig-jag_b500c_lpa_0634}
 
-![Biegemomentenverlauf B500C, Lastfaktor xx](../imgs/jag_b500c_7.svg){#fig-jag_b500c_7}
 
-![Verformungsverlauf B500C, Lastfaktor xx](../imgs/jag_b500c_9.svg){#fig-jag_b500c_9}
+Die relativen Gelenkrotationen in der Summe über die plastische Länge entsprechen dem plastischen Rotationsvermögen.
 
-![Biegemomentenverlauf B500C, Lastfaktor xx](../imgs/jag_b500c_10.svg){#fig-jag_b500c_10}
+![Relative Gelenkrotation für den Lastfaktor 0.634](../imgs/jag_b500c_lpa_0634_rot.svg){#fig-jag_b500c_lpa_0634_rot}
 
-![Verformungsverlauf B500C, Lastfaktor xx](../imgs/jag_b500c_12.svg){#fig-jag_b500c_12}
-
-![Relative Gelenkrotation B500C, Lastfaktor xx](../imgs/jag_b500c_13.svg){#fig-jag_b500c_13}
 
 ## Fazit
 
