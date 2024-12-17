@@ -1,5 +1,9 @@
 # Allgemeine Modellbildung 
 
+Dieses Kapitel beschreibt die Modellbildung abschliessend. Es zeigt die Modellierung für Stabtragwerke auf, sowie die Modellierung für Plattentragwerke.
+
+## Stabtragwerke
+
 Um einen Überblick über die Modellbildung zu erhalten wird mit einem Gedankenexperiment gestartet. Dazu dient das statische System in der @fig-allg_stat_system als Grundlage. Es beschreibt einen einfachen Balken mit einer konstanten Streckenlast belastet. Der Balken wird mit starren Stäben modelliert, welche mit Drehfedern gekoppelt sind. In den Drehfedern ist eine linear-elastische Momenten-Verdrehungs-Beziehung um die globale Y-Achse hinterlegt.
 
 ![Beispielsystem eines einfachen Balkens](../imgs/allg_stat_system.svg){#fig-allg_stat_system}
@@ -22,6 +26,10 @@ Mit dem angepassten System resultiert der qualitative Verlauf der Biegelinie gem
 
 
 Das Gedankenexperiment lässt sich mit der Kernaussage abschliessen, dass das System an sich nicht komplex ist. Die Qualität der gewünschten Resultate jedoch einzig von der Bestimmung der Federsteifigkeiten abhängt.
+
+## Plattentragwerk
+
+Das Gedankenexperiment lässt sich erweitern, indem die Stäbe quer zu einander überlagert werden zur Bildung eines Trägerrosts. Dabei besteht das Ziel mit dem Trägerrost das nicht-lineare Tragverhalten von Plattentragwerken abzubilden.
 
 ## Berechnungsschema
 
@@ -118,6 +126,10 @@ Es ist selbstverständlich, dass die Momenten-Verdrehungs-Beziehung nur für den
 
 
 ### Plattenquerschnitt
+
+#### Theorie nach Kirchhof
+
+Für Dünne Platten
 
 Die Querschnittsmodellbildung lässt sich allgemein an einem Plattenausschnitt beschreiben. Dazu ist der Querschnitt gemäss der @fig-allg_qs_mikro gewählt. Der Streifen der Stahlbetonplatte weist eine Streifenbreite $b_w$ und eine Höhe $h$ auf. 
 
