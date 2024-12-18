@@ -1,4 +1,4 @@
-# Anwendung Zweifeldträger{#sec-zweifeldtraeger}
+# Zweifeldträger{#sec-zweifeldtraeger}
 
 Im vorangegangen Kapitel wurde vertieft auf die Systemmodellbildung eingegangen. Sowie wurde diese allgemein formuliert. Dabei wurde die Querschnittsmodellbildung aussenvor gelassen. 
 

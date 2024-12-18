@@ -1,4 +1,4 @@
-# Überblick
+# Allgemeines
 
 Der Teil I Modellbildung beschreibt sämtliche Herleitungen und Annahmen der verwendeten Modelle. Es unterscheidet zwischen der Modellbildung für Balken und der Modellbildung für Platten. Das Kapitel ist in sich abschliessend und soll dem Leser sämtliche Informationen liefern zur Anwendung der Modelle an beliebige Stab- oder Plattentragwerke.
 
@@ -27,7 +27,9 @@ Mit dem angepassten System resultiert der qualitative Verlauf der Biegelinie gem
 
 Das Gedankenexperiment lässt sich mit der Kernaussage abschliessen, dass das System an sich nicht komplex ist. Die Qualität der gewünschten Resultate jedoch einzig von der Bestimmung der Federsteifigkeiten abhängt.
 
-Zur Nachbildung des Tragverhaltens von Stahlbetonplatten lässt sich das Gedankenexperiment erweitern. Dazu ist lediglich ein Trägerrost zu modellieren, mit dessen Träger den Balken mit nicht-linearen Federn entsprechen.
+Zur Nachbildung des Tragverhaltens von Platten lässt sich das Gedankenexperiment erweitern. Dazu ist lediglich ein Trägerrost zu modellieren, mit dessen Träger den Balken mit nicht-linearen Federn entsprechen.
+
+![Erweiterung des Stabtragwerks zum Trägerrost](../imgs/allg_gedankenexperiment_tr.svg){#fig-allg_gedankenexperiment_tr}
 
 
 
@@ -64,14 +66,16 @@ Generell lassen sich den Federn entsprechend den Freiheitsgraden Beziehungen hin
 Gelenkdefinitionen im zweidimensionalen Raum:
 
 $$
-F_x(u_z),F_z(u_z),M_y(\varphi_y)
+F_x(u),F_z(w),M_y(\varphi_y)
 $${#eq-zweidim_gelenkfunktionen} 
 
 Gelenkdefinitionen im dreidimensionalen Raum:
 
 $$
-F_x(u_x),F_y(u_y),F_z(u_z),M_x(\varphi_x),M_y(\varphi_y),M_z(\varphi_z)
+F_x(u),F_y(v),F_z(w),M_x(\varphi_x),M_y(\varphi_y),M_z(\varphi_z)
 $${#eq-dreidim_gelenkfunktionen}
+
+![Definition der Gelenksteifigkeit, a) Momentenbeziehung b) Kraftbeziehung](../imgs/allg_definition_gelenksteifigkeit.svg){#fig-allg_definition_gelenksteifigkeit}
 
 Dabei steht $u_i$ für die Verformung, $F_i$ für die Kraft, $M_i$ für das Biegemoment und $\varphi_i$ für die Verdrehung und der Index $i$ für die entsprechende Richtung. Dies verdeutlicht, dass mit der richtigen Wahl der Federbeziehungen das nicht-lineare Querkraft-, Normalkraft- und Biegeverhalten modelliert werden kann. Die Schwierigkeit liegt jedoch offensichtlich in der richtigen Wahl der Federbeziehungen.
 

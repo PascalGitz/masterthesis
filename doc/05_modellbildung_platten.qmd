@@ -31,8 +31,8 @@ Für kleine Winkel gilt
 
 $$
 \begin{aligned}
--\varphi_x = \frac{\partial w_0}{\partial x} \quad
--\varphi_y = \frac{\partial w_0}{\partial y} \quad
+-\psi_x = \frac{\partial w_0}{\partial x} \quad
+-\psi_y = \frac{\partial w_0}{\partial y} \quad
 \end{aligned}
 $${#eq-phi_x_kirch}
 
@@ -41,8 +41,8 @@ Gilt für jeden beliebigen Punkt, nicht nur P
 
 $$
 \begin{aligned}
-u_P = z_P \varphi_x = u \quad
-v_P = z_P \varphi_y = v
+u_P = z_P \psi_x = u \quad
+v_P = z_P \psi_y = v
 \end{aligned}
 $${#eq-u_P_kirch}
 
@@ -171,23 +171,7 @@ $${#eq-konstitutiv_kirchhoff_platte}
 ![Detaildarstellung des Einflusses der Querdehnung beim Volumenelement](../imgs/allg_einfluss_querdehnzahl_detail.svg){#fig-allg_einfluss_querdehnzahl_detail}
 
 
-
-
-
-## Systemmodellbildung
-
-Trägerrostbildung
-
-Definition Einzugslänge
-
-Definition Elementlänge
-
-## Querschnittsmodellbildung
-
-Bestimmung Steifigkeiten und Abbruchkriterium
-
-
-### Transformation zum Trägerrost
+## Transformation zum Trägerrost
 
 Es gilt zu klären in welcher Relation der Trägerrost zum Plattenmodell steht.
 
@@ -197,8 +181,8 @@ Für dünne Querschnitte $h << b$ gilt
 
 $$
 \begin{aligned}
-M_x &= \int_A \left(z \cdot \tau_{yx} - y \cdot \tau_{zx}\right) dA = G \frac{h^3 b}{3} \vartheta = G I_p \vartheta\\
-M_y &= \int_A z \cdot \sigma_{x} d_A =E \frac{bh^3}{12} \chi_y =  E I_y \chi_y
+M_x &=  \int_A \left(z \cdot \tau_{yx} - y \cdot \tau_{zx}\right) dA = G \frac{h^3 b}{3} \vartheta = G I_p \vartheta = T\\ 
+M_y &= \int_A z \cdot \sigma_{x} d_A =E \frac{bh^3}{12} \chi_y =  E I_y \chi_y = M
 \end{aligned}
 $${#eq-sg_balken}
 
@@ -230,15 +214,15 @@ Der Einfluss dieser Tatsache lässt sich an einem  Beispiel illustrieren. Betrac
 
 $$
 \begin{aligned}
-I_t = \frac{bt^3}{3} \quad 
-i_{xy} = \frac{t^3}{6}
+I_t = \frac{bh^3}{3} \quad 
+i_{xy} = \frac{h^3}{6}
 \end{aligned}
 $${#eq-torsion_streifen}
 
 Das Torsionsträgheitsmoment des Balkenelements $I_t$ und das auf die Einheitslänge bezogene Torsionsträgheitsmoment des Plattenelements in X-Richtung $i_{xy}$ unterscheiden sich um den Faktor 2. Der Faktor 2 ist zudem konstant. Dies lässt sich erklären, dass sich beim Balkenquerschnitt der Schubfluss in Y Richtung zu gleichen Teilen am Torsionsmoment beteiligt, wie der in X gerichtete Schubfluss. Der vertikale Schubfluss verläuft zwar nur über die Querschnittshöhe $t$, besitzt jedoch den deutlich grösseren Hebelarm, während der horizontale Schubfluss über die gesamte Breite $b$ verläuft, mit einem jedoch deutlich kleineren Hebelarm. Die @eq-schubfluss_balken beschreibt diese Tatsache.
 
 $$
-M_{x,vert} = q_{zx} \cdot t \cdot b/2 = M_{x,horiz} = q_{yx} \cdot b \cdot t/2 = M_x / 2
+M_{x,vert} = q_{zx} \cdot h \cdot b/2 = M_{x,horiz} = q_{yx} \cdot b \cdot h/2 = M_x / 2
 $${#eq-schubfluss_balken}
 
 Die Quintessenz ist somit, dass eine Torsionssteifigkeit am Balkenquerschnitt hergeleitet, doppelt so gross wie die entsprechende Ersatzsteifigkeit ist. Beschrieben ist diese Tatsache ebenfalls in @blaauwendraad_plates_2010 Seite 389.
@@ -271,6 +255,12 @@ Abschliessend
 - tückisch das Faktor zwei für Qs zu Drillsteifigkeit
 - Ziel ist die kirchhoffsche Plattentheorie nachzubilden
 
+## Querschnittsmodellbildung
+
+Bestimmung Steifigkeiten und Abbruchkriterium
+
+
+
 ### Biegeverhalten
 
 Querschnittsanalyse am Stabquerschnitt.
@@ -279,18 +269,20 @@ Querschnittsanalyse am Stabquerschnitt.
 
 ### Torsionsverhalten
 
-
-
 #### Ungerissene Drillsteifigkeit
 
-Aus @eq-ersatzsteifigkeit_torsion folgt
+Aus @eq-ersatzsteifigkeit_torsion folgt. Dabei ist die ungerissene Drillsteifigkeit einzig abhängig von den Betonparametern.
+
 $$
-GI_{p,Ersatz} = G \frac{h^3b}{6}
+G_I = G = \frac{E_c}{2(1+\nu)}
+$${#eq-schubmodul_I}
+$$
+G_I I_{p,Ersatz} = G_I \frac{h^3b}{6}
 $${#eq-drillsteifigkeit_torsion_ungerissen}
 
 Die Gelenksteifigkeit folgt zu:
 $$
-k_{r,x} = \frac{GI_{p,Ersatz}}{l_{Einzug}}  = G \frac{h^3b}{6} \frac{1}{l_{Einzug}}
+k_{r,x} = \frac{G_I I_{p,Ersatz}}{l_{Einzug}}  = G_I \frac{h^3b}{6} \frac{1}{l_{Einzug}}
 $${#eq-verdrehsteifigkeit_torsion_ungerissen}
 
 Schubspannung mit Zugfestigkeit gleichgesetzt resultiert zum Rissmoment. Entspricht dem Biegerissmoment.
@@ -301,7 +293,7 @@ $${#eq-rissdrillmoment}
 
 #### Gerissene Drillsteifigkeit
 
-Klassisches Sandwichmodell nach @heinzmann_stringer-tafelmodelle_2012.
+Klassisches Sandwichmodell nach @peter_marti_design_1990.
 
 ![klassiches Sandwichmodell](../imgs/allg_sandwich.svg){#fig-allg_sandwich}
 
@@ -330,11 +322,17 @@ $t$ Deckelstärke
 
 ![Definition der Deckelstärke](../imgs/allg_sandwich_deckelstaerke.svg){#fig-allg_sandwich_deckelstaerke}
 
-Die Schiebung einer gerissenen Scheibe lässt sich anhand des klassischen Druckfeldmodells bestimmen. Dieses ist ebenfalls in @heinzmann_stringer-tafelmodelle_2012 beschrieben. Die @eq-schiebung_klass_druckfeldmodell setzt voraus, dass keine der beiden Bewehrung fliesst, sowie kein Druckversagen des Betons eintritt. Mit dem klassischen Druckfeldmodell lässt sich die Schiebung für das Fliessen der Bewehrung bestimmen. Vereinfacht wird dies nicht berücksichtigt.
+Die Schiebung einer gerissenen Scheibe lässt sich anhand des klassischen Druckfeldmodells bestimmen. Das klassische Druckfeldmodell liefert unter anderem Lösungen zum Verhalten einer Scheibe unter reinem Schub. Aufgezeigt ist das Modell in @heinzmann_stringer-tafelmodelle_2012. Damit lässt sich ein Schubmodul für den ungerissenen, für den gerissen-elastischen, und für das Fliessen der Bewehrung ermitteln. In dieser Arbeit gilt die vereinfachte Betrachtung des lediglich gerissenen-elastischen Bereichs bis zum Erreichen des Torsionswiderstands.
+
+Die Schiebung des gerissenen-elastischen Bereichs beschreibt die @eq-schiebung_klass_druckfeldmodell.
 
 $$
 \gamma_{xy,II} = 2 \frac{\tau_{xy}}{E_s}\cdot \left(\sqrt{\frac{(1+n\rho_x)(1+n\rho_y)}{\rho_x \rho_y}+n} \right)
 $${#eq-schiebung_klass_druckfeldmodell}
+
+Die numerische Auswertung des klassischen Druckfeldmodells in @heinzmann_stringer-tafelmodelle_2012 illustriert das Verhalten verständlich. Dazu ist ein Ausschnitt in der 
+
+![Verhalten des Schubmoduls, der Schiebung und der Schubspannung des klassischen Druckfeldmodells entnommen aus @heinzmann_stringer-tafelmodelle_2012, ergänzt mit der Vereinfachung](../imgs/allg_klassisches_druckfeldmodell_bsp.svg){#fig-allg_klassisches_druckfeldmodell_bsp}
 
 Die Schiebung kann als konstant über die Deckelstärke angenommen werden. 
 
@@ -368,6 +366,8 @@ M_{x,u} &= \tau_{xy,u} \frac{h^2b}{6}\\
 M_{x,u} &= \sqrt{\rho_x f_{syx} \cdot \rho_y f_{syy}} \frac{h^2b}{6}
 \end{aligned}
 $${#eq-drillwiderstand}
+
+Erweiterungsmöglichkeiten berücksichtigung des vollständigen klassischen Druckfeldmodells. Anwendung des erweiterten Sandwichmodells @jager_querkraftwiderstand_2007.
 
 
 
