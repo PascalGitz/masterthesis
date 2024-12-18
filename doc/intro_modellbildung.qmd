@@ -1,0 +1,1 @@
+Das Kapitel der Modellbildung beschreibt sämtliche Herleitungen und Annahmen der verwendeten Modelle. Es unterscheidet zwischen der Modellbildung für Balken und der Modellbildung für Platten. Das Kapitel ist in sich abschliessend und soll dem Leser sämtliche Informationen liefern zur Anwendung der Modelle an beliebige Stab- oder Plattentragwerke.

@@ -1,20 +1,4 @@
-# Modellbildung Balken
-
-Kapitelübersicht
-
-Gedankenexperiment
-
-## Modellierungsschema
-
-## Systemmodellbildung
-
-### Elementlänge
-
-### Federn
-
-### Resultate
-
-Relative Gelenkrotation
+# Balken
 
 ## Querschnittsmodellbildung
 

@@ -11,9 +11,16 @@ book:
   date: 2025.01.17
   date-format: full
   chapters:
+
     - index.qmd
-    - 04_modellbildung_balken.qmd
-    - 05_modellbildung_platten.qmd
+    - part: "Modellbildung"
+      chapters:
+      - 04_modellbildung_einleitung.qmd
+      - 04_modellbildung_balken.qmd
+      - 05_modellbildung_platten.qmd
+
+    - part: "Anwendung"
+
     # - 05_zweifeldtraeger.qmd
     # - 06_traegerrost.ipynb
     # - 07_quadratplatte.ipynb

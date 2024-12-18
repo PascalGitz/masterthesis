@@ -1,4 +1,4 @@
-# Modellbildung Platten
+# Platten
 
 Einführungsbeispiel erweitern auf Trägerrost. Ambition eine Platte damit nachzurechnen
 
@@ -290,7 +290,7 @@ $${#eq-drillsteifigkeit_torsion_ungerissen}
 
 Die Gelenksteifigkeit folgt zu:
 $$
-k_{r,x} = \frac{GI_{p,Ersatz}}{l_{Einzug}}  = G \frac{h^3b}{6\cdot l_{Einzug}}
+k_{r,x} = \frac{GI_{p,Ersatz}}{l_{Einzug}}  = G \frac{h^3b}{6} \frac{1}{l_{Einzug}}
 $${#eq-verdrehsteifigkeit_torsion_ungerissen}
 
 Schubspannung mit Zugfestigkeit gleichgesetzt resultiert zum Rissmoment. Entspricht dem Biegerissmoment.
@@ -330,10 +330,10 @@ $t$ Deckelstärke
 
 ![Definition der Deckelstärke](../imgs/allg_sandwich_deckelstaerke.svg){#fig-allg_sandwich_deckelstaerke}
 
-Die Schiebung einer gerissenen Scheibe lässt sich anhand des klassischen Druckfeldmodells bestimmen. Dieses ist ebenfalls in @heinzmann_stringer-tafelmodelle_2012 beschrieben. 
+Die Schiebung einer gerissenen Scheibe lässt sich anhand des klassischen Druckfeldmodells bestimmen. Dieses ist ebenfalls in @heinzmann_stringer-tafelmodelle_2012 beschrieben. Die @eq-schiebung_klass_druckfeldmodell setzt voraus, dass keine der beiden Bewehrung fliesst, sowie kein Druckversagen des Betons eintritt. Mit dem klassischen Druckfeldmodell lässt sich die Schiebung für das Fliessen der Bewehrung bestimmen. Vereinfacht wird dies nicht berücksichtigt.
 
 $$
-\gamma_{xy} = 2 \frac{\tau_{xy}}{E_s}\cdot \left(\sqrt{\frac{(1+n\rho_x)(1+n\rho_y)}{\rho_x \rho_y}+n} \right)
+\gamma_{xy,II} = 2 \frac{\tau_{xy}}{E_s}\cdot \left(\sqrt{\frac{(1+n\rho_x)(1+n\rho_y)}{\rho_x \rho_y}+n} \right)
 $${#eq-schiebung_klass_druckfeldmodell}
 
 Die Schiebung kann als konstant über die Deckelstärke angenommen werden. 
@@ -342,16 +342,33 @@ Mit der @eq-schiebung_klass_druckfeldmodell lässt sich die Schiebung einer geri
 
 ![Ansicht des Sandwichmodells, resultierende Dehnungsebene durch die Schiebung des oberen und unteren Deckels](../imgs/allg_sandwich_kruemmung.svg){#fig-allg_sandwich_kruemmung}
 
-$$
-\frac{m_{xy}}{\chi_{xy,II}/2} = \frac{m_{xy}}{\gamma_{xy,II}/(2z)}
-$$ 
+In Anlehnung an das Hooksche Gesetzt @eq-hook_3d folgt:
 
 $$
-\chi_{xy} = \frac{\gamma_{xyt}+ \gamma_{xyb}}{d_v}
-$${#eq-kruemmung_sandwich}
+G_{II} = \left[\frac{2}{E_s}\cdot \left(\sqrt{\frac{(1+n\rho_x)(1+n\rho_y)}{\rho_x \rho_y}+n} \right)\right]^{-1} = \frac{\tau_{xy}}{\gamma_{xy}}
+$${#eq-schubmodul_II}
+
+Daraus folgt die Gelenksteifigkeit
+
+$$
+k_{rII,x} = \frac{G_{II}I_{p,Ersatz}}{l_{Einzug}}  = G_{II} \frac{h^3b}{6} \frac{1}{l_{Einzug}}
+$${#eq-verdrehsteifigkeit_torsion_gerissen}
 
 
-Abschliessend kann die Momenten-Verdrehungs-Beziehung mit der @eq-transformation_drill bestimmt werden.
+Abschliessend beträgt der Drillwiderstand:
+
+$$
+\tau_{xy,u} = \sqrt{\rho_x f_{syx} \cdot \rho_y f_{syy}}
+$${#eq-max_drillschubspannung}
+
+Aus @eq-rissdrillmoment folgt die @eq-drillwiderstand, unter der Annahme einer linearen Verteilung der Schubspannungen über die Querschnittshöhe.
+$$
+\begin{aligned}
+M_{x,u} &= \tau_{xy,u} \frac{h^2b}{6}\\
+M_{x,u} &= \sqrt{\rho_x f_{syx} \cdot \rho_y f_{syy}} \frac{h^2b}{6}
+\end{aligned}
+$${#eq-drillwiderstand}
+
 
 
 
