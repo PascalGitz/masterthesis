@@ -61,21 +61,37 @@ Die Feder verbindet die starren Stäbe, wie in der @fig-allg_stat_system gezeigt
 
 ![Numerische Integration der Krümmungen mittels den Feder](../imgs/allg_feder.svg){#fig-allg_feder}
 
-Generell lassen sich den Federn entsprechend den Freiheitsgraden Beziehungen hinterlegen. Im zweidimensionalen Raum entspricht dies drei Beziehungen, im dreidimensionalen Raum erweitert sich dies zu deren sechs.
-
-Gelenkdefinitionen im zweidimensionalen Raum:
+Die Beziehung zwischen der Krümmung und der Verdrehung zeigt die @eq-phi_to_chi. Dabei gilt die Voraussetzung, dass die Krümmung entlang der Einzugslänge konstant ist. 
 
 $$
-F_x(u),F_z(w),M_y(\varphi_y)
-$${#eq-zweidim_gelenkfunktionen} 
+\begin{aligned}
+\varphi &= \int \chi d_x\\
+\varphi &=\chi \cdot l_{Ein} 
+\end{aligned}
+$${#eq-phi_to_chi}
 
-Gelenkdefinitionen im dreidimensionalen Raum:
+Generell lassen sich den Federn entsprechend den Freiheitsgraden Beziehungen hinterlegen. Die @fig-allg_definition_gelenksteifigkeit zeigt eine Momentenbeziehung und eine Kraftbeziehung mit den entsprechenden Bezeichnungen.
+
+![Definition der Gelenksteifigkeit, a) Momentenbeziehung b) Kraftbeziehung](../imgs/allg_definition_gelenksteifigkeit.svg){#fig-allg_definition_gelenksteifigkeit}
+
+In der Fläche entspricht dies drei Beziehungen, im Raum erweitert sich dies zu deren sechs. Dabei gilt die @def-gelenkfunktionen_flaeche und @def-gelenkfunktionen_raum.
+
+
+
+::: {#def-gelenkfunktionen_flaeche}
+Gelenkdefinition in der Fläche
+$$
+F_x(u),F_z(w),M_y(\varphi_y)
+$$
+:::
+
+::: {#def-gelenkfunktionen_raum}
+Gelenkdefinitionen im Raum:
 
 $$
 F_x(u),F_y(v),F_z(w),M_x(\varphi_x),M_y(\varphi_y),M_z(\varphi_z)
-$${#eq-dreidim_gelenkfunktionen}
-
-![Definition der Gelenksteifigkeit, a) Momentenbeziehung b) Kraftbeziehung](../imgs/allg_definition_gelenksteifigkeit.svg){#fig-allg_definition_gelenksteifigkeit}
+$$
+:::
 
 Dabei steht $u_i$ für die Verformung, $F_i$ für die Kraft, $M_i$ für das Biegemoment und $\varphi_i$ für die Verdrehung und der Index $i$ für die entsprechende Richtung. Dies verdeutlicht, dass mit der richtigen Wahl der Federbeziehungen das nicht-lineare Querkraft-, Normalkraft- und Biegeverhalten modelliert werden kann. Die Schwierigkeit liegt jedoch offensichtlich in der richtigen Wahl der Federbeziehungen.
 

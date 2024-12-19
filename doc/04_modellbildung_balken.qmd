@@ -1,14 +1,92 @@
 # Balken
 
-## Querschnittsmodellbildung
+## Bernoulli Balkentheorie
+
+Dieser Abschnitt reisst die Balkentheorie von Bernoulli in groben Zügen an. Es besteht lediglich der Anspruch, die später verwendeten Begriffe zu visualisieren. Grundlagen zur Balkentheorie können in @spura_einfuhrung_2019 nachgelesen werden.
+
+Die Bernoulli Balkentheorie beschreibt einen schubstarren Balken. Dabei gelten die folgenden Annahmen:
+
+- Ebenbleiben des Querschnitts
+- Orthogonalität zur Balkenachse bleibt im verformten Zustand
+
+Am verformten Zustand lässt sich ein Verschiebungsfeld definieren, welches unter der Berücksichtigung der Elastizitätstheorie zum Verzerrungsfeld führt. Die Verzerrungen des Balkens und die zugehörigen Krümmungen zeigt die @fig-allg_balken_kin.
+
+![Verzerrungen am Balken](../imgs/allg_balken_kin.svg){#fig-allg_balken_kin}
+
+Unter der Berücksichtigung des Hookschen Gesetzes lassen sich die Spannungen ermitteln. Dargestellt in der @fig-allg_balken_normal und @fig-allg_balken_schub.
+
+![Normalspannungen am Balken](../imgs/allg_balken_normal.svg){#fig-allg_balken_normal}
+
+![Schubspannungen am Balken](../imgs/allg_balken_schub.svg){#fig-allg_balken_schub}
+
+Durch die Integration über die Fläche resultieren die Schnittgrössen gemäss der @fig-allg_balken_sg.
+
+![Schnittgrössen am Balken](../imgs/allg_balken_sg.svg){#fig-allg_balken_sg}
+
+Gemäss der Abgrenzung, lediglich das einachsige Biegetragverhalten zu untersuchen, reduziert sich die Betrachtung auf die Biegekrümmung $\chi_y$ und das Biegemoment $M_y$. Dabei gilt die Definition nach @eq-balken_definition_biegemoment.
+
+$$
+\begin{aligned}
+M_y = M\quad
+\chi_y = \chi
+\end{aligned}
+$${#eq-balken_definition_biegemoment}
+
+
+## Querschnittmodellbildung
+
+Die Querschnittmodellbildung beinhaltet die Ermittlung der Biegesteifigkeit und das Abbruchkriterium.
 
 ### Biegesteifigkeit
 
-Biegesteifigkeit
-Querschnittsanalyse
-Übertrag auf Verdrehungsfunktion
+Das Ziel ist es die Momentenfunktion gemäss der @def-gelenkfunktionen_flaeche zu ermitteln. Dazu ist eine Momenten-Krümmungs-Beziehung am Querschnitt zu definieren. Unter der Berücksichtigung der @eq-phi_to_chi folgt die Momenten-Verdrehungs-Beziehung. 
+
+Das verallgemeinerte Vorgehen der Momenten-Krümmungs-Analyse zeigt die @fig-allg_qs_analyse. Dazu ist der Querschnitt bei steigender Krümmung zu untersuchen. 
+
+![Querschnitt bei steigender Biegekrümmung mit Momenten-Krümmungs-Beziehung für linear-elastische ideal-plastische Werkstoffbeziehungen, sowie der Berücksichtigung der Zugversteifung](../imgs/allg_qs_analyse.svg){#fig-allg_qs_analyse}
+
+Unter der Prämisse von linear-elastischen ideal-plastischen Werkstoffbeziehungen, sowie einer Berücksichtigung der Zugfestigkeit des Betons lassen sich die folgenden analytischen Beziehungen aufstellen.
+
+Dabei beschreibt die @eq-rissmoment_balken das Rissmoment $M_r$ und die Biegesteifigkeit des ungerissenen Zustands $EI_{I}$.
+$$
+\begin{aligned}
+M_r = \frac{f_{ct} h^2}{6}\\
+EI_I = E_c \frac{h^3b}{12}
+\end{aligned}
+$${#eq-rissmoment_balken}
+
+
+Unter der Voraussetzung des elastischen Verhaltens des Betons bestimmt die @eq-gerissene_steifigkeit_balken die Druckzonenhöhe $x$, den Bewehrungsgehalt $\rho$, das Fliessmoment $M_y$ und die gerissene Biegesteifigkeit $EI_{II}$. Dabei entspricht $d$ der statischen Höhe, 
+$A_s$ der Querschnittsfläche der gezogenen Bewehrung, $b$ der Querschnittsbreite, $E_s$ dem Elastizitätsmodul des Bewehrungsstahls $E_c$ dem Elastizitätsmodul des Betons und $f_{sy}$ der Fliessspannung des Betonstahls.
+
+$$
+\begin{aligned}
+\rho &= \frac{A_s}{bd} \quad n = \frac{E_s}{E_c}\\
+x &= d\left[\sqrt{(\rho n)^2 +2\rho n} - \rho n\right]\\
+M_y &= A_s f_{sy} (d-x/3)\\
+EI_{II} &= A_s E_s (d-x)(d-x/3)
+\end{aligned}
+$${#eq-gerissene_steifigkeit_balken}
+
+Abschliessend leitet P. Marti basierend auf dem Zuggurtmodell @marti_tension_1998 eine Krümmungsdifferenz her. Diese Krümmungsdifferenz ermöglicht die Berücksichtigung der Zugversteifung in der Momenten-Krümmungs-Beziehung. 
+
+$$
+\begin{aligned}
+\Delta_{\chi}(\lambda) = \frac{\lambda}{2} \cdot \left( \frac{M_r}{EI_{II}} - \frac{f_{ct}}{E_c (d-x)}\right)
+\end{aligned}
+$${#eq-delta_chi_zugversteifung}
+
 
 ### Abbruchkriterium
 
-Summe der Gelenkrotationen
-Nur ein Biegeversagen prognostiziert
+Das Abbruchkriterium lässt sich anhand der  Modellvorstellung in @fig-jag_plast_rot definieren. Dabei muss die Summe der relativen Gelenkrotationen der Gelenke innerhalb der Länge des plastischen Gelenks kleiner als das Rotationsvermögen sein.
+
+$$
+\varphi_{max} \geq \sum_{i=1}^n \varphi_i
+$${#eq-abbruchkriterium}
+
+Dabei ist zwingend der ideal-plastische Verlauf am Ende der Momenten-Verdrehungs-Beziehung zu hinterlegen, da einzelne Gelenke innerhalb der plastischen Länge die Bruchverdrehung deutlich überschreiten können. In der Summe diese jedoch kleiner als das Rotationsvermögen sein müssen.
+
+Die @fig-jag_abbruchkrit illustriert die plastische Gelenklänge für das System. 
+
+![Definition des Abbruchkriteriums, Gelenke innerhalb der Länge des plastischen Gelenks](../imgs/jag_abbruchkrit.svg){#fig-jag_abbruchkrit}
