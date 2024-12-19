@@ -2,7 +2,7 @@
 
 ## Bernoulli Balkentheorie
 
-Dieser Abschnitt reisst die Balkentheorie von Bernoulli in groben Zügen an. Es besteht lediglich der Anspruch, die später verwendeten Begriffe zu visualisieren. Grundlagen zur Balkentheorie können in @spura_einfuhrung_2019 nachgelesen werden.
+Dieser Abschnitt reisst die Balkentheorie von Bernoulli in groben Zügen an. Es besteht lediglich der Anspruch, die später verwendeten Begriffe zu visualisieren. Grundlagen zur Balkentheorie können in @spura_einfuhrung_2019 (passende Quelle finden) nachgelesen werden.
 
 Die Bernoulli Balkentheorie beschreibt einen schubstarren Balken. Dabei gelten die folgenden Annahmen:
 
@@ -13,11 +13,9 @@ Am verformten Zustand lässt sich ein Verschiebungsfeld definieren, welches unte
 
 ![Verzerrungen am Balken](../imgs/allg_balken_kin.svg){#fig-allg_balken_kin}
 
-Unter der Berücksichtigung des Hookschen Gesetzes lassen sich die Spannungen ermitteln. Dargestellt in der @fig-allg_balken_normal und @fig-allg_balken_schub.
+Unter der Berücksichtigung des Hookschen Gesetzes lassen sich die Spannungen ermitteln. Dargestellt in der @fig-allg_balken_normal.
 
-![Normalspannungen am Balken](../imgs/allg_balken_normal.svg){#fig-allg_balken_normal}
-
-![Schubspannungen am Balken](../imgs/allg_balken_schub.svg){#fig-allg_balken_schub}
+![a) Normalspannungen b) Schubspannungen am Balken](../imgs/allg_balken_normal.svg){#fig-allg_balken_normal}
 
 Durch die Integration über die Fläche resultieren die Schnittgrössen gemäss der @fig-allg_balken_sg.
 
@@ -35,7 +33,43 @@ $${#eq-balken_definition_biegemoment}
 
 ## Querschnittmodellbildung
 
-Die Querschnittmodellbildung beinhaltet die Ermittlung der Biegesteifigkeit und das Abbruchkriterium.
+Die Querschnittmodellbildung beinhaltet einen Überblick über das Zuggurtmodell, die Ermittlung der Biegesteifigkeit und das Abbruchkriterium.
+
+### Zuggurtmodell
+
+Bevor mit der Analyse des Querschnitts begonnen wird, beschreibt dieser Abschnitt das Zuggurtmodell in groben Zügen. Das Zuggurtmodell geht zurück auf @marti_tension_1998. Anwendungen des Modells sind in @alvarez_einfluss_1998 und @kaufmann_strength_1998 zu finden. Der Abschnitt soll die Zusammenhänge erläutern und die verwendeten Begriffe klären.
+
+Das Zuggurtmodell ist eine vereinfachte, jedoch mechanisch konsistente Modellvorstellung zur Beschreibung der Zugversteifung anhand eines Zugglieds. Ein solches Zugglied ist in der @fig-allg_zugglied dargestellt.
+
+![Zugversteifung, a) Stahlbetonzugglied, b) Verlauf der Verbundschubspannungen, Betonstahlspannungen, Betonspannungen, Betonstahldehnungen, Betondehnungen, Schlupf, neugezeichnet nach @kaufmann_strength_1998](../imgs/allg_zugglied.svg){#fig-allg_zugglied}
+
+Das dargestellte Zugglied ist in seiner Achse mit einer Normalkraft beansprucht. Die sich einstellenden Risse sind im Abstand $s_{rm}$ dargestellt. Die Verläufe entsprechen in einer Näherung den effektiven Verläufen. Hervorzuheben ist der Betonspannungsverlauf und der Betondehnungsverlauf. Durch die Verbundwirkung zwischen dem Beton und dem Betonstahl beteiligt sich der Beton an der Aufnahme der Normalspannungen. Der Begriff der Zugversteifung definiert diese Beeinflussung des Tragverhaltens.
+
+Das Zuggurtmodell setzt eine abgetreppte ideale Verbundschubspannungs-Schlupf-Beziehung voraus. Dargestellt in @fig-allg_schubspann_schlupf.
+
+![Idealisierte abgetreppte Verbundschubspannungs-Schlupf-Beziehung](../imgs/allg_schubspann_schlupf.svg){#fig-allg_schubspann_schlupf}
+
+Basierend auf dieser Vereinfachung lässt sich unter anderem die @eq-rissabstand herleiten, welche den Rissabstand eingrenzt.
+
+
+$$
+\begin{aligned}
+s_{rm}(\lambda)&= \lambda \frac{\oslash (1-\rho)}{4\rho}\\
+0.5 &\leq \lambda \leq 1.0
+\end{aligned}
+$${#eq-rissabstand}
+
+Im Fokus steht hierbei der Einfluss der Zugversteifung auf das Biegetragverhalten. Dazu lässt sich das Zuggurtmodell problemlos auf ein Biegeproblem übertragen. Dargestellt ist dies in der @fig-allg_zugglied_in_biegung.
+
+![Zugglied in einem Stahlbetonelement durch Biegung beansprucht, dazu die entsprechende Dehnungs und Spannungsverteilung, nachgezeichnet nach @spathelf_gebrauchstauglichkeit_2022](../imgs/allg_zugglied_in_biegung.svg){#fig-allg_zugglied_in_biegung}
+
+Basierend auf dem Zuggurtmodell lässt sich die Krümmungsdifferenz herleiten. Diese ermöglicht die Berücksichtigung der Zugversteifung in der Momenten-Krümmungs-Beziehung. 
+
+$$
+\begin{aligned}
+\Delta_{\chi}(\lambda) = \frac{\lambda}{2} \cdot \left( \frac{M_r}{EI_{II}} - \frac{f_{ct}}{E_c (d-x)}\right)
+\end{aligned}
+$${#eq-delta_chi_zugversteifung}
 
 ### Biegesteifigkeit
 
@@ -68,25 +102,51 @@ EI_{II} &= A_s E_s (d-x)(d-x/3)
 \end{aligned}
 $${#eq-gerissene_steifigkeit_balken}
 
-Abschliessend leitet P. Marti basierend auf dem Zuggurtmodell @marti_tension_1998 eine Krümmungsdifferenz her. Diese Krümmungsdifferenz ermöglicht die Berücksichtigung der Zugversteifung in der Momenten-Krümmungs-Beziehung. 
-
-$$
-\begin{aligned}
-\Delta_{\chi}(\lambda) = \frac{\lambda}{2} \cdot \left( \frac{M_r}{EI_{II}} - \frac{f_{ct}}{E_c (d-x)}\right)
-\end{aligned}
-$${#eq-delta_chi_zugversteifung}
-
+Alternativ kann eine Momenten-Krümmungs-Beziehung numerisch ermittelt werden. Dazu gibt es eine Vielzahl von Softwarepaketen, welche eine Querschnittanalyse mit beliebigen Werkstoffbeziehungen erlauben. Die Transformation zur Gelenksteifigkeit ist dabei analog der analytischen Lösung.
 
 ### Abbruchkriterium
 
-Das Abbruchkriterium lässt sich anhand der  Modellvorstellung in @fig-jag_plast_rot definieren. Dabei muss die Summe der relativen Gelenkrotationen der Gelenke innerhalb der Länge des plastischen Gelenks kleiner als das Rotationsvermögen sein.
+Abschliessend gilt es ein Kriterium zu definieren, bei dem das Versagen des Systems eintritt. Dies geschieht über eine Begrenzung der Verdrehung. Die @fig-jag_plast_gelenk illustriert die Modellvorstellung zum Verhalten eines plastischen Gelenks. 
 
+![Darstellung eines plastischen Biegegelenks, nachgezeichnet nach @kaufmann_2_2017](../imgs/jag_plast_gelenk.svg){#fig-jag_plast_gelenk}
+
+Die Verdrehung des plastischen Gelenks definiert sich über die Summe der einzelnen Rissverdrehungen. 
 $$
-\varphi_{max} \geq \sum_{i=1}^n \varphi_i
+\varphi_{adm} \geq \sum_{i=1}^n \varphi_i
 $${#eq-abbruchkriterium}
 
-Dabei ist zwingend der ideal-plastische Verlauf am Ende der Momenten-Verdrehungs-Beziehung zu hinterlegen, da einzelne Gelenke innerhalb der plastischen Länge die Bruchverdrehung deutlich überschreiten können. In der Summe diese jedoch kleiner als das Rotationsvermögen sein müssen.
 
-Die @fig-jag_abbruchkrit illustriert die plastische Gelenklänge für das System. 
+Konkret lässt sich bei einem Betondruckversagen die zulässige Verdrehung mit der @eq-varphi_adm_beton bestimmen.
+$$
+\begin{aligned}
+\varphi_{adm,c} &= \left(\frac{\varepsilon_{cu}}{x}-\frac{\varepsilon_{smy}}{d-x}\right)\cdot l_{pl}\\
+\varepsilon_{smy} &\simeq \frac{f_{sy}}{E_s}
+\end{aligned}
+$${#eq-varphi_adm_beton}
+
+Dabei entspricht $\varepsilon_{smy}$ der gemittelten Dehnung über die Länge des Zugglieds beim Fliessbeginn der Bewehrung.
+
+Ist ein Betondruckversagen ausgeschlossen, so bestimmt sich die zulässige Verdrehung nach der @eq-varphi_adm_stahl.
+
+$$
+\begin{aligned}
+\varphi_{adm,s} &= \left(\frac{\varepsilon_{smu}}{d-x}-\frac{\varepsilon_{smy}}{d-x}\right)\cdot l_{pl}\\
+\varepsilon_{smu} &\not \simeq \varepsilon_{su}
+\end{aligned}
+$${#eq-varphi_adm_stahl}
+
+Die über die Länge des Zugglieds gemittelten Dehnung beim Erreichen der Zugfestigkeit ist mit $\varepsilon_{smu}$ bezeichnet. Es gilt die Tatsache, dass die gemittelte Dehnung deutlich kleiner als die Bruchdehnung der Bewehrung ist. Setzt man diese gleich, so überschätzt man die Duktilität des Systems deutlich. Der Betonstahldehnungsverlauf in der @fig-allg_zugglied zeigt diese Problematik auf, sofern die $\varepsilon_{sr} = \varepsilon_{su}$ gilt.
+
+Die erfoderliche Länge des plastischen Gelenks lässt sich mit der @eq-l_pl_schaetzung abschätzen. 
+
+$$
+l_{pl} \simeq 2d
+$${#eq-l_pl_schaetzung}
+
+Detailliertere Berechnungen zur mittleren Stahldehnung entlang des Zugglieds sind in @alvarez_einfluss_1998 beschrieben, sowie zeigt die Vorlesungsunterlage @kaufmann_2_2017 eine kompakte Zusammenfassung der Bestimmung der plastischen Rotation.
+
+Abschliessend ist die Ermittlung der einzelnen Rissrotationen zu klären. Diese lassen sich anhand der relativen Gelenkrotationen bestimmen. Dargestellt ist der Verhalt in der @fig-jag_abbruchkrit.
 
 ![Definition des Abbruchkriteriums, Gelenke innerhalb der Länge des plastischen Gelenks](../imgs/jag_abbruchkrit.svg){#fig-jag_abbruchkrit}
+
+Zugleich liefert diese Betrachtung eine Abschätzung zur Wahl der passenden Elementlänge. Es lässt sich argumentieren, dass die Elementlänge sicherlich kleiner als die plastische Gelenklänge zu wählen ist. Ebenso scheint eine Elementlänge entsprechend der Rissabstände zu wählen durchaus sinnvoll.
