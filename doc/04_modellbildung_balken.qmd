@@ -1,25 +1,33 @@
-# Balken
+# Stab
+
+Das vorangegangene Kapitel hat die Querschnittmodellbildung aussenvor gelassen. Das Ziel dieses Kapitels ist es, die Querschnittmodellbildung für Balken aufzuzeigen. Dazu sind die essentiellen Grössen der Balkentheorie beschrieben. Basierend auf diesen Grössen folgt der Abschnitt der Querschnittmodellbildung
 
 ## Bernoulli Balkentheorie
 
-Dieser Abschnitt reisst die Balkentheorie von Bernoulli in groben Zügen an. Es besteht lediglich der Anspruch, die später verwendeten Begriffe zu visualisieren. Grundlagen zur Balkentheorie können in @spura_einfuhrung_2019 (passende Quelle finden) nachgelesen werden.
+Der bereits mehrfach verwendete Begriff des Balkens bezieht sich in der gesamten Thesis auf die Balkentheorie nach Bernoulli. Dieser Abschnitt reisst die Balkentheorie in groben Zügen an. Es besteht lediglich der Anspruch, die später verwendeten Begriffe zu visualisieren. Grundlagen zur Balkentheorie können in @spura_einfuhrung_2019 (passende Quelle finden) nachgelesen werden.
 
-Die Bernoulli Balkentheorie beschreibt einen schubstarren Balken. Dabei gelten die folgenden Annahmen:
+Die Theorie nach Bernoulli geht von einem schubstarren Balken aus. Dabei gelten die folgenden Annahmen:
 
-- Ebenbleiben des Querschnitts
-- Orthogonalität zur Balkenachse bleibt im verformten Zustand
+- Der Querschnitt erfährt keine Verwölbung, es herrscht das Ebenbleiben des Querschnitts
+- Die Orthogonalität des Querschnitts zur Längsachse bleibt auch im verformten Zustand bestehen.
+
+![]
 
 Am verformten Zustand lässt sich ein Verschiebungsfeld definieren, welches unter der Berücksichtigung der Elastizitätstheorie zum Verzerrungsfeld führt. Die Verzerrungen des Balkens und die zugehörigen Krümmungen zeigt die @fig-allg_balken_kin.
 
 ![Verzerrungen am Balken](../imgs/allg_balken_kin.svg){#fig-allg_balken_kin}
 
-Unter der Berücksichtigung des Hookschen Gesetzes lassen sich die Spannungen ermitteln. Dargestellt in der @fig-allg_balken_normal.
+Unter der Berücksichtigung des Hookschen Gesetzes lassen sich die Normalspannungen ermitteln. Dargestellt in der @fig-allg_balken_normal.
 
-![a) Normalspannungen b) Schubspannungen am Balken](../imgs/allg_balken_normal.svg){#fig-allg_balken_normal}
+![Normalspannungen am Balken](../imgs/allg_balken_normal.svg){#fig-allg_balken_normal}
 
-Durch die Integration über die Fläche resultieren die Schnittgrössen gemäss der @fig-allg_balken_sg.
+Durch die Integration über die Fläche resultieren die beiden Biegemomente  und die Normalkraft, dargestellt in der @fig-allg_balken_sg. Für das Gleichgewicht sind zudem Querkräfte und das Torsionsmoment erforderlich. Diese sind ebenfalls dargestellt.
 
 ![Schnittgrössen am Balken](../imgs/allg_balken_sg.svg){#fig-allg_balken_sg}
+
+Aufgrund der Hypothese des schubstarren Balkens lassen sich die Schubspannungen nicht anhand der Verzerrung bestimmen. Vielmehr sind die für das Gleichgewicht geforderten Querkräfte und Torsionsmomente anhand der Biegemomente zu bestimmen und daraus sind die Schubspannungen rückzurechnen. Der Bezug zwischen den Schubspannungen und den Schnittgrössen erfolgt ebenfalls durch die Integration über die Fläche. Dargestellet sind die Schubspannungen in der @fig-allg_balken_schub 
+
+![Schubspannungen am Balken](../imgs/allg_balken_schub.svg){#fig-allg_balken_schub}
 
 Gemäss der Abgrenzung, lediglich das einachsige Biegetragverhalten zu untersuchen, reduziert sich die Betrachtung auf die Biegekrümmung $\chi_y$ und das Biegemoment $M_y$. Dabei gilt die Definition nach @eq-balken_definition_biegemoment.
 
@@ -36,6 +44,11 @@ $${#eq-balken_definition_biegemoment}
 Die Querschnittmodellbildung beinhaltet einen Überblick über das Zuggurtmodell, die Ermittlung der Biegesteifigkeit und das Abbruchkriterium.
 
 ### Transformation vom Querschnitt zum Gelenk
+
+ Verbleibt man beim Gedankenexperiment bei den Biegeverformungen, so integriert die Drehfeder die Krümmung des Querschnitts zu einer Verdrehung. Die Grenzen der Integration sind über die Einzugslänge beschrieben. Die Einzugslänge ist dabei definiert durch die Hälfte der Distanz bis zum nächsten Gelenk. Als Bezeichnung der Einzugslänge gilt $l_{Ein}$. Zudem setzt diese Modellierung einen konstanten Krümmungsverlauf entlang der Einzugslänge voraus.
+
+![Numerische Integration der Krümmungen mittels den Feder](../imgs/allg_feder.svg){#fig-allg_feder}
+
 
 Die Beziehung zwischen der Krümmung und der Verdrehung zeigt die @eq-phi_to_chi. Dabei gilt die Voraussetzung, dass die Krümmung entlang der Einzugslänge konstant ist. 
 
@@ -85,7 +98,7 @@ $${#eq-delta_chi_zugversteifung}
 
 ### Biegesteifigkeit
 
-Das Ziel ist es die Momentenfunktion gemäss der @def-gelenkfunktionen_flaeche zu ermitteln. Dazu ist eine Momenten-Krümmungs-Beziehung am Querschnitt zu definieren. Unter der Berücksichtigung der @eq-phi_to_chi folgt die Momenten-Verdrehungs-Beziehung. 
+Das Ziel ist es die Momentenfunktion gemäss der @def-gelenkfunktionen_raum zu ermitteln. Dazu ist eine Momenten-Krümmungs-Beziehung am Querschnitt zu definieren. Unter der Berücksichtigung der @eq-phi_to_chi folgt die Momenten-Verdrehungs-Beziehung. 
 
 Das verallgemeinerte Vorgehen der Momenten-Krümmungs-Analyse zeigt die @fig-allg_qs_analyse. Dazu ist der Querschnitt bei steigender Krümmung zu untersuchen. 
 

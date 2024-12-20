@@ -28,7 +28,7 @@
        id="clipPath3">
       <path
          d="M -0.00426,-0.00168 V 167.24579 H 425.20111 V -0.00168 H -0.00426"
-         transform="matrix(1,0,0,-1,-122.52661,62.116134)"
+         transform="matrix(1,0,0,-1,-228.1972,102.74133)"
          clip-rule="evenodd"
          id="path3" />
     </clipPath>
@@ -37,7 +37,7 @@
        id="clipPath4">
       <path
          d="M -0.00426,-0.00168 V 167.24579 H 425.20111 V -0.00168 H -0.00426"
-         transform="matrix(1,0,0,-1,-128.46228,57.982269)"
+         transform="matrix(1,0,0,-1,-180.83769,99.922283)"
          clip-rule="evenodd"
          id="path4" />
     </clipPath>
@@ -46,7 +46,7 @@
        id="clipPath5">
       <path
          d="M -0.00426,-0.00168 V 167.24579 H 425.20111 V -0.00168 H -0.00426"
-         transform="matrix(1,0,0,-1,-228.1972,102.74133)"
+         transform="matrix(1,0,0,-1,-168.43278,88.620062)"
          clip-rule="evenodd"
          id="path5" />
     </clipPath>
@@ -55,7 +55,7 @@
        id="clipPath6">
       <path
          d="M -0.00426,-0.00168 V 167.24579 H 425.20111 V -0.00168 H -0.00426"
-         transform="matrix(1,0,0,-1,-180.83769,99.922283)"
+         transform="matrix(1,0,0,-1,-174.36846,84.486205)"
          clip-rule="evenodd"
          id="path6" />
     </clipPath>
@@ -64,7 +64,7 @@
        id="clipPath7">
       <path
          d="M -0.00426,-0.00168 V 167.24579 H 425.20111 V -0.00168 H -0.00426"
-         transform="matrix(1,0,0,-1,-151.15995,89.770135)"
+         transform="matrix(1,0,0,-1,-78.217232,68.425659)"
          clip-rule="evenodd"
          id="path7" />
     </clipPath>
@@ -73,7 +73,7 @@
        id="clipPath8">
       <path
          d="M -0.00426,-0.00168 V 167.24579 H 425.20111 V -0.00168 H -0.00426"
-         transform="matrix(1,0,0,-1,-157.09561,85.63627)"
+         transform="matrix(1,0,0,-1,-148.66632,120.86978)"
          clip-rule="evenodd"
          id="path8" />
     </clipPath>
@@ -82,7 +82,7 @@
        id="clipPath9">
       <path
          d="M -0.00426,-0.00168 V 167.24579 H 425.20111 V -0.00168 H -0.00426"
-         transform="matrix(1,0,0,-1,-32.311061,41.921724)"
+         transform="matrix(1,0,0,-1,-121.21824,50.675409)"
          clip-rule="evenodd"
          id="path9" />
     </clipPath>
@@ -91,36 +91,9 @@
        id="clipPath10">
       <path
          d="M -0.00426,-0.00168 V 167.24579 H 425.20111 V -0.00168 H -0.00426"
-         transform="matrix(1,0,0,-1,-102.76014,94.365833)"
+         transform="matrix(1,0,0,-1,-127.1539,46.541559)"
          clip-rule="evenodd"
          id="path10" />
-    </clipPath>
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath11">
-      <path
-         d="M -0.00426,-0.00168 V 167.24579 H 425.20111 V -0.00168 H -0.00426"
-         transform="matrix(1,0,0,-1,-174.09525,124.31238)"
-         clip-rule="evenodd"
-         id="path11" />
-    </clipPath>
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath12">
-      <path
-         d="M -0.00426,-0.00168 V 167.24579 H 425.20111 V -0.00168 H -0.00426"
-         transform="matrix(1,0,0,-1,-75.312069,24.171481)"
-         clip-rule="evenodd"
-         id="path12" />
-    </clipPath>
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath13">
-      <path
-         d="M -0.00426,-0.00168 V 167.24579 H 425.20111 V -0.00168 H -0.00426"
-         transform="matrix(1,0,0,-1,-81.247742,20.037623)"
-         clip-rule="evenodd"
-         id="path13" />
     </clipPath>
   </defs>
   <sodipodi:namedview
@@ -163,165 +136,128 @@
     <text
        id="text2"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,163.36881,140.17049)"
+       transform="matrix(1.3333333,0,0,1.3333333,304.26292,86.00356)"
        clip-path="url(#clipPath3)"><tspan
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          x="0"
          y="0"
-         id="tspan2">χ</tspan></text>
+         id="tspan2">y</tspan></text>
     <text
        id="text3"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,171.28304,145.68231)"
+       transform="matrix(1.3333333,0,0,1.3333333,241.11691,89.762293)"
        clip-path="url(#clipPath4)"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.00428px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          x="0"
          y="0"
-         id="tspan3">y</tspan></text>
+         id="tspan3">x</tspan></text>
     <text
        id="text4"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,304.26292,86.00356)"
+       transform="matrix(1.3333333,0,0,1.3333333,224.57704,104.83192)"
        clip-path="url(#clipPath5)"><tspan
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          x="0"
          y="0"
-         id="tspan4">y</tspan></text>
+         id="tspan4">χ</tspan></text>
     <text
        id="text5"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,241.11691,89.762293)"
+       transform="matrix(1.3333333,0,0,1.3333333,232.49127,110.34373)"
        clip-path="url(#clipPath6)"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.00428px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          x="0"
          y="0"
-         id="tspan5">x</tspan></text>
+         id="tspan5">y</tspan></text>
     <text
        id="text6"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,201.5466,103.29849)"
+       transform="matrix(1.3333333,0,0,1.3333333,104.28964,131.75779)"
        clip-path="url(#clipPath7)"><tspan
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          x="0"
          y="0"
-         id="tspan6">χ</tspan></text>
+         id="tspan6">ε</tspan></text>
     <text
        id="text7"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,209.46081,108.81031)"
+       transform="matrix(1.3333333,0,0,1.3333333,198.22175,61.832293)"
        clip-path="url(#clipPath8)"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.00428px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          x="0"
          y="0"
-         id="tspan7">x</tspan></text>
+         id="tspan7">ε</tspan></text>
     <text
        id="text8"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,43.081413,167.09637)"
+       transform="matrix(1.3333333,0,0,1.3333333,161.62432,155.42479)"
        clip-path="url(#clipPath9)"><tspan
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          x="0"
          y="0"
-         id="tspan8">ε</tspan></text>
+         id="tspan8">χ</tspan></text>
     <text
        id="text9"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,137.01352,97.170893)"
+       transform="matrix(1.3333333,0,0,1.3333333,169.53853,160.93659)"
        clip-path="url(#clipPath10)"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         x="0"
-         y="0"
-         id="tspan9">ε</tspan></text>
-    <text
-       id="text10"
-       xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,232.127,57.24216)"
-       clip-path="url(#clipPath11)"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         x="0"
-         y="0"
-         id="tspan10">γ</tspan></text>
-    <text
-       id="text11"
-       xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,100.41609,190.76336)"
-       clip-path="url(#clipPath12)"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         x="0"
-         y="0"
-         id="tspan11">χ</tspan></text>
-    <text
-       id="text12"
-       xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,108.33032,196.27517)"
-       clip-path="url(#clipPath13)"><tspan
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.00428px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          x="0"
          y="0"
-         id="tspan12">z</tspan></text>
+         id="tspan9">z</tspan></text>
     <path
-       id="path14"
-       d="m 118.2563,29.02583 13.99278,8.07874 -27.98556,53.27687 13.99278,8.07875"
+       id="path11"
+       d="m 119.49283,99.17409 2.45488,1.41733 m 1.9639,1.13386 2.45486,1.41731 m 1.96391,1.13387 2.45487,1.41733 m 1.9639,1.13385 2.45489,1.41732 m 1.9639,1.13385 2.45486,1.41733 m 1.9639,1.13387 2.4549,1.41731 m 1.96389,1.13387 2.45487,1.41731 m 1.9639,1.13386 2.45486,1.41733 m 1.96393,1.13385 2.45486,1.41733 m 1.9639,1.13385 2.45486,1.41733 m 1.9639,1.13386 0.48191,0.27822 M 118.2563,98.46019 v 0 m 45.90618,26.50394 v 0 m 42.63339,-10.10279 V 92.68448 m 0,5.95276 v 0.42518 m 0,-6.37794 v 0 l 0.8504,5.95276 h -1.7008 l 0.8504,-5.95276"
        style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(1.3333333,0,0,-1.3333333,0,222.992)" />
     <path
-       id="path15"
-       d="m 160.11252,82.53696 c 1.24914,-0.65615 2.63898,-0.99897 4.04996,-0.99897"
-       style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-       transform="matrix(1.3333333,0,0,-1.3333333,0,222.992)" />
-    <path
-       id="path16"
-       d="m 118.2563,55.03406 c 1.41097,0 2.80081,0.34282 4.04994,0.99896"
-       style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-       transform="matrix(1.3333333,0,0,-1.3333333,0,222.992)" />
-    <path
-       id="path17"
-       d="m 178.15524,116.88538 -13.99276,8.07875 m -44.66965,-25.79004 2.45488,1.41733 m 1.9639,1.13386 2.45486,1.41731 m 1.96391,1.13387 2.45487,1.41733 m 1.9639,1.13385 2.45489,1.41732 m 1.9639,1.13385 2.45486,1.41733 m 1.9639,1.13387 2.4549,1.41731 m 1.96389,1.13387 2.45487,1.41731 m 1.9639,1.13386 2.45486,1.41733 m 1.96393,1.13385 2.45486,1.41733 m 1.9639,1.13385 2.45486,1.41733 m 1.9639,1.13386 0.48191,0.27822 M 118.2563,98.46019 v 0 m 45.90618,26.50394 v 0 m 0,-69.43436 -13.9928,8.07874 m -31.54233,-34.36844 2.45488,1.41731 m 1.9639,1.13386 2.45488,1.41732 m 1.96389,1.13386 2.4549,1.41733 m 1.9639,1.13385 2.45486,1.41733 m 1.9639,1.13385 2.45486,1.41733 m 1.96393,1.13386 2.45487,1.41731 m 1.96389,1.13387 2.45487,1.41731 m 1.9639,1.13387 2.45489,1.41733 m 1.9639,1.13385 2.45486,1.41732 m 1.9639,1.13385 2.4549,1.41733 m 1.96389,1.13387 1.34736,0.77789 M 118.2563,29.02583 v 0 m 45.90618,26.50394 v 0 m 0,69.43436 V 55.52977 m 13.99276,61.35561 -27.98556,-53.27687 M 118.2563,98.46019 V 29.02583 m 14.39775,44.69533 1.16819,-0.67444 m 1.96389,-1.13386 2.45487,-1.41732 m 1.9639,-1.13386 2.45486,-1.41733 m 1.9639,-1.13385 2.45489,-1.41733 m 1.9639,-1.13385 2.45486,-1.41732 m 1.9639,-1.13387 2.4549,-1.41731 m 1.96389,-1.13387 2.45487,-1.41733 m 1.9639,-1.13385 2.45489,-1.41732 m 1.9639,-1.13385 2.45486,-1.41733 m 1.9639,-1.13385 2.45487,-1.41733 m 1.96389,-1.13387 2.4549,-1.41731 m 1.9639,-1.13386 2.45486,-1.41733 m -49.77469,28.73744 v 0 m 51.5524,-29.76378 v 0 m 22.58942,70.90396 V 92.68448 m 0,5.95276 v 0.42518 m 0,-6.37794 v 0 l 0.8504,5.95276 h -1.7008"
-       style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-       transform="matrix(1.3333333,0,0,-1.3333333,0,222.992)" />
-    <path
-       id="path18"
-       d="m 205.94547,98.63724 0.8504,-5.95276"
-       style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-       transform="matrix(1.3333333,0,0,-1.3333333,0,222.992)" />
-    <path
-       id="path19"
+       id="path12"
        d="m 205.94547,98.63724 0.8504,-5.95276 0.8504,5.95276 z"
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        transform="matrix(1.3333333,0,0,-1.3333333,0,222.992)" />
     <path
-       id="path20"
+       id="path13"
        d="m 206.79587,114.86134 19.20572,-11.08844 m -5.15522,2.97638 -0.36825,0.2126 m 5.52347,-3.18898 v 0 l -4.73004,3.71285 -0.85038,-1.47292 5.58042,-2.23993"
        style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(1.3333333,0,0,-1.3333333,0,222.992)" />
     <path
-       id="path21"
+       id="path14"
        d="m 220.42117,106.01283 5.58042,-2.23993 -4.73004,3.71285 z"
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        transform="matrix(1.3333333,0,0,-1.3333333,0,222.992)" />
     <path
-       id="path22"
+       id="path15"
        d="M 206.79587,114.86134 187.59012,103.7729 m 5.15524,2.97638 0.36823,0.2126 m -5.52347,-3.18898 v 0 l 5.58044,2.23993 -0.8504,1.47292 -4.73004,-3.71285"
        style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(1.3333333,0,0,-1.3333333,0,222.992)" />
     <path
-       id="path23"
+       id="path16"
        d="m 192.32016,107.48575 -4.73004,-3.71285 5.58044,2.23993 z"
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        transform="matrix(1.3333333,0,0,-1.3333333,0,222.992)" />
     <path
-       id="path24"
-       d="m 148.17697,134.19336 2.4549,-1.41733 m 1.96389,-1.13385 2.45487,-1.41733 m 1.9639,-1.13385 2.45486,-1.41734 m 1.9639,-1.13385 2.45489,-1.41733 m 1.9639,-1.13385 2.45487,-1.41733 m 1.96389,-1.13386 2.4549,-1.41731 m 1.9639,-1.13387 2.45486,-1.41731 m 1.9639,-1.13387 2.23819,-1.29222 m -33.38629,19.27559 v 0 m 33.38629,-19.27559 v 0 M 72.66295,37.41968 l 2.45488,1.41731 m 1.9639,1.13387 2.45488,1.41732 m 1.96389,1.13385 2.45488,1.41733 m 1.9639,1.13385 2.45487,1.41733 m 1.96391,1.13386 2.45486,1.41732 m 1.9639,1.13386 2.45488,1.41733 m 1.9639,1.13385 2.45488,1.41733 m 1.9639,1.13385 2.45488,1.41733 m 1.96389,1.13385 2.45488,1.41732 m 1.9639,1.13387 2.45488,1.41731 m 1.9639,1.13387 1.40559,0.81152 M 72.35014,37.23907 v 0 m 45.90616,26.50394 v 0 m -45.90616,8.21324 0.99103,0.57218 m 1.9639,1.13385 2.45488,1.41733 m 1.9639,1.13386 2.45488,1.41731 m 1.96389,1.13387 2.45488,1.41733 m 1.9639,1.13385 2.45488,1.41732 m 1.9639,1.13385 2.45486,1.41733 m 1.96392,1.13385 2.45486,1.41733 m 1.9639,1.13387 2.45488,1.41731 m 1.9639,1.13386 2.45488,1.41733 m 1.96389,1.13385 2.45488,1.41733 m 1.9639,1.13385 2.45488,1.41733 M 72.35014,71.95625 v 0 m 45.90616,26.50394 v 0 M 72.35014,2.5219 72.47571,2.59439 m 1.9639,1.13385 2.45488,1.41733 m 1.96389,1.13386 2.45487,1.41732 m 1.96391,1.13386 2.45487,1.41733 m 1.96389,1.13385 2.45488,1.41733 m 1.9639,1.13385 2.45488,1.41733 m 1.9639,1.13385 2.45488,1.41732 m 1.9639,1.13387 2.45488,1.41731 m 1.96389,1.13387 2.45488,1.41733 m 1.9639,1.13385 2.45486,1.41732 m 1.96392,1.13385 2.45486,1.41733 M 72.35014,2.5219 v 0 m 45.90616,26.50393 v 0 M 72.35014,2.5219 v 0.31274"
+       id="path17"
+       d="m 164.16248,55.52977 13.99276,8.07874 -27.98556,53.27687 13.9928,8.07875"
        style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(1.3333333,0,0,-1.3333333,0,222.992)" />
     <path
-       id="path25"
-       d="m 72.35014,5.10236 v 2.83465 m 0,2.26772 v 2.83464 m 0,2.26771 v 2.83466 m 0,2.26771 v 2.83464 m 0,2.26772 v 2.83464 m 0,2.26773 v 2.83464 m 0,2.26772 v 2.83464 m 0,2.26771 v 2.83466 m 0,2.26771 v 2.83465 m 0,2.26771 v 2.83466 m 0,2.26771 v 2.83464 m 0,2.26772 V 64.063 m 0,2.26772 v 2.83464 m 0,2.26771 v 0.52318 m 0,-69.43435 v 0 m 0,69.43435 v 0 M 86.34293,80.03499 72.35014,71.95625 M 92.3941,25.66667 52.30617,48.81146 M 92.3941,25.66667 111.71811,36.82339 M 32.98216,37.65474 52.30617,48.81146 M 32.98216,37.65474 111.71811,36.82339"
+       id="path18"
+       d="m 164.16248,81.53799 c 1.41098,0 2.80081,0.34282 4.04992,0.99897"
        style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(1.3333333,0,0,-1.3333333,0,222.992)" />
     <path
-       id="path26"
-       d="m 79.89232,32.8846 c 0.74878,1.29693 1.15047,2.76503 1.16629,4.26253"
+       id="path19"
+       d="M 164.16248,124.96413 V 55.52977 m -45.90618,8.21324 1.04927,0.60581 m 1.96392,1.13385 2.45486,1.41732 m 1.9639,1.13385 2.45488,1.41733 m 1.9639,1.13387 2.45489,1.41731 m 1.9639,1.13387 2.45486,1.41731 m 1.9639,1.13386 2.4549,1.41733 m 1.96389,1.13385 2.45487,1.41733 m 1.9639,1.13385 2.45486,1.41733 m 1.9639,1.13386 2.45489,1.41732 m 1.9639,1.13386 2.45486,1.41733 m 1.9639,1.13385 2.4549,1.41733 M 118.2563,63.74301 v 0 m 45.90618,26.50394 v 0 m -44.66965,8.92714 2.45488,1.41733 m 1.9639,1.13386 2.45486,1.41731 m 1.96391,1.13387 2.45487,1.41733 m 1.9639,1.13385 2.45489,1.41732 m 1.9639,1.13385 2.45486,1.41733 m 1.9639,1.13387 2.4549,1.41731 m 1.96389,1.13387 2.45487,1.41731 m 1.9639,1.13386 2.45486,1.41733 m 1.96393,1.13385 2.45486,1.41733 m 1.9639,1.13385 2.45486,1.41733 m 1.9639,1.13386 0.48191,0.27822 M 118.2563,98.46019 v 0 m 45.90618,26.50394 v 0 m -45.53513,-95.72406 2.45488,1.41731 m 1.9639,1.13386 2.45488,1.41732 m 1.96389,1.13386 2.4549,1.41733 m 1.9639,1.13385 2.45486,1.41733 m 1.9639,1.13385 2.45486,1.41733 m 1.96393,1.13386 2.45487,1.41731 m 1.96389,1.13387 2.45487,1.41731 m 1.9639,1.13387 2.45489,1.41733 m 1.9639,1.13385 2.45486,1.41732 m 1.9639,1.13385 2.4549,1.41733 m 1.96389,1.13387 1.34736,0.77789 M 118.2563,29.02583 v 0 m 45.90618,26.50394 v 0 M 118.2563,30.61418 v 2.83464 m 0,2.26772 v 2.83464 m 0,2.26771 v 2.83466 m 0,2.26771 v 2.83465 m 0,2.26771 v 2.83466 m 0,2.26771 v 2.83464 m 0,2.26772 V 64.063 m 0,2.26772 v 2.83464 m 0,2.26771 v 2.83465 m 0,2.26771 v 2.83466"
+       style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(1.3333333,0,0,-1.3333333,0,222.992)" />
+    <path
+       id="path20"
+       d="m 118.2563,81.6378 v 2.83464 m 0,2.26772 v 2.83465 m 0,2.26772 v 2.83464 m 0,2.26772 v 1.5153 m 0,-69.43436 v 0 m 0,69.43436 v 0 M 138.30026,52.17061 98.21233,75.3154 m 40.08793,-23.14479 19.32401,11.15672 M 78.88834,64.15869 98.21233,75.3154 M 78.88834,64.15869 157.62427,63.32733"
+       style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(1.3333333,0,0,-1.3333333,0,222.992)" />
+    <path
+       id="path21"
+       d="m 125.79848,59.38853 c 0.74878,1.29694 1.15048,2.76503 1.16629,4.26253"
        style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(1.3333333,0,0,-1.3333333,0,222.992)" />
   </g>

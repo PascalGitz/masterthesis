@@ -19,7 +19,7 @@
        id="clipPath7">
       <path
          d="M -0.00426,-0.00156 V 155.90707 H 425.20111 V -0.00156 H -0.00426"
-         transform="matrix(1,0,0,-1,-108.17062,132.44706)"
+         transform="matrix(1,0,0,-1,-94.2322,19.596373)"
          clip-rule="evenodd"
          id="path7" />
     </clipPath>
@@ -28,7 +28,7 @@
        id="clipPath8">
       <path
          d="M -0.00426,-0.00156 V 155.90707 H 425.20111 V -0.00156 H -0.00426"
-         transform="matrix(1,0,0,-1,-108.11157,122.24234)"
+         transform="matrix(1,0,0,-1,-285.88375,9.0692902)"
          clip-rule="evenodd"
          id="path8" />
     </clipPath>
@@ -37,7 +37,7 @@
        id="clipPath9">
       <path
          d="M -0.00426,-0.00156 V 155.90707 H 425.20111 V -0.00156 H -0.00426"
-         transform="matrix(1,0,0,-1,-306.77975,18.633538)"
+         transform="matrix(1,0,0,-1,-116.03346,110.16432)"
          clip-rule="evenodd"
          id="path9" />
     </clipPath>
@@ -46,7 +46,7 @@
        id="clipPath10">
       <path
          d="M -0.00426,-0.00156 V 155.90707 H 425.20111 V -0.00156 H -0.00426"
-         transform="matrix(1,0,0,-1,-94.2322,19.596373)"
+         transform="matrix(1,0,0,-1,-115.9744,99.959593)"
          clip-rule="evenodd"
          id="path10" />
     </clipPath>
@@ -270,41 +270,41 @@
   <text
      id="text6"
      xml:space="preserve"
-     transform="matrix(1.3333333,0,0,1.3333333,144.22749,31.278587)"
-     clip-path="url(#clipPath7)"><tspan
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       x="0"
-       y="0"
-       id="tspan6">y</tspan></text>
-  <text
-     id="text7"
-     xml:space="preserve"
-     transform="matrix(1.3333333,0,0,1.3333333,144.14876,44.88488)"
-     clip-path="url(#clipPath8)"><tspan
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       x="0"
-       y="0"
-       id="tspan7">v</tspan></text>
-  <text
-     id="text8"
-     xml:space="preserve"
-     transform="matrix(1.3333333,0,0,1.3333333,409.03965,183.02995)"
-     clip-path="url(#clipPath9)"><tspan
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       x="0 5.0035648 7.5053477 13.069312"
-       y="0"
-       sodipodi:role="line"
-       id="tspan8">x u </tspan></text>
-  <text
-     id="text9"
-     xml:space="preserve"
      transform="matrix(1.3333333,0,0,1.3333333,125.64293,181.74617)"
-     clip-path="url(#clipPath10)"><tspan
+     clip-path="url(#clipPath7)"><tspan
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        x="0 4.4431658 6.9449482"
        y="0"
        sodipodi:role="line"
-       id="tspan9">z w</tspan></text>
+       id="tspan6">z w</tspan></text>
+  <text
+     id="text7"
+     xml:space="preserve"
+     transform="matrix(1.3333333,0,0,1.3333333,381.17832,195.78228)"
+     clip-path="url(#clipPath8)"><tspan
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       x="0 5.0035648 7.5053477 13.069312"
+       y="0"
+       sodipodi:role="line"
+       id="tspan7">x u </tspan></text>
+  <text
+     id="text8"
+     xml:space="preserve"
+     transform="matrix(1.3333333,0,0,1.3333333,154.71128,60.988907)"
+     clip-path="url(#clipPath9)"><tspan
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       x="0"
+       y="0"
+       id="tspan8">y</tspan></text>
+  <text
+     id="text9"
+     xml:space="preserve"
+     transform="matrix(1.3333333,0,0,1.3333333,154.63253,74.595213)"
+     clip-path="url(#clipPath10)"><tspan
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       x="0"
+       y="0"
+       id="tspan9">v</tspan></text>
   <text
      id="text10"
      xml:space="preserve"

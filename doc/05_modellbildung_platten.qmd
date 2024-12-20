@@ -31,8 +31,8 @@ Für kleine Winkel gilt
 
 $$
 \begin{aligned}
--\psi_x = \frac{\partial w_0}{\partial x} \quad
--\psi_y = \frac{\partial w_0}{\partial y} \quad
+-\varphi_x = \frac{\partial w_0}{\partial x} \quad
+-\varphi_y = \frac{\partial w_0}{\partial y} \quad
 \end{aligned}
 $${#eq-phi_x_kirch}
 
@@ -41,8 +41,8 @@ Gilt für jeden beliebigen Punkt, nicht nur P
 
 $$
 \begin{aligned}
-u_P = z_P \psi_x = u \quad
-v_P = z_P \psi_y = v
+u_P = z_P \varphi_x = u \quad
+v_P = z_P \varphi_y = v
 \end{aligned}
 $${#eq-u_P_kirch}
 
