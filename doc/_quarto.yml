@@ -13,9 +13,9 @@ book:
   chapters:
 
     - index.qmd
-    - part: "Modellbildung"
+    - part: intro_modellbildung.qmd
       chapters:
-      - 04_modellbildung_einleitung.qmd
+      - 04_modellbildung_allgemeines.qmd
       - 04_modellbildung_balken.qmd
       - 05_modellbildung_platten.qmd
 

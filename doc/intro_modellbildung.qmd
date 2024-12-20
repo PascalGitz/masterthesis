@@ -1,1 +1,6 @@
-Das Kapitel der Modellbildung beschreibt sämtliche Herleitungen und Annahmen der verwendeten Modelle. Es unterscheidet zwischen der Modellbildung für Balken und der Modellbildung für Platten. Das Kapitel ist in sich abschliessend und soll dem Leser sämtliche Informationen liefern zur Anwendung der Modelle an beliebige Stab- oder Plattentragwerke.
+# Modellbildung
+
+Der erste Teil der Arbeit befasst sich mit der Modellbildung. Die Modellbildung ist in sich abschliessend beschrieben und soll dem Leser sämtliche Informationen liefern zur Anwendung an beliebigen Stahlbetonbalken- oder Plattentragwerken.
+
+Gegliedert ist der Teil in ein allgemeines Kapitel, gefolgt von der Modellbildung der Balken und der Modellbildung der Platten.
+

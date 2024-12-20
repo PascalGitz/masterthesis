@@ -35,6 +35,18 @@ $${#eq-balken_definition_biegemoment}
 
 Die Querschnittmodellbildung beinhaltet einen Überblick über das Zuggurtmodell, die Ermittlung der Biegesteifigkeit und das Abbruchkriterium.
 
+### Transformation vom Querschnitt zum Gelenk
+
+Die Beziehung zwischen der Krümmung und der Verdrehung zeigt die @eq-phi_to_chi. Dabei gilt die Voraussetzung, dass die Krümmung entlang der Einzugslänge konstant ist. 
+
+$$
+\begin{aligned}
+\varphi &= \int \chi d_x\\
+\varphi &=\chi \cdot l_{Ein} 
+\end{aligned}
+$${#eq-phi_to_chi}
+
+
 ### Zuggurtmodell
 
 Bevor mit der Analyse des Querschnitts begonnen wird, beschreibt dieser Abschnitt das Zuggurtmodell in groben Zügen. Das Zuggurtmodell geht zurück auf @marti_tension_1998. Anwendungen des Modells sind in @alvarez_einfluss_1998 und @kaufmann_strength_1998 zu finden. Der Abschnitt soll die Zusammenhänge erläutern und die verwendeten Begriffe klären.
