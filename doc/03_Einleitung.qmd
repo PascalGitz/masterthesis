@@ -15,9 +15,9 @@ Die vorliegende Arbeit hat das Ziel, eine praxisorientierte Methode zur präzise
 
 ## Abgrenzung
 
-Im Fokus der Arbeit steht die Modellbildung für die Anwendung bei Platten- und Stabtragwerken. Dabei wird ausschliesslich das **einachsige Biegetragverhalten** betrachtet. Zudem werden sämtliche Berechnungen mit der FE-Software AxisVM-X7 durchgeführt.
+Im Fokus der Arbeit steht die Modellbildung für die Anwendung bei Platten- und Stabtragwerken. Dabei wird ausschliesslich das **Biegetragverhalten** betrachtet. Zudem sind sämtliche Berechnungen mit der FE-Software AxisVM-X7 durchgeführt.
 
 ## Übersicht
 
-Im ersten Kapitel wird die Modellvorstellung aufgezeigt, welche mit einer Grosszahl an in der Schweiz verbreiteten Statiksoftwares angewendet werden kann. Es wird lediglich auf die generellen Aspekte des Modells eingegangen. Danach wird die Anwendung des Modells an einem zweidimensionalen Stabsystem illustriert und anschliessend auf einen dreidimensionalen Trägerrost übertragen. Nach der erfolgreichen Beschreibung dreidimensionaler Systeme wird das Modell auf ein theoretisches Plattentragwerk angewendet. Den Höhepunkt der Arbeit bildet die Anwendung des Modells an einem konkreten Versuchsbeispiel. Abschliessend wird ein Fazit über die erzielten Ergebnisse gezogen und ein Ausblick auf mögliche zukünftige Forschungsthemen gegeben.
+
 

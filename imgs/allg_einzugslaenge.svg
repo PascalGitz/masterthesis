@@ -19,7 +19,7 @@
        id="clipPath7">
       <path
          d="M -0.00426,-8.5e-4 V 85.04022 H 425.20111 V -8.5e-4 H -0.00426"
-         transform="matrix(1,0,0,-1,-201.2707,51.063252)"
+         transform="matrix(1,0,0,-1,-204.95574,51.063252)"
          clip-rule="evenodd"
          id="path7" />
     </clipPath>
@@ -28,7 +28,7 @@
        id="clipPath8">
       <path
          d="M -0.00426,-8.5e-4 V 85.04022 H 425.20111 V -8.5e-4 H -0.00426"
-         transform="matrix(1,0,0,-1,-204.26617,46.929391)"
+         transform="matrix(1,0,0,-1,-207.95122,46.929391)"
          clip-rule="evenodd"
          id="path8" />
     </clipPath>
@@ -90,7 +90,7 @@
   <text
      id="text6"
      xml:space="preserve"
-     transform="matrix(1.3333333,0,0,1.3333333,268.36093,45.301533)"
+     transform="matrix(1.3333333,0,0,1.3333333,273.27431,45.301533)"
      clip-path="url(#clipPath7)"><tspan
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        x="0"
@@ -99,7 +99,7 @@
   <text
      id="text7"
      xml:space="preserve"
-     transform="matrix(1.3333333,0,0,1.3333333,272.35488,50.813347)"
+     transform="matrix(1.3333333,0,0,1.3333333,277.26828,50.813347)"
      clip-path="url(#clipPath8)"><tspan
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.00428px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        x="0 3.6686151 5.3378048"

@@ -4,7 +4,9 @@ Das Kapitel verfolgt das Ziel, die Modellbildung im Ganzen aufzuzeigen. Dazu die
 
 ## Gedankenexperiment
 
-Das Gedankenexperiment soll einen Überblick über das Modellverhalten liefern. Dabei steht die Verständlichkeit im Vordergrund, die fachlich saubere Sprache ist dabei nebensächlich. Stellt man sich einen einfachen Balken mit einer Streckenlast belastet vor, so resultiert erwartungsgemäss die elastische Biegelinie gemäss der @fig-allg_stat_system_def2.
+Das Gedankenexperiment soll einen Überblick über das Modellverhalten liefern. Dabei steht die Verständlichkeit im Vordergrund. 
+
+Stellt man sich einen einfachen Balken mit einer Streckenlast belastet vor, so resultiert erwartungsgemäss die elastische Biegelinie gemäss der @fig-allg_stat_system_def2.
 
 ![Elastische Biegelinie des einfachen Balkens](../imgs/allg_stat_system_def2.svg){#fig-allg_stat_system_def2}
 
@@ -28,7 +30,10 @@ Stellt man sich den adaptierten Balken im dreidimensionalen Raum vor, und ordnet
 
 ![Anordnung des adaptieren Balkens zum Trägerrost](../imgs/allg_gedankenexperiment_tr.svg){#fig-allg_gedankenexperiment_tr}
 
-Die adaptierte Modellvorstellung ermöglicht die Bestimmung des nicht-linearen Tragverhalten von Stab- und Flächentragwerken. Die Schwierigkeit liegt offensichtlich in der Bestimmung der passenden Federbeziehungen. Zudem erhöht sich die Komplexität des Modells im Vergleich mit einer linear-elastischen Lösung deutlich, was die Anwendung einer Finiten-Elemente Software praktisch unabdingbar macht.
+
+Das Gedankexeperiment zeigt auf, dass die adaptierte Modellvorstellung die Bestimmung des nicht-linearen Tragverhalten von Stab- und Flächentragwerken ermöglicht. 
+
+Die Schwierigkeit liegt offensichtlich in der Bestimmung der passenden Federbeziehungen. Zudem erhöht sich die Komplexität des Modells im Vergleich mit einer linear-elastischen Lösung deutlich, was die Anwendung einer Finiten-Elemente Software praktisch unabdingbar macht.
 
 ## Berechnungsschema
 
@@ -36,11 +41,11 @@ Die Modellbildung kann mit dem Ablaufschema, gemäss der @fig-allg_schema, veral
 
 ![Modellierungsschema](../imgs/allg_schema.svg){#fig-allg_schema}
 
-Das Modellierungsschema unterteilt die Modellbildung in zwei Hauptgruppen. Die Systemmodellbildung beschreibt das gesamte Modell. Dazu gehören die Elementlänge, die Anordnung der Federn, die Federbeziehung und die abschliessende Analyse mit den daraus folgenden Resultaten. Die Querschnittmodellbildung als zweite Hauptgruppe befindet sich innerhalb der Systemmodellbildung und befasst sich detailliert mit der Ermittlung der Federbeziehung. Dazu gehört die Steifigkeitsermittlung, sowie das Abbruchkriterium.
+Das Modellierungsschema unterteilt die Modellbildung in zwei Hauptgruppen. Die Systemmodellbildung beschreibt das gesamte Modell. Dazu gehören die Elementlänge, die Anordnung der Federn, die Federbeziehung und die abschliessende Analyse mit den daraus folgenden Resultaten. Die Querschnittsmodellbildung als zweite Hauptgruppe befindet sich innerhalb der Systemmodellbildung und befasst sich detailliert mit der Ermittlung der Federbeziehung. Dazu gehört die Steifigkeitsermittlung, sowie das Abbruchkriterium.
 
 ## Systemmodellbildung
 
-Die Systemmodellbildung ist mit dem einleitenden Gedankenexperiment in ihren Grundzügen aufgezeigt. Der folgende Abschnitt beschreibt die Einzelheiten. Dabei ist die Querschnittmodellbildung ausgeklammert. Diese wird in den folgenden Kapitel für Balken und Platten gesondert beschrieben.
+Die Systemmodellbildung ist mit dem einleitenden Gedankenexperiment in ihren Grundzügen aufgezeigt. Der folgende Abschnitt beschreibt die Einzelheiten. Dabei ist die Querschnittsmodellbildung ausgeklammert. Diese wird in den folgenden Kapitel für Balken und Platten gesondert beschrieben.
 
 ### Elementlänge
 
@@ -50,15 +55,15 @@ Dabei stellt sich die zentrale Frage, wie gross die Elementlänge zu wählen ist
 
 Eine solche Feststellung ist jedoch von kleinem praktischen Nutzen. Umsetzbar ist hingegen eine Sensitivitätsanalyse der Elementlänge. Dazu ist das Modell mit einer Variation der Elementlänge zu berechnen um den Einfluss dieser zu quantifizieren.
 
-Die Wahl der Elementlänge wird bei der Definition des Abbruchkriteriums in der Querschnittmodellbildung erneut aufgegriffen.
+Die Wahl der Elementlänge wird bei der Definition des Abbruchkriteriums in der Querschnittsmodellbildung erneut aufgegriffen.
 
-### Federn
+### Federn {#sec-feder}
 
 Die Feder verbindet die starren Stäbe, wie in der @fig-allg_stat_system gezeigt. Die Feder beschreibt das Systemverhalten innerhalb der Einzugslänge. Die Einzugslänge $l_{Ein}$ ist definiert durch die Hälfte des Abstands zur nächsten Feder und ist in der @fig-allg_einzugslaenge dargestellt. 
 
 ![Definition der Einzugslänge der Feder](../imgs/allg_einzugslaenge.svg){#fig-allg_einzugslaenge}
 
-Generell lassen sich den Federn entsprechend den Knotenfreiheitsgraden Beziehungen hinterlegen. Im Raum entspricht dies sechs unterschiedlichen Beziehungen. Dabei gilt die @def-gelenkfunktionen_raum. Zudem zeigt dies, dass die Feder fähig ist nicht-lineares Querkraft-, Normalkraft- und Biegemomentenverhalten zu beschreiben.
+Generell lassen sich den Federn entsprechend den Knotenfreiheitsgraden Beziehungen hinterlegen. Im Raum entspricht dies sechs unterschiedlichen Beziehungen. Dabei gilt die @def-gelenkfunktionen_raum. Zudem zeigt dies, dass die Feder fähig ist, nicht-lineares Querkraft-, Normalkraft-, Torsions- und biaxiales Biegemomentenverhalten zu beschreiben.
 
 ::: {#def-gelenkfunktionen_raum}
 Federdefinitionen im Raum:
@@ -72,7 +77,7 @@ Die Federsteifigkeit ist bei einer Verdrehungsbeziehung mit $K_r$ und bei einer 
 
 ![Definition der Federbeziehungen, a) Verdrehungsbeziehung b) Verschiebungsbeziehung](../imgs/allg_definition_gelenksteifigkeit.svg){#fig-allg_definition_gelenksteifigkeit}
 
-Die Umsetzung der Feder in AxisVM-X7 bildet den Abschluss des Beschriebs der Feder. In AxisVM-X7 lässt sich die Feder mit einem Stabgelenk modellieren. Des Weiteren hat sich eine Modellierungsstrategie bewährt, bei dem an jedem Stab ein Anfang- und ein Endgelenk modelliert wird. Dies bringt den Vorteil, dass die Einzugslängen sich für Randgelenke, bei Auflagern beispielsweise, nicht unterscheiden. Illustriert ist dies in der @fig-allg_doppelgelenk.
+Die Umsetzung der Feder in AxisVM-X7 bildet den Abschluss des Beschriebs der Feder. In AxisVM-X7 lässt sich die Feder mit einem Stabgelenk modellieren. Des Weiteren hat sich eine Modellierungsstrategie bewährt, bei dem an jedem Stab ein Anfang- und ein Endgelenk zu modellieren ist. Dies bringt den Vorteil, dass die Einzugslängen sich für Randgelenke, bei Auflagern beispielsweise, nicht unterscheiden. Illustriert ist dies in der @fig-allg_doppelgelenk.
 
 ![Modellierungsstrategie der Stabanfang- und Endgelenke](../imgs/allg_doppelgelenk.svg){#fig-allg_doppelgelenk}
 
@@ -82,7 +87,7 @@ Auf Grund der Definition in AxisVM-X7 sind die Federn fortan als Stabgelenke bez
 
 Nach der Modellierung des Systems ist eine nicht-lineare Analyse durchzuführen. Auf einen vertieften Beschrieb des Lösungsalgorithmus wird verzichtet. In AxisVM-X7 ist der Newton-Rhapson-Algorithmus implementiert zur iterativen Lösung des Systems. Grundlagen dazu sind in @wagner_gleichungslosung_2022 (passende Quelle finden) beschrieben.
 
-Nach der nicht-linearen Analyse lassen sich eine Vielzahl von Resultaten ausgeben. Die starren Stäbe weisen die üblichen Schnittkräfte auf. Lagerreaktion lassen sich darstellen. Zudem besteht die Möglichkeit zur Darstellung der relativen Gelenkrotation der Stabgelenke. Die Definition der relativen Gelenkrotation $\varphi_R$ ist in der @fig-allg_relative_gelenkrot aufgezeigt.
+Nach der nicht-linearen Analyse lassen sich eine Vielzahl von Resultaten ausgeben. Die starren Stäbe weisen die üblichen Schnittkräfte auf. Lagerreaktion lassen sich darstellen. Zudem besteht die Möglichkeit zur Darstellung der relativen Gelenkrotation der Stabgelenke. Die Definition der relativen Gelenkrotation $\varphi_R$ ist in der @fig-allg_relative_gelenkrot aufgezeigt. Diese beschreibt die Rotation des Gelenks relativ zum verdrehten Stab.
 
 ![Relative Gelenkrotation am verformten System](../imgs/allg_relative_gelenkrot.svg){#fig-allg_relative_gelenkrot}
 
