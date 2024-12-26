@@ -1,33 +1,31 @@
 # Platten
 
-Einführungsbeispiel erweitern auf Trägerrost. Ambition eine Platte damit nachzurechnen
-
+Der Abschluss der Modellbildung bildet die Querschnittsmodellbildung der Stäbe des Trägerrosts zur Berechnung von Plattentragwerken. Dazu ist zunächst die Kirchhoffsche Plattentheorie erläutert, um den in der Arbeit verwendeten Begriff der Platte zu schärfen. Gefolgt ist dies von der Transformation des Plattenelements zum Trägerrost. Abschliessend folgt die eigentliche Querschnittsmodellbildung.
 
 ## Kirchhoffsche Plattentheorie
 
-Was versteht man unter einer Platte:
+Der folgende Beschrieb beschränkt sich auf die wesentlichen Begriffe der Plattentheorie. Eine ausführliche Darstellung der Theorie ist in @mittelstedt_flachentragwerke_2022 zu finden.
 
+Plattenelemente sind ebene Flächenelemente, welche normal zur Ebene belastet sind. Die Kirchhoffsche Plattentheorie dient der Berechnung von dünnen Platten. Dazu muss die Dicke $h$ der Platte deutlich kleiner als die charakterisierende Abmessung, beispielsweise die Breite, sein. Die @fig-allg_duenne_platte zeigt ein solch dünnes Plattenelement mit einer Einwirkung normal zur Ebene.
 
+![Ein Plattenelement mit deutlich signifikant kleineren Dicke $h$ als charakterisierende Abmessungen $l$](../imgs/allg_duenne_platte.svg){#fig-allg_duenne_platte}
 
-@mittelstedt_flachentragwerke_2022
+Zudem gelten die folgenden Annahmen, welche aus @mittelstedt_flachentragwerke_2022 entnommen sind:
 
-
-![Ein Plattenelement mit deutlich signifikant kleineren Dicke $h$ als charakterisierende Abmessungen](../imgs/allg_duenne_platte.svg){#fig-allg_duenne_platte}
-
-
-Annahmen
-
-- Ebenbleiben des Querschnitts, es tritt keine Querschnittsverwölbung auf.
-- Normalenhypothese, der Querschnitt steht auch im verformten Zustand senkrecht zur Mittelebene.
-- Man unterstellt geometrische Linearität. Die Verformungen sind klein gegenüber der Plattenabmessungen.
+- Das Hooksche Gesetz ist uneingeschränkt gültig. 
+- Der Querschnitt bleibt auch im verformten Zustand eben, es tritt keine Querschnittsverwölbung auf. 
+- Es gilt die Normalenhypothese, der Querschnitt steht auch im verformten Zustand senkrecht zur Mittelebene.
+- Man unterstellt geometrische Linearität. Die Verformungen sind klein gegenüber den Plattenabmessungen.
 - Die Normalspannungen in Dickenrichtung der Platte sind vernachlässigbar klein. Es gilt ein ebener Spannungszustand.
+- Die Dicke der Platte ändert sich auch im verformten Zustand nicht.
 
+Basierend auf diesen Annahmen beschreibt @mittelstedt_flachentragwerke_2022 die Kirchhoffsche Plattentheorie als Erweiterung der Euler-Bernoulli-Balkentheorie auf Plattentragwerke.
 
-Verschiebungsfeld am verformten Zustand
+Betrachtet man nun ein infinit kleines Plattenelement und verformt dies, so lässt sich ein Verschiebungsfeld beschreiben. Das Verschiebungsfeld liefert Beziehungen der Verschiebungen in allen drei Koordinatenrichtungen. Der unverformte und der verformte Zustand des infinit kleinen Elements zeigt die @fig-allg_kirchhoff_kin. 
 
-![Element einer Dünnen Platte im verformten und unverformten Zustand unter der Berücksichtigung der Annahmen der Kirchhoff'schen Plattentheorie](../imgs/allg_kirchhoff_kin.svg){#fig-allg_kirchhoff_kin}
+![Element einer infinit kleinen, dünnen Platte im verformten und unverformten Zustand unter der Berücksichtigung der Annahmen der Kirchhoffschen Plattentheorie, nachgezeichnet nach @mittelstedt_flachentragwerke_2022](../imgs/allg_kirchhoff_kin.svg){#fig-allg_kirchhoff_kin}
 
-Für kleine Winkel gilt
+Aufgrund kleiner Verformungen sind die Winkel ebenfalls klein, es lassen sich die Beziehungen in der @eq-phi_x_kirch aufstellen.
 
 $$
 \begin{aligned}
@@ -36,19 +34,24 @@ $$
 \end{aligned}
 $${#eq-phi_x_kirch}
 
-
-Gilt für jeden beliebigen Punkt, nicht nur P
+Betrachtet man den dargestellten Punkt $P$ in der @fig-allg_kirchhoff_kin, so lässt sich die Verschiebung in $x$-Richtung des Punkts ermitteln. In der $y$-Richtung gilt das gleiche Verhalten. Die @eq-u_P_kirch beschreibt die Verschiebung des Punkts. 
 
 $$
 \begin{aligned}
-u_P = z_P \varphi_x = u \quad
-v_P = z_P \varphi_y = v
+u_P = z_P \varphi_x \qquad
+v_P = z_P \varphi_y
 \end{aligned}
 $${#eq-u_P_kirch}
 
+Aufgrund des Ebenbleibens des Querschnitts gilt die Beziehung für jeden Punkt auf der Querschnittsebene. Es gilt die @eq-u_kirch.
+$$
+\begin{aligned}
+u_P = u \qquad
+v_P = v
+\end{aligned}
+$${#eq-u_kirch}
 
-Da Platte die Dicke behält
-Verschiebungsfeld
+Die Verschiebungskomponente in $z$-Richtung entspricht der initialen Verformung, da die Platte im verformten Zustand die Dicke beibehält. Das Verschiebungsfeld lässt sich abschliessend mit der @eq-verschiebungsfeld_kirch beschreiben.
 
 $$
 \begin{aligned}
@@ -56,12 +59,16 @@ u = -z \frac{\partial w_0}{\partial x} \quad v = -z \frac{\partial w_0}{\partial
 \end{aligned}
 $${#eq-verschiebungsfeld_kirch}
 
+Anhand des Verschiebungsfelds lässt sich das Verzerrungsfeld definieren. Dazu gelten die kinematischen Beziehungen am Kontinuum. Diese gehen aus der Elastizitätstheorie hervor. Betrachtet man die @fig-allg_dehnung, so lassen sich daran die infinitesimalen Dehnungen in $x$ und $y$ Richtung bestimmen.
 
-Verzerrungsfeld aus Elastizitätstheorie für das dreidimensionale Kontinuum. Aus der Prämisse des ebenen Spannungszustands verbleiben lediglich die folgenden Grössen. Grundsätzlich sind die Dehnungen $\varepsilon_{zz}$ im ebenen Spannungszustand nicht null. Siehe Widersprich Kirchhoff Theorie.
+![Definition der infinitesimalen Dehnungen in der Draufsicht des Volumenkörpers, nachgezeichnet nach @mittelstedt_flachentragwerke_2022](../imgs/allg_dehnung.svg){#fig-allg_dehnung}
 
-![Definition der infinitesimalen Dehnungen in der Draufsicht des Volumenkörpers](../imgs/allg_dehnung.svg){#fig-allg_dehnung}
+Die @fig-allg_schiebung zeigt das gleiche Element unter dem Einfluss einer Schiebung. Aus der Summe der beiden Winkeln resultiert die infinitesimale Schiebung.
 
-![Definition der infinitesimalen Schiebung in der Draufsicht des Volumenkörpers](../imgs/allg_schiebung.svg){#fig-allg_schiebung}
+![Definition der infinitesimalen Schiebung in der Draufsicht des Volumenkörpers, nachgezeichnet nach @mittelstedt_flachentragwerke_2022](../imgs/allg_schiebung.svg){#fig-allg_schiebung}
+
+
+Die @eq-verzerrungsfeld_kirch fasst die Verzerrungen zusammen.
 
 $$
 \begin{aligned}
@@ -74,8 +81,16 @@ $$
 \end{aligned}
 $${#eq-verzerrungsfeld_kirch}
 
-Krümmungen sind definiert
+Zur vollständigen Beschreibung des Verzerrungsfelds ist die Dehnung in $z$ Richtung zu bestimmen, sowie zwei weitere Schiebungen $\gamma_{xz} , \gamma_{yz}$. Aufgrund der Unveränderlichkeit der Plattendicke verschwindet die Dehnung $\varepsilon_{zz}$. Als Folge der Normalenhypothese und des Ebenbleibens des Querschnitts entfallen die übrigen Schiebungen ebenfalls. Aufgezeigt ist dies in der @eq-verzerrungsfeld_kirch_null.
+$$
+\begin{aligned}
+\varepsilon_{zz} &= \frac{\partial w}{\partial z} = 0 \\
+\gamma_{xz} &= \frac{\partial u}{\partial z} + \frac{\partial w}{\partial x} = 0 \\
+\gamma_{yz} &= \frac{\partial v}{\partial z} + \frac{\partial w}{\partial y} = 0 \\
+\end{aligned}
+$${#eq-verzerrungsfeld_kirch_null}
 
+Das Verzerrungsfeld ist abschliessend mit der @eq-verzerrungsfeld_kirch und der @eq-verzerrungsfeld_kirch_null beschrieben. Anhand der Verzerrungen lassen sich die Krümmungen einführen. Diese sind gemäss der @eq-kruemmungen_kirch definiert.
 $$
 \begin{aligned}
 \chi_{xx} &= -\frac{\partial^2w_0}{\partial x^2} = \frac{\varepsilon_{xx}}{z}\\ 
@@ -84,7 +99,8 @@ $$
 \end{aligned}
 $${#eq-kruemmungen_kirch}
 
-Hooksche Gesetz im Raum - konstitutive Beziehung
+Die Verzerrungen gilt es über eine Materialbeziehung mit den Spannungen zu koppeln. Dazu dient das Hooksche Gesetz im Raum. Das Hooksche Gesetz ist in der @eq-hook_3d aufgezeigt. Dabei ist die Normalspannung über den Elastizitätsmodul mit der Dehnung gekoppelt. Die Schubspannung ist über den Schubmodul mit der Schiebung zu bestimmen. Die Querdehnung $\varepsilon_q$ lässt sich über die Querdehnzahl bestimmen. 
+
 $$
 \begin{aligned}
 \sigma = E\varepsilon \quad 
@@ -99,9 +115,7 @@ $$
 G = \frac{E}{2(1+\nu)}
 $${#eq-schubmodul}
 
-Aus Elastizitätstheorie folgt die Beziehung zwischen Spannungen und Verzerrungen für ein isotropes Verhalten.
-Hier in Abhängigkeit von den Krümmungen.
-
+Setzt man Isotropie voraus, so lassen sich aus der Elastizitätstheorie die Beziehungen zwischen Spannungen und Verzerrungen aufstellen. Die @eq-spannungen_kirch zeigt dies auf.
 
 $$
 \begin{aligned}
@@ -111,13 +125,15 @@ $$
 \end{aligned}
 $${#eq-spannungen_kirch}
 
-Mit den Spannungen die Schnittgrössen ermitteln
+Die Spannungsvektoren sind in der @fig-allg_platte_spannungen dargestellt für eine einzelne Lamelle des Plattenelements.
 
-![Überhöhtes Plattenelement mit eingezeichneten Normal- und Schubspannungen](../imgs/allg_platte_spannungen.svg){#fig-allg_platte_spannungen}
+![Überhöhtes Plattenelement mit eingezeichneten Normal- und Schubspannungen, nachgezeichnet nach @heinzmann_stringer-tafelmodelle_2012](../imgs/allg_platte_spannungen.svg){#fig-allg_platte_spannungen}
 
-![Überhöhtes Plattenelement mit eingezeichneten Schnittkräften](../imgs/allg_platte_sg.svg){#fig-allg_platte_sg}
+Durch die Integration über die Plattendicke $h$ lassen sich die Schnittgrössen ermitteln. Die @fig-allg_platte_sg zeigt die allgemeinen Schnittgrössen am Plattenelement.
 
-Vernachlässigt sind Membran- und Querkräfte.
+![Überhöhtes Plattenelement mit eingezeichneten Schnittgrössen, nachgezeichnet nach @heinzmann_stringer-tafelmodelle_2012](../imgs/allg_platte_sg.svg){#fig-allg_platte_sg}
+
+Die Ermittlung der beiden Biegemomenten und des Drillmoments zeigt die @eq-m_chi_kirchhoff. Dabei gilt $m_{xy} = m_{yx}$. Die Membran- und Querkräfte sind nicht aufgezeigt, lassen sich jedoch analog bestimmen. 
 
 $$
 \begin{aligned}
@@ -127,16 +143,18 @@ m_{xy} &= \int_{-h/2}^{h/2} \tau_{xy} \cdot z d_z = \frac{E h^3 }{12(1+\nu)} \fr
 \end{aligned}
 $${#eq-m_chi_kirchhoff}
 
-Vorsicht, das Drillmoment bezieht sich auf die Hälfte der Krümmung $\chi_{xy}$
+Die Biegemomente sind dabei anhand der eingeführten Krümmungen beschrieben. Es ist hervorzuheben, dass das Drillmoment sich auf die Hälfte der Krümmung $\chi_{xy}$ bezieht. 
+
+<!-- Die auf die Einheitslänge bezogenen Trägheitsmomente sind in der @eq-tragheit_elastizitaet aufgezeigt.
 $$
 \begin{aligned}
 i_{xx} = \frac{h^3}{12(1 - \nu^2)}\quad
 i_{yy} = \frac{h^3}{12(1 - \nu^2)}\quad
 i_{xy} = \frac{h^3}{6}
 \end{aligned}
-$${#eq-tragheit_elastizitaet}
+$${#eq-tragheit_elastizitaet} -->
 
-Verpackt in matrixschreibweise:
+Abschliessend lassen sich die hergeleiteten Beziehungen kompakt in der Matrixschreibweise darstellen. Dies zeigt die @eq-konstitutiv_kirchhoff_platte. Die @eq-plattensteifigkeit beschreibt die Plattensteifigkeit.
 
 
 $$
@@ -165,17 +183,14 @@ D_b
 $${#eq-konstitutiv_kirchhoff_platte}
 
 
-![Illustration der Beziehung zwischen Biegemomente und Krümmungen. a) ohne Querdehnzahl, b) mit Querdehnzahl](../imgs/allg_einfluss_querdehnzahl.svg){#fig-allg_einfluss_querdehnzahl}
-
-
-![Detaildarstellung des Einflusses der Querdehnung beim Volumenelement](../imgs/allg_einfluss_querdehnzahl_detail.svg){#fig-allg_einfluss_querdehnzahl_detail}
-
-
 ## Transformation zum Trägerrost
 
-Es gilt zu klären in welcher Relation der Trägerrost zum Plattenmodell steht.
+
+Das gesamte Tragverhalten eines Plattentragwerks ist mit dem Trägerrost nachzubilden. Dazu lässt sich das Verhalten des beschriebenen Plattenelements mit dem Stabkreuz des Trägerrosts gleich setzen. Dies ist in der @fig-allg_platte_zu_Rost aufgezeigt. 
 
 ![Ersatz des Plattenelements mit dem Stabkreuz](../imgs/allg_platte_zu_Rost.svg){#fig-allg_platte_zu_Rost}
+
+Dabei weisen die beiden Stäbe des Kreuzes die Schnittgrössen gemäss der @fig-schnit
 
 Für dünne Querschnitte $h << b$ gilt 
 
@@ -185,6 +200,14 @@ M_x &=  \int_A \left(z \cdot \tau_{yx} - y \cdot \tau_{zx}\right) dA = G \frac{h
 M_y &= \int_A z \cdot \sigma_{x} d_A =E \frac{bh^3}{12} \chi_y =  E I_y \chi_y = M
 \end{aligned}
 $${#eq-sg_balken}
+
+Die @fig-allg_einfluss_querdehnzahl illustriert das Biegetragverhalten nach der Kirchhoffschen Plattentheorie für die Biege- und Drillmomente gesondert. Speziell ist der Einfluss der Querdehnung aufgezeigt. In @fig-allg_einfluss_querdehnzahl a) ist das gekrümmte Plattenelement ohne Einfluss der Querdehnung gezeigt, die @fig-allg_einfluss_querdehnzahl b) 
+
+
+![Illustration der Beziehung zwischen Biegemomente und Krümmungen. a) ohne Querdehnzahl, b) mit Querdehnzahl, nachgezeichnet nach @blaauwendraad_plates_2010](../imgs/allg_einfluss_querdehnzahl.svg){#fig-allg_einfluss_querdehnzahl}
+
+
+![Detaildarstellung des Einflusses der Querdehnung beim Volumenelement](../imgs/allg_einfluss_querdehnzahl_detail.svg){#fig-allg_einfluss_querdehnzahl_detail}
 
 Die Trägheitsmomente
 

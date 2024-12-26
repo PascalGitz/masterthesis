@@ -2,7 +2,7 @@
 
 Das Kapitel verfolgt das Ziel, die Modellbildung im Ganzen aufzuzeigen. Dazu dient ein Gedankenexperiment, ein allgemein gültiges Berechnungsschema und die Systemmodellbildung.
 
-## Gedankenexperiment
+## Gedankenexperiment {#sec-gedankenexperiment}
 
 Das Gedankenexperiment soll einen Überblick über das Modellverhalten liefern. Dabei steht die Verständlichkeit im Vordergrund. 
 
@@ -77,15 +77,15 @@ Die Federsteifigkeit ist bei einer Verdrehungsbeziehung mit $K_r$ und bei einer 
 
 ![Definition der Federbeziehungen, a) Verdrehungsbeziehung b) Verschiebungsbeziehung](../imgs/allg_definition_gelenksteifigkeit.svg){#fig-allg_definition_gelenksteifigkeit}
 
-Die Umsetzung der Feder in AxisVM-X7 bildet den Abschluss des Beschriebs der Feder. In AxisVM-X7 lässt sich die Feder mit einem Stabgelenk modellieren. Des Weiteren hat sich eine Modellierungsstrategie bewährt, bei dem an jedem Stab ein Anfang- und ein Endgelenk zu modellieren ist. Dies bringt den Vorteil, dass die Einzugslängen sich für Randgelenke, bei Auflagern beispielsweise, nicht unterscheiden. Illustriert ist dies in der @fig-allg_doppelgelenk.
+Die Umsetzung der Feder in AxisVM bildet den Abschluss des Beschriebs der Feder. In AxisVM lässt sich die Feder mit einem Stabgelenk modellieren. Des Weiteren hat sich eine Modellierungsstrategie bewährt, bei dem an jedem Stab ein Anfang- und ein Endgelenk zu modellieren ist. Dies bringt den Vorteil, dass die Einzugslängen sich für Randgelenke, bei Auflagern beispielsweise, nicht unterscheiden. Illustriert ist dies in der @fig-allg_doppelgelenk.
 
 ![Modellierungsstrategie der Stabanfang- und Endgelenke](../imgs/allg_doppelgelenk.svg){#fig-allg_doppelgelenk}
 
-Auf Grund der Definition in AxisVM-X7 sind die Federn fortan als Stabgelenke bezeichnet.
+Auf Grund der Definition in AxisVM sind die Federn fortan als Stabgelenke bezeichnet.
 
 ### Resultate
 
-Nach der Modellierung des Systems ist eine nicht-lineare Analyse durchzuführen. Auf einen vertieften Beschrieb des Lösungsalgorithmus wird verzichtet. In AxisVM-X7 ist der Newton-Rhapson-Algorithmus implementiert zur iterativen Lösung des Systems. Grundlagen dazu sind in @wagner_gleichungslosung_2022 (passende Quelle finden) beschrieben.
+Nach der Modellierung des Systems ist eine nicht-lineare Analyse durchzuführen. Auf einen vertieften Beschrieb des Lösungsalgorithmus wird verzichtet. In AxisVM ist der Newton-Rhapson-Algorithmus implementiert zur iterativen Lösung des Systems. Grundlagen dazu sind in @wagner_gleichungslosung_2022 (passende Quelle finden) beschrieben.
 
 Nach der nicht-linearen Analyse lassen sich eine Vielzahl von Resultaten ausgeben. Die starren Stäbe weisen die üblichen Schnittkräfte auf. Lagerreaktion lassen sich darstellen. Zudem besteht die Möglichkeit zur Darstellung der relativen Gelenkrotation der Stabgelenke. Die Definition der relativen Gelenkrotation $\varphi_R$ ist in der @fig-allg_relative_gelenkrot aufgezeigt. Diese beschreibt die Rotation des Gelenks relativ zum verdrehten Stab.
 

@@ -15,7 +15,7 @@ Die vorliegende Arbeit hat das Ziel, eine praxisorientierte Methode zur präzise
 
 ## Abgrenzung
 
-Im Fokus der Arbeit steht die Modellbildung für die Anwendung bei Platten- und Stabtragwerken. Dabei wird ausschliesslich das **Biegetragverhalten** betrachtet. Zudem sind sämtliche Berechnungen mit der FE-Software AxisVM-X7 durchgeführt.
+Im Fokus der Arbeit steht die Modellbildung der Anwendung bei Platten- und Balkentragwerken. Dabei wird ausschliesslich das **Biegetragverhalten** betrachtet. Zudem sind sämtliche FE-Berechnungen mit der Software AxisVM, @ingware_axisvm-x7_2024,  durchgeführt.
 
 ## Übersicht
 

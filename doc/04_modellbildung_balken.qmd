@@ -12,7 +12,7 @@ Ein Stab weist die Schnittgrössen gemäss der @fig-allg_balken_sg a) auf, dazu 
 
 ![Schnittgrössen a) und elementare Verformungen b) des Stabs](../imgs/allg_balken_sg.svg){#fig-allg_balken_sg}
 
-Gemäss der Abgrenzung, lediglich das Biegetragverhalten zu untersuchen, reduziert sich die Betrachtung auf die Biegekrümmung $\chi_y$ und das Biegemoment $M_y$. Hierbei entspricht das Biegetragverhalten dem einachsigen Biegetragverhalten. Die Bernoulli-Navier Balkentheorie, beschrieben in @spura_einfuhrung_2019 (passende Quelle suchen), eignet sich somit zum Beschrieb des Tragverhaltens. Dabei gilt die Schreibweise nach der @def-balken_groessen.
+Gemäss der Abgrenzung, lediglich das Biegetragverhalten zu untersuchen, reduziert sich die Betrachtung auf die Biegekrümmung $\chi_y$ und das Biegemoment $M_y$. Hierbei entspricht das Biegetragverhalten dem einachsigen Biegetragverhalten. Die Euler-Bernoulli Balkentheorie, beschrieben in @spura_einfuhrung_2019 (passende Quelle suchen), eignet sich somit zum Beschrieb des Tragverhaltens. Dabei gilt die Schreibweise nach der @def-balken_groessen.
 
 ::: {#def-balken_groessen}
 $$
@@ -81,7 +81,7 @@ Die @eq-delta_chi_zugversteifung betrachtet die Krümmung des gerissenen Quersch
 
 #### Querschnittsanalyse
 
-Die Querschnittsanalyse bezeichnet das Untersuchen des Querschnitts bei steigender Biegekrümmung. Dabei ist folgend eine analytische Bestimmung der Momenten-Krümmungs-Beziehung aufgezeigt. Es gilt, dass die Bewehrung lediglich Kräfte in der Stabrichtung überträgt, sowie gelten die folgenden Hypothesen nach Bernoulli-Navier:
+Die Querschnittsanalyse bezeichnet das Untersuchen des Querschnitts bei steigender Biegekrümmung. Dabei ist folgend eine analytische Bestimmung der Momenten-Krümmungs-Beziehung aufgezeigt. Es gilt, dass die Bewehrung lediglich Kräfte in der Stabrichtung überträgt, sowie gelten die folgenden Hypothesen nach Euler-Bernoulli:
 
 - Der Querschnitt erfährt keine Verwölbung, es herrscht das Ebenbleiben des Querschnitts
 - Die Orthogonalität des Querschnitts zur Längsachse bleibt auch im verformten Zustand bestehen. 
@@ -182,7 +182,7 @@ $${#eq-l_pl_schaetzung}
 
 Analytische Lösungen zur mittleren Stahldehnung entlang des Zugglieds sind in @alvarez_einfluss_1998 beschrieben, sowie zeigt die Vorlesungsunterlage @kaufmann_2_2017 eine kompakte Zusammenfassung der Bestimmung der plastischen Rotation.
 
-Abschliessend ist die Ermittlung der einzelnen Rissverdrehungen zu klären. Diese entsprechen der relativen Gelenkrotationen, welche in @fig-allg_relative_gelenkrot illustriert sind. Diese lassen sich als Resultat in AxisVM-X7 ausgeben. 
+Abschliessend ist die Ermittlung der einzelnen Rissverdrehungen zu klären. Diese entsprechen der relativen Gelenkrotationen, welche in @fig-allg_relative_gelenkrot illustriert sind. Diese lassen sich als Resultat in AxisVM ausgeben. 
 
 Die @fig-jag_abbruchkrit zeigt einen Ausschnitt eines Stabs mit Stabanfang- und Endgelenken. Die Elementlänge ist kleiner als die Länge des plastischen Gelenks gewählt. Die Summe der relativen Gelenkrotation der von der plastischen Gelenklänge umfassten Stabgelenke muss kleiner als die zulässige Verdrehung sein.
 
