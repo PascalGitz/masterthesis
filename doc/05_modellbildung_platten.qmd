@@ -185,21 +185,48 @@ $${#eq-konstitutiv_kirchhoff_platte}
 
 ## Transformation zum Trägerrost
 
-
-Das gesamte Tragverhalten eines Plattentragwerks ist mit dem Trägerrost nachzubilden. Dazu lässt sich das Verhalten des beschriebenen Plattenelements mit dem Stabkreuz des Trägerrosts gleich setzen. Dies ist in der @fig-allg_platte_zu_Rost aufgezeigt. 
+Der Beschrieb der Kirchhoffschen Plattentheorie hat das elastische Plattentragverhalten aufgezeigt. Dieser Abschnitt zeigt auf, wie das Plattentragverhalten mit dem Trägerrost abgebildet werden kann. Das Ziel ist es, eine Ersatzbiege- und Torsionssteifigkeit zu finden um das Plattenverhalten abzubilden. Dazu lässt sich das Verhalten des beschriebenen Plattenelements mit dem Stabkreuz des Trägerrosts gleich setzen. Dies ist in der @fig-allg_platte_zu_Rost aufgezeigt. 
 
 ![Ersatz des Plattenelements mit dem Stabkreuz](../imgs/allg_platte_zu_Rost.svg){#fig-allg_platte_zu_Rost}
 
-Dabei weisen die beiden Stäbe des Kreuzes die Schnittgrössen gemäss der @fig-schnit
+Dabei weisen die beiden Stäbe des Kreuzes die Schnittgrössen gemäss der @fig-allg_balken_sg auf. Zu betrachten sind das Torsionsmoment $T$ und das Biegemoment $M_y$. Es gilt die @def-balken_groessen. Die Indizes $x$ und $y$ gelten dabei für die Richtung des Stabs bezogen auf das globale Koordinatensystem. Die @def-stabkreuz verdeutlicht den Zusammenhang.
 
-Für dünne Querschnitte $h << b$ gilt 
+::: {#def-stabkreuz}
+$$
+\begin{aligned}
+m_{xx} &\rightarrow M_x\\
+m_{yy} &\rightarrow M_y\\
+m_{xy} &\rightarrow T_x\\
+m_{yx} &\rightarrow T_y\\
+\end{aligned}
+$$
+:::
+
+
+In Anlehnung an die Kirchhoffsche Plattentheorie lassen sich für dünne Balkenquerschnitte $h << b$ das Biegemoment und das Torsionsmoment mit der @eq-sg_balken bestimmen. 
 
 $$
 \begin{aligned}
-M_x &=  \int_A \left(z \cdot \tau_{yx} - y \cdot \tau_{zx}\right) dA = G \frac{h^3 b}{3} \vartheta = G I_p \vartheta = T\\ 
-M_y &= \int_A z \cdot \sigma_{x} d_A =E \frac{bh^3}{12} \chi_y =  E I_y \chi_y = M
+M &= \int_A z \cdot \sigma_{x} d_A =E \frac{bh^3}{12} \chi =  E I \chi\\
+T &=  \int_A \left(z \cdot \tau_{yx} - y \cdot \tau_{zx}\right) dA = G \frac{h^3 b}{3} \vartheta = G I_p \vartheta 
 \end{aligned}
 $${#eq-sg_balken}
+
+<!-- Die Trägheitsmomente
+
+$$
+\begin{aligned}
+I_p = \frac{h^3 b}{3} \quad
+I_y = \frac{h^3 b}{12}
+\end{aligned}
+$${#eq-steifigkeiten_balken_elastisch_schmal} -->
+
+
+Zunächst steht die Transformation des Biegemoments $m_{xx} \rightarrow M_x$ im Vordergrund. Die Transformation $m_{yy} \rightarrow M_y$ ist dabei analog. Es gilt die Ersatzbiegesteifigkeit des Balkens zu finden. Vergleicht man die Definition des Biegemoments des Balkens mit deren der Platte, @eq-m_chi_kirchhoff mit der @eq-sg_balken, so sind diese unter der Vernachlässigung der Querdehnung deckungsgleich. Die Berücksichtigung der Querdehnung ist am Balkenquerschnitt nicht möglich, somit gilt die @eq-biegung_transformation.
+
+$$
+M = m_{xx} b = Ei_{xx}\chi_{xx}\cdot b = EI \chi
+$${#eq-biegung_transformation}
 
 Die @fig-allg_einfluss_querdehnzahl illustriert das Biegetragverhalten nach der Kirchhoffschen Plattentheorie für die Biege- und Drillmomente gesondert. Speziell ist der Einfluss der Querdehnung aufgezeigt. In @fig-allg_einfluss_querdehnzahl a) ist das gekrümmte Plattenelement ohne Einfluss der Querdehnung gezeigt, die @fig-allg_einfluss_querdehnzahl b) 
 
@@ -209,74 +236,71 @@ Die @fig-allg_einfluss_querdehnzahl illustriert das Biegetragverhalten nach der 
 
 ![Detaildarstellung des Einflusses der Querdehnung beim Volumenelement](../imgs/allg_einfluss_querdehnzahl_detail.svg){#fig-allg_einfluss_querdehnzahl_detail}
 
-Die Trägheitsmomente
+
+
+Die Ersatzbiegesteifigkeit entspricht somit der Biegesteifigkeit des Balkens. Aufgezeigt in der @eq-ersatzbiegesteifigkeit.
 
 $$
-\begin{aligned}
-I_p = \frac{h^3 b}{3} \quad
-I_y = \frac{h^3 b}{12}
-\end{aligned}
-$${#eq-steifigkeiten_balken_elastisch_schmal}
+EI_{Ersatz} = Ei_{xx} \cdot b = \frac{Eh^3b}{12} = EI
+$${#eq-ersatzbiegesteifigkeit}
 
-Betrachtet man den Stab in X-Richtung des Stabkreuzes, so ist das Ziel das Drillverhalten der Platte in dieser Richtung mit dem Torsionsverhalten des Stabs abzubilden. Es folgt die Beziehung in der @eq-m_chi_to_M_theta. Dabei ist der Term rechterhand als unbekannt anzunehmen.
+Abschliessend gilt es die Transformation $m_{xy} \rightarrow T_x$ und $m_{yx} \rightarrow T_y$ zu betrachten. Es besteht der Anspruch die Ersatztorsionssteifigkeit zu finden, welche das Drillverhalten abbildet. Es folgt die Beziehung in der @eq-m_chi_to_M_theta. Dabei ist der Term rechterhand als unbekannt anzunehmen. Hier ist vorsicht geboten bei der gewählten Definition der Krümmung $\chi_{xy}$. Das Drillmoment $m_{xy}$ beteiligt sich lediglich hälftig an der Krümmung $\chi_{xy}$
+
 $$
-\frac{m_{xy}(\tau_{xy})}{\chi_{xy}/2} \cdot b = \frac{M_{x}(\tau_{yx}, \tau_{zx})}{\vartheta}
+\frac{m_{xy}(\tau_{xy})}{\chi_{xy}/2} \cdot b = \frac{T_{x}(\tau_{yx}, \tau_{zx})}{\vartheta}
 $${#eq-m_chi_to_M_theta}
 
 Substituiert man @eq-m_chi_to_M_theta mit @eq-m_chi_kirchhoff und @eq-sg_balken, so folgt die @eq-ersatzsteifigkeit_torsion. 
 
 $$
-G i_{xy}b = G I_{p,Ersatz}
+G I_{p,Ersatz} = G i_{xy}b = \frac{Gh^3b}{6} \not= GI_p
 $${#eq-ersatzsteifigkeit_torsion}
 
 Die Drillsteifigkeit der Platte entspricht der unbekannten Torsionssteifigkeit. Festzuhalten ist, dass die Ersatzsteifigkeit nicht der Torsionssteifigkeit des Balkenquerschnitts entspricht.
 
-Der Einfluss dieser Tatsache lässt sich an einem  Beispiel illustrieren. Betrachtet man einen unendlich schmalen Streifen $t << b$, dargestellt in der @fig-allg_torsion_balken_vs_platte.
+Der Einfluss dieser Tatsache lässt sich an einem  Beispiel illustrieren. In der @fig-allg_torsion_balken_vs_platte ist ein schmaler Balkenquerschnitt und ein schmales Plattenelement dargestellt $h << b$. Das Torsionsträgheitsmoment und das Drillträgheitsmoment zeigt die @eq-torsion_streifen.
 
 ![Torsionsträgheitsmoment für einen unendlich schmalen Streifen, darunter für ein unendlich schmales Plattenelement, nachgezeichnet nach @blaauwendraad_plates_2010](../imgs/allg_torsion_balken_vs_platte.svg){#fig-allg_torsion_balken_vs_platte}
 
 $$
 \begin{aligned}
-I_t = \frac{bh^3}{3} \quad 
+I_p = \frac{bh^3}{3} \quad 
 i_{xy} = \frac{h^3}{6}
 \end{aligned}
 $${#eq-torsion_streifen}
 
-Das Torsionsträgheitsmoment des Balkenelements $I_t$ und das auf die Einheitslänge bezogene Torsionsträgheitsmoment des Plattenelements in X-Richtung $i_{xy}$ unterscheiden sich um den Faktor 2. Der Faktor 2 ist zudem konstant. Dies lässt sich erklären, dass sich beim Balkenquerschnitt der Schubfluss in Y Richtung zu gleichen Teilen am Torsionsmoment beteiligt, wie der in X gerichtete Schubfluss. Der vertikale Schubfluss verläuft zwar nur über die Querschnittshöhe $t$, besitzt jedoch den deutlich grösseren Hebelarm, während der horizontale Schubfluss über die gesamte Breite $b$ verläuft, mit einem jedoch deutlich kleineren Hebelarm. Die @eq-schubfluss_balken beschreibt diese Tatsache.
+Das Torsionsträgheitsmoment des Balkenelements $I_t$ und das auf die Einheitslänge bezogene Drillträgheitsmoment des Plattenelements in $x$ Richtung $i_{xy}$ unterscheiden sich um den Faktor 2. Dies lässt sich erklären, dass sich beim Balkenquerschnitt der Schubfluss in $y$ Richtung zu gleichen Teilen am Torsionsmoment beteiligt, wie der in $x$ gerichtete Schubfluss. Der vertikale Schubfluss verläuft zwar nur über die Querschnittshöhe $t$, besitzt jedoch den deutlich grösseren Hebelarm, während der horizontale Schubfluss über die gesamte Breite $b$ verläuft, mit einem jedoch deutlich kleineren Hebelarm. Die @eq-schubfluss_balken beschreibt diese Tatsache.
 
 $$
 M_{x,vert} = q_{zx} \cdot h \cdot b/2 = M_{x,horiz} = q_{yx} \cdot b \cdot h/2 = M_x / 2
 $${#eq-schubfluss_balken}
 
-Die Quintessenz ist somit, dass eine Torsionssteifigkeit am Balkenquerschnitt hergeleitet, doppelt so gross wie die entsprechende Ersatzsteifigkeit ist. Beschrieben ist diese Tatsache ebenfalls in @blaauwendraad_plates_2010 Seite 389.
+Die Quintessenz ist somit, dass eine Torsionssteifigkeit am Balkenquerschnitt hergeleitet, doppelt so gross wie die entsprechende Ersatzsteifigkeit ist. Dies deckt sich mit @eq-ersatzsteifigkeit_torsion. Beschrieben ist diese Tatsache ebenfalls in @blaauwendraad_plates_2010 Seite 389.
 
 
-In Anlehnung an das Konstitutivgesetz der kirchhoffschen Plattentheorie, gemäss der @eq-konstitutiv_kirchhoff_platte, lässt das Konstitutivgesetz des Trägerrosts bilden.
+In Anlehnung an die Matrizenschreibweise der kirchhoffschen Plattentheorie, @eq-konstitutiv_kirchhoff_platte, lässt sich die Modellierung des Trägerrosts ebenfalls in dieser Form darstellen. Aufgezeigt in der @eq-konstitutiv_traegerrost. Dabei gilt $T_x = T_y$
 
 $$
+\frac{1}{b}
 \begin{Bmatrix}
-m_{xx} \\
-m_{yy} \\
-m_{xy}
+M_{x} \\
+M_{y} \\
+T_{x}
 \end{Bmatrix}
 =
 D_b
 \begin{bmatrix}
 (1-\nu^2) & 0 & 0 \\
 0 & (1-\nu^2) & 0 \\
-0 & 0 & \frac{1}{2}(1 - \nu)
+0 & 0 & (1 - \nu)
 \end{bmatrix}
 \begin{Bmatrix}
-\chi_{xx} \\
-\chi_{yy} \\
-\chi_{xy}
+\chi_x \\
+\chi_{y} \\
+\vartheta_x
 \end{Bmatrix}
 $${#eq-konstitutiv_traegerrost}
 
-Abschliessend
-
-- tückisch das Faktor zwei für Qs zu Drillsteifigkeit
-- Ziel ist die kirchhoffsche Plattentheorie nachzubilden
 
 ## Querschnittsmodellbildung
 
