@@ -16,7 +16,7 @@ Für die detaillierte analytische Berechnungen ist der @sec-zweifeldtraeger_anha
 Das statische System des Zweifeldträgers ist in der @fig-jag_system aufgezeigt. Dabei sind die Streckenlast, die Verformungsvektoren und die Abmessungen dargestellt.  
 
 
-![Statisches system des Zweifeldträgers](../imgs/jag_system.svg){#fig-jag_system}
+![Statisches System des Zweifeldträgers](../imgs/jag_system.svg){#fig-jag_system}
 
 Der entsprechende Querschnitt zeigt die @fig-jag_system_qs. Dargestellt ist die Biegebewehrung mit entsprechendem Durchmesser.
 
@@ -30,11 +30,11 @@ Das Ziel des Beispiels ist es, den Einfluss der Duktilitätsklasse des Bewehrung
 
 Den Betonstählen sind idealisierte Spannungs-Dehnungs-Diagramme zu Grunde gelegt. Das Verhalten des kaltverformten Stahls ist mit einem bilinearen Verlauf, gemäss der @fig-jag_stress_strain_b500a, beschrieben.
 
-![Spannungs-Dehnungs-Beziehungen des Betonstahls B500A](../imgs/jag_stress_strain_b500a.svg){#fig-jag_stress_strain_b500a}
+![Spannungs-Dehnungs-Beziehungen des Betonstahls B500A](../imgs/jag_b500a_sigma_eps.svg){#fig-jag_stress_strain_b500a}
 
 Der trilineare Verlauf der @fig-jag_stress_strain_b500c beschreibt das Verhalten des naturharten Stahls.
 
-![Spannungs-Dehnungs-Beziehungen des Betonstahls B500C](../imgs/jag_stress_strain_b500c.svg){#fig-jag_stress_strain_b500c}
+![Spannungs-Dehnungs-Beziehungen des Betonstahls B500C](../imgs/jag_b500c_sigma_eps.svg){#fig-jag_stress_strain_b500c}
 
 
 ## Analytische Lösung
@@ -83,7 +83,7 @@ Die Krümmung gilt es mit der Einzugslänge, illustriert in der @fig-allg_feder,
 
 #### Abbruchkriterium
 
-Es wird ein Abbruchkriterium definiert gemäss der Modellvorstellung in @fig-jag_plast_rot. Dabei muss die Summe der relativen Gelenkrotationen der Gelenke innerhalb der Länge des plastischen Gelenks kleiner als das Rotationsvermögen sein.
+Es wird ein Abbruchkriterium definiert gemäss der Modellvorstellung in @fig-jag_plast_gelenk. Dabei muss die Summe der relativen Gelenkrotationen der Gelenke innerhalb der Länge des plastischen Gelenks kleiner als das Rotationsvermögen sein.
 
 $$
 \varphi_{max} \geq \sum_{i=1}^n \varphi_i
