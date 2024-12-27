@@ -30,7 +30,7 @@ $$
 
 :::
 
-### Biegesteifigkeit
+### Biegesteifigkeit {#sec-biegesteifigkeit_balken}
 
 Die Biegesteifigkeit lässt sich anhand der Analyse des Querschnitts bei steigender Krümmung ermitteln. Erweitern lässt sich dies mit der Berücksichtigung der Zugversteifung. 
 
@@ -122,7 +122,7 @@ Das allgemeine Vorgehen illustriert die @fig-allg_qs_analyse. Linkerhand ist ein
 
 Alternativ kann eine Momenten-Krümmungs-Beziehung numerisch ermittelt werden. Dazu gibt es eine Vielzahl von Softwarepaketen, welche eine Querschnittsanalyse mit beliebigen Werkstoffbeziehungen erlauben.
 
-### Von der Krümmung zur Verdrehung
+### Von der Krümmung zur Verdrehung {#sec-kruemmung_verdrehung}
 
 Es ist offensichtlich, dass die Momenten-Krümmungs-Beziehung nicht direkt der geforderten Momenten-Verdrehungs-Beziehung, gemäss der @def-gelenkfunktionen_raum, des Stabgelenks entspricht. 
 
@@ -144,7 +144,7 @@ $$
 $${#eq-phi_to_chi_konst}
 
 
-### Abbruchkriterium
+### Abbruchkriterium {#sec-abbruchkriterium}
 
 Der Abschluss der Querschnittsmodellbildung bildet das Abbruchkriterium. Das Abbruchkriterium dient dazu das Systemversagen zu definieren. Dies geschieht über eine Begrenzung der Verdrehung der Gelenke. Die @fig-jag_plast_gelenk illustriert die Modellvorstellung zum Verhalten eines plastischen Biegegelenks. 
 

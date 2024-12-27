@@ -208,7 +208,7 @@ In Anlehnung an die Kirchhoffsche Plattentheorie lassen sich für dünne Balkenq
 $$
 \begin{aligned}
 M &= \int_A z \cdot \sigma_{x} d_A =E \frac{bh^3}{12} \chi =  E I \chi\\
-T &=  \int_A \left(z \cdot \tau_{yx} - y \cdot \tau_{zx}\right) dA = G \frac{h^3 b}{3} \vartheta = G I_p \vartheta 
+T &=  \int_A \left(z \cdot \tau_{yx} - y \cdot \tau_{zx}\right) dA = G \frac{h^3 b}{3} \vartheta = G I_x \vartheta 
 \end{aligned}
 $${#eq-sg_balken}
 
@@ -216,7 +216,7 @@ $${#eq-sg_balken}
 
 $$
 \begin{aligned}
-I_p = \frac{h^3 b}{3} \quad
+I_x = \frac{h^3 b}{3} \quad
 I_y = \frac{h^3 b}{12}
 \end{aligned}
 $${#eq-steifigkeiten_balken_elastisch_schmal} -->
@@ -253,7 +253,7 @@ $${#eq-m_chi_to_M_theta}
 Substituiert man @eq-m_chi_to_M_theta mit @eq-m_chi_kirchhoff und @eq-sg_balken, so folgt die @eq-ersatzsteifigkeit_torsion. 
 
 $$
-G I_{p,Ersatz} = G i_{xy}b = \frac{Gh^3b}{6} \not= GI_p
+G I_{x,Ersatz} = G i_{xy}b = \frac{Gh^3b}{6} \not= GI_p
 $${#eq-ersatzsteifigkeit_torsion}
 
 Die Drillsteifigkeit der Platte entspricht der unbekannten Torsionssteifigkeit. Festzuhalten ist, dass die Ersatzsteifigkeit nicht der Torsionssteifigkeit des Balkenquerschnitts entspricht.
@@ -264,21 +264,23 @@ Der Einfluss dieser Tatsache lässt sich an einem  Beispiel illustrieren. In der
 
 $$
 \begin{aligned}
-I_p = \frac{bh^3}{3} \quad 
+I_x = \frac{bh^3}{3} \quad 
 i_{xy} = \frac{h^3}{6}
 \end{aligned}
 $${#eq-torsion_streifen}
 
-Das Torsionsträgheitsmoment des Balkenelements $I_t$ und das auf die Einheitslänge bezogene Drillträgheitsmoment des Plattenelements in $x$ Richtung $i_{xy}$ unterscheiden sich um den Faktor 2. Dies lässt sich erklären, dass sich beim Balkenquerschnitt der Schubfluss in $y$ Richtung zu gleichen Teilen am Torsionsmoment beteiligt, wie der in $x$ gerichtete Schubfluss. Der vertikale Schubfluss verläuft zwar nur über die Querschnittshöhe $t$, besitzt jedoch den deutlich grösseren Hebelarm, während der horizontale Schubfluss über die gesamte Breite $b$ verläuft, mit einem jedoch deutlich kleineren Hebelarm. Die @eq-schubfluss_balken beschreibt diese Tatsache.
+Das Torsionsträgheitsmoment des Balkenelements $I_t$ und das auf die Einheitslänge bezogene Drillträgheitsmoment des Plattenelements in $x$ Richtung $i_{xy}$ unterscheiden sich um den Faktor 2. Dies lässt sich erklären, dass sich beim Balkenquerschnitt der Schubfluss in $y$ Richtung zu gleichen Teilen am Torsionsmoment beteiligt, wie der in $x$ gerichtete Schubfluss. Der vertikale Schubfluss verläuft zwar nur über die Querschnittshöhe $h$, besitzt jedoch den deutlich grösseren Hebelarm, während der horizontale Schubfluss über die gesamte Breite $b$ verläuft, mit einem jedoch deutlich kleineren Hebelarm. Die @eq-schubfluss_balken beschreibt diese Tatsache.
 
 $$
-M_{x,vert} = q_{zx} \cdot h \cdot b/2 = M_{x,horiz} = q_{yx} \cdot b \cdot h/2 = M_x / 2
+T_{vert} = q_{zx} \cdot h \cdot b/2 = T_{horiz} = q_{yx} \cdot b \cdot h/2 = T / 2
 $${#eq-schubfluss_balken}
 
-Die Quintessenz ist somit, dass eine Torsionssteifigkeit am Balkenquerschnitt hergeleitet, doppelt so gross wie die entsprechende Ersatzsteifigkeit ist. Dies deckt sich mit @eq-ersatzsteifigkeit_torsion. Beschrieben ist diese Tatsache ebenfalls in @blaauwendraad_plates_2010 Seite 389.
+Die Quintessenz ist somit, dass eine Torsionssteifigkeit am Balkenquerschnitt hergeleitet, doppelt so gross wie die entsprechende Ersatzsteifigkeit ist. Dies deckt sich mit @eq-ersatzsteifigkeit_torsion. Beschrieben ist diese Tatsache ebenfalls in @blaauwendraad_plates_2010 Seite 389. Aufgrund der Definition der Krümmung $\chi_{xy}$ ist die Drillsteifigkeit aus der Steifigkeitsmatrix des Plattenelements nur halb so gross.
+
+![Beziehung der Drill- und Torsionssteifigkeit zwischen Plattenelement, Trägerrost und Balken](../imgs/allg_faktor_drill.svg){#fig-allg_faktor_drill}
 
 
-In Anlehnung an die Matrizenschreibweise der kirchhoffschen Plattentheorie, @eq-konstitutiv_kirchhoff_platte, lässt sich die Modellierung des Trägerrosts ebenfalls in dieser Form darstellen. Aufgezeigt in der @eq-konstitutiv_traegerrost. Dabei gilt $T_x = T_y$
+In Anlehnung an die Matrizenschreibweise der kirchhoffschen Plattentheorie, @eq-konstitutiv_kirchhoff_platte, lässt sich die Modellierung des Trägerrosts ebenfalls in dieser Form darstellen. Aufgezeigt in der @eq-konstitutiv_traegerrost. Dabei gilt $T_x = T_y$.
 
 $$
 \frac{1}{b}
@@ -288,133 +290,140 @@ M_{y} \\
 T_{x}
 \end{Bmatrix}
 =
+\begin{Bmatrix}
+m_{xx} \\
+m_{yy} \\
+m_{xy}
+\end{Bmatrix}
+=
 D_b
 \begin{bmatrix}
 (1-\nu^2) & 0 & 0 \\
 0 & (1-\nu^2) & 0 \\
-0 & 0 & (1 - \nu)
+0 & 0 & \frac{1}{2}(1 - \nu)
 \end{bmatrix}
 \begin{Bmatrix}
-\chi_x \\
-\chi_{y} \\
-\vartheta_x
+\chi_{xx} \\
+\chi_{yy} \\
+\chi_{xy}
 \end{Bmatrix}
 $${#eq-konstitutiv_traegerrost}
 
 
 ## Querschnittsmodellbildung
 
-Bestimmung Steifigkeiten und Abbruchkriterium
+Abschliessend zeigt dieser Abschnitt die Querschnittsmodellbildung der Stäbe des Trägerrosts.
 
+### Ersatzbiegesteifigkeit
 
+Die Transformation zum Plattenelement hat gezeigt, dass die Biegesteifigkeit direkt am Stabquerschnitt bestimmt werden kann. Dazu ist die Querschnittsbreite zu bestimmen. Diese entspricht im Trägerrost der Elementlänge $l_{El}$.
 
-### Biegeverhalten
+![Definition der Querschnittsbreite des einzelnen Balkens des Trägerrosts](../imgs/allg_querschnittsbreite_rost.svg){#fig-allg_querschnittsbreite_rost}
 
-Querschnittsanalyse am Stabquerschnitt.
+Nach der Definition des Querschnitts kann folglich gleich wie beim Balken analysiert werden. Es gilt das @sec-biegesteifigkeit_balken.
 
-![Querschnittsanalyse, Querschnitt bei steigender Biegekrümmung untersuchen](../imgs/allg_qs_analyse.svg){#fig-allg_qs_analyse}
+### Ersatztorsionssteifigkeit
 
-### Torsionsverhalten
+Die Ersatztorsionssteifigkeit ist anhand der Drillsteifigkeit des Plattenelements bestimmt. Dazu ist die ungerissene und die gerissene Drillsteifigkeit aufgezeigt.
 
 #### Ungerissene Drillsteifigkeit
 
-Aus @eq-ersatzsteifigkeit_torsion folgt. Dabei ist die ungerissene Drillsteifigkeit einzig abhängig von den Betonparametern.
+Die ungerissene Drillsteifigkeit ist beim Beschrieb der Plattentheorie bereits aufgezeigt worden. Aus @eq-ersatzsteifigkeit_torsion folgt die Beziehung in @eq-drillsteifigkeit_torsion_ungerissen. Dabei ist die ungerissene Drillsteifigkeit einzig abhängig von den Betonparametern.
 
 $$
 G_I = G = \frac{E_c}{2(1+\nu)}
 $${#eq-schubmodul_I}
 $$
-G_I I_{p,Ersatz} = G_I \frac{h^3b}{6}
+G_I i_{xy} \cdot b = G_I I_{x,Ersatz} = G_I \frac{h^3b}{6}
 $${#eq-drillsteifigkeit_torsion_ungerissen}
 
-Die Gelenksteifigkeit folgt zu:
+Dabei gilt die ungerissene Drillsteifigkeit bis zum Erreichen der Zugfestigkeit des Betons. Ersetzt man in der @eq-m_chi_kirchhoff die Schubspannung mit der Zugfestigkeit des Betons, sowie nimmt man einen linearen Verlauf der Schubspannungen über die Plattendicke an, so folgt ein Rissdrillmoment entsprechend dem Biegerissmoment.
 $$
-k_{r,x} = \frac{G_I I_{p,Ersatz}}{l_{Einzug}}  = G_I \frac{h^3b}{6} \frac{1}{l_{Einzug}}
-$${#eq-verdrehsteifigkeit_torsion_ungerissen}
-
-Schubspannung mit Zugfestigkeit gleichgesetzt resultiert zum Rissmoment. Entspricht dem Biegerissmoment.
-$$
-M_{x,r} = f_{ct} \cdot \frac{h^2 b}{6} = M_{y,r}
+m_{xy,r}\cdot b = T_{r} = f_{ct} \cdot \frac{h^2 b}{6} = M_{r}
 $${#eq-rissdrillmoment}
 
 
 #### Gerissene Drillsteifigkeit
 
-Klassisches Sandwichmodell nach @peter_marti_design_1990.
+Die gerissene Drillsteifigkeit ist mittels dem klassischen Sandwichmodell hergeleitet. Dieses geht zurück auf @peter_marti_design_1990. Dazu lässt sich das Plattenelement in zwei Deckel und einen Kern unterteilen. Aufgezeigt ist dies in der @fig-allg_sandwich.
 
 ![klassiches Sandwichmodell](../imgs/allg_sandwich.svg){#fig-allg_sandwich}
 
-Dabei sind die Biegemomente als Kräftepaar auf die Deckel aufgeteilt. Querkräfte und Biegenormalkräfte vernachlässigt.
+Die Deckel übernehmen die Biegemomente als Kräftepaar, die Querkräfte sind über den Kern abzutragen. Betrachtet man ausschliesslich die Drillmomente, so stellt sich die Verteilung gemäss der @fig-allg_drill_deckel ein.
 
 
 ![Aufteilung der Drillmomente auf die Deckel gemäss dem klassischen Sandwichmodell](../imgs/allg_drill_deckel.svg){#fig-allg_drill_deckel}
 
+Betrachtet man einen einzelnen Deckel gesondert, aufgezeigt in der @fig-allg_scheibe_schubfluss, so entspricht dies einer Scheibe unter reinem Schub.
 
 
 ![Scheibe unter reinem Schub, rechts im Verzerrungszustand](../imgs/allg_scheibe_schubfluss.svg){#fig-allg_scheibe_schubfluss}
 
+Der Schubfluss ist in der @eq-schubfluss_scheibe definiert.
 
 
 $$
 n_{xy} = \frac{m_{xy}}{d_v} = n_{yx} = \frac{m_{yx}}{d_v}
 $${#eq-schubfluss_scheibe}
 
+Die Schubspannung lässt sich über die Deckelstärke bestimmen.
 
 $$
 \tau_{xy} = \frac{n_{xy}}{t}
 $${#eq-schubspannung_scheibe}
 
-$t$ Deckelstärke
+Die Definition der Deckelstärke ist in der @fig-allg_sandwich_deckelstaerke aufgezeigt.
 
 
 ![Definition der Deckelstärke](../imgs/allg_sandwich_deckelstaerke.svg){#fig-allg_sandwich_deckelstaerke}
 
-Die Schiebung einer gerissenen Scheibe lässt sich anhand des klassischen Druckfeldmodells bestimmen. Das klassische Druckfeldmodell liefert unter anderem Lösungen zum Verhalten einer Scheibe unter reinem Schub. Aufgezeigt ist das Modell in @heinzmann_stringer-tafelmodelle_2012. Damit lässt sich ein Schubmodul für den ungerissenen, für den gerissen-elastischen, und für das Fliessen der Bewehrung ermitteln. In dieser Arbeit gilt die vereinfachte Betrachtung des lediglich gerissenen-elastischen Bereichs bis zum Erreichen des Torsionswiderstands.
-
-Die Schiebung des gerissenen-elastischen Bereichs beschreibt die @eq-schiebung_klass_druckfeldmodell.
+Die Schiebung einer gerissenen Scheibe lässt sich anhand des klassischen Druckfeldmodells bestimmen. Das klassische Druckfeldmodell liefert unter anderem Lösungen zum Verhalten einer Scheibe unter reinem Schub. Aufgezeigt ist das Modell in @heinzmann_stringer-tafelmodelle_2012. Damit lässt sich ein Schubmodul für den ungerissenen, für den gerissen-elastischen, und für das Fliessen der Bewehrung ermitteln. In dieser Arbeit gilt die vereinfachte Betrachtung des lediglich gerissenen-elastischen Bereichs bis zum Erreichen des Torsionswiderstands. Die Schiebung des gerissenen-elastischen Bereichs beschreibt die @eq-schiebung_klass_druckfeldmodell.
 
 $$
 \gamma_{xy,II} = 2 \frac{\tau_{xy}}{E_s}\cdot \left(\sqrt{\frac{(1+n\rho_x)(1+n\rho_y)}{\rho_x \rho_y}+n} \right)
 $${#eq-schiebung_klass_druckfeldmodell}
 
-Die numerische Auswertung des klassischen Druckfeldmodells in @heinzmann_stringer-tafelmodelle_2012 illustriert das Verhalten verständlich. Dazu ist ein Ausschnitt in der 
+Die numerische Auswertung des klassischen Druckfeldmodells in @heinzmann_stringer-tafelmodelle_2012 illustriert das Verhalten verständlich. Dazu ist ein Ausschnitt in der @fig-allg_klassisches_druckfeldmodell_bsp aufgezeigt. Zudem ist die gewählte Vereinfachung dargestellt.
 
 ![Verhalten des Schubmoduls, der Schiebung und der Schubspannung des klassischen Druckfeldmodells entnommen aus @heinzmann_stringer-tafelmodelle_2012, ergänzt mit der Vereinfachung](../imgs/allg_klassisches_druckfeldmodell_bsp.svg){#fig-allg_klassisches_druckfeldmodell_bsp}
 
-Die Schiebung kann als konstant über die Deckelstärke angenommen werden. 
+Die gerissen elastische Schiebung am Deckel gilt als konstant über die Deckelstärke. Betrachtet man das Sandwichmodell in der Ansicht, aufgezeigt in der @fig-allg_sandwich_kruemmung, so lässt sich die Krümmung des Plattenelements bestimmen. Die Schiebung kann für den oberen und unteren Deckel gesondert bestimmt werden.
 
-Mit der @eq-schiebung_klass_druckfeldmodell lässt sich die Schiebung einer gerissenen Scheibe beschreiben. Diese ist Abhängig von der Bewehrung des Deckels und kann für den oberen und unteren Deckel gesondert betrachtet werden.
 
 ![Ansicht des Sandwichmodells, resultierende Dehnungsebene durch die Schiebung des oberen und unteren Deckels](../imgs/allg_sandwich_kruemmung.svg){#fig-allg_sandwich_kruemmung}
 
-In Anlehnung an das Hooksche Gesetzt @eq-hook_3d folgt:
+Anhand der Schiebung lässt sich der Schubmodul des Zustands $II$ bestimmen, aufgezeigt in der @eq-schubmodul_II
 
 $$
 G_{II} = \left[\frac{2}{E_s}\cdot \left(\sqrt{\frac{(1+n\rho_x)(1+n\rho_y)}{\rho_x \rho_y}+n} \right)\right]^{-1} = \frac{\tau_{xy}}{\gamma_{xy}}
 $${#eq-schubmodul_II}
 
-Daraus folgt die Gelenksteifigkeit
+Die Ersatztorsionssteifigkeit ist abschliessend in der @eq-drillsteifigkeit_torsion_gerissen gezeigt.
 
 $$
-k_{rII,x} = \frac{G_{II}I_{p,Ersatz}}{l_{Einzug}}  = G_{II} \frac{h^3b}{6} \frac{1}{l_{Einzug}}
-$${#eq-verdrehsteifigkeit_torsion_gerissen}
+G_{II} I_{x,Ersatz} = G_{II} i_{xy} \cdot b =  G_{II} \frac{h^3b}{6}
+$${#eq-drillsteifigkeit_torsion_gerissen}
 
-
-Abschliessend beträgt der Drillwiderstand:
+Begrenzt ist das Verhalten durch die maximale Schubspannung gemäss der @eq-max_drillschubspannung.
 
 $$
 \tau_{xy,u} = \sqrt{\rho_x f_{syx} \cdot \rho_y f_{syy}}
 $${#eq-max_drillschubspannung}
 
-Aus @eq-rissdrillmoment folgt die @eq-drillwiderstand, unter der Annahme einer linearen Verteilung der Schubspannungen über die Querschnittshöhe.
+Setzt man eine lineare Schubspannungsverteilung über die Plattenstärke voraus, so bestimmt sich der Drillwiderstand gemäss der @eq-drillwiderstand.
+
 $$
-\begin{aligned}
-M_{x,u} &= \tau_{xy,u} \frac{h^2b}{6}\\
-M_{x,u} &= \sqrt{\rho_x f_{syx} \cdot \rho_y f_{syy}} \frac{h^2b}{6}
-\end{aligned}
+m_{xy,u}\cdot b = T_{u} = \tau_{xy,u} \frac{h^2b}{6}\\
 $${#eq-drillwiderstand}
 
-Erweiterungsmöglichkeiten berücksichtigung des vollständigen klassischen Druckfeldmodells. Anwendung des erweiterten Sandwichmodells @jager_querkraftwiderstand_2007.
+
+Die Modellbildung lässt sich mit der vollständigen Lösung des klassischen Druckfeldmodells verfeinern. Zudem ist in @jager_querkraftwiderstand_2007 eine erweiterung des Sandwichmodells aufgezeigt.
+
+Abschlissend gilt die Transformation zum Momenten-Verdrehungs-Verlauf gemäss @sec-kruemmung_verdrehung.
+
+## Abbruchkriterium
+
+Als Abbruchkriterium gilt das in @sec-abbruchkriterium beschriebene. Dies kann ein Biegeversagen prognostizieren.
 
 
 
