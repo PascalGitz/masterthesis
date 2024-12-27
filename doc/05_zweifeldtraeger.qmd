@@ -1,69 +1,75 @@
 # Zweifeldträger{#sec-zweifeldtraeger}
 
+Das Anwendungsbeispiel des Zweifeldträgers zeigt die Modellbildung für Balkentragwerke vollumfänglich auf. Zunächst ist die Aufgabenstellung aufgezeigt. Gefolgt ist vom Beschrieb der analytischen Lösung. Darauf folgt der Beschrieb des NLFE-Modells. Der Abschluss des Beispiels bildet der Vergleich der Resultate zwischen der analytischen und der numerischen Lösung.
+
 Im vorangegangen Kapitel wurde vertieft auf die Systemmodellbildung eingegangen. Sowie wurde diese allgemein formuliert. Dabei wurde die Querschnittsmodellbildung aussenvor gelassen. 
 
 Das Ziel dieses Kapitel ist es an einem konkreten Beispiel die Systemmodellbildung aufzuzeigen, sowie speziell auf die Querschnittsmodellbildung einzugehen. 
 
-Das Beispiel dazu wurde aus den Vorlesungsunterlagen @jager_stahlbeton_2009 entnommen. Für die detaillierte analytische Berechnungen ist der @sec-zweifeldtraeger_anhang zu konsultieren. Sowie ist die numerische Näherung mit der beschriebenen Modellbildung aufgezeigt. Hier werden die wichtigsten Erkenntnisse zusammengefasst beschrieben.
+
 
 ## Aufgabenbeschrieb
 
-Zunächst wird auf die Grundlagen des Beispiels eingegangen. Die @fig-jag_system zeigt ein statisches System eines Zweifeldträgers mit den entsprechenden Abmessungen. Der Zweifeldträger wird mit einer konstanten Streckenlast $q$ belastet. 
+Es handelt sich um ein Vorlesungsbeispiel aus den Unterlagen @jager_stahlbeton_2009. 
+Für die detaillierte analytische Berechnungen ist der @sec-zweifeldtraeger_anhang zu konsultieren. 
+
+Das statische System des Zweifeldträgers ist in der @fig-jag_system aufgezeigt. Dabei sind die Streckenlast, die Verformungsvektoren und die Abmessungen dargestellt.  
+
 
 ![Statisches system des Zweifeldträgers](../imgs/jag_system.svg){#fig-jag_system}
 
-
-Der dazugehörige Querschnitt ist in der @fig-jag_system_qs dargestellt. Dargestellt ist die Biegebewehrung mit entsprechendem Durchmesser.
+Der entsprechende Querschnitt zeigt die @fig-jag_system_qs. Dargestellt ist die Biegebewehrung mit entsprechendem Durchmesser.
 
 ![Querschnitt des Zweifeldträgers](../imgs/jag_system_qs.svg){#fig-jag_system_qs}
 
-Das übergeordnete Ziel ist es das Last-Verformungs-Verhalten (An der Stelle des Verformungsvektors $w_m$, gemäss der @fig-jag_system) des Tragwerks für zwei unterschiedlich duktile Betonstähle zu berechnen. Sprich damit den Einfluss der Duktilität auf das Tragverhalten zu zeigen.
+
+Das Ziel des Beispiels ist es, den Einfluss der Duktilitätsklasse des Bewehrungsstahls aufzuzeigen. Dazu ist das Last-Verformungs-Verhalten für einen kaltverformten Stahl (B500A) und einen naturharten Stahl (B500C) zu ermitteln. Das Last-Verformungs-Verhalten ist an der Stelle des Verformungsvektors $w_m$ aufzuzeigen.
+
 
 ### Materialeigenschaften
 
-Die Betonstähle werden durch die Spannungs-Dehnungs-Diagramme, gemäss der @fig-jag_stress_strain_b500a definiert. Es wird ein bilinearer Verlauf für den B500A und ein trilinearer Verlauf für den B500C angesetzt.
-
-::: {#fig-jag_stress_strain_steel-ncol=2}
+Den Betonstählen sind idealisierte Spannungs-Dehnungs-Diagramme zu Grunde gelegt. Das Verhalten des kaltverformten Stahls ist mit einem bilinearen Verlauf, gemäss der @fig-jag_stress_strain_b500a, beschrieben.
 
 ![Spannungs-Dehnungs-Beziehungen des Betonstahls B500A](../imgs/jag_stress_strain_b500a.svg){#fig-jag_stress_strain_b500a}
 
+Der trilineare Verlauf der @fig-jag_stress_strain_b500c beschreibt das Verhalten des naturharten Stahls.
+
 ![Spannungs-Dehnungs-Beziehungen des Betonstahls B500C](../imgs/jag_stress_strain_b500c.svg){#fig-jag_stress_strain_b500c}
 
-Spannungs-Dehnungs-Diagramme der beiden Betonstähle
-:::
 
 ## Analytische Lösung
 
-Die analytische Lösung erweist sich als umfangreich. Deshalb ist die detaillierte Berechnung in den @sec-zweifeldtraeger_anhang verschoben. Das Vorgehen wird dennoch beschrieben.
+Die analytische Lösung erweist sich als umfangreich. Deshalb ist die detaillierte Berechnung in den @sec-zweifeldtraeger_anhang verschoben. Das Vorgehen lässt sich folgend beschreiben.
 
 Betrachtet man das System, dargestellt in der @fig-jag_system, unter steigender Belastung, so ist naheliegend, dass sich über dem Mittelauflager zuerst ein plastisches Gelenk bildet. Falls genügend Rotationsvermögen vorhanden ist, bildet sich in Feldmitte ebenfalls ein plastisches Gelenk. Aufgezeigt ist der Mechanismus in der @fig-jag_mechanismus.
 
 ![Mechanismus des Zweifeldträgers mit eingezeichnetem Verdrehungswinkel](../imgs/jag_mechanismus.svg){#fig-jag_mechanismus}
 
-Eine zentrale Grösse ist folglich das Rotationsvermögen der plastischen Gelenke. Um dieses abzuschätzen wird ein Zugglied analysiert. Für den Zustand des Fliessens der Bewehrung und den Zustand beim Erreichen der Zugfestigkeit wird eine mittlere Dehnung über das Zugglied ermittelt. Mit der Dehnungsdifferenz dieser Zustände lässt sich das Rotationsvermögen bestimmen.
+Eine zentrale Grösse ist folglich das Rotationsvermögen der plastischen Gelenke. Um dieses abzuschätzen ist das Zugglied zu analysieren. Für den Zustand des Fliessens der Bewehrung und den Zustand beim Erreichen der Zugfestigkeit ist die mittlere Dehnung entlang des Zugglieds zu ermitteln. Mit der Dehnungsdifferenz dieser Zustände lässt sich das Rotationsvermögen bestimmen.
 
-Gefolgt wird die Grenzzustandbetrachtung des Zugglieds von der eigentlichen Systemanalyse. Es sind Zustände gewählt welche sich signifikant auf die Last-Verformungs-Kurve auswirken. Dabei wird für jeden Zustand die erforderliche Belastung $q$ ermittelt. Die zugehörige Verformung $w_m$ wird unter der Berücksichtigung einer konstanten gerissenen Biegesteifigkeit $EI_{II}$ bestimmt. Zudem wird bei den plastischen Gelenken jeweils der Rotationsbedarf mit dem Rotationsvermögen verglichen.
-
+Nach der Bestimmung des Rotationsvermögens folgt die Systemanalyse. Die Systemanalyse zeigt die Zustandslinien der Biegemomente, sowie die entsprechende Einwirkung $q$. Es sind Zustände gewählt welche sich signifikant auf die Last-Verformungs-Kurve auswirken. Die zugehörige Verformung $w_m$ ist unter der Berücksichtigung einer konstanten gerissenen Biegesteifigkeit $EI_{II}$ bestimmt. Dabei ist das Rotationsvermögen nach der Bildung der Fliessgelenke essentiell zur Bestimmung der Biegemomentenverläufe.
 
 ## NLFE-Modell
 
+Der Beschrieb des nicht-linearen finiten-Element-Modells zeigt die Systemmodellbildung auf, sowie die Querschnittsmodellbildung. Abschliessend sind die numerischen Resultate aufgezeigt. 
+
 ### Systemmodellbildung
 
-Das System ist in biegestarre Stäbe unterteilt und mit Stabanfang- und Endgelenken versehen. Wie in @fig-allg_doppelgelenk gezeigt, wird die Modellierungsstrategie mit Stabanfang- und Endgelenken verfolgt. 
+Das System ist in biegestarre Stäbe unterteilt und mit Stabanfang- und Endgelenken versehen, entsprechend der Modellierungsstrategie in der @fig-allg_doppelgelenk. Die Streckenlast $q$ ist mit 30 kN/m angesetzt. Die @fig-jag_makrosystem zeigt das System, die Stabgelenke sind nicht dargestellt.
 
 ![Statisches System mit schematischer Stabunterteilung](../imgs/jag_makrosystem.svg){#fig-jag_makrosystem}
 
-Die @fig-jag_makrosystem zeigt das System mit den Doppelgelenken. Die effektive Stabeinteilung ist nicht dargestellt.
-
-Das System ist für beide Stähle mit einer Streckenlast von 30 kN/m belastet. Diese ist deutlich grösser gewählt als die analytisch ermittelte. 
+Eine Detailansicht der Stäbe mit den Gelenken zeigt die @fig-jag_makro_detail. Dazu ist die Einzugslänge $l_{Ein}$ und die Elementlänge $l_{El}$ vermasst.
 
 ![Detailansicht des statischen Modells ](../imgs/jag_makro_detail.svg){#fig-jag_makro_detail}
 
 ### Querschnittsmodellbildung
 
+Die Querschnittsmodellbildung folgt der Herleitung gemäss dem @sec-allg_balken.
+
 #### Biegesteifigkeit
 
-Es wird ausschliesslich das Biegeverhalten untersucht. Dazu wird eine Querschnittsanalyse durchgeführt. Der Querschnitt ist bei steigender Krümmung zu untersuchen. Mittels den Gleichgewichstbedingungen kann das Biegemoment für die entsprechende Krümmung bestimmt werden. Dies führt zu einer Momenten-Krümmungs-Beziehung. 
+Die Biegesteifigkeit ist anhand einer Querschnittsanalyse zu bestimmen.
 
 Konkret ist in diesem Beispiel das Fliessmoment und der Biegewiderstand vereinfacht an den folgenden Querschnitten bestimmt worden. Gezeigt in der @fig-jag_qs_fliessen und @fig-jag_qs_widerstand. Dabei erreicht der Stahl die Fliessspannung, der Beton wird als vollständig plastifiziert angenommen.
 

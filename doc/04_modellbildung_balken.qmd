@@ -1,4 +1,4 @@
-# Balken
+# Balken {#sec-allg_balken}
 
 Dieses Kapitel beschreibt die Querschnittsmodellbildung der Balkentragwerke.
 

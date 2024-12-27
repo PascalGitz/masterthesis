@@ -19,17 +19,17 @@ book:
       - 04_modellbildung_balken.qmd
       - 05_modellbildung_platten.qmd
 
-  #   - part: "Anwendung"
-  #     chapters: 
-  #     - 05_zweifeldtraeger.qmd
+    - part: "Anwendung"
+      chapters: 
+      - 05_zweifeldtraeger.qmd
   #     - 06_traegerrost.ipynb
   #     - 07_quadratplatte.ipynb
   #     - 08_thoma_platte.ipynb
   #   - 09_Fazit.qmd
     - references.qmd
 
-  # appendices: 
-  #   - A2_Zweifeldtraeger_Jaeger.ipynb
+  appendices: 
+    - A2_Zweifeldtraeger_Jaeger.ipynb
 
 bibliography: references.bib
 
