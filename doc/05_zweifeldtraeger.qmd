@@ -1,11 +1,6 @@
 # Zweifeldträger{#sec-zweifeldtraeger}
 
-Das Anwendungsbeispiel des Zweifeldträgers zeigt die Modellbildung für Balkentragwerke vollumfänglich auf. Zunächst ist die Aufgabenstellung aufgezeigt. Gefolgt ist vom Beschrieb der analytischen Lösung. Darauf folgt der Beschrieb des NLFE-Modells. Der Abschluss des Beispiels bildet der Vergleich der Resultate zwischen der analytischen und der numerischen Lösung.
-
-Im vorangegangen Kapitel wurde vertieft auf die Systemmodellbildung eingegangen. Sowie wurde diese allgemein formuliert. Dabei wurde die Querschnittsmodellbildung aussenvor gelassen. 
-
-Das Ziel dieses Kapitel ist es an einem konkreten Beispiel die Systemmodellbildung aufzuzeigen, sowie speziell auf die Querschnittsmodellbildung einzugehen. 
-
+Das Anwendungsbeispiel des Zweifeldträgers zeigt die Modellbildung für Balkentragwerke vollumfänglich auf. Zunächst ist die Aufgabenstellung aufgezeigt. Die analytische Lösung ist danach beschrieben. Darauf folgt der Beschrieb des NLFE-Modells. Der Abschluss des Beispiels bildet der Vergleich der Resultate zwischen der analytischen und der numerischen Lösung.
 
 
 ## Aufgabenbeschrieb
@@ -23,7 +18,7 @@ Der entsprechende Querschnitt zeigt die @fig-jag_system_qs. Dargestellt ist die 
 ![Querschnitt des Zweifeldträgers](../imgs/jag_system_qs.svg){#fig-jag_system_qs}
 
 
-Das Ziel des Beispiels ist es, den Einfluss der Duktilitätsklasse des Bewehrungsstahls aufzuzeigen. Dazu ist das Last-Verformungs-Verhalten für einen kaltverformten Stahl (B500A) und einen naturharten Stahl (B500C) zu ermitteln. Das Last-Verformungs-Verhalten ist an der Stelle des Verformungsvektors $w_m$ aufzuzeigen.
+Das Ziel des Beispiels ist es, den Einfluss der Duktilitätsklasse des Bewehrungsstahls aufzuzeigen. Dazu ist das Last-Verformungs-Verhalten für einen kaltverformten Betonstahl (B500A) und einen naturharten Betonstahl (B500C) zu ermitteln. Das Last-Verformungs-Verhalten ist an der Stelle des Verformungsvektors $w_m$ aufzuzeigen.
 
 
 ### Materialeigenschaften
@@ -39,7 +34,7 @@ Der trilineare Verlauf der @fig-jag_stress_strain_b500c beschreibt das Verhalten
 
 ## Analytische Lösung
 
-Die analytische Lösung erweist sich als umfangreich. Deshalb ist die detaillierte Berechnung in den @sec-zweifeldtraeger_anhang verschoben. Das Vorgehen lässt sich folgend beschreiben.
+Die analytische Lösung erweist sich als umfangreich. Dieser Abschnitt beschreibt das Berechnungsvorgehen. Die detaillierte Berechnung ist dem  @sec-zweifeldtraeger_anhang zu entnehmen. 
 
 Betrachtet man das System, dargestellt in der @fig-jag_system, unter steigender Belastung, so ist naheliegend, dass sich über dem Mittelauflager zuerst ein plastisches Gelenk bildet. Falls genügend Rotationsvermögen vorhanden ist, bildet sich in Feldmitte ebenfalls ein plastisches Gelenk. Aufgezeigt ist der Mechanismus in der @fig-jag_mechanismus.
 
@@ -69,77 +64,77 @@ Die Querschnittsmodellbildung folgt der Herleitung gemäss dem @sec-allg_balken.
 
 #### Biegesteifigkeit
 
-Die Biegesteifigkeit ist anhand einer Querschnittsanalyse zu bestimmen.
+Die Ermittlung der Biegesteifigkeit ist in der analytischen Lösung vollumfänglich dargestellt. Folgend sind die berechneten Grössen in der Momenten-Krümmungs-Beziehung zusammengefasst.
 
-Konkret ist in diesem Beispiel das Fliessmoment und der Biegewiderstand vereinfacht an den folgenden Querschnitten bestimmt worden. Gezeigt in der @fig-jag_qs_fliessen und @fig-jag_qs_widerstand. Dabei erreicht der Stahl die Fliessspannung, der Beton wird als vollständig plastifiziert angenommen.
+Die Momenten-Krümmungs-Beziehung des kaltverformten Stahls ist anhand der Dehnungszustände in @fig-jag_qs_steifigkeit und der @fig-jag_qs_hebelarm bestimmt. Die Bruchkrümmung $\chi_u$ lässt sich ebenfalls am Querschnitt gemäss der @fig-jag_qs_hebelarm bestimmen, die Betonstahlspannung ist mit der Spannung aus der gemittelten Stahldehnung entlang des Zugglieds zu ersetzen. Die gemittelte Dehnung zeigt die @fig-jag_zustand_a2. 
 
-![Querschnittsanalyse zur Bestimmung des Fliessmoments und der Fliesskrümmung, Stahl erreicht Fliessgrenze, Beton ist völlig plastifiziert](../imgs/jag_qs_fliessen.svg){#fig-jag_qs_fliessen}
+Das Momenten-Verdrehungs-Diagramm resultiert aus der Anwendung der @eq-phi_to_chi_konst. Das Diagramm ist mit einem ideal-plastischen Verlauf abgeschlossen. Dies verhindert, dass sich Biegemomente grösser als der Biegewiederstand einstellen können.
 
-Bei der Bestimmung der Bruchkrümmung fliesst das Zuggurtmodell mit ein. Im @sec-zweifeldtraeger_anhang ist die Berücksichtigung dazu umfangreich aufgezeigt. Die Grundüberlegung liegt dabei, dass sich der Beton ebenfalls am Spannungsabtrag beteiligt über die Verbundwirkung des Betonstahls zum Beton. Dazu wird basierend auf dem Zuggurtmodell ein Zugglied untersucht, speziell dessen Dehnungszustands. Anhand diesem wird eine mittlere Dehnung ermittelt. Mit dieser mittleren Dehnung ist hier die Bruchkrümmung ermittelt.
+![a) Momenten-Krümmungs-Beziehung, b) Momenten-Verdrehungs-Beziehung des kaltverformten Betonstahls B500A](../imgs/jag_m_chi_b500a.svg){#fig-jag_m_chi_b500a}
 
-![Querschnittsanalyse zur Bestimmung des Biegewiderstands und der Bruchkrümmung, Stahl erreicht die Spannung entsprechend der mittleren Dehnung des Zugglieds, Beton ist völlig plastifiziert](../imgs/jag_qs_widerstand.svg){#fig-jag_qs_widerstand}
+Die @fig-jag_m_chi_b500c zeigt das Momenten-Krümmungs-Diagramm und das Momenten-Verdrehungs-Diagramm des naturharten Betonstahls. Die Ermittlung ist analog deren des kaltverformten Stahls. Aufgrund der trilinearen Spannungs-Dehnungs-Beziehung des Betonstahls resultiert eine trilineare Momenten-Krümmungs-Beziehung.
 
-Die Krümmung gilt es mit der Einzugslänge, illustriert in der @fig-allg_feder, zu multiplizieren um die Verdrehung zu erhalten. 
+![a) Momenten-Krümmungs-Beziehung, b) Momenten-Verdrehungs-Beziehung des naturharten Betonstahls B500C](../imgs/jag_m_chi_b500c.svg){#fig-jag_m_chi_b500c}
 
 #### Abbruchkriterium
 
-Es wird ein Abbruchkriterium definiert gemäss der Modellvorstellung in @fig-jag_plast_gelenk. Dabei muss die Summe der relativen Gelenkrotationen der Gelenke innerhalb der Länge des plastischen Gelenks kleiner als das Rotationsvermögen sein.
+Das Abbruchkriterium bezieht sich auf das @sec-abbruchkriterium, es sind die dort beschriebenen Näherungsformeln angewendet. Die Ermittlung des Rotationsvermögens zeigt der @sec-zweifeldtraeger_anhang. 
 
-$$
-\varphi_{max} \geq \sum_{i=1}^n \varphi_i
-$${#eq-abbruchkriterium}
-
-Dabei ist zwingend der ideal-plastische Verlauf am Ende der Momenten-Verdrehungs-Beziehung zu hinterlegen, da einzelne Gelenke innerhalb der plastischen Länge die Bruchverdrehung deutlich überschreiten können. In der Summe diese jedoch kleiner als das Rotationsvermögen sein müssen.
-
-Die @fig-jag_abbruchkrit illustriert die plastische Gelenklänge für das System. 
-
-![Definition des Abbruchkriteriums, Gelenke innerhalb der Länge des plastischen Gelenks](../imgs/jag_abbruchkrit.svg){#fig-jag_abbruchkrit}
 
 ### Resultate
 
-Das Anwendungsbeispiel wird mit den Berechnungsresultaten abgeschlossen. Dazu ist das gesuchte Last-Verformungs-Diagramm in der @fig-jag_q_w gezeigt. Aufgezeigt ist die analytische Lösung und die numerische mittels dem nicht-linearen FE-Modell.
+Mit der Querschnittsmodellbildung sind die Gelenkeigenschaften geklärt, sowie das Abbruchkriterium definiert. Das Modell ist vollständig beschrieben. Es gilt die Resultate darzustellen und zu interpretieren. Dazu sind in diesem Abschnitt die Zustandslinien der Schnittgrössen und das Last-Verformungs-Diagramm in der Feldmitte der beiden Betonstähle aufgezeigt.
 
-![Last-Feldmittendurchbiegung-Diagramm für beide Betonstähle, analytisch gelöst und mit der FEM-Lösung nachgerechnet](../imgs/jag_q_w.svg){#fig-jag_q_w}
+#### Kaltverformter Betonstahl
 
-Die Verläufe für den kaltverformten Betonstahl B500A sind deckungsgleich. Lediglich kleine Differenzen bei der prognostizierten Traglast. Die analytische Lösung beschreibt eine um 5 % höhere Traglast. Da das FE-Modell lediglich eine Näherung beschreibt ist dieses Resultat zufriedenstellend.
+Die Zustände des Systems sind anhand des Lastparameters (LP) gegliedert. Der Lastparameter beschreibt der Anteil der aufgebrachten Streckenlast, im Modell sind dies 30 kN/m.
 
-Die Verläufe für den naturharten Stahl B500C zeigen gleichbleibendes Verhalten bis zu einer Verformung von 145mm. Exakt an diesem Punkt erreicht das Gelenkpaar beim Auflager die Bruchkrümmung $\varphi_u$. Ab dann folgt im FE-Modell der ideal-plastische Bereich. Dies spiegelt sich im Last-Verformungs-Verhalten wieder. 
+Die Verläufe der analytischen und der numerischen Lösung, gezeigt in der @fig-jag_q_w_b500a, des kaltverformten Betonstahls B500A sind deckungsgleich. Es sind lediglich kleine Differenzen bei der prognostizierten Traglast zu erkennen. Die analytische Lösung beschreibt eine um 5 % höhere Traglast. Da das FE-Modell lediglich eine Näherung beschreibt ist dieses Resultat zufriedenstellend.
 
-An diesem Verhalten lässt sich das Abbruchkriterium verdeutlichen. Wären in den Momenten-Verdrehungs-Beziehungen keine ideal-plastischen Verläufe hinterlegt, so läge die prognostizierte Verformung beim Erreichen der Traglast lediglich bei 50% der Verformung der analytischen Lösung.
+![Last-Feldmittendurchbiegungs-Diagramm des Systems mit dem kaltverformten Betonstahl. Die analytische und numerische Lösung ist dargestellt. Zudem mit markierten Lastparametern](../imgs/jag_q_w_b500a.svg){#fig-jag_q_w_b500a}
 
-Insgesamt weichen die numerischen Näherung weniger als 8% von der analytischen Lösung ab.
+Die Zustandslinien der Biegemomente und der Verformung beim Erreichen des Fliessmoments beim Auflager zeigt die @fig-jag_b500a_lpa_0462.
 
-#### Kaltverformter Stahl
-
-![Resultate für den Lastfaktor 0.494](../imgs/jag_b500a_lpa_0494.svg){#fig-jag_b500a_lpa_0494}
-
-![Resultate für den Lastfaktor 0.504](../imgs/jag_b500a_lpa_0504.svg){#fig-jag_b500a_lpa_0504}
-
-Die relativen Gelenkrotationen in der Summe über die plastische Länge entsprechen dem plastischen Rotationsvermögen.
-
-![Relative Gelenkrotation für den Lastfaktor 0.504](../imgs/jag_b500a_lpa_0504_rot.svg){#fig-jag_b500a_lpa_0504_rot}
+![Resultate für den Lastparameter 0.462](../imgs/jag_b500a_lpa_0494.svg){#fig-jag_b500a_lpa_0462}
 
 
-#### Naturharter Stahl
+Die Zustandslinien der Biegemomente und der Verformung des Systems beim erreichen des Abbruchkriteriums zeigt die @fig-jag_b500a_lpa_0504.
 
-![Resultate für den Lastfaktor 0.433](../imgs/jag_b500c_lpa_0433.svg){#fig-jag_b500c_lpa_0433}
+![Resultate für den Lastparameter 0.504](../imgs/jag_b500a_lpa_0504.svg){#fig-jag_b500a_lpa_0504}
 
-![Resultate für den Lastfaktor 0.597](../imgs/jag_b500c_lpa_0597.svg){#fig-jag_b500c_lpa_0597}
+Die relativen Gelenkrotationen zeigt die @fig-jag_b500a_lpa_0504_rot im bereich der plastischen Gelenklänge für den entsprechenden Lastparameter. In der Summe entsprechen diese dem plastischen Rotationsvermögen.
 
-![Resultate für den Lastfaktor 0.619](../imgs/jag_b500c_lpa_0619.svg){#fig-jag_b500c_lpa_0619}
-
-![Resultate für den Lastfaktor 0.634](../imgs/jag_b500c_lpa_0634.svg){#fig-jag_b500c_lpa_0634}
+![Relative Gelenkrotation für den Lastparameter 0.504](../imgs/jag_b500a_lpa_0504_rot.svg){#fig-jag_b500a_lpa_0504_rot}
 
 
-Die relativen Gelenkrotationen in der Summe über die plastische Länge entsprechen dem plastischen Rotationsvermögen.
+#### Naturharter Betonstahl
 
-![Relative Gelenkrotation für den Lastfaktor 0.634](../imgs/jag_b500c_lpa_0634_rot.svg){#fig-jag_b500c_lpa_0634_rot}
+Die Verläufe, gezeigt in der @fig-jag_q_w_b500c, des naturharten Betonstahl B500C zeigen gleichbleibendes Verhalten bis zum Lastparameter 0.619. Exakt an diesem Punkt erreicht das Gelenkpaar beim Auflager die Bruchkrümmung $\varphi_u$. Ab dann folgt im FE-Modell der ideal-plastische Bereich, aufgezeigt in der @fig-jag_m_chi_b500c b). Der ideal-plastische Bereich dominiert ab diesem Punkt das Verfromungsverhalten. Das Abbruchkriterium ist jedoch noch nicht erreicht, die Summe der relativen Gelenkrotation im plastischen Gelenkbereich sind weiterhin kleiner als das Rotationsvermögen. 
+
+![Last-Feldmittendurchbiegungs-Diagramm des Systems mit dem naturharten Betonstahl. Die analytische und numerische Lösung ist dargestellt. Zudem mit markierten Lastparametern](../imgs/jag_q_w_b500c.svg){#fig-jag_q_w_b500c}
+
+Bei steigender Belastung stellt sich zuerst ein Fliessgelenk beim Mittelauflager ein. Aufgezeigt in der @fig-jag_b500c_lpa_0433.
+
+![Resultate für den Lastparameter 0.433](../imgs/jag_b500c_lpa_0433.svg){#fig-jag_b500c_lpa_0433}
+
+Danach folgt das Erreichen des Fliessmoments im Feld, aufgezeigt in der @fig-jag_b500c_lpa_0597.
+
+![Resultate für den Lastparameter 0.597](../imgs/jag_b500c_lpa_0597.svg){#fig-jag_b500c_lpa_0597}
+
+Die @fig-jag_b500c_lpa_0619 zeigt, dass beim Mittelauflager der Biegewiderstand erreicht ist.
+
+![Resultate für den Lastparameter 0.619](../imgs/jag_b500c_lpa_0619.svg){#fig-jag_b500c_lpa_0619}
+
+Die @fig-jag_b500c_lpa_0634 zeigt die Zustandslinien beim Erreichen des Abbruchkriteriums. Die relativen Gelenkrotationen zeigt die @fig-jag_b500c_lpa_0634_rot, das Abbruchkriterium ist erfüllt.
+
+![Resultate für den Lastparameter 0.634](../imgs/jag_b500c_lpa_0634.svg){#fig-jag_b500c_lpa_0634}
+
+![Relative Gelenkrotation für den Lastparameter 0.634](../imgs/jag_b500c_lpa_0634_rot.svg){#fig-jag_b500c_lpa_0634_rot}
 
 
 ## Fazit
 
-Die dargestellen Resultate zeigen, dass sich die analytische Lösung zuverlässig annähern lässt. Das Modell zeigt, dass die aufwändige analytische Lösung, speziell die Systemanalye mit wenig Modellierungsaufwand ersetzt werden kann. Zudem ist aufgezeigt, dass die Steifigkeitsermittlung basierend auf den analytischen Modellen problemlos in das FE-Modell integriert werden. Dies erhöht die Nachvollziehbarkeit des Modells beträchtlich, da der Ingenieur die Modellsteifigkeit direkt steuert und über meist bekannte Ansätze berechnen kann.
-
+Die dargestellen Resultate zeigen, dass sich die analytische Lösung zuverlässig annähern lässt. Das Modell zeigt, dass die aufwändige analytische Lösung, speziell die Systemanalye mit wenig Modellierungsaufwand ersetzt werden kann. Zudem ist die Integration der mechanischen Modellen zur Bestimmung der Steifigkeit problemlos möglich.
 
 
 
