@@ -37,7 +37,7 @@ Die Schwierigkeit liegt offensichtlich in der Bestimmung der passenden Federbezi
 
 ## Berechnungsschema
 
-Die Modellbildung kann mit dem Ablaufschema, gemäss der @fig-allg_schema, verallgemeinert werden. Grundsätzlich ist das Schema Software unabhängig. Die angewendete FE-Software muss lediglich in der Lage sein, nicht-lineare Federsteifigkeiten zu berücksichtigen.
+Die Modellbildung des NLFE-Modells (Nicht-lineare-finite-Elemente) kann mit dem Ablaufschema, gemäss der @fig-allg_schema, verallgemeinert werden. Grundsätzlich ist das Schema Software unabhängig. Die angewendete FE-Software muss lediglich in der Lage sein, nicht-lineare Federsteifigkeiten zu berücksichtigen.
 
 ![Modellierungsschema](../imgs/allg_schema.svg){#fig-allg_schema}
 

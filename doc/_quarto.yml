@@ -23,7 +23,7 @@ book:
       chapters: 
       - 05_zweifeldtraeger.qmd
       - 06_traegerrost.ipynb
-  #     - 07_quadratplatte.ipynb
+      - 07_quadratplatte.ipynb
   #     - 08_thoma_platte.ipynb
   #   - 09_Fazit.qmd
     - references.qmd
