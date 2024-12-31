@@ -77,16 +77,30 @@ $${#eq-delta_chi_zugversteifung}
 
 Die @eq-delta_chi_zugversteifung betrachtet die Krümmung des gerissenen Querschnitts abzüglich der Krümmung beim Erreichen der Zugfestigkeit des Betons, sprich dem ungerissenen Querschnitt. Die folgende Querschnittsanalyse greift diese Thematik erneut auf.
 
+Ebenfalls lässt sich die Bruchkrümmung mit dem Zuggurtmodell einschränken. Die Beziehungen für ein Betonversagen und ein Betonstahlversagen zeigt die @eq-bruchkrummung. Diese sind im @sec-abbruchkriterium erneut aufgegriffen.
+$$
+\begin{aligned}
+\chi_{cu} &= \left(\frac{\varepsilon_{cu}}{x}- \frac{\varepsilon_{smy}}{d-x}\right)\\
+\varepsilon_{smy} &\simeq \frac{f_{sy}}{E_s}\\
+\chi_{su} &= \left(\frac{\varepsilon_{smu}}{d-x}- \frac{\varepsilon_{smy}}{d-x}\right)\\
+\varepsilon_{smu} &\not \simeq \varepsilon_{su}
+\end{aligned}
+$${#eq-bruchkrummung}
 
 
-#### Querschnittsanalyse
+
+#### Querschnittsanalyse {#sec-qs_balken}
 
 Die Querschnittsanalyse bezeichnet das Untersuchen des Querschnitts bei steigender Biegekrümmung. Dabei ist folgend eine analytische Bestimmung der Momenten-Krümmungs-Beziehung aufgezeigt. Es gilt, dass die Bewehrung lediglich Kräfte in der Stabrichtung überträgt, sowie gelten die folgenden Hypothesen nach Euler-Bernoulli:
 
 - Der Querschnitt erfährt keine Verwölbung, es herrscht das Ebenbleiben des Querschnitts
 - Die Orthogonalität des Querschnitts zur Längsachse bleibt auch im verformten Zustand bestehen. 
 
-Unter der Prämisse von linear-elastischen, ideal-plastischen Werkstoffbeziehungen, sowie einer Berücksichtigung der Zugfestigkeit des Betons lassen sich die folgenden analytischen Beziehungen aufstellen. Dabei beschreibt die @eq-rissmoment_balken das Rissmoment $M_r$ und die Biegesteifigkeit des ungerissenen Zustands $EI_{I}$.
+Unter der Prämisse von linear-elastischen, ideal-plastischen Werkstoffbeziehungen, sowie einer Berücksichtigung der Zugfestigkeit des Betons lassen sich die folgenden analytischen Beziehungen aufstellen. Dabei beschreibt die @eq-rissmoment_balken das Rissmoment $M_r$ und die Biegesteifigkeit des ungerissenen Zustands $EI_{I}$. Der Zustand des Querschnitts zeigt die @fig-tho_qs_mr.
+
+
+![Querschnittsanalyse beim Reissen des Betons, Beton erreicht Zugfestigkeit, Betonstahlspannung ist vernachlässigt](../imgs/tho_qs_mr.svg){#fig-tho_qs_mr}
+
 $$
 \begin{aligned}
 M_r = \frac{f_{ct} h^2}{6}\\
@@ -95,7 +109,11 @@ EI_I = E_c \frac{h^3b}{12}
 $${#eq-rissmoment_balken}
 
 
-Unter der Voraussetzung des elastischen Verhaltens des Betons bestimmt die @eq-gerissene_steifigkeit_balken die Druckzonenhöhe $x$, das Fliessmoment $M_y$ und die gerissene Biegesteifigkeit $EI_{II}$. 
+Unter der Voraussetzung des elastischen Verhaltens des Betons bestimmt die @eq-gerissene_steifigkeit_balken die Druckzonenhöhe $x$, das Fliessmoment $M_y$ und die gerissene Biegesteifigkeit $EI_{II}$. Die @fig-tho_qs_my zeigt den Querschnitt beim Fliessen.
+
+
+![Querschnittsanalyse beim Fliessen der Bewehrung, der Beton ist völlig elastisch](../imgs/tho_qs_my.svg){#fig-tho_qs_my}
+
 
 
 
@@ -159,7 +177,6 @@ Die zulässige Gelenkverdrehung lässt sich bei einem Betondruckversagen mit der
 $$
 \begin{aligned}
 \varphi_{adm,c} &= \left(\frac{\varepsilon_{cu}}{x}-\frac{\varepsilon_{smy}}{d-x}\right)\cdot l_{pl}\\
-\varepsilon_{smy} &\simeq \frac{f_{sy}}{E_s}
 \end{aligned}
 $${#eq-varphi_adm_beton}
 
@@ -168,7 +185,6 @@ Dabei entspricht $\varepsilon_{smy}$ der gemittelten Dehnung der Bewehrung über
 $$
 \begin{aligned}
 \varphi_{adm,s} &= \left(\frac{\varepsilon_{smu}}{d-x}-\frac{\varepsilon_{smy}}{d-x}\right)\cdot l_{pl}\\
-\varepsilon_{smu} &\not \simeq \varepsilon_{su}
 \end{aligned}
 $${#eq-varphi_adm_stahl}
 

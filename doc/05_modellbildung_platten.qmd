@@ -275,10 +275,6 @@ $$
 T_{vert} = q_{zx} \cdot h \cdot b/2 = T_{horiz} = q_{yx} \cdot b \cdot h/2 = T / 2
 $${#eq-schubfluss_balken}
 
-Die Quintessenz ist somit, dass eine Torsionssteifigkeit am Balkenquerschnitt hergeleitet, doppelt so gross wie die entsprechende Ersatzsteifigkeit ist. Dies deckt sich mit @eq-ersatzsteifigkeit_torsion. Beschrieben ist diese Tatsache ebenfalls in @blaauwendraad_plates_2010 Seite 389. Aufgrund der Definition der Krümmung $\chi_{xy}$ ist die Drillsteifigkeit aus der Steifigkeitsmatrix des Plattenelements nur halb so gross.
-
-![Beziehung der Drill- und Torsionssteifigkeit zwischen Plattenelement, Trägerrost und Balken](../imgs/allg_faktor_drill.svg){#fig-allg_faktor_drill}
-
 
 In Anlehnung an die Matrizenschreibweise der kirchhoffschen Plattentheorie, @eq-konstitutiv_kirchhoff_platte, lässt sich die Modellierung des Trägerrosts ebenfalls in dieser Form darstellen. Aufgezeigt in der @eq-konstitutiv_traegerrost. Dabei gilt $T_x = T_y$.
 
@@ -309,8 +305,17 @@ D_b
 \end{Bmatrix}
 $${#eq-konstitutiv_traegerrost}
 
+::: {.callout-important}
 
-## Querschnittsmodellbildung
+Zusammenfassend gilt für den Trägerrost, die Ersatzbiegesteifigkeit entspricht der Biegesteifigkeit des Stabs mit der Querschnittsbreite entsprechend der Elementlänge.\newline
+
+
+Die Ersatztorsionssteifigkeit ist doppelt so gross wie diese der Steifigkeitsmatrize aufgrund der Definition der Krümmung. Zudem ist diese halb so gross wie die Torsionssteifigkeit am Balkenquerschnitt.
+
+![Beziehung der Drill- und Torsionssteifigkeit zwischen Plattenelement, Trägerrost und Balken](../imgs/allg_faktor_drill.svg){#fig-allg_faktor_drill}
+:::
+
+## Querschnittsmodellbildung {#sec-qs_platte}
 
 Abschliessend zeigt dieser Abschnitt die Querschnittsmodellbildung der Stäbe des Trägerrosts.
 
