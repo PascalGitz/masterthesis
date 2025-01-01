@@ -327,7 +327,7 @@ Die Transformation zum Plattenelement hat gezeigt, dass die Biegesteifigkeit dir
 
 Nach der Definition des Querschnitts kann folglich gleich wie beim Balken analysiert werden. Es gilt das @sec-biegesteifigkeit_balken.
 
-### Ersatztorsionssteifigkeit
+### Ersatztorsionssteifigkeit {#sec-ersatztorsion}
 
 Die Ersatztorsionssteifigkeit ist anhand der Drillsteifigkeit des Plattenelements bestimmt. Dazu ist die ungerissene und die gerissene Drillsteifigkeit aufgezeigt.
 
@@ -397,10 +397,10 @@ Die gerissen elastische Schiebung am Deckel gilt als konstant über die Deckelst
 
 ![Ansicht des Sandwichmodells, resultierende Dehnungsebene durch die Schiebung des oberen und unteren Deckels](../imgs/allg_sandwich_kruemmung.svg){#fig-allg_sandwich_kruemmung}
 
-Anhand der Schiebung lässt sich der Schubmodul des Zustands $II$ bestimmen, aufgezeigt in der @eq-schubmodul_II
+Anhand der Schiebung lässt sich der Schubmodul des Zustands $II$ bestimmen, aufgezeigt in der @eq-schubmodul_II, unter der Voraussetzung dass $\gamma_{xyb} = \gamma_{xyt}$ gilt. 
 
 $$
-G_{II} = \left[\frac{2}{E_s}\cdot \left(\sqrt{\frac{(1+n\rho_x)(1+n\rho_y)}{\rho_x \rho_y}+n} \right)\right]^{-1} = \frac{\tau_{xy}}{\gamma_{xy}}
+G_{II} =  \left[2 \cdot\frac{2}{E_s}\cdot \left(\sqrt{\frac{(1+n\rho_{xt})(1+n\rho_{yt})}{\rho_{xt} \rho_{yt}}+n} \right)\right]^{-1} = \frac{\tau_{xy}}{\gamma_{xyt} + \gamma_{xyb}}
 $${#eq-schubmodul_II}
 
 Die Ersatztorsionssteifigkeit ist abschliessend in der @eq-drillsteifigkeit_torsion_gerissen gezeigt.
