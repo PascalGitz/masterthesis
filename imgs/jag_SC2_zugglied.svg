@@ -136,7 +136,7 @@
        id="clipPath15">
       <path
          d="M -0.00426,-0.00119 V 119.0563 H 425.20111 V -0.00119 H -0.00426"
-         transform="matrix(1,0,0,-1,-82.538305,85.238692)"
+         transform="matrix(1,0,0,-1,-82.538312,85.238692)"
          clip-rule="evenodd"
          id="path15" />
     </clipPath>
@@ -163,7 +163,7 @@
        id="clipPath18">
       <path
          d="M -0.00426,-0.00119 V 119.0563 H 425.20111 V -0.00119 H -0.00426"
-         transform="matrix(1,0,0,-1,-155.62129,57.506242)"
+         transform="matrix(1,0,0,-1,-155.62129,57.506251)"
          clip-rule="evenodd"
          id="path18" />
     </clipPath>
@@ -426,7 +426,7 @@
     <text
        id="text14"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,110.05107,45.088413)"
+       transform="matrix(1.3333333,0,0,1.3333333,110.05108,45.088413)"
        clip-path="url(#clipPath15)"><tspan
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          x="0"
@@ -454,7 +454,7 @@
     <text
        id="text17"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,207.49505,82.065013)"
+       transform="matrix(1.3333333,0,0,1.3333333,207.49505,82.065)"
        clip-path="url(#clipPath18)"><tspan
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.00428px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          x="0 2.335665"
@@ -588,12 +588,12 @@
        transform="matrix(1.3333333,0,0,-1.3333333,0,158.74)" />
     <path
        id="path35"
-       d="m 260.92175,19.688 v 96.46535 m 0,-5.95276 v -0.4252 m 0,6.37796 v 0 l -0.8504,-5.95276 h 1.70078 l -0.85038,5.95276"
+       d="m 260.92175,19.688 v 96.46535 m 0,-5.95276 v -0.4252 m 0,6.37796 v 0 l -0.8504,-5.95276 h 1.70081 l -0.85041,5.95276"
        style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(1.3333333,0,0,-1.3333333,0,158.74)" />
     <path
        id="path36"
-       d="m 261.77213,110.20059 -0.85038,5.95276 -0.8504,-5.95276 z"
+       d="m 261.77216,110.20059 -0.85041,5.95276 -0.8504,-5.95276 z"
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        transform="matrix(1.3333333,0,0,-1.3333333,0,158.74)" />
     <text

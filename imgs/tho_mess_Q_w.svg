@@ -77,6 +77,15 @@
          clip-rule="evenodd"
          id="path8" />
     </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath9">
+      <path
+         d="M -0.00426,-0.00133 V 133.22968 H 425.20111 V -0.00133 H -0.00426"
+         transform="matrix(1,0,0,-1,-164.71323,8.6560227)"
+         clip-rule="evenodd"
+         id="path9" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="namedview1"
@@ -103,7 +112,7 @@
      inkscape:label="1">
     <path
        id="path1"
-       d="m 56.82677,19.68776 0.68069,8.9044 v 7.28545 l 2.72283,5.93628 0.68071,5.66644 2.72282,6.2061 5.44565,5.12679 7.48774,6.74577 -0.6807,-15.11052 -10.21058,-29.14174 15.65622,48.56955 4.76494,5.93628 4.76494,3.77763 5.44565,3.77764 10.89128,6.74577 2.04211,-7.82509 4.08423,7.28543 6.80705,5.66645 14.2948,4.58712 11.57203,2.69831 22.46325,5.39662 -1.36139,-5.93628 8.16846,6.2061 14.2948,2.15865 14.97553,2.15866 10.89126,1.34915 v -11.87256 l 4.08426,5.93628 6.12631,5.12678 8.84918,3.23797 11.572,0.80949 h 15.65622 l 12.25268,-0.26982 11.57199,-1.34915 11.57199,-1.34915 12.25272,-3.23798 M 306.6456,19.68776 V 16.8531 M 56.82677,99.22308 H 53.99211 M 56.82677,19.68776 V 16.8531 m 0,2.83466 h -2.83466"
+       d="m 56.82677,19.68776 0.68069,8.9044 v 7.28545 l 2.72283,5.93628 0.68071,5.66644 2.72282,6.2061 5.44565,5.12679 7.48774,6.74577 -0.6807,-15.11052 -10.21058,-29.14174 15.65622,48.56955 4.76494,5.93628 4.76494,3.77763 5.44565,3.77764 10.89128,6.74577 2.04211,-7.82509 4.08423,7.28543 6.80705,5.66645 14.2948,4.58712 11.57203,2.69831 22.46325,5.39662 -1.36139,-5.93628 8.16846,6.2061 14.2948,2.15865 14.97553,2.15866 10.89126,1.34915 v -11.87256 l 4.08426,5.93628 6.12631,5.12678 8.84918,3.23797 11.572,0.80949 h 15.65622 l 12.25268,-0.26982 11.57199,-1.34915 11.57199,-1.34915 12.25272,-3.23798 M 306.6456,19.68776 V 16.8531 M 56.82677,99.22308 H 53.99211 M 56.82677,19.68776 V 16.8531 m 0,2.83466 h -2.83466 m 127.7441,0 V 16.8531"
        style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(1.3333333,0,0,-1.3333333,0,177.63733)" />
     <text
@@ -173,33 +182,43 @@
          y="0"
          sodipodi:role="line"
          id="tspan7">975 kN</tspan></text>
+    <text
+       id="text8"
+       xml:space="preserve"
+       transform="matrix(1.3333333,0,0,1.3333333,219.61764,166.09597)"
+       clip-path="url(#clipPath9)"><tspan
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0916px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         x="0 5.045805 10.09161 15.137415 17.660318 26.571209"
+         y="0"
+         sodipodi:role="line"
+         id="tspan8">100 mm</tspan></text>
     <path
-       id="path9"
+       id="path10"
        d="m 56.82677,19.68776 v 96.46535 m 0,-5.95276 v -0.4252 m 0,6.37796 v 0 l -0.85041,-5.95276 h 1.70079 l -0.85038,5.95276"
        style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(1.3333333,0,0,-1.3333333,0,177.63733)" />
     <path
-       id="path10"
+       id="path11"
        d="m 57.67715,110.20035 -0.85038,5.95276 -0.85041,-5.95276 z"
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        transform="matrix(1.3333333,0,0,-1.3333333,0,177.63733)" />
     <path
-       id="path11"
+       id="path12"
        d="m 260.92126,19.68776 h 123.21976 m -5.95276,0 h -0.4252 m 6.37796,0 v 0 l -5.95276,0.85039 v -1.70078 l 5.95276,0.85039"
        style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(1.3333333,0,0,-1.3333333,0,177.63733)" />
     <path
-       id="path12"
+       id="path13"
        d="m 378.18826,18.83737 5.95276,0.85039 -5.95276,0.85039 z"
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        transform="matrix(1.3333333,0,0,-1.3333333,0,177.63733)" />
     <path
-       id="path13"
+       id="path14"
        d="m 56.82677,19.68776 h 327.31425 m -5.95276,0 h -0.4252 m 6.37796,0 v 0 l -5.95276,0.85039 v -1.70078 l 5.95276,0.85039"
        style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(1.3333333,0,0,-1.3333333,0,177.63733)" />
     <path
-       id="path14"
+       id="path15"
        d="m 378.18826,18.83737 5.95276,0.85039 -5.95276,0.85039 z"
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        transform="matrix(1.3333333,0,0,-1.3333333,0,177.63733)" />

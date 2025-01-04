@@ -1,0 +1,7 @@
+# Anwendung
+
+Der zweite Teil der Arbeit befasst sich mit der Anwendung der Modellbildung an ausgewählten Beispielen. 
+
+Dazu ist die Anwendung an einem zweidimensionalen Balkentragwerk, dem Zweifeldträger gezeigt. Darauf folgt die Erweiterung auf ein dreidimensionales Balkentragwerk, dem torsionsweichen Trägerrost. 
+
+Die Anwendung der Plattentheorie startet mit der Bestimmung der Traglast einer Quadratplatte. Der Abschluss liefert die Versuchsnachrechnung einer Zweifeldplatte.

@@ -86,6 +86,24 @@
          clip-rule="evenodd"
          id="path9" />
     </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath18">
+      <path
+         d="M -0.00426,-0.00119 V 119.0563 H 425.20111 V -0.00119 H -0.00426"
+         transform="matrix(1,0,0,-1,-5.7696502,107.99183)"
+         clip-rule="evenodd"
+         id="path18" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath19">
+      <path
+         d="M -0.00426,-0.00119 V 119.0563 H 425.20111 V -0.00119 H -0.00426"
+         transform="matrix(1,0,0,-1,-209.62792,107.99183)"
+         clip-rule="evenodd"
+         id="path19" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="namedview1"
@@ -227,5 +245,25 @@
        d="m 57.67714,110.20027 -0.85039,5.95276 -0.85039,-5.95276 z"
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        transform="matrix(1.3333333,0,0,-1.3333333,0,158.74)" />
+    <text
+       id="text17"
+       xml:space="preserve"
+       transform="matrix(1.3333333,0,0,1.3333333,7.6928667,14.750893)"
+       clip-path="url(#clipPath18)"><tspan
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         x="0 4.4431658"
+         y="0"
+         sodipodi:role="line"
+         id="tspan17">a)</tspan></text>
+    <text
+       id="text18"
+       xml:space="preserve"
+       transform="matrix(1.3333333,0,0,1.3333333,279.50389,14.750893)"
+       clip-path="url(#clipPath19)"><tspan
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         x="0 4.6333013"
+         y="0"
+         sodipodi:role="line"
+         id="tspan18">b)</tspan></text>
   </g>
 </svg>

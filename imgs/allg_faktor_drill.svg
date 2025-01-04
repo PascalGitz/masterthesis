@@ -159,9 +159,9 @@
        transform="matrix(1.3333333,0,0,1.3333333,403.06903,12.345507)"
        clip-path="url(#clipPath11)"><tspan
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         x="0 6.1143565 10.557522 13.339504 17.782669 21.675444"
+         x="0 5.5639644 8.8963385 13.339504"
          y="0"
          sodipodi:role="line"
-         id="tspan10">Balken</tspan></text>
+         id="tspan10">Stab</tspan></text>
   </g>
 </svg>

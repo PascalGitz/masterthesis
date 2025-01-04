@@ -440,12 +440,12 @@
        transform="matrix(1.3333333,0,0,-1.3333333,0,158.74)" />
     <path
        id="path27"
-       d="m 260.92175,19.688 v 96.46535 m 0,-5.95276 v -0.4252 m 0,6.37796 v 0 l -0.8504,-5.95276 h 1.70078 l -0.85038,5.95276"
+       d="m 260.92175,19.688 v 96.46535 m 0,-5.95276 v -0.4252 m 0,6.37796 v 0 l -0.8504,-5.95276 h 1.70081 l -0.85041,5.95276"
        style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(1.3333333,0,0,-1.3333333,0,158.74)" />
     <path
        id="path28"
-       d="m 261.77213,110.20059 -0.85038,5.95276 -0.8504,-5.95276 z"
+       d="m 261.77216,110.20059 -0.85041,5.95276 -0.8504,-5.95276 z"
        style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        transform="matrix(1.3333333,0,0,-1.3333333,0,158.74)" />
     <text

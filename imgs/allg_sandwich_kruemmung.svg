@@ -149,6 +149,24 @@
          clip-rule="evenodd"
          id="path19" />
     </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath20">
+      <path
+         d="M -0.00426,-0.00142 V 141.7337 H 425.20111 V -0.00142 H -0.00426"
+         transform="matrix(1,0,0,-1,-388.42173,66.685412)"
+         clip-rule="evenodd"
+         id="path20" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath21">
+      <path
+         d="M -0.00426,-0.00142 V 141.7337 H 425.20111 V -0.00142 H -0.00426"
+         transform="matrix(1,0,0,-1,-401.24916,66.685412)"
+         clip-rule="evenodd"
+         id="path21" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="namedview1"
@@ -335,5 +353,23 @@
          x="0"
          y="0"
          id="tspan18">v</tspan></text>
+    <text
+       id="text19"
+       xml:space="preserve"
+       transform="matrix(1.3333333,0,0,1.3333333,517.89563,100.06212)"
+       clip-path="url(#clipPath20)"><tspan
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.616px;font-family:'Cambria Math';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         x="0"
+         y="0"
+         id="tspan19">≈</tspan></text>
+    <text
+       id="text20"
+       xml:space="preserve"
+       transform="matrix(1.3333333,0,0,1.3333333,534.99886,100.06212)"
+       clip-path="url(#clipPath21)"><tspan
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         x="0"
+         y="0"
+         id="tspan20">h</tspan></text>
   </g>
 </svg>

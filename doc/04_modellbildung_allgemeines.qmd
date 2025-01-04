@@ -1,16 +1,14 @@
 # Allgemeines
 
-Das Kapitel verfolgt das Ziel, die Modellbildung im Ganzen aufzuzeigen. Dazu dient ein Gedankenexperiment, ein allgemein gültiges Berechnungsschema und die Systemmodellbildung.
+Dieses Kapitel soll die Modellbildung in groben Zügen beschreiben. Dazu dient ein Gedankenexperiment, ein allgemein gültiges Berechnungsschema und die Systemmodellbildung.
 
 ## Gedankenexperiment {#sec-gedankenexperiment}
 
-Das Gedankenexperiment soll einen Überblick über das Modellverhalten liefern. Dabei steht die Verständlichkeit im Vordergrund. 
+Das Gedankenexperiment liefert einen Überblick über die Modellbildung. Dazu ist das Modellverhalten an einem einfachen Balken aufgezeigt. Die Grundlage bildet die @fig-allg_stat_system_def2, welche den einfachen Balken mit einer konstanten Streckenlast zeigt. Dazu ist die elastische Biegelinie eingezeichnet.
 
-Stellt man sich einen einfachen Balken mit einer Streckenlast belastet vor, so resultiert erwartungsgemäss die elastische Biegelinie gemäss der @fig-allg_stat_system_def2.
+![Elastische Biegelinie des einfachen Balkens mit konstanter Streckenlast](../imgs/allg_stat_system_def2.svg){#fig-allg_stat_system_def2}
 
-![Elastische Biegelinie des einfachen Balkens](../imgs/allg_stat_system_def2.svg){#fig-allg_stat_system_def2}
-
-Unterteilt man nun den Balken in einzelne starre Stäbe und koppelt deren Enden mit Drehfedern, welche eine lineare Abhängigkeit zwischen Biegemoment und Federverdrehung aufweisen, so lässt sich eine näherungsweise gleiche elastische Biegelinie vermuten. Das adaptierte System zeigt die @fig-allg_stat_system.
+Unterteilt man nun den Balken in einzelne starre Stäbe und koppelt deren Enden mit Drehfedern, welche eine lineare Abhängigkeit zwischen Biegemoment und Federverdrehung aufweisen, so lässt sich eine näherungsweise gleiche elastische Biegelinie bestimmen. Das adaptierte System zeigt die @fig-allg_stat_system.
 
 ![Adaptierter einfacher Balken, modelliert mit starren Stäben gekoppelt mit elastischen Drehfedern](../imgs/allg_stat_system.svg){#fig-allg_stat_system}
 
@@ -22,7 +20,7 @@ Das adaptierte System mit der linear-elastischen Momenten-Verdrehungs-Beziehung 
 
 ![Adaptierter einfacher Balken, modelliert mit starren Stäben gekoppelt mit nicht-linearen Drehfedern](../imgs/allg_gedankenexp.svg){#fig-allg_gedankenexp}
 
-Mit dem System mit nicht-linearen Federbeziehungen resultiert der qualitative Verlauf der Biegelinie gemäss der @fig-allg_stat_system_def_nl. Es ist ersichtlich, dass sich das System in den Randbereichen steifer verhält als in der Feldmitte. Beziehungsweise ist das System bei niedrigeren Biegemomenten steifer.
+Mit dem System mit nicht-linearen Federbeziehungen resultiert der qualitative Verlauf der Biegelinie gemäss der @fig-allg_stat_system_def_nl. Es ist hervorzuheben, dass sämtlichen Federn die selbe Federbeziehung hinterlegt ist. Die Federsteifigkeit ist abhängig von der Biegebeanspruchung. Dies zeigt sich in der Darstellung, da sich das System in den Randbereichen steifer verhält als in der Feldmitte. Beziehungsweise ist das System bei niedrigeren Biegemomenten steifer. 
 
 ![Bieglinie des adaptieren, einfachen Balkens mit nicht-linearen Drehfedern, ergänzt mit elastischer Biegelinie](../imgs/allg_stat_system_def_nl.svg){#fig-allg_stat_system_def_nl}
 
@@ -31,21 +29,19 @@ Stellt man sich den adaptierten Balken im dreidimensionalen Raum vor, und ordnet
 ![Anordnung des adaptieren Balkens zum Trägerrost](../imgs/allg_gedankenexperiment_tr.svg){#fig-allg_gedankenexperiment_tr}
 
 
-Das Gedankexeperiment zeigt auf, dass die adaptierte Modellvorstellung die Bestimmung des nicht-linearen Tragverhalten von Stab- und Flächentragwerken ermöglicht. 
-
-Die Schwierigkeit liegt offensichtlich in der Bestimmung der passenden Federbeziehungen. Zudem erhöht sich die Komplexität des Modells im Vergleich mit einer linear-elastischen Lösung deutlich, was die Anwendung einer Finiten-Elemente Software praktisch unabdingbar macht.
+Das Gedankexeperiment zeigt auf, dass die adaptierte Modellvorstellung die Bestimmung des nicht-linearen Tragverhalten von Stab- und Flächentragwerken ermöglicht. Die Schwierigkeit liegt in der Bestimmung der passenden Federbeziehungen. Zudem erhöht sich die Komplexität des Modells im Vergleich mit einer linear-elastischen Lösung deutlich, was die Anwendung einer Finiten-Elemente Software praktisch unabdingbar macht.
 
 ## Berechnungsschema
 
 Die Modellbildung des NLFE-Modells (Nicht-lineare-finite-Elemente) kann mit dem Ablaufschema, gemäss der @fig-allg_schema, verallgemeinert werden. Grundsätzlich ist das Schema Software unabhängig. Die angewendete FE-Software muss lediglich in der Lage sein, nicht-lineare Federsteifigkeiten zu berücksichtigen.
 
-![Modellierungsschema](../imgs/allg_schema.svg){#fig-allg_schema}
+![Modellierungsschema des NLFE-Modells](../imgs/allg_schema.svg){#fig-allg_schema}
 
 Das Modellierungsschema unterteilt die Modellbildung in zwei Hauptgruppen. Die Systemmodellbildung beschreibt das gesamte Modell. Dazu gehören die Elementlänge, die Anordnung der Federn, die Federbeziehung und die abschliessende Analyse mit den daraus folgenden Resultaten. Die Querschnittsmodellbildung als zweite Hauptgruppe befindet sich innerhalb der Systemmodellbildung und befasst sich detailliert mit der Ermittlung der Federbeziehung. Dazu gehört die Steifigkeitsermittlung, sowie das Abbruchkriterium.
 
 ## Systemmodellbildung
 
-Die Systemmodellbildung ist mit dem einleitenden Gedankenexperiment in ihren Grundzügen aufgezeigt. Der folgende Abschnitt beschreibt die Einzelheiten. Dabei ist die Querschnittsmodellbildung ausgeklammert. Diese wird in den folgenden Kapitel für Balken und Platten gesondert beschrieben.
+Die Systemmodellbildung ist mit dem einleitenden Gedankenexperiment in ihren Grundzügen aufgezeigt. Der folgende Abschnitt beschreibt die Einzelheiten. Dabei ist die Querschnittsmodellbildung ausgeklammert. Diese ist in den folgenden Kapitel für Balken und Platten gesondert beschrieben.
 
 ### Elementlänge
 
@@ -55,7 +51,7 @@ Dabei stellt sich die zentrale Frage, wie gross die Elementlänge zu wählen ist
 
 Eine solche Feststellung ist jedoch von kleinem praktischen Nutzen. Umsetzbar ist hingegen eine Sensitivitätsanalyse der Elementlänge. Dazu ist das Modell mit einer Variation der Elementlänge zu berechnen um den Einfluss dieser zu quantifizieren.
 
-Die Wahl der Elementlänge wird bei der Definition des Abbruchkriteriums in der Querschnittsmodellbildung erneut aufgegriffen.
+Die Wahl der Elementlänge ist bei der Definition des Abbruchkriteriums in der Querschnittsmodellbildung erneut aufgegriffen.
 
 ### Federn {#sec-feder}
 
@@ -91,4 +87,4 @@ Nach der nicht-linearen Analyse lassen sich eine Vielzahl von Resultaten ausgebe
 
 ![Relative Gelenkrotation am verformten System](../imgs/allg_relative_gelenkrot.svg){#fig-allg_relative_gelenkrot}
 
-Diese ist von besonderem Interesse, da daraus die Steifigkeit des Gelenks abgelesen werden kann. Zudem findet diese Grösse bei der Definition des Abbruchkriteriem Einzug.
+Diese ist von besonderem Interesse, da daraus die Steifigkeit des Gelenks abgelesen werden kann. Zudem findet diese Grösse bei der Definition des Abbruchkriteriums Einzug.

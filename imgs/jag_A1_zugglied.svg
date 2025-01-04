@@ -82,7 +82,7 @@
        id="clipPath9">
       <path
          d="M 25.68941,119.0563 V -0.00119 H 411.40744 V 119.0563 H 25.68941"
-         transform="matrix(1,0,0,-1,-356.39915,37.753313)"
+         transform="matrix(1,0,0,-1,-356.39918,37.753313)"
          clip-rule="evenodd"
          id="path9" />
     </clipPath>
@@ -325,7 +325,7 @@
     <text
        id="text8"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,475.19885,108.40225)"
+       transform="matrix(1.3333333,0,0,1.3333333,475.19889,108.40225)"
        clip-path="url(#clipPath9)"><tspan
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          x="0"

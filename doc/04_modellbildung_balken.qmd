@@ -1,6 +1,6 @@
 # Balken {#sec-allg_balken}
 
-Dieses Kapitel beschreibt die Querschnittsmodellbildung der Balkentragwerke.
+Die bisher ausgeklammerte Querschnittsmodellbildung ist in diesem Kapitel für Balken beschrieben.
 
 ## Querschnittsmodellbildung
 
@@ -67,7 +67,7 @@ Im Fokus steht hierbei der Einfluss der Zugversteifung auf das Biegetragverhalte
 
 ![Zugglied in einem biegebeanspruchten Stahlbetonelement](../imgs/allg_zugglied_in_biegung.svg){#fig-allg_zugglied_in_biegung}
 
-Basierend auf dem Zuggurtmodell bei einem Biegeproblem lässt sich die Krümmungsdifferenz herleiten. Diese ermöglicht die Berücksichtigung der Zugversteifung in der Momenten-Krümmungs-Beziehung. Dabei gilt die @eq-delta_chi_zugversteifung.
+Basierend auf dem Zuggurtmodell bei einem Biegeproblem lässt sich die Krümmungsdifferenz herleiten. Diese ermöglicht die Berücksichtigung der Zugversteifung im gerissenen elastischen Zustand. Dabei gilt die @eq-delta_chi_zugversteifung.
 
 $$
 \begin{aligned}
@@ -87,7 +87,9 @@ $$
 \end{aligned}
 $${#eq-bruchkrummung}
 
+Dabei entspricht $\varepsilon_{smy}$ der gemittelten Dehnung der Bewehrung über die Länge des Zugglieds bei Fliessbeginn. Die über die Länge des Zugglieds gemittelten Dehnung beim Erreichen der Zugfestigkeit ist mit $\varepsilon_{smu}$ bezeichnet. Dabei ist zu beachten, dass die gemittelte Dehnung deutlich kleiner als Bruchdehnung $\varepsilon_{su}$ des Betonstahls ist. Setzt man diese gleich, so überschätzt man die Duktilität des Systems deutlich. Der Betonstahldehnungsverlauf in der @fig-allg_zugglied zeigt diese Problematik auf, sofern $\varepsilon_{sr} = \varepsilon_{su}$ gilt.
 
+Analytische Lösungen der mittleren Stahldehnung entlang des Zugglieds sind in @alvarez_einfluss_1998 beschrieben.
 
 #### Querschnittsanalyse {#sec-qs_balken}
 
@@ -96,10 +98,10 @@ Die Querschnittsanalyse bezeichnet das Untersuchen des Querschnitts bei steigend
 - Der Querschnitt erfährt keine Verwölbung, es herrscht das Ebenbleiben des Querschnitts
 - Die Orthogonalität des Querschnitts zur Längsachse bleibt auch im verformten Zustand bestehen. 
 
-Unter der Prämisse von linear-elastischen, ideal-plastischen Werkstoffbeziehungen, sowie einer Berücksichtigung der Zugfestigkeit des Betons lassen sich die folgenden analytischen Beziehungen aufstellen. Dabei beschreibt die @eq-rissmoment_balken das Rissmoment $M_r$ und die Biegesteifigkeit des ungerissenen Zustands $EI_{I}$. Der Zustand des Querschnitts zeigt die @fig-tho_qs_mr.
+Unter der Prämisse von linear-elastischen, ideal-plastischen Werkstoffbeziehungen, sowie einer Berücksichtigung der Zugfestigkeit des Betons lassen sich die analytischen Beziehungen zwischen dem Biegemoment und der Krümmung ermitteln. Zunächst gilt es den Querschnitt beim Erreichen der Betonzugfestigkeit in der äussersten Faser zu beschreiben. Dies ist als ungerissener Zustand bezeichnet. Dabei beschreibt die @eq-rissmoment_balken das Rissmoment $M_r$ und die Biegesteifigkeit des ungerissenen Zustands $EI_{I}$. Der Querschnitts zeigt die @fig-tho_qs_mr.
 
 
-![Querschnittsanalyse beim Reissen des Betons, Beton erreicht Zugfestigkeit, Betonstahlspannung ist vernachlässigt](../imgs/tho_qs_mr.svg){#fig-tho_qs_mr}
+![Ungerissener Querschnitt, Beton erreicht Zugfestigkeit, Betonstahlspannung ist vernachlässigt](../imgs/tho_qs_mr.svg){#fig-tho_qs_mr}
 
 $$
 \begin{aligned}
@@ -108,11 +110,10 @@ EI_I = E_c \frac{h^3b}{12}
 \end{aligned}
 $${#eq-rissmoment_balken}
 
+Darauf folgt der gerissene Zustand. Im Zugbereich ist die Betonzugfestigkeit überschritten, der Beton wirkt lediglich auf Druck. Unter der Voraussetzung des elastischen Verhaltens des Betons bestimmt die @eq-gerissene_steifigkeit_balken die Druckzonenhöhe $x$, das Fliessmoment $M_y$ und die gerissene Biegesteifigkeit $EI_{II}$. Die @fig-tho_qs_my zeigt den Querschnitt.
 
-Unter der Voraussetzung des elastischen Verhaltens des Betons bestimmt die @eq-gerissene_steifigkeit_balken die Druckzonenhöhe $x$, das Fliessmoment $M_y$ und die gerissene Biegesteifigkeit $EI_{II}$. Die @fig-tho_qs_my zeigt den Querschnitt beim Fliessen.
 
-
-![Querschnittsanalyse beim Fliessen der Bewehrung, der Beton ist völlig elastisch](../imgs/tho_qs_my.svg){#fig-tho_qs_my}
+![Gerissener Querschnitt, Beton weist elastisches Verhalten auf](../imgs/tho_qs_my.svg){#fig-tho_qs_my}
 
 
 
@@ -133,7 +134,7 @@ $${#eq-geom_bewehrungsgehalt_qs}
 
 Abschliessend lässt sich die Zugversteifung mit der in @eq-delta_chi_zugversteifung aufgezeigten Krümmungsdifferenz im gerissenen Zustand berücksichtigen. Nach dem Erreichen des Fliessmoments gilt der ideal-plastische Verlauf.
 
-Das allgemeine Vorgehen illustriert die @fig-allg_qs_analyse. Linkerhand ist ein Beispielquerschnitt mit der Dehnungsebene gezeigt, welche eine steigende Biegekrümmung darstellt. Das Diagramm rechterhand zeigt den qualitativen Momenten-Krümmungs-Verlauf. Dabei ist die ungerissene Steifigkeit und die gerissene Steifigkeit, sowie die Krümmungsdifferenz unter Variation des Beiwerts $\lambda$ eingezeichnet.
+Das allgemeine Vorgehen illustriert die @fig-allg_qs_analyse. Linkerhand ist ein Beispielquerschnitt mit der Dehnungsebene gezeigt, welche eine steigende Biegekrümmung darstellt. Das Diagramm rechterhand zeigt den qualitativen Momenten-Krümmungs-Verlauf. Dabei ist die ungerissene Steifigkeit und die gerissene Steifigkeit, sowie die Krümmungsdifferenz unter Variation des Beiwerts $\lambda$ ausgewiesen.
 
 ![Querschnitt bei steigender Biegekrümmung mit Momenten-Krümmungs-Beziehung für linear-elastische ideal-plastische Werkstoffbeziehungen, sowie der Berücksichtigung der Zugversteifung](../imgs/allg_qs_analyse.svg){#fig-allg_qs_analyse}
 
@@ -142,7 +143,7 @@ Alternativ kann eine Momenten-Krümmungs-Beziehung numerisch ermittelt werden. D
 
 ### Von der Krümmung zur Verdrehung {#sec-kruemmung_verdrehung}
 
-Es ist offensichtlich, dass die Momenten-Krümmungs-Beziehung nicht direkt der geforderten Momenten-Verdrehungs-Beziehung, gemäss der @def-gelenkfunktionen_raum, des Stabgelenks entspricht. 
+Es ist offensichtlich, dass die Momenten-Krümmungs-Beziehung nicht der geforderten Momenten-Verdrehungs-Beziehung, gemäss der @def-gelenkfunktionen_raum, des Stabgelenks entspricht. 
 
 Die Transformation lässt sich anhand des Gelenkverhaltens herleiten. Im Beschrieb der Feder, @sec-feder, wurde die Einzugslänge eingeführt mit dem Vermerk, dass die Feder das Systemverhalten innerhalb der Einzugslänge definiert. Bezieht man dies auf das Biegeverhalten, so entspricht dies einer numerischen Integration der Biegekrümmungen im Bereich der Einzugslänge. Definiert ist dies durch die @eq-phi_to_chi.
 
@@ -173,22 +174,14 @@ $$
 \varphi_{adm} \geq \sum_{i=1}^n \varphi_i
 $${#eq-abbruchkriterium}
 
-Die zulässige Gelenkverdrehung lässt sich bei einem Betondruckversagen mit der @eq-varphi_adm_beton bestimmen.
-$$
-\begin{aligned}
-\varphi_{adm,c} &= \left(\frac{\varepsilon_{cu}}{x}-\frac{\varepsilon_{smy}}{d-x}\right)\cdot l_{pl}\\
-\end{aligned}
-$${#eq-varphi_adm_beton}
-
-Dabei entspricht $\varepsilon_{smy}$ der gemittelten Dehnung der Bewehrung über die Länge des Zugglieds bei Fliessbeginn. Ist ein Betondruckversagen ausgeschlossen, so bestimmt sich die zulässige Verdrehung nach der @eq-varphi_adm_stahl.
+Die zulässige Gelenkverdrehung ist dabei abhängig von der Bruchkrümmung welche durch die @eq-bruchkrummung definiert ist. Es gilt die @eq-varphi_adm.
 
 $$
 \begin{aligned}
-\varphi_{adm,s} &= \left(\frac{\varepsilon_{smu}}{d-x}-\frac{\varepsilon_{smy}}{d-x}\right)\cdot l_{pl}\\
+\varphi_{adm,c} &= \chi_{cu} \cdot l_{pl} =  \left(\frac{\varepsilon_{cu}}{x}-\frac{\varepsilon_{smy}}{d-x}\right)\cdot l_{pl}\\
+\varphi_{adm,s} &= \chi_{su} \cdot l_{pl} = \left(\frac{\varepsilon_{smu}}{d-x}-\frac{\varepsilon_{smy}}{d-x}\right)\cdot l_{pl}\\
 \end{aligned}
-$${#eq-varphi_adm_stahl}
-
-Die über die Länge des Zugglieds gemittelten Dehnung beim Erreichen der Zugfestigkeit ist mit $\varepsilon_{smu}$ bezeichnet. Dabei ist zu beachten, dass die gemittelte Dehnung deutlich kleiner als Bruchdehnung $\varepsilon_{su}$ des Betonstahls ist. Setzt man diese gleich, so überschätzt man die Duktilität des Systems deutlich. Der Betonstahldehnungsverlauf in der @fig-allg_zugglied zeigt diese Problematik auf, sofern $\varepsilon_{sr} = \varepsilon_{su}$ gilt.
+$${#eq-varphi_adm}
 
 Die erfoderliche Länge des plastischen Gelenks lässt sich mit der @eq-l_pl_schaetzung abschätzen, welche diese gleich der doppelten statischen Höhe setzt.
 
@@ -196,11 +189,12 @@ $$
 l_{pl} \simeq 2d
 $${#eq-l_pl_schaetzung}
 
-Analytische Lösungen zur mittleren Stahldehnung entlang des Zugglieds sind in @alvarez_einfluss_1998 beschrieben, sowie zeigt die Vorlesungsunterlage @kaufmann_2_2017 eine kompakte Zusammenfassung der Bestimmung der plastischen Rotation.
+In der Vorlesungsunterlage @kaufmann_2_2017 ist die Ermittlung der plastischen Gelenkrotation kompakt zusammengefasst. Sowie sind verfeinerte Berechnungsmethoden zur Bestimmung der Rotation aufgezeigt.
 
-Abschliessend ist die Ermittlung der einzelnen Rissverdrehungen zu klären. Diese entsprechen der relativen Gelenkrotationen, welche in @fig-allg_relative_gelenkrot illustriert sind. Diese lassen sich als Resultat in AxisVM ausgeben. 
 
-Die @fig-jag_abbruchkrit zeigt einen Ausschnitt eines Stabs mit Stabanfang- und Endgelenken. Die Elementlänge ist kleiner als die Länge des plastischen Gelenks gewählt. Die Summe der relativen Gelenkrotation der von der plastischen Gelenklänge umfassten Stabgelenke muss kleiner als die zulässige Verdrehung sein.
+Die einzelnen Rissverdrehungen entsprechen den relativen Gelenkrotationen im Bereich des plastischen Gelenks. Die relativen Gelenkrotationen sind in der @fig-allg_relative_gelenkrot illustriert und sind eine Resultatgrösse aus AxisVM.
+
+Abschliessend veranschaulicht die @fig-jag_abbruchkrit das Abbruchkriterium. Diese zeigt einen Ausschnitt eines Stabs mit Stabanfang- und Endgelenken. Die Elementlänge ist kleiner als die Länge des plastischen Gelenks gewählt. Die Summe der relativen Gelenkrotation der von der plastischen Gelenklänge umfassten Stabgelenke muss kleiner als die zulässige Verdrehung sein.
 
 ![Systemmodellbildung mit Stabanfang- und Endgelenken, dazu die plastische Gelenklänge und Elementlänge eingezeichnet](../imgs/jag_abbruchkrit.svg){#fig-jag_abbruchkrit}
 
