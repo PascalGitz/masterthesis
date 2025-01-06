@@ -10,7 +10,7 @@ Die Querschnittsmodellbildung startet beim Beschrieb der Grössen am Stabquersch
 
 Ein Stab weist die Schnittgrössen gemäss der @fig-allg_balken_sg a) auf, dazu sind die aus den Schnittgrössen hervorgerufenen elementaren Verformungen in der @fig-allg_balken_sg b) gezeigt.
 
-![Schnittgrössen a) und elementare Verformungen b) des Stabs](../imgs/allg_balken_sg.svg){#fig-allg_balken_sg}
+![a) Schnittgrössen und b) elementare Verformungen des Stabs](../imgs/allg_balken_sg.svg){#fig-allg_balken_sg}
 
 Gemäss der Abgrenzung, lediglich das Biegetragverhalten zu untersuchen, reduziert sich die Betrachtung auf die Biegekrümmung $\chi_y$ und das Biegemoment $M_y$. Hierbei entspricht das Biegetragverhalten dem einachsigen Biegetragverhalten. Die Euler-Bernoulli Balkentheorie, beschrieben in @spura_einfuhrung_2019 (passende Quelle suchen), eignet sich somit zum Beschrieb des Tragverhaltens. Dabei gilt die Schreibweise nach der @def-balken_groessen.
 
@@ -167,7 +167,7 @@ $${#eq-phi_to_chi_konst}
 
 Der Abschluss der Querschnittsmodellbildung bildet das Abbruchkriterium. Das Abbruchkriterium dient dazu das Systemversagen zu definieren. Dies geschieht über eine Begrenzung der Verdrehung der Gelenke. Die @fig-jag_plast_gelenk illustriert die Modellvorstellung zum Verhalten eines plastischen Biegegelenks. 
 
-![Darstellung eines plastischen Biegegelenks, nachgezeichnet nach @kaufmann_2_2017](../imgs/jag_plast_gelenk.svg){#fig-jag_plast_gelenk}
+![Modellbildung eines plastischen Biegegelenks, nachgezeichnet nach @kaufmann_2_2017](../imgs/jag_plast_gelenk.svg){#fig-jag_plast_gelenk}
 
 Die Verdrehung des plastischen Gelenks definiert sich über die Summe der einzelnen Rissverdrehungen. Dabei muss die zulässige Gelenkverdrehung grösser oder gleich der Summe der einzelnen Verdrehungen sein. Aufgezeigt in der @eq-abbruchkriterium.
 $$
@@ -196,6 +196,6 @@ Die einzelnen Rissverdrehungen entsprechen den relativen Gelenkrotationen im Ber
 
 Abschliessend veranschaulicht die @fig-jag_abbruchkrit das Abbruchkriterium. Diese zeigt einen Ausschnitt eines Stabs mit Stabanfang- und Endgelenken. Die Elementlänge ist kleiner als die Länge des plastischen Gelenks gewählt. Die Summe der relativen Gelenkrotation der von der plastischen Gelenklänge umfassten Stabgelenke muss kleiner als die zulässige Verdrehung sein.
 
-![Systemmodellbildung mit Stabanfang- und Endgelenken, dazu die plastische Gelenklänge und Elementlänge eingezeichnet](../imgs/jag_abbruchkrit.svg){#fig-jag_abbruchkrit}
+![Systemmodell mit Stabanfang- und Endgelenken, dazu die plastische Gelenklänge und Elementlänge eingezeichnet](../imgs/jag_abbruchkrit.svg){#fig-jag_abbruchkrit}
 
 Die Darstellung liefert zugleich eine Abschätzung der Wahl der passenden Elementlänge. Die Elementlänge ist sicherlich kleiner als die plastische Gelenklänge zu wählen, damit die Gelenkverdrehungen die Rissverdrehung darstellen. Ebenso scheint eine Elementlänge entsprechend der Rissabstände zu wählen durchaus sinnvoll.

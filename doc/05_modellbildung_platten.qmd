@@ -1,4 +1,4 @@
-# Platten
+# Platten {#sec-platten}
 
 Im Gedankenexperiment, @fig-allg_gedankenexperiment_tr, ist die Anrodnung der Stäbe zu einem Trägerrost dargestellt, mit dem Vermerk, dass mit diesem Modell das nicht-lineare Tragverhalten von Flächentragwerken bestimmt werden kann. In diesem Kapitel sind die Grundlagen zur Modellierung von Plattentragwerken mit diesem Modell aufgezeigt. Dazu ist zunächst die Kirchhoffsche Plattentheorie erläutert, um den in der Thesis verwendeten Begriff der Platte zu schärfen. Gefolgt ist dies von der Transformation des Plattenelements zum Trägerrost. Abschliessend folgt die eigentliche Querschnittsmodellbildung.
 
@@ -28,7 +28,7 @@ Basierend auf diesen Annahmen beschreibt @mittelstedt_flachentragwerke_2022 die 
 
 Betrachtet man ein infinit kleines Plattenelement und verformt dies, so lässt sich ein Verschiebungsfeld beschreiben. Das Verschiebungsfeld liefert Beziehungen der Verschiebungen in allen drei Koordinatenrichtungen. Der unverformte und der verformte Zustand des infinit kleinen Elements zeigt die @fig-allg_kirchhoff_kin. 
 
-![Element einer infinit kleinen, dünnen Platte im verformten und unverformten Zustand unter der Berücksichtigung der Annahmen der Kirchhoffschen Plattentheorie, nachgezeichnet nach @mittelstedt_flachentragwerke_2022](../imgs/allg_kirchhoff_kin.svg){#fig-allg_kirchhoff_kin}
+![Element einer infinit kleinen, dünnen Platte im verformten und unverformten Zustand gemäss der Annahmen nach der Kirchhoffschen Plattentheorie, nachgezeichnet nach @mittelstedt_flachentragwerke_2022](../imgs/allg_kirchhoff_kin.svg){#fig-allg_kirchhoff_kin}
 
 Aufgrund kleiner Verformungen sind die Winkel ebenfalls klein, es lassen sich die Beziehungen der @eq-phi_x_kirch aufstellen.
 
@@ -208,7 +208,7 @@ $${#eq-sg_balken}
 Zunächst steht die Transformation des Biegemoments $m_{xx} \rightarrow M_x$ im Vordergrund. Die Transformation $m_{yy} \rightarrow M_y$ ist dabei analog.  Vergleicht man die Definition des Biegemoments des Balkens mit deren der Platte, @eq-m_chi_kirchhoff mit der @eq-sg_balken, so unterscheiden sich diese in der Berücksichtigung der Querdehnung. Der Einfluss der Querdehnung am Plattenelement illustriert die @fig-allg_einfluss_querdehnzahl_detail.
 
 
-![Detaildarstellung des Einflusses der Querdehnung beim Volumenelement](../imgs/allg_einfluss_querdehnzahl_detail.svg){#fig-allg_einfluss_querdehnzahl_detail}
+![Detaildarstellung des Einflusses der Querdehnung am Plattenelement](../imgs/allg_einfluss_querdehnzahl_detail.svg){#fig-allg_einfluss_querdehnzahl_detail}
 
 Vernachlässigt man den Einfluss der Querdehnung, so lässt sich die @eq-ersatzbiegesteifigkeit aufstellen. Dabei entspricht die Ersatzbiegesteifigkeit eines Stabes des Stabkreuzes der Plattensteifigkeit multipliziert mit der Querschnittsbreite. Dies entspricht der Biegesteifigkeit des Balkens, aufgezeigt in der @eq-sg_balken.
 $$
@@ -233,7 +233,7 @@ $${#eq-ersatzsteifigkeit_torsion}
 
 Diese Tatsache geht auf die unterschiedliche Definitions des Torsionsmoments und des Drillmoments zurück. Dies lässt sich an folgendem Beispiel erläutern. In der @fig-allg_torsion_balken_vs_platte ist ein schmaler Stabquerschnitt und ein schmales Plattenelement dargestellt $h << b$. 
 
-![Torsionsträgheitsmoment des schmalen Stabs, darunter des schmalen Plattenelements, nachgezeichnet nach @blaauwendraad_plates_2010](../imgs/allg_torsion_balken_vs_platte.svg){#fig-allg_torsion_balken_vs_platte}
+![Schubfluss des schmalen Stabs, darunter des schmalen Plattenelements, nachgezeichnet nach @blaauwendraad_plates_2010](../imgs/allg_torsion_balken_vs_platte.svg){#fig-allg_torsion_balken_vs_platte}
 
 
 Das Torsionsträgheitsmoment und das Drillträgheitsmoment zeigt die @eq-torsion_streifen.
@@ -298,7 +298,7 @@ Mit der Aufklärung der Transformation vom Plattenelement zum Träggerost sind n
 
 Die @eq-ersatzbiegesteifigkeit zeigt, dass sich die Ersatzbiegesteifigkeit direkt am Stabquerschnitt mit der entsprechenden Querschnittsbreite bestimmen lässt. Die Querschnittsbreite entspricht dabei der Elementlänge, sofern eine gleichmässige Trägerrostteilung gewählt ist. Die @fig-allg_querschnittsbreite_rost illustriert die Querschnittsbreite. 
 
-![Definition der Querschnittsbreite des einzelnen Balkens des Trägerrosts](../imgs/allg_querschnittsbreite_rost.svg){#fig-allg_querschnittsbreite_rost}
+![Definition der Querschnittsbreite des einzelnen Stabs des Trägerrosts](../imgs/allg_querschnittsbreite_rost.svg){#fig-allg_querschnittsbreite_rost}
 
 Nach der Definition des Querschnitts folgt das Vorgehen analog dem Balken, gemäss dem @sec-biegesteifigkeit_balken.
 
@@ -328,12 +328,12 @@ $${#eq-rissdrillmoment}
 
 Die gerissene Drillsteifigkeit ist unter der Verwendung des klassischen Sandwichmodells und des klassischen Durckfeldmodells bestimmt. Das klassische Sandwichmodell geht zurück auf @peter_marti_design_1990. Anhand diesem lässt sich das Plattenelement in zwei Deckel und einen Kern unterteilen. Aufgezeigt ist dies in der @fig-allg_sandwich.
 
-![klassiches Sandwichmodell](../imgs/allg_sandwich.svg){#fig-allg_sandwich}
+![Klassiches Sandwichmodell bestehend aus zwei Sandwichdeckeln und dem Kern](../imgs/allg_sandwich.svg){#fig-allg_sandwich}
 
 Die Deckel übernehmen die Biegemomente als Kräftepaar, die Querkräfte sind über den Kern abzutragen. Betrachtet man ausschliesslich die Drillmomente, so stellt sich die Verteilung gemäss der @fig-allg_drill_deckel ein.
 
 
-![Aufteilung der Drillmomente auf die Deckel gemäss dem klassischen Sandwichmodell](../imgs/allg_drill_deckel.svg){#fig-allg_drill_deckel}
+![Aufteilung der Drillmomente auf die Sandwichdeckel](../imgs/allg_drill_deckel.svg){#fig-allg_drill_deckel}
 
 Betrachtet man einen einzelnen Deckel gesondert, aufgezeigt in der @fig-allg_scheibe_schubfluss, so entspricht dies einer Scheibe unter reinem Schub.
 
@@ -356,7 +356,7 @@ $${#eq-schubspannung_scheibe}
 Die Definition der Deckelstärke ist in der @fig-allg_sandwich_deckelstaerke aufgezeigt. Die Deckelstärke entspricht der Summe der doppelten Betondeckung und dem Durchmesser der Bewehrung.
 
 
-![Definition der Deckelstärke](../imgs/allg_sandwich_deckelstaerke.svg){#fig-allg_sandwich_deckelstaerke}
+![Definition der Sandwichdeckelstärke](../imgs/allg_sandwich_deckelstaerke.svg){#fig-allg_sandwich_deckelstaerke}
 
 Das Tragverhalten der Scheibe lässt sich mit dem erwähnten klassischen Druckfeldmodell beschreiben. Das Modell ist in @heinzmann_stringer-tafelmodelle_2012 aufgezeigt. Beschränkt man sich auf den gerissenen elastischen Bereich der Scheibe unter reinem Schub, so lässt sich die Schiebung mit der @eq-schiebung_klass_druckfeldmodell beschreiben. 
 
@@ -367,7 +367,7 @@ $${#eq-schiebung_klass_druckfeldmodell}
 
 Mit der definierten Schiebung der Scheibe lässt sich anhand des Sandwichelements die Krümmung des Plattenelements ermitteln. Die @fig-allg_sandwich_kruemmung zeigt das Sandwichelement in der Ansicht. 
 
-![Ansicht des Sandwichmodells, resultierende Dehnungsebene durch die Schiebung des oberen und unteren Deckels](../imgs/allg_sandwich_kruemmung.svg){#fig-allg_sandwich_kruemmung}
+![Ansicht des Sandwichmodells, resultierende Verzerrungsebene durch die Schiebung des oberen und unteren Deckels](../imgs/allg_sandwich_kruemmung.svg){#fig-allg_sandwich_kruemmung}
 
 Mit dieser Überlegung lässt sich der Schubmodul für das Plattenelement des gerissenen Zustands ermitteln. Dieser ist in der @eq-schubmodul_II aufgezeigt. Dabei gilt $\gamma_{xyb} = \gamma_{xyt}$. 
 
@@ -396,7 +396,7 @@ $${#eq-drillwiderstand}
 
 Die gewählte ungerissene und gerissene Drillsteifigkeit lässt sich mit der @fig-allg_klassisches_druckfeldmodell_bsp illustrieren. Die Darstellung entspricht qualitativ der numerischen Auswertung des klassischen Druckfeldmodells, entnommen aus @heinzmann_stringer-tafelmodelle_2012. Die Betrachtung eines gerissenen, elastischen Bereichs bis zum Erreichen des Torsionswiderstands ist eine Vereinfachung des klassischen Druckfeldmodells. Das klassische Druckfeldmodell liefert weitere Beziehungen zum Tragverhalten einer Scheibe, welche sich mittels dem klassischen Sandwichmodell auf das Plattenelement übertragen lassen. 
 
-![a) Verhalten des Schubmoduls,  b) Verhalten der Schubspannung zur Schiebung des klassischen Druckfeldmodells entnommen aus @heinzmann_stringer-tafelmodelle_2012, ergänzt mit der Vereinfachung](../imgs/allg_klassisches_druckfeldmodell_bsp.svg){#fig-allg_klassisches_druckfeldmodell_bsp}
+![a) Verhalten des Schubmoduls,  b) Verhalten der Schubspannung zur Schiebung des klassischen Druckfeldmodells, entnommen aus @heinzmann_stringer-tafelmodelle_2012, ergänzt mit der Vereinfachung](../imgs/allg_klassisches_druckfeldmodell_bsp.svg){#fig-allg_klassisches_druckfeldmodell_bsp}
 
 
 Die Modellbildung lässt sich mit der vollständigen Lösung des klassischen Druckfeldmodells verfeinern. Zudem ist in @jager_querkraftwiderstand_2007 eine erweiterung des Sandwichmodells aufgezeigt.

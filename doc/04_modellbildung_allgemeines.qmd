@@ -14,7 +14,7 @@ Unterteilt man nun den Balken in einzelne starre Stäbe und koppelt deren Enden 
 
 Die Biegelinie des angepassten Systems zeigt die @fig-allg_stat_system_def1. Dabei erfahren die starren Stäbe eine Starrkörperrotation. Vergleicht man die Biegelinien beider Systeme, so sind diese annähernd deckungsgleich.
 
-![Bieglinie des adaptierten einfachen Balkens](../imgs/allg_stat_system_def1.svg){#fig-allg_stat_system_def1}
+![Biegelinie des adaptierten einfachen Balkens](../imgs/allg_stat_system_def1.svg){#fig-allg_stat_system_def1}
 
 Das adaptierte System mit der linear-elastischen Momenten-Verdrehungs-Beziehung weist offensichtlich keinen Mehrwert zu einer Modellierung mit einem einzelnen Stab auf. Der Vorteil dieses Ansatzes liegt darin, dass den Federn anstelle der elastischen Beziehung, auch nicht-lineare Federbeziehungen hinterlegt werden können. Dadurch können nicht-lineare Biegelinien approximiert werden. Die Erweiterung des Modells ist schematisch in der @fig-allg_gedankenexp illustriert.
 
@@ -22,7 +22,7 @@ Das adaptierte System mit der linear-elastischen Momenten-Verdrehungs-Beziehung 
 
 Mit dem System mit nicht-linearen Federbeziehungen resultiert der qualitative Verlauf der Biegelinie gemäss der @fig-allg_stat_system_def_nl. Es ist hervorzuheben, dass sämtlichen Federn die selbe Federbeziehung hinterlegt ist. Die Federsteifigkeit ist abhängig von der Biegebeanspruchung. Dies zeigt sich in der Darstellung, da sich das System in den Randbereichen steifer verhält als in der Feldmitte. Beziehungsweise ist das System bei niedrigeren Biegemomenten steifer. 
 
-![Bieglinie des adaptieren, einfachen Balkens mit nicht-linearen Drehfedern, ergänzt mit elastischer Biegelinie](../imgs/allg_stat_system_def_nl.svg){#fig-allg_stat_system_def_nl}
+![Biegelinie des adaptieren, einfachen Balkens mit nicht-linearen Drehfedern, ergänzt mit elastischer Biegelinie](../imgs/allg_stat_system_def_nl.svg){#fig-allg_stat_system_def_nl}
 
 Stellt man sich den adaptierten Balken im dreidimensionalen Raum vor, und ordnet diesen als Trägerrost an, so ist es naheliegend, dass dieses System das nicht-lineare Tragverhalten von Flächentragwerken bestimmen kann. Eine solche Anordnung zeigt die @fig-allg_gedankenexperiment_tr.
 
@@ -65,7 +65,7 @@ Generell lassen sich den Federn entsprechend den Knotenfreiheitsgraden Beziehung
 Federdefinitionen im Raum:
 
 $$
-F_x(u),F_y(v),F_z(w),M_x(\varphi_x),M_y(\varphi_y),M_z(\varphi_z)
+F_x(u),F_y(v),F_z(w),T(\varphi_x),M_y(\varphi_y),M_z(\varphi_z)
 $$
 :::
 
