@@ -58,10 +58,16 @@ s_{rm}(\lambda)&= \lambda \frac{\oslash (1-\rho)}{4\rho}\\
 \end{aligned}
 $${#eq-rissabstand}
 
-Dabei lässt sich der geometrische Bewehrungsgehalt mit der @eq-geom_bewehrungsgehalt bestimmen. Die Fläche $bh$ bezieht sich auf die Querschnittsfläche des Zugglieds.
+Dabei lässt sich der geometrische Bewehrungsgehalt mit der @eq-geom_bewehrungsgehalt bestimmen. Die Fläche $bh_{eff}$ bezieht sich auf die Querschnittsfläche des Zugglieds.
 $$
-\rho = \frac{A_s}{bh} 
+\rho = \frac{A_s}{bh_{eff}} 
 $${#eq-geom_bewehrungsgehalt}
+
+Die effektive Höhe des Zugglieds lässt sich mit der @eq-effektive_hoehe bestimmen.
+
+$$
+h_{eff} = 2 \cdot (h-d)
+$${#eq-effektive_hoehe}
 
 Im Fokus steht hierbei der Einfluss der Zugversteifung auf das Biegetragverhalten. Dazu lässt sich das Zuggurtmodell problemlos auf ein Biegeproblem übertragen. Dabei ist ein Zugglied innerhalb des auf Biegung beanspruchten Betonelements zu definieren. Dargestellt ist dies in der @fig-allg_zugglied_in_biegung.
 

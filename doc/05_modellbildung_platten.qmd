@@ -405,7 +405,7 @@ Abschlissend gilt die Transformation zum Momenten-Verdrehungs-Verlauf gemäss @s
 
 ### Analogie zum Balken
 
-Sind die Ersatzsteifigkeiten bestimmt, lässt sich das Vorgehen des Balkens anwenden. Die Gelenkbeziehungen sind gemäss dem @sec-kruemmung_verdrehung zu bestimmen. Nach der @def-gelenkfunktionen_raum ist den Stäben des Stabkreuzes die Funktion $M_x(\varphi_x)$ und die $M_y(\varphi_y)$ zu hinterlegen. Das Abbruchkriterium entspricht dem Abbruchkriterium des Balkens, beschrieben im @sec-abbruchkriterium.
+Sind die Ersatzsteifigkeiten bestimmt, lässt sich das Vorgehen des Balkens anwenden. Die Gelenkbeziehungen sind gemäss dem @sec-kruemmung_verdrehung zu bestimmen. Nach der @def-gelenkfunktionen_raum ist den Stäben des Stabkreuzes die Funktion $T(\varphi_x)$ und die $M_y(\varphi_y)$ zu hinterlegen. Das Abbruchkriterium entspricht dem Abbruchkriterium des Balkens, beschrieben im @sec-abbruchkriterium.
 
 
 

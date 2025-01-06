@@ -6,9 +6,9 @@ Solche vereinfachten Ansätze bergen erhebliche Nachteile. Sie können dazu füh
 
 Im Gegensatz dazu hat sich in der Forschung die Nutzung nichtlinearer Finite-Elemente-Methoden (NLFEM) als präzises und effektives Werkzeug zur Verformungsberechnung etabliert. Programme wie Ansys, Abaqus oder Atena bieten hohe Genauigkeit und Flexibilität. Diese Werkzeuge stossen in der praktischen Anwendung jedoch auf zahlreiche Hindernisse: Die Lizenzkosten sind hoch, die Bestimmung der Vielzahl an Eingabeparametern erfordert vertieftes Fachwissen und  Aufwand, und die Ergebnisse sind oft schwer zu interpretieren. Darüber hinaus erlauben die benutzerfreundlichen Eingabemasken dieser Softwares eine rasche Modellierung komplexer Probleme ohne Verständnis der Hintergründe. Dies führt oft zu unzureichend begründeten Aussagen.
 
-Die vorliegende Arbeit hat das Ziel, eine praxisorientierte Methode zur präzisen Berechnung von Verformungen in Stahlbetontragwerken zu entwickeln. Dazu soll eine Modellbildung erarbeitet werden, welche es ermöglicht, das nicht-lineare Tragverhalten mit der Statiksoftware AxisVM @ingware_axisvm-x7_2024 zu bestimmen. 
+Die vorliegende Arbeit hat das Ziel, eine praxisorientierte Methode zur präzisen Berechnung von Verformungen in Stahlbetontragwerken zu entwickeln. Dazu soll eine Modellbildung erarbeitet werden, welche es ermöglicht, das nicht-lineare Tragverhalten mit der Statiksoftware AxisVM, @ingware_axisvm-x7_2024, zu bestimmen. 
 
-Die Thesis gliedert sich in zwei Hauptkapitel. Zum einen die Modellbildung welche sämtliche Grundlagen erläutert. Zum anderen die Anwendung der Modellbildung an einem Zweifeldträger, einem torsionsweichen Trägerrost, einer Quadratplatte und an einem experimentellen Versuch einer Zweifeldplatte. Im Fokus der Arbeit steht die Modellbildung der Anwendung bei Platten- und Balkentragwerken. Dabei wird ausschliesslich das **Biegetragverhalten** betrachtet.
+Die Thesis gliedert sich in zwei Hauptkapitel. Zum einen die Modellbildung, welche sämtliche Grundlagen erläutert. Zum anderen die Anwendung der Modellbildung an einem Zweifeldträger, einem torsionsweichen Trägerrost, einer Quadratplatte und an einem experimentellen Versuch einer Zweifeldplatte. Im Fokus der Arbeit steht die Modellbildung der Anwendung bei Platten- und Balkentragwerken. Dabei wird ausschliesslich das **Biegetragverhalten** betrachtet.
 
 
 
