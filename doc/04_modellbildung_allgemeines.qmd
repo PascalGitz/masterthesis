@@ -1,6 +1,6 @@
 # Allgemeines
 
-Dieses Kapitel soll die Modellbildung in groben Zügen beschreiben. Dazu dient ein Gedankenexperiment, ein allgemein gültiges Berechnungsschema und die Systemmodellbildung.
+Dieses Kapitel soll die Modellbildung in groben Zügen beschreiben. Dazu dienen ein Gedankenexperiment, ein allgemein gültiges Berechnungsschema und die Systemmodellbildung.
 
 ## Gedankenexperiment {#sec-gedankenexperiment}
 
@@ -29,7 +29,7 @@ Stellt man sich den adaptierten Balken im dreidimensionalen Raum vor, und ordnet
 ![Anordnung des adaptieren Balkens zum Trägerrost](../imgs/allg_gedankenexperiment_tr.svg){#fig-allg_gedankenexperiment_tr}
 
 
-Das Gedankexeperiment zeigt auf, dass die adaptierte Modellvorstellung die Bestimmung des nicht-linearen Tragverhalten von Stab- und Flächentragwerken ermöglicht. Die Schwierigkeit liegt in der Bestimmung der passenden Federbeziehungen. Zudem erhöht sich die Komplexität des Modells im Vergleich mit einer linear-elastischen Lösung deutlich, was die Anwendung einer Finiten-Elemente Software praktisch unabdingbar macht.
+Das Gedankenexperiment zeigt auf, dass die adaptierte Modellvorstellung die Bestimmung des nicht-linearen Tragverhalten von Stab- und Flächentragwerken ermöglicht. Die Schwierigkeit liegt in der Bestimmung der passenden Federbeziehungen. Zudem erhöht sich die Komplexität des Modells im Vergleich mit einer linear-elastischen Lösung deutlich, was die Anwendung einer Finiten-Elemente Software praktisch unabdingbar macht.
 
 ## Berechnungsschema
 
@@ -41,7 +41,7 @@ Das Modellierungsschema unterteilt die Modellbildung in zwei Hauptgruppen. Die S
 
 ## Systemmodellbildung
 
-Die Systemmodellbildung ist mit dem einleitenden Gedankenexperiment in ihren Grundzügen aufgezeigt. Der folgende Abschnitt beschreibt die Einzelheiten. Dabei ist die Querschnittsmodellbildung ausgeklammert. Diese ist in den folgenden Kapitel für Balken und Platten gesondert beschrieben.
+Die Systemmodellbildung ist mit dem einleitenden Gedankenexperiment in ihren Grundzügen aufgezeigt. Der folgende Abschnitt beschreibt die Einzelheiten. Dabei ist die Querschnittsmodellbildung ausgeklammert. Diese ist in den folgenden Kapiteln für Balken und Platten gesondert beschrieben.
 
 ### Elementlänge
 
@@ -49,7 +49,7 @@ Die Elementlänge definiert die Länge der starren Stäbe, gemessen von Feder zu
 
 Dabei stellt sich die zentrale Frage, wie gross die Elementlänge zu wählen ist. Aus der @fig-allg_stat_system_def1 lässt sich schliessen, dass durch eine Minimierung der Elementlänge, sich das Biegeverhalten des Systems der elastischen Biegelinie des einfachen Balkens annähert. Somit gilt, eine feinere Elementlänge reduziert den Näherungsfehler. Berücksichtigt man die Berechnungsdauer des Systems, so gilt, die Elementlänge ist so gross wie möglich, so klein wie nötig zu wählen. 
 
-Eine solche Feststellung ist jedoch von kleinem praktischen Nutzen. Umsetzbar ist hingegen eine Sensitivitätsanalyse der Elementlänge. Dazu ist das Modell mit einer Variation der Elementlänge zu berechnen um den Einfluss dieser zu quantifizieren.
+Eine solche Feststellung ist jedoch von kleinem praktischem Nutzen. Umsetzbar ist hingegen eine Sensitivitätsanalyse der Elementlänge. Dazu ist das Modell mit einer Variation der Elementlänge zu berechnen, um den Einfluss dieser zu quantifizieren.
 
 Die Wahl der Elementlänge ist bei der Definition des Abbruchkriteriums in der Querschnittsmodellbildung erneut aufgegriffen.
 

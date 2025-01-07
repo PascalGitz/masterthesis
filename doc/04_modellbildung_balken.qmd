@@ -43,7 +43,7 @@ Das Zuggurtmodell ist eine vereinfachte, jedoch mechanisch konsistente Modellvor
 
 ![Zugversteifung, a) Stahlbetonzugglied, b) Verlauf der Verbundschubspannungen, Betonstahlspannungen, Betonspannungen, Betonstahldehnungen, Betondehnungen, Schlupf, neugezeichnet nach @kaufmann_strength_1998](../imgs/allg_zugglied.svg){#fig-allg_zugglied}
 
-Das dargestellte Zugglied ist in seiner Achse mit einer Normalkraft beansprucht. Die sich einstellenden Risse sind im Abstand $s_{rm}$ dargestellt. Die Verläufe entsprechen in einer Näherung den effektiven Verläufen. Hervorzuheben ist der Betonspannungsverlauf und der Betondehnungsverlauf. Durch die Verbundwirkung zwischen dem Beton und dem Betonstahl beteiligt sich der Beton an der Aufnahme der Normalspannungen. Der Begriff der Zugversteifung definiert diese Beeinflussung des Tragverhaltens.
+Das dargestellte Zugglied ist in seiner Achse mit einer Normalkraft beansprucht. Die sich einstellenden Risse sind im Abstand $s_{rm}$ dargestellt. Die Verläufe entsprechen in einer Näherung den effektiven Verläufen. Hervorzuheben sind der Betonspannungsverlauf und der Betondehnungsverlauf. Durch die Verbundwirkung zwischen dem Beton und dem Betonstahl beteiligt sich der Beton an der Aufnahme der Normalspannungen. Der Begriff der Zugversteifung definiert diese Beeinflussung des Tragverhaltens.
 
 Das Zuggurtmodell setzt eine abgetreppte ideale Verbundschubspannungs-Schlupf-Beziehung voraus. Dargestellt in @fig-allg_schubspann_schlupf.
 
@@ -104,7 +104,7 @@ Die Querschnittsanalyse bezeichnet das Untersuchen des Querschnitts bei steigend
 - Der Querschnitt erfährt keine Verwölbung, es herrscht das Ebenbleiben des Querschnitts
 - Die Orthogonalität des Querschnitts zur Längsachse bleibt auch im verformten Zustand bestehen. 
 
-Unter der Prämisse von linear-elastischen, ideal-plastischen Werkstoffbeziehungen, sowie einer Berücksichtigung der Zugfestigkeit des Betons lassen sich die analytischen Beziehungen zwischen dem Biegemoment und der Krümmung ermitteln. Zunächst gilt es den Querschnitt beim Erreichen der Betonzugfestigkeit in der äussersten Faser zu beschreiben. Dies ist als ungerissener Zustand bezeichnet. Dabei beschreibt die @eq-rissmoment_balken das Rissmoment $M_r$ und die Biegesteifigkeit des ungerissenen Zustands $EI_{I}$. Der Querschnitts zeigt die @fig-tho_qs_mr.
+Unter der Prämisse von linear-elastischen, ideal-plastischen Werkstoffbeziehungen, sowie einer Berücksichtigung der Zugfestigkeit des Betons lassen sich die analytischen Beziehungen zwischen dem Biegemoment und der Krümmung ermitteln. Zunächst gilt es den Querschnitt beim Erreichen der Betonzugfestigkeit in der äussersten Faser zu beschreiben. Dies ist als ungerissener Zustand bezeichnet. Dabei beschreibt die @eq-rissmoment_balken das Rissmoment $M_r$ und die Biegesteifigkeit des ungerissenen Zustands $EI_{I}$. Der Querschnitt zeigt die @fig-tho_qs_mr.
 
 
 ![Ungerissener Querschnitt, Beton erreicht Zugfestigkeit, Betonstahlspannung ist vernachlässigt](../imgs/tho_qs_mr.svg){#fig-tho_qs_mr}
@@ -189,7 +189,7 @@ $$
 \end{aligned}
 $${#eq-varphi_adm}
 
-Die erfoderliche Länge des plastischen Gelenks lässt sich mit der @eq-l_pl_schaetzung abschätzen, welche diese gleich der doppelten statischen Höhe setzt.
+Die erforderliche Länge des plastischen Gelenks lässt sich mit der @eq-l_pl_schaetzung abschätzen, welche diese gleich der doppelten statischen Höhe setzt.
 
 $$
 l_{pl} \simeq 2d
@@ -204,4 +204,4 @@ Abschliessend veranschaulicht die @fig-jag_abbruchkrit das Abbruchkriterium. Die
 
 ![Systemmodell mit Stabanfang- und Endgelenken, dazu die plastische Gelenklänge und Elementlänge eingezeichnet](../imgs/jag_abbruchkrit.svg){#fig-jag_abbruchkrit}
 
-Die Darstellung liefert zugleich eine Abschätzung der Wahl der passenden Elementlänge. Die Elementlänge ist sicherlich kleiner als die plastische Gelenklänge zu wählen, damit die Gelenkverdrehungen die Rissverdrehung darstellen. Ebenso scheint eine Elementlänge entsprechend der Rissabstände zu wählen durchaus sinnvoll.
+Die Darstellung liefert zugleich eine Abschätzung der Wahl der passenden Elementlänge. Die Elementlänge ist sicherlich kleiner als die plastische Gelenklänge zu wählen, damit die Gelenkverdrehungen die Rissverdrehung darstellen. Ebenso scheint eine Elementlänge entsprechend den Rissabständen zu wählen durchaus sinnvoll.

@@ -25,7 +25,8 @@ book:
       - 06_traegerrost.ipynb
       - 07_quadratplatte.ipynb
       - 08_thoma_platte.ipynb
-  #   - 09_Fazit.qmd
+      
+    - 09_Fazit.qmd
     - references.qmd
 
 bibliography: references.bib
@@ -69,7 +70,7 @@ format:
     fig-format: svg
   
   # Verlinkungen
-    csl: ../config/style/apa.csl
+    csl: ../config/style/american-sociological-association.csl
     link-citations: True
     linkcolor: Black
   

@@ -46,7 +46,7 @@
        id="clipPath14">
       <path
          d="M -0.00426,-0.00122 V 121.89099 H 425.20111 V -0.00122 H -0.00426"
-         transform="matrix(1,0,0,-1,-45.464851,78.748122)"
+         transform="matrix(1,0,0,-1,-45.464841,78.748122)"
          clip-rule="evenodd"
          id="path14" />
     </clipPath>
@@ -354,7 +354,7 @@
     <text
        id="text13"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,60.6198,57.522507)"
+       transform="matrix(1.3333333,0,0,1.3333333,60.619787,57.522507)"
        clip-path="url(#clipPath14)"><tspan
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.00428px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          x="0"
