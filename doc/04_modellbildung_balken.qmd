@@ -154,7 +154,7 @@ Es ist offensichtlich, dass die Momenten-Krümmungs-Beziehung nicht der geforder
 Die Transformation lässt sich anhand des Gelenkverhaltens herleiten. Im Beschrieb der Feder, @sec-feder, wurde die Einzugslänge eingeführt mit dem Vermerk, dass die Feder das Systemverhalten innerhalb der Einzugslänge definiert. Bezieht man dies auf das Biegeverhalten, so entspricht dies einer numerischen Integration der Biegekrümmungen im Bereich der Einzugslänge. Definiert ist dies durch die @eq-phi_to_chi.
 
 $$
-\varphi = \int \chi d_x\\
+\varphi = \int \chi dx\\
 $${#eq-phi_to_chi}
 
 Aufgezeigt ist das Verhalten in der @fig-allg_feder. Dabei ist vorausgesetzt, dass die Krümmung entlang der Einzugslänge konstant verläuft.
