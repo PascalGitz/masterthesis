@@ -1,6 +1,6 @@
 # Allgemeines
 
-Dieses Kapitel soll die Modellbildung in groben Zügen beschreiben. Dazu dienen ein Gedankenexperiment, ein allgemein gültiges Berechnungsschema und die Systemmodellbildung.
+Das allgemeine Kapitel soll die Modellbildung in groben Zügen beschreiben. Dazu dienen ein Gedankenexperiment, ein allgemein gültiges Berechnungsschema und die Systemmodellbildung. Die hier beschriebenen Aspekte sind gültig für Platten- und Balkentragwerke.
 
 ## Gedankenexperiment {#sec-gedankenexperiment}
 
@@ -16,24 +16,24 @@ Die Biegelinie des angepassten Systems zeigt die @fig-allg_stat_system_def1. Dab
 
 ![Biegelinie des adaptierten einfachen Balkens](../imgs/allg_stat_system_def1.svg){#fig-allg_stat_system_def1}
 
-Das adaptierte System mit der linear-elastischen Momenten-Verdrehungs-Beziehung weist offensichtlich keinen Mehrwert zu einer Modellierung mit einem einzelnen Stab auf. Der Vorteil dieses Ansatzes liegt darin, dass den Federn anstelle der elastischen Beziehung, auch nicht-lineare Federbeziehungen hinterlegt werden können. Dadurch können nicht-lineare Biegelinien approximiert werden. Die Erweiterung des Modells ist schematisch in der @fig-allg_gedankenexp illustriert.
+Das adaptierte System mit der linear-elastischen Momenten-Verdrehungs-Beziehung weist offensichtlich keinen Mehrwert zu einer Modellierung mit einem einzelnen Stab auf. Der Vorteil dieses Ansatzes liegt darin, dass den Federn anstelle der elastischen Beziehung, auch nichtlineare Federbeziehungen hinterlegt werden können. Dadurch können nichtlineare Biegelinien approximiert werden. Die Erweiterung des Modells ist schematisch in der @fig-allg_gedankenexp illustriert.
 
-![Adaptierter einfacher Balken, modelliert mit starren Stäben gekoppelt mit nicht-linearen Drehfedern](../imgs/allg_gedankenexp.svg){#fig-allg_gedankenexp}
+![Adaptierter einfacher Balken, modelliert mit starren Stäben gekoppelt mit nichtlinearen Drehfedern](../imgs/allg_gedankenexp.svg){#fig-allg_gedankenexp}
 
-Mit dem System mit nicht-linearen Federbeziehungen resultiert der qualitative Verlauf der Biegelinie gemäss der @fig-allg_stat_system_def_nl. Es ist hervorzuheben, dass sämtlichen Federn die selbe Federbeziehung hinterlegt ist. Die Federsteifigkeit ist abhängig von der Biegebeanspruchung. Dies zeigt sich in der Darstellung, da sich das System in den Randbereichen steifer verhält als in der Feldmitte. Beziehungsweise ist das System bei niedrigeren Biegemomenten steifer. 
+Mit dem System mit nichtlinearen Federbeziehungen resultiert der qualitative Verlauf der Biegelinie gemäss der @fig-allg_stat_system_def_nl. Es ist hervorzuheben, dass sämtlichen Federn die selbe Federbeziehung hinterlegt ist. Die Federsteifigkeit ist abhängig von der Biegebeanspruchung. Dies zeigt sich in der Darstellung, da sich das System in den Randbereichen steifer verhält als in der Feldmitte. Beziehungsweise ist das System bei niedrigeren Biegemomenten steifer. 
 
-![Biegelinie des adaptieren, einfachen Balkens mit nicht-linearen Drehfedern, ergänzt mit elastischer Biegelinie](../imgs/allg_stat_system_def_nl.svg){#fig-allg_stat_system_def_nl}
+![Biegelinie des adaptieren, einfachen Balkens mit nichtlinearen Drehfedern, ergänzt mit elastischer Biegelinie](../imgs/allg_stat_system_def_nl.svg){#fig-allg_stat_system_def_nl}
 
-Stellt man sich den adaptierten Balken im dreidimensionalen Raum vor, und ordnet diesen als Trägerrost an, so ist es naheliegend, dass dieses System das nicht-lineare Tragverhalten von Flächentragwerken bestimmen kann. Eine solche Anordnung zeigt die @fig-allg_gedankenexperiment_tr.
+Stellt man sich den adaptierten Balken im dreidimensionalen Raum vor, und ordnet diesen als Trägerrost an, so ist es naheliegend, dass dieses System das nichtlineare Tragverhalten von Flächentragwerken bestimmen kann. Eine solche Anordnung zeigt die @fig-allg_gedankenexperiment_tr.
 
 ![Anordnung des adaptieren Balkens zum Trägerrost](../imgs/allg_gedankenexperiment_tr.svg){#fig-allg_gedankenexperiment_tr}
 
 
-Das Gedankenexperiment zeigt auf, dass die adaptierte Modellvorstellung die Bestimmung des nicht-linearen Tragverhalten von Stab- und Flächentragwerken ermöglicht. Die Schwierigkeit liegt in der Bestimmung der passenden Federbeziehungen. Zudem erhöht sich die Komplexität des Modells im Vergleich mit einer linear-elastischen Lösung deutlich, was die Anwendung einer Finiten-Elemente Software praktisch unabdingbar macht.
+Das Gedankenexperiment zeigt auf, dass die adaptierte Modellvorstellung die Bestimmung des nichtlinearen Tragverhalten von Stab- und Flächentragwerken ermöglicht. Die Schwierigkeit liegt in der Bestimmung der passenden Federbeziehungen. Zudem erhöht sich die Komplexität des Modells im Vergleich mit einer linear-elastischen Lösung deutlich, was die Anwendung einer Finiten-Elemente Software praktisch unabdingbar macht.
 
 ## Berechnungsschema
 
-Die Modellbildung des NLFE-Modells (Nicht-lineare-finite-Elemente) kann mit dem Ablaufschema, gemäss der @fig-allg_schema, verallgemeinert werden. Grundsätzlich ist das Schema Software unabhängig. Die angewendete FE-Software muss lediglich in der Lage sein, nicht-lineare Federsteifigkeiten zu berücksichtigen.
+Die Modellbildung des NLFE-Modells (nichtlineare-finite-Elemente) kann mit dem Ablaufschema, gemäss der @fig-allg_schema, verallgemeinert werden. Grundsätzlich ist das Schema Software unabhängig. Die angewendete FE-Software muss lediglich in der Lage sein, nichtlineare Federsteifigkeiten zu berücksichtigen.
 
 ![Modellierungsschema des NLFE-Modells](../imgs/allg_schema.svg){#fig-allg_schema}
 
@@ -41,7 +41,7 @@ Das Modellierungsschema unterteilt die Modellbildung in zwei Hauptgruppen. Die S
 
 ## Systemmodellbildung
 
-Die Systemmodellbildung ist mit dem einleitenden Gedankenexperiment in ihren Grundzügen aufgezeigt. Der folgende Abschnitt beschreibt die Einzelheiten. Dabei ist die Querschnittsmodellbildung ausgeklammert. Diese ist in den folgenden Kapiteln für Balken und Platten gesondert beschrieben.
+Die Systemmodellbildung ist mit dem einleitenden Gedankenexperiment in ihren Grundzügen aufgezeigt. Der folgende Abschnitt beschreibt die Einzelheiten der Elementlänge und der Federn und der Resultate. Der Beschrieb der Resultate beschränkt sich auf die wesentlichen Resultatgrössen. Die Querschnittsmodellbildung ist nicht beschrieben. Diese ist in den folgenden Kapiteln für Balken und Platten gesondert aufgezeigt.
 
 ### Elementlänge
 
@@ -49,17 +49,17 @@ Die Elementlänge definiert die Länge der starren Stäbe, gemessen von Feder zu
 
 Dabei stellt sich die zentrale Frage, wie gross die Elementlänge zu wählen ist. Aus der @fig-allg_stat_system_def1 lässt sich schliessen, dass durch eine Minimierung der Elementlänge, sich das Biegeverhalten des Systems der elastischen Biegelinie des einfachen Balkens annähert. Somit gilt, eine feinere Elementlänge reduziert den Näherungsfehler. Berücksichtigt man die Berechnungsdauer des Systems, so gilt, die Elementlänge ist so gross wie möglich, so klein wie nötig zu wählen. 
 
-Eine solche Feststellung ist jedoch von kleinem praktischem Nutzen. Umsetzbar ist hingegen eine Sensitivitätsanalyse der Elementlänge. Dazu ist das Modell mit einer Variation der Elementlänge zu berechnen, um den Einfluss dieser zu quantifizieren.
+Eine solche Feststellung ist jedoch von kleinem praktischem Nutzen. Umsetzbar ist hingegen eine Sensitivitätsanalyse der Elementlänge. Dazu ist das Modell mit einer Variation der Elementlänge zu berechnen, um den Einfluss dieser zu quantifizieren. Ändern sich die Resultate mit der Verfeinerung der Elemente nicht aussagekräftig, so ist die passende Länge gefunden.
 
 Die Wahl der Elementlänge ist bei der Definition des Abbruchkriteriums in der Querschnittsmodellbildung erneut aufgegriffen.
 
 ### Federn {#sec-feder}
 
-Die Feder verbindet die starren Stäbe, wie in der @fig-allg_stat_system gezeigt. Die Feder beschreibt das Systemverhalten innerhalb der Einzugslänge. Die Einzugslänge $l_{Ein}$ ist definiert durch die Hälfte des Abstands zur nächsten Feder und ist in der @fig-allg_einzugslaenge dargestellt. 
+Die Feder verbindet die starren Stäbe, aufgezeigt in der @fig-allg_stat_system. Die Feder ist verantwortlich für das Systemverhalten innerhalb der Einzugslänge. Die Einzugslänge $l_{Ein}$ ist definiert durch die Hälfte des Abstands zur nächsten Feder und ist in der @fig-allg_einzugslaenge dargestellt. 
 
 ![Definition der Einzugslänge der Feder](../imgs/allg_einzugslaenge.svg){#fig-allg_einzugslaenge}
 
-Generell lassen sich den Federn entsprechend den Knotenfreiheitsgraden Beziehungen hinterlegen. Im Raum entspricht dies sechs unterschiedlichen Beziehungen. Dabei gilt die @def-gelenkfunktionen_raum. Zudem zeigt dies, dass die Feder fähig ist, nicht-lineares Querkraft-, Normalkraft-, Torsions- und biaxiales Biegemomentenverhalten zu beschreiben.
+Generell lassen sich den Federn entsprechend den Knotenfreiheitsgraden Beziehungen hinterlegen. Im Raum entspricht dies sechs unterschiedlichen Beziehungen. Dabei gilt die @def-gelenkfunktionen_raum. Zudem zeigt dies, dass die Feder fähig ist, nichtlineares Querkraft-, Normalkraft-, Torsions- und biaxiales Biegemomentenverhalten zu beschreiben.
 
 ::: {#def-gelenkfunktionen_raum}
 Federdefinitionen im Raum:
@@ -69,22 +69,22 @@ F_x(u),F_y(v),F_z(w),T(\varphi_x),M_y(\varphi_y),M_z(\varphi_z)
 $$
 :::
 
-Die Federsteifigkeit ist bei einer Verdrehungsbeziehung mit $K_r$ und bei einer Verschiebungsbeziehung mit $K_u$ bezeichnet. Illustriert ist dies in der @fig-allg_definition_gelenksteifigkeit. Der Index $I$ steht dabei für den ausgewählten Zustand, beispielsweise den Zustand des ungerissenen Betons. Mit $i$ ist die Richtung des lokalen Koordinatensystems gemeint.
+Die Federsteifigkeit ist bei einer Verdrehungsbeziehung mit $K_r$ und bei einer Verschiebungsbeziehung mit $K_u$ bezeichnet. Illustriert ist dies in der @fig-allg_definition_gelenksteifigkeit. Der Index $II$ steht dabei für den ausgewählten Zustand, beispielsweise den Zustand des gerissenen Querschnitts. Mit $i$ ist die Richtung des lokalen Koordinatensystems gemeint.
 
 ![Definition der Federbeziehungen, a) Verdrehungsbeziehung b) Verschiebungsbeziehung](../imgs/allg_definition_gelenksteifigkeit.svg){#fig-allg_definition_gelenksteifigkeit}
 
 Die Umsetzung der Feder in AxisVM bildet den Abschluss des Beschriebs der Feder. In AxisVM lässt sich die Feder mit einem Stabgelenk modellieren. Des Weiteren hat sich eine Modellierungsstrategie bewährt, bei dem an jedem Stab ein Anfang- und ein Endgelenk zu modellieren ist. Dies bringt den Vorteil, dass die Einzugslängen sich für Randgelenke, bei Auflagern beispielsweise, nicht unterscheiden. Illustriert ist dies in der @fig-allg_doppelgelenk.
 
-![Modellierungsstrategie der Stabanfang- und Endgelenke](../imgs/allg_doppelgelenk.svg){#fig-allg_doppelgelenk}
+![Modellierungsstrategie der Stabanfang- und Endgelenke, a) mit nur Stabanfangsgelenken, b) mit Doppelgelenken](../imgs/allg_doppelgelenk.svg){#fig-allg_doppelgelenk}
 
 Auf Grund der Definition in AxisVM sind die Federn fortan als Stabgelenke bezeichnet.
 
 ### Resultate
 
-Nach der Modellierung des Systems ist eine nicht-lineare Analyse durchzuführen. Auf einen vertieften Beschrieb des Lösungsalgorithmus wird verzichtet. In AxisVM ist der Newton-Rhapson-Algorithmus implementiert zur iterativen Lösung des Systems. Grundlagen dazu sind in @wagner_gleichungslosung_2022 (passende Quelle finden) beschrieben.
+Nach der Modellierung des Systems ist eine nichtlineare Analyse durchzuführen. Auf einen vertieften Beschrieb des Lösungsalgorithmus wird verzichtet. In AxisVM ist der Newton-Rhapson-Algorithmus implementiert zur iterativen Lösung des Systems. Grundlagen dazu sind in @wagner_gleichungslosung_2022 (passende Quelle finden) beschrieben.
 
-Nach der nicht-linearen Analyse lassen sich eine Vielzahl von Resultaten ausgeben. Die starren Stäbe weisen die üblichen Schnittkräfte auf. Lagerreaktion lassen sich darstellen. Zudem besteht die Möglichkeit zur Darstellung der relativen Gelenkrotation der Stabgelenke. Die Definition der relativen Gelenkrotation $\varphi_R$ ist in der @fig-allg_relative_gelenkrot aufgezeigt. Diese beschreibt die Rotation des Gelenks relativ zum verdrehten Stab.
+Nach der nichtlinearen Analyse lassen sich eine Vielzahl von Resultaten ausgeben. Die starren Stäbe weisen die üblichen Schnittkräfte auf. Lagerreaktion lassen sich darstellen. Zudem besteht die Möglichkeit zur Darstellung der relativen Gelenkrotation der Stabgelenke. Die Definition der relativen Gelenkrotation $\varphi_R$ ist in der @fig-allg_relative_gelenkrot aufgezeigt. Diese beschreibt die Rotation des Gelenks relativ zum verdrehten Stab.
 
 ![Relative Gelenkrotation am verformten System](../imgs/allg_relative_gelenkrot.svg){#fig-allg_relative_gelenkrot}
 
-Diese ist von besonderem Interesse, da daraus die Steifigkeit des Gelenks abgelesen werden kann. Zudem findet diese Grösse bei der Definition des Abbruchkriteriums Einzug.
+Die relative Gelenkrotation ist von besonderem Interesse, da daraus die Steifigkeit des Gelenks abgelesen werden kann. Zudem findet diese Grösse bei der Definition des Abbruchkriteriums Einzug.

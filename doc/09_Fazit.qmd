@@ -43,8 +43,6 @@ Gleichzeitig ist auch Kritik an der Modellbildung angebracht. Die Beschränkung 
 
 \addchap{Bezeichnungen}
 
-## Griechische Bezeichnungen
-
 | Variabel                 | Bezeichnung          |
 |:----------------------|:------------------|
 | $A,B,C$                   | Knotenbezeichnungen|
@@ -103,8 +101,9 @@ Gleichzeitig ist auch Kritik an der Modellbildung angebracht. Die Beschränkung 
 | $m$                   | Biegemoment bezogen auf die Einheitslänge |
 | $m_{ij}$                   | Biegemoment in $i$-Richtung auf der $j$-Ebene |
 | $n$                   | Wertigkeit               |
-| $n$                   | Membrankraft bezogen auf die Einheitslänge |
-| $n_{ij}$                   | Schubfluss in $i$-Richtung auf der $j$-Ebene|
+| $n_{ij}$                   | Membrankraft bezogen auf die Einheitslänge in $i$-Richtung auf der $j$-Ebene |
+| $p$                   | Flächenlast               |
+| $q_{ij}$                   | Schubfluss in $i$-Richtung auf der $j$-Ebene|
 | $q$                   | Streckenlast               |
 | $s_{rm}$                   | Rissabstand |
 | $s_{x}$                   | Stabteilung in $x$-Richtung |
@@ -117,8 +116,6 @@ Gleichzeitig ist auch Kritik an der Modellbildung angebracht. Die Beschränkung 
 | $x$                   | Druckzonenhöhe               |
 | $z$                   | Hebelarm der inneren Kräfte               |
 
-
-## Lateinische Bezeichnungen 
 
 | Variabel                 | Bezeichnung          |
 |:----------------------|:------------------|
@@ -157,8 +154,6 @@ Gleichzeitig ist auch Kritik an der Modellbildung angebracht. Die Beschränkung 
 | $\chi_{y}$                   | Krümmung beim Fliessen der Bewehrung |
 | $\chi_y$                   | Krümmung um die lokale $y$-Richtung               |
 | $\chi_z$                   | Krümmung um die lokale $z$-Richtung               |
-
-## Sonderzeichen
 
 | Variabel                 | Bezeichnung          |
 |:----------------------|:------------------|
