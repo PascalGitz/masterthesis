@@ -1,14 +1,16 @@
 # Fazit  
 
+Die Thesis schliesst mit einem Fazit. Dieses gliedert sich in eine Zusammenfassung der Arbeit. Darauf folgt eine Schlussfolgerung und ein Ausblick.
+
 ## Zusammenfassung  
 
-Diese Thesis liefert einen Beitrag zur Beschreibung des nicht-linearen Tragverhaltens von Stahlbetontragwerken. Sie zeigt eine praxisnahe Methode auf, um das Tragverhalten von Stahlbetonbalken und -platten zu beschreiben. Dies erfolgt ausschliesslich mit der in der Praxis üblichen Statiksoftware AxisVM. Dazu ist eine Modellbildung beschrieben, welche starre Stäbe über Gelenke koppelt, in denen nicht-lineare Gelenkbeziehungen hinterlegt sind. Im zweidimensionalen Raum lassen sich beliebige Stabtragwerke abbilden. Angeordnet als Trägerrost ermöglicht das NLFE-Modell die Abbildung des Tragverhaltens von Flächentragwerken.  
+Diese Thesis liefert einen Beitrag zur Beschreibung des nichtlinearen Tragverhaltens von Stahlbetontragwerken. Sie zeigt eine praxisnahe Methode auf, um das Tragverhalten von Stahlbetonbalken und -platten zu beschreiben. Dies erfolgt ausschliesslich mit der in der Praxis üblichen Statiksoftware AxisVM. Dazu ist eine Modellbildung beschrieben, welche starre Stäbe über Gelenke koppelt, in denen nichtlineare Gelenkbeziehungen hinterlegt sind. Im zweidimensionalen Raum lassen sich beliebige Stabtragwerke abbilden. Angeordnet als Trägerrost ermöglicht das NLFE-Modell die Abbildung des Tragverhaltens von Flächentragwerken.  
 
 Der erste Teil der Arbeit, die Modellbildung, legt die Grundlagen des NLFE-Modells dar. Ein einleitendes Gedankenexperiment verdeutlicht das Modellverhalten an einem einfachen Balken. Darauf folgt das Berechnungsschema, welches das Modell in die Systemmodellbildung und die Querschnittsmodellbildung unterteilt. Die Systemmodellbildung umfasst die starren Stäbe, die Anordnung der Gelenke und die Berechnung der Resultate. Die Querschnittsmodellbildung ist einzeln für Balken- und Plattentragwerke beschrieben.  
 
-Die Querschnittsmodellbildung der Balken zeigt die Ermittlung der nicht-linearen Biegesteifigkeit unter Berücksichtigung der Zugversteifung, basierend auf dem Zuggurtmodell.  
+Die Querschnittsmodellbildung der Balken zeigt die Ermittlung der nichtlinearen Biegesteifigkeit unter Berücksichtigung der Zugversteifung, basierend auf dem Zuggurtmodell.  
 
-Die Querschnittsmodellbildung der Platten beschreibt das allgemeine Plattentragverhalten. Darauf folgt eine Transformation vom Plattenelement zum Trägerrost. Abschliessend zeigt sie das nicht-lineare Biegetragverhalten des Plattenelements, bestehend aus dem Biege- und Drillverhalten.  
+Die Querschnittsmodellbildung der Platten beschreibt das allgemeine Plattentragverhalten. Darauf folgt eine Transformation vom Plattenelement zum Trägerrost. Abschliessend zeigt sie das nichtlineare Biegetragverhalten des Plattenelements, bestehend aus dem Biege- und Drillverhalten.  
 
 Der zweite Teil der Arbeit demonstriert die Anwendung der Modelle an Beispielen. Die Modellbildung der Balken ist an einem Zweifeldträger vollständig aufgezeigt. Der Zweifeldträger ist mit zwei unterschiedlich duktilen Betonstählen modelliert. Das Tragverhalten ist zunächst analytisch und anschliessend mit dem NLFE-Modell ermittelt. Die Resultate zeigen eine Übereinstimmung.  
 
@@ -20,7 +22,7 @@ Den Abschluss bildet die Nachrechnung eines grossmassstäblichen Plattenexperime
 
 ## Schlussfolgerung  
 
-In der Einleitung ist gefordert, eine praxisnahe Methode zur Abbildung des nicht-linearen Tragverhaltens von Stahlbetontragwerken zu entwickeln. Mit der gewählten Abgrenzung, sich auf das Biegetragverhalten zu beschränken, gelingt dies in der Thesis vollumfänglich. Die Modellbildung ist für Ingenieurinnen und Ingenieure in der Praxis zugänglich, da sie vollständig in AxisVM umsetzbar ist. Die angestrebte Präzision der Resultate verdeutlichen die Anwendungsbeispiele, die allesamt zufriedenstellende Ergebnisse liefern.  
+Die Schlussfolgerung adressiert die einleitenden Forderungen an die Thesis. In der Einleitung ist gefordert, eine praxisnahe Methode zur Abbildung des nichtlinearen Tragverhaltens von Stahlbetontragwerken zu entwickeln. Mit der gewählten Abgrenzung, sich auf das Biegetragverhalten zu beschränken, gelingt dies in der Thesis vollumfänglich. Die Modellbildung ist für Ingenieurinnen und Ingenieure in der Praxis zugänglich, da sie vollständig in AxisVM umsetzbar ist. Die angestrebte Präzision der Resultate verdeutlichen die Anwendungsbeispiele, die allesamt zufriedenstellende Ergebnisse liefern.  
 
 Die in der Einleitung kritisierte schwierige Interpretierbarkeit der Resultate anderer Softwarelösungen ist durch die aufgezeigte Modellbildung entschärft. Durch die ausschliessliche Modellierung mit Stäben reduzieren sich die Resultatgrössen auf die Schnittgrössen der Stäbe. Zudem definiert ausschliesslich das Gelenkverhalten das Tragverhalten des Modells. Steifigkeitsabfälle im Tragverhalten lassen sich direkt auf die Gelenkbeziehungen zurückführen.  
 

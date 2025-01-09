@@ -55,7 +55,7 @@
        id="clipPath30">
       <path
          d="M -0.00426,-0.00169 V 170.08044 H 425.20111 V -0.00169 H -0.00426"
-         transform="matrix(1,0,0,-1,-117.13818,95.507213)"
+         transform="matrix(1,0,0,-1,-146.31141,95.507213)"
          clip-rule="evenodd"
          id="path30" />
     </clipPath>
@@ -250,11 +250,11 @@
   <text
      id="text29"
      xml:space="preserve"
-     transform="matrix(1.3333333,0,0,1.3333333,156.18424,99.429053)"
+     transform="matrix(1.3333333,0,0,1.3333333,195.08187,99.429053)"
      clip-path="url(#clipPath30)"><tspan
        style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0916px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       x="0 8.3861275 14.471369 23.382261 28.216141 32.202328 35.138985 39.417828 43.898502 49.77182 54.605701 57.128605 60.529476 66.402794 69.692657 74.526543 80.137474 84.123657 89.169464 92.459328 95.395988 100.90601 106.77933 109.30223 115.4682 120.30209 124.28827 126.81117 134.13768 138.12387 144.20911 153.12 162.03088 168.11613 173.98944 179.60039 184.43427"
+       x="0 3.4008725 9.2741899 12.564054 17.397936 23.008871 26.995056 32.040863 35.330727 38.267384 43.777405 49.650723 52.173622 58.339596 63.173477 67.159668 69.682564 77.009079 80.995262 87.080505 95.991394 104.90228 110.98753 116.86085 122.47178 127.30566"
        y="0"
        sodipodi:role="line"
-       id="tspan29">Numerische Integration der Krümmungen</tspan></text>
+       id="tspan29">Integration der Krümmungen</tspan></text>
 </svg>

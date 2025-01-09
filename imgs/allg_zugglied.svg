@@ -320,6 +320,24 @@
          clip-rule="evenodd"
          id="path56" />
     </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath57">
+      <path
+         d="M -0.00426,-0.00156 V 155.90707 H 425.20111 V -0.00156 H -0.00426"
+         transform="matrix(1,0,0,-1,-5.7696502,142.00758)"
+         clip-rule="evenodd"
+         id="path57" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath58">
+      <path
+         d="M -0.00426,-0.00156 V 155.90707 H 425.20111 V -0.00156 H -0.00426"
+         transform="matrix(1,0,0,-1,-99.076735,142.00758)"
+         clip-rule="evenodd"
+         id="path58" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="namedview1"
@@ -772,4 +790,24 @@
      d="m 26.19025,44.47572 -0.4252,2.97638 h 0.85038 l -0.42518,-2.97638 m 0,68.28244 -0.4252,-2.97636 h 0.85038 l -0.42518,2.97636 m 0,-68.28244 h -2.126 m 2.126,0 h 2.12597 m -2.12597,68.28244 h -2.126 m 2.126,0 h 2.12597 M 26.19025,44.47572 H 37.52882 M 26.19025,112.75816 H 37.52882 M 26.19025,44.47572 v 0 m 0,68.28244 v 0 m 0,-68.28244 v 68.28244"
      style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
      transform="matrix(1.3333333,0,0,-1.3333333,0,207.87467)" />
+  <text
+     id="text56"
+     xml:space="preserve"
+     transform="matrix(1.3333333,0,0,1.3333333,7.6928667,18.531227)"
+     clip-path="url(#clipPath57)"><tspan
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       x="0 4.4431658"
+       y="0"
+       sodipodi:role="line"
+       id="tspan56">a)</tspan></text>
+  <text
+     id="text57"
+     xml:space="preserve"
+     transform="matrix(1.3333333,0,0,1.3333333,132.10231,18.531227)"
+     clip-path="url(#clipPath58)"><tspan
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       x="0 4.6333013"
+       y="0"
+       sodipodi:role="line"
+       id="tspan57">b)</tspan></text>
 </svg>
