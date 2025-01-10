@@ -41,11 +41,10 @@ format:
       - text: |
           \usepackage{fvextra}
           \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+          \usepackage{pdfpages}
       - file: ../config/style/styling_nach_hslu.sty
 
     include-before-body:
-      - file: 01_redlichkeitserklaerung.tex
-      - file: 02_kurzfassung.tex
       - text: |
           \RecustomVerbatimEnvironment{verbatim}{Verbatim}{
             showspaces = false,
@@ -54,7 +53,12 @@ format:
             breaklines
             % Note: setting commandchars=\\\{\} here will cause an error 
           }
+          \includepdf[pages=-]{Titelblatt_hslu.pdf}
+          \include{01_redlichkeitserklaerung.tex}
+          \include{02_kurzfassung.tex}
 
+      # - file: 01_redlichkeitserklaerung.tex
+      # - file: 02_kurzfassung.tex
 
 
   # Dokument
