@@ -117,10 +117,7 @@ Gleichzeitig ist auch Kritik an der Modellbildung angebracht. Die Beschränkung 
 | $x$                   | Laufvariable               |
 | $x$                   | Druckzonenhöhe               |
 | $z$                   | Hebelarm der inneren Kräfte               |
-
-
-| Variabel                 | Bezeichnung          |
-|:----------------------|:------------------|
+|                    |  |
 | $\alpha, \beta$                   | Winkel |
 | $\gamma_z$                   | Schiebung in lokaler $z$-Richtung               |
 | $\gamma_y$                   | Schiebung in lokaler $y$-Richtung               |
@@ -156,8 +153,6 @@ Gleichzeitig ist auch Kritik an der Modellbildung angebracht. Die Beschränkung 
 | $\chi_{y}$                   | Krümmung beim Fliessen der Bewehrung |
 | $\chi_y$                   | Krümmung um die lokale $y$-Richtung               |
 | $\chi_z$                   | Krümmung um die lokale $z$-Richtung               |
-
-| Variabel                 | Bezeichnung          |
-|:----------------------|:------------------|
+|                    |  |
 | $\oslash$                   | Durchmesser Bewehrungsstahl |
 
