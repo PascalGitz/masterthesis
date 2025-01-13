@@ -54,7 +54,6 @@ format:
             % Note: setting commandchars=\\\{\} here will cause an error 
           }
           \includepdf[pages=-]{Titelblatt_hslu.pdf}
-          \include{01_redlichkeitserklaerung.tex}
           \include{02_kurzfassung.tex}
 
       # - file: 01_redlichkeitserklaerung.tex
