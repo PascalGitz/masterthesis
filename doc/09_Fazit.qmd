@@ -48,7 +48,7 @@ Das tatsächliche Querkrafttragverhalten folgt jedoch nicht der Stabausrichtung.
 
 ![Qualitative Zustandslinien der Hauptrichtung der Querkräfte der Quadratplatte beim Lastparameter 0.500](../imgs/quad_vz_traj.svg){#fig-quad_vz_traj}
 
-Die Grundlage für weiterführende Arbeiten ist mit dieser Thesis geschaffen.
+Eine Grundlage für weiterführende Arbeiten ist mit dieser Thesis geschaffen. Zudem besteht die Hoffnung, dass diese Modellierung Einzug in den Praxisalltag von Ingenieuren findet. Sie bietet eine fundierte und zugleich zugängliche Methode, um das nichtlineare Tragverhalten von Stahlbetontragwerken präzise zu analysieren und so einen Beitrag zur Optimierung und Weiterentwicklung in der Baupraxis zu leisten.
 
 
 {{< pagebreak >}}
