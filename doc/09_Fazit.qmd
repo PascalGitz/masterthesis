@@ -6,7 +6,7 @@ Die Thesis schliesst mit einem Fazit. Dieses gliedert sich in eine Zusammenfassu
 
 Diese Thesis liefert einen Beitrag zur Beschreibung des nichtlinearen Tragverhaltens von Stahlbetontragwerken. Sie zeigt eine praxisnahe Methode auf, um das Tragverhalten von Stahlbetonbalken und -platten zu beschreiben. Dies erfolgt ausschliesslich mit der in der Praxis üblichen Statiksoftware AxisVM. Dazu ist eine Modellbildung beschrieben, welche starre Stäbe über Gelenke koppelt, in denen nichtlineare Gelenkbeziehungen hinterlegt sind. Im zweidimensionalen Raum lassen sich beliebige Stabtragwerke abbilden. Angeordnet als Trägerrost ermöglicht das NLFE-Modell die Abbildung des Tragverhaltens von Flächentragwerken.  
 
-Der erste Teil der Arbeit, die Modellbildung, legt die Grundlagen des NLFE-Modells dar. Ein einleitendes Gedankenexperiment verdeutlicht das Modellverhalten an einem einfachen Balken. Darauf folgt das Berechnungsschema, welches das Modell in die Systemmodellbildung und die Querschnittsmodellbildung unterteilt. Die Systemmodellbildung umfasst die starren Stäbe, die Anordnung der Gelenke und die Berechnung der Resultate. Die Querschnittsmodellbildung ist einzeln für Balken- und Plattentragwerke beschrieben.  
+Der erste Teil der Arbeit, die Modellbildung, legt die Grundlagen des NLFE-Modells dar. Ein einführendes Beispiel verdeutlicht das Modellverhalten an einem einfachen Balken. Darauf folgt das Berechnungsschema, welches das Modell in die Systemmodellbildung und die Querschnittsmodellbildung unterteilt. Die Systemmodellbildung umfasst die starren Stäbe, die Anordnung der Gelenke und die Berechnung der Resultate. Die Querschnittsmodellbildung ist einzeln für Balken- und Plattentragwerke beschrieben.  
 
 Die Querschnittsmodellbildung der Balken zeigt die Ermittlung der nichtlinearen Biegesteifigkeit unter Berücksichtigung der Zugversteifung, basierend auf dem Zuggurtmodell.  
 
@@ -34,11 +34,21 @@ Die einfache Modellbildung, die Verantwortung der Gelenkdefinition auf Seiten de
 
 Die Thesis zeigt, dass das Tragverhalten der betrachteten Tragwerke mit dem NLFE-Modell gut beschrieben wird. Doch welche Vorteile bietet dieses vertiefte Verständnis des Tragverhaltens?  
 
-Ein besseres Verständnis des Tragverhaltens ermöglicht gezielte Materialeinsparungen. Besonders beim Beton, der aufgrund seiner CO2-Bilanz zu Recht in der Kritik steht, ist der Materialverbrauch eine entscheidende Stellschraube. Werden an den richtigen Stellen Einsparungen erzielt, rechtfertigt dies den zusätzlichen Berechnungsaufwand. Dies mag nicht immer wirtschaftlich sein, ist jedoch im Hinblick auf die Nachhaltigkeit von grosser Bedeutung. Speziell in einer Zeit, in der Nachhaltigkeit im Fokus steht, geniesst dieser Aspekt einen höheren Stellenwert.  
+Ein besseres Verständnis des Tragverhaltens ermöglicht gezielte Materialeinsparungen. Besonders beim Beton, der aufgrund seiner $CO_2$-Bilanz zu Recht in der Kritik steht, ist der Materialverbrauch eine entscheidende Stellschraube. Werden an den richtigen Stellen Einsparungen erzielt, rechtfertigt dies den zusätzlichen Berechnungsaufwand. Dies mag nicht immer wirtschaftlich sein, ist jedoch im Hinblick auf die Nachhaltigkeit von grosser Bedeutung. Speziell in einer Zeit, in der Nachhaltigkeit im Fokus steht, geniesst dieser Aspekt einen höheren Stellenwert.  
 
-Im Hinblick auf Materialeinsparungen könnten gängige Flachdecken in Zukunft durch ästhetisch ansprechende Kassettendecken ersetzt werden. Werden diese mit der vorgestellten Modellbildung dimensioniert, entstehen optimierte und ingenieurtechnisch anspruchsvolle Bauwerke.  
+Im Hinblick auf Materialeinsparungen könnten gängige Flachdecken in Zukunft durch ästhetisch ansprechende Kassettendecken ersetzt werden. Werden diese mit der vorgestellten Modellbildung dimensioniert, entstehen optimierte Bauwerke.  
 
-Gleichzeitig ist auch Kritik an der Modellbildung angebracht. Die Beschränkung auf das Biegetragverhalten erlaubt keine umfassende Optimierung, ohne die Gefahr unberücksichtigter Einflüsse. Insbesondere das ausgeklammerte Querkrafttragverhalten sollte in zukünftigen Arbeiten untersucht werden.
+Gleichzeitig ist auch Kritik an der Modellbildung angebracht. Die Beschränkung auf das Biegetragverhalten erlaubt keine umfassende Optimierung, da unberücksichtigte Einflüsse nicht ausgeschlossen werden können. Insbesondere das ausgeklammerte Querkrafttragverhalten sollte in zukünftigen Arbeiten näher untersucht werden.  
+
+Es sind Modelle zu entwickeln oder anzuwenden um passende Querkraftgelenkbeziehungen zu ermitteln. Zudem bedingt es Forschungsarbeit auf Seiten der Resultatauswertung. Beispielsweise wären bei Plattentragwerken die Zustandslinien der Querkräfte zu analysieren, wie in @fig-quad_vz_lp2 dargestellt. Im Trägerrost entsprechen die Querkraftrichtungen stets der Stabausrichtung.  
+
+![Qualitative Zustandslinien der Querkräfte der Quadratplatte beim Lastparameter 0.500](../imgs/quad_vz_lp2.svg){#fig-quad_vz_lp2}
+
+Das tatsächliche Querkrafttragverhalten folgt jedoch nicht der Stabausrichtung. Es wäre daher erforderlich, die Hauptrichtungen der Querkräfte zu bestimmen, wie in @fig-quad_vz_traj gezeigt.  
+
+![Qualitative Zustandslinien der Hauptrichtung der Querkräfte der Quadratplatte beim Lastparameter 0.500](../imgs/quad_vz_traj.svg){#fig-quad_vz_traj}
+
+Die Grundlage für weiterführende Arbeiten ist mit dieser Thesis geschaffen.
 
 
 {{< pagebreak >}}
@@ -75,8 +85,8 @@ Gleichzeitig ist auch Kritik an der Modellbildung angebracht. Die Beschränkung 
 | $N_x$                   | Normalkraft               |
 | $P$                   | Punkt |
 | $T$                   | Torsionsmoment               |
-| $T_{vert}$                   | Torsionsmoment aus vertikal gerichteten Schubfluss               |
-| $T_{horiz}$                   | Torsionsmoment aus horizontal gerichteten Schubfluss               |
+| $T_{vert}$                   | Torsionsmoment aus vertikal gerichtetem Schubfluss               |
+| $T_{horiz}$                   | Torsionsmoment aus horizontal gerichtetem Schubfluss               |
 | $T_u$                   | Torsionswiderstand               |
 | $T_r$                   | Risstorsionsmoment               |
 | $T$                   | Torsionsmoment               |

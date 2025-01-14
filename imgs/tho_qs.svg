@@ -37,7 +37,7 @@
        id="clipPath18">
       <path
          d="M -0.00426,-0.00119 V 119.0563 H 425.20111 V -0.00119 H -0.00426"
-         transform="matrix(1,0,0,-1,-200.09037,45.681831)"
+         transform="matrix(1,0,0,-1,-200.09035,45.681831)"
          clip-rule="evenodd"
          id="path18" />
     </clipPath>
@@ -122,7 +122,7 @@
      transform="matrix(1.3333333,0,0,-1.3333333,0,158.74)" />
   <path
      id="path10"
-     d="m 215.16388,48.18925 c 0,1.41677 -1.14853,2.56527 -2.56528,2.56527 m 0,0 c -1.41675,0 -2.56524,-1.1485 -2.56524,-2.56527 m 0,0 c 0,-1.41674 1.14849,-2.56526 2.56524,-2.56526 m 0,0 c 1.41675,0 2.56528,1.14852 2.56528,2.56526"
+     d="m 215.16385,48.18925 c 0,1.41677 -1.1485,2.56527 -2.56525,2.56527 m 0,0 c -1.41675,0 -2.56524,-1.1485 -2.56524,-2.56527 m 0,0 c 0,-1.41674 1.14849,-2.56526 2.56524,-2.56526 m 0,0 c 1.41675,0 2.56525,1.14852 2.56525,2.56526"
      style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
      transform="matrix(1.3333333,0,0,-1.3333333,0,158.74)" />
   <path
@@ -171,7 +171,7 @@
   <text
      id="text17"
      xml:space="preserve"
-     transform="matrix(1.3333333,0,0,1.3333333,266.78715,97.830893)"
+     transform="matrix(1.3333333,0,0,1.3333333,266.78712,97.830893)"
      clip-path="url(#clipPath18)"><tspan
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        x="0"
