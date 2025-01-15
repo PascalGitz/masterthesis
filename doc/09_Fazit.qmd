@@ -1,6 +1,6 @@
 # Fazit  
 
-Die Thesis schliesst mit einem Fazit. Dieses gliedert sich in eine Zusammenfassung der Arbeit. Darauf folgt eine Schlussfolgerung und ein Ausblick.
+Die Thesis schliesst mit einem Fazit. Dieses gliedert sich in eine Zusammenfassung der Arbeit. Darauf folgen eine Schlussfolgerung und ein Ausblick.
 
 ## Zusammenfassung  
 
@@ -24,7 +24,7 @@ Den Abschluss bildet die Nachrechnung eines grossmassstäblichen Plattenexperime
 
 Die Schlussfolgerung adressiert die einleitenden Forderungen an die Thesis. In der Einleitung ist gefordert, eine praxisnahe Methode zur Abbildung des nichtlinearen Tragverhaltens von Stahlbetontragwerken zu entwickeln. Mit der gewählten Abgrenzung, sich auf das Biegetragverhalten zu beschränken, gelingt dies in der Thesis vollumfänglich. Die Modellbildung ist für Ingenieurinnen und Ingenieure in der Praxis zugänglich, da sie vollständig in AxisVM umsetzbar ist. Die angestrebte Präzision der Resultate verdeutlichen die Anwendungsbeispiele, die allesamt zufriedenstellende Ergebnisse liefern.  
 
-Die in der Einleitung kritisierte schwierige Interpretierbarkeit der Resultate anderer Softwarelösungen ist durch die aufgezeigte Modellbildung entschärft. Durch die ausschliessliche Modellierung mit Stäben reduzieren sich die Resultatgrössen auf die Schnittgrössen der Stäbe. Zudem definiert ausschliesslich das Gelenkverhalten das Tragverhalten des Modells. Steifigkeitsabfälle im Tragverhalten lassen sich direkt auf die Gelenkbeziehungen zurückführen.  
+Die in der Einleitung kritisierte schwierige Interpretierbarkeit der Resultate anderer Softwarelösungen ist durch die aufgezeigte Modellbildung entschärft. Durch die ausschliessliche Modellierung mit Stäben reduzieren sich die Resultatgrössen auf die Schnittgrössen der Stäbe. Zudem definiert ausschliesslich das Gelenkverhalten das Tragverhalten des Modells. Steifigkeitsänderungen im Tragverhalten lassen sich direkt auf die Gelenkbeziehungen zurückführen.  
 
 Das Gelenkverhalten wird von der Ingenieurin oder dem Ingenieur festgelegt, was eine vollständige Transparenz des Tragverhaltens ermöglicht. Gleichzeitig erfordert dies entsprechendes Fachwissen. Die in der Modellbildung aufgezeigten Gelenkbeziehungen bieten einen Anhaltspunkt, können jedoch beliebig verfeinert werden – stets im Ermessen der Berechnenden.  
 
@@ -40,7 +40,7 @@ Im Hinblick auf Materialeinsparungen könnten gängige Flachdecken in Zukunft du
 
 Gleichzeitig ist auch Kritik an der Modellbildung angebracht. Die Beschränkung auf das Biegetragverhalten erlaubt keine umfassende Optimierung, da unberücksichtigte Einflüsse nicht ausgeschlossen werden können. Insbesondere das ausgeklammerte Querkrafttragverhalten sollte in zukünftigen Arbeiten näher untersucht werden.  
 
-Es sind Modelle zu entwickeln oder anzuwenden um passende Querkraftgelenkbeziehungen zu ermitteln. Zudem bedingt es Forschungsarbeit auf Seiten der Resultatauswertung. Beispielsweise wären bei Plattentragwerken die Zustandslinien der Querkräfte zu analysieren, wie in @fig-quad_vz_lp2 dargestellt. Im Trägerrost entsprechen die Querkraftrichtungen stets der Stabausrichtung.  
+Es sind Modelle zu entwickeln oder anzuwenden, um passende Querkraftgelenkbeziehungen zu ermitteln. Zudem bedingt es Forschungsarbeit auf Seiten der Resultatauswertung. Beispielsweise wären bei Plattentragwerken die Zustandslinien der Querkräfte zu analysieren, wie in @fig-quad_vz_lp2 dargestellt. Im Trägerrost entsprechen die Querkraftrichtungen stets der Stabausrichtung.  
 
 ![Qualitative Zustandslinien der Querkräfte der Quadratplatte beim Lastparameter 0.500](../imgs/quad_vz_lp2.svg){#fig-quad_vz_lp2}
 
@@ -141,7 +141,7 @@ Eine Grundlage für weiterführende Arbeiten ist mit dieser Thesis geschaffen. Z
 | $\varepsilon_{sh}$                   | Dehnung beim Verfestigungsbeginn |
 | $\varepsilon_{su}$                   | Dehnung beim Erreichen der Zugfestigkeit |
 | $\varepsilon_{q}$                   | Querdehnung |
-| $\vartheta$                   | Drillung  |
+| $\vartheta$                   | Verdrillung  |
 | $\lambda$                   | Beiwert Zuggurtmodell |
 | $\nu$                   | Querdehnzahl |
 | $\rho$                   | Geometrischer Bewehrungsgehalt |

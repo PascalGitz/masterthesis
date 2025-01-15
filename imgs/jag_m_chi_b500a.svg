@@ -37,7 +37,7 @@
        id="clipPath4">
       <path
          d="M 425.19684,119.05511 H 0 V 0 h 425.19684 v 119.05511"
-         transform="matrix(1,0,0,-1,-81.32845,50.971912)"
+         transform="matrix(1,0,0,-1,-81.328442,50.971912)"
          clip-rule="evenodd"
          id="path4" />
     </clipPath>
@@ -46,7 +46,7 @@
        id="clipPath5">
       <path
          d="M 425.19684,119.05511 H 0 V 0 h 425.19684 v 119.05511"
-         transform="matrix(1,0,0,-1,-91.08385,46.838051)"
+         transform="matrix(1,0,0,-1,-91.083842,46.838051)"
          clip-rule="evenodd"
          id="path5" />
     </clipPath>
@@ -118,7 +118,7 @@
        id="clipPath13">
       <path
          d="M 425.19684,119.05511 H 0 V 0 h 425.19684 v 119.05511"
-         transform="matrix(1,0,0,-1,-81.914912,4.5224026)"
+         transform="matrix(1,0,0,-1,-81.914905,4.5224026)"
          clip-rule="evenodd"
          id="path13" />
     </clipPath>
@@ -298,7 +298,7 @@
     <text
        id="text3"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,108.43793,90.777453)"
+       transform="matrix(1.3333333,0,0,1.3333333,108.43792,90.777453)"
        clip-path="url(#clipPath4)"><tspan
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          x="0 6.1143565"
@@ -308,7 +308,7 @@
     <text
        id="text4"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,121.44513,96.289267)"
+       transform="matrix(1.3333333,0,0,1.3333333,121.44512,96.289267)"
        clip-path="url(#clipPath5)"><tspan
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.00428px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          x="0 1.9994253"
@@ -381,7 +381,7 @@
     <text
        id="text12"
        xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,109.21988,152.71013)"
+       transform="matrix(1.3333333,0,0,1.3333333,109.21987,152.71013)"
        clip-path="url(#clipPath13)"><tspan
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.00428px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
          x="0"

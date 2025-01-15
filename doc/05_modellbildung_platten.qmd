@@ -183,7 +183,7 @@ D_b
 \end{Bmatrix}
 $${#eq-konstitutiv_kirchhoff_platte}
 
-Damit sind die Verzerrungen, Verschiebungen , Spannungen und Schnittkräfte des Plattenelements definiert. 
+Damit sind die Verzerrungen, Verschiebungen, Spannungen und Schnittkräfte des Plattenelements definiert. 
 
 
 ## Transformation zum Trägerrost
@@ -303,7 +303,7 @@ $${#eq-konstitutiv_traegerrost}
 Abschliessend sind die Kernaussagen der Transformation vom Plattenelement zum Trägerrost erneut aufgelistet. 
 
 - Die Ersatzbiegesteifigkeit entspricht der Biegesteifigkeit des Balkens mit dem entsprechenden Ersatzquerschnitt. 
-- Die Ersatztorsionssteifigkeit ist doppelt so gross wie die der Steifigkeitsmatrix aufgrund der Definition der Krümmung, jedoch halb so gross wie die Torsionssteifigkeit des Balkens aufgrund der vernachlässigten vertikalen Schubspannungen. 
+- Die Ersatztorsionssteifigkeit ist doppelt so gross wie der Drillsteifigkeitsterm der Steifigkeitsmatrix aufgrund der Definition der Krümmung, jedoch halb so gross wie die Torsionssteifigkeit des Balkens aufgrund des vernachlässigten vertikalen Schubflusses. 
 
 Diese Beziehungen sind in @fig-allg_faktor_drill illustriert.  
 
@@ -344,7 +344,7 @@ $${#eq-rissdrillmoment}
 
 #### Gerissene Drillsteifigkeit
 
-Die gerissene Drillsteifigkeit ist unter der Verwendung des klassischen Sandwichmodells und des klassischen Durckfeldmodells bestimmt. Das klassische Sandwichmodell geht zurück auf @peter_marti_design_1990. Anhand diesem lässt sich das Plattenelement in zwei Deckel und einen Kern unterteilen. Aufgezeigt ist dies in der @fig-allg_sandwich.
+Die gerissene Drillsteifigkeit ist unter der Verwendung des klassischen Sandwichmodells und des klassischen Druckfeldmodells bestimmt. Das klassische Sandwichmodell geht zurück auf @peter_marti_design_1990. Anhand diesem lässt sich das Plattenelement in zwei Deckel und einen Kern unterteilen. Aufgezeigt ist dies in der @fig-allg_sandwich.
 
 ![Klassisches Sandwichmodell bestehend aus zwei Sandwichdeckeln und dem Kern. Die Aufteilung der Plattenschnittkräfte in Membran- und Querkräfte ist aufgezeigt](../imgs/allg_sandwich.svg){#fig-allg_sandwich}
 

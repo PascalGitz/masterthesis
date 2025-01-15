@@ -46,7 +46,7 @@
        id="clipPath183">
       <path
          d="M -0.00426,-0.00255 V 255.12067 H 425.20111 V -0.00255 H -0.00426"
-         transform="matrix(1,0,0,-1,-43.595461,33.601871)"
+         transform="matrix(1,0,0,-1,-43.241131,33.601871)"
          clip-rule="evenodd"
          id="path183" />
     </clipPath>
@@ -55,7 +55,7 @@
        id="clipPath184">
       <path
          d="M -0.00426,-0.00255 V 255.12067 H 425.20111 V -0.00255 H -0.00426"
-         transform="matrix(1,0,0,-1,-65.853352,33.601871)"
+         transform="matrix(1,0,0,-1,-154.68385,128.48488)"
          clip-rule="evenodd"
          id="path184" />
     </clipPath>
@@ -64,18 +64,9 @@
        id="clipPath185">
       <path
          d="M -0.00426,-0.00255 V 255.12067 H 425.20111 V -0.00255 H -0.00426"
-         transform="matrix(1,0,0,-1,-154.68385,128.48488)"
-         clip-rule="evenodd"
-         id="path185" />
-    </clipPath>
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath186">
-      <path
-         d="M -0.00426,-0.00255 V 255.12067 H 425.20111 V -0.00255 H -0.00426"
          transform="matrix(1,0,0,-1,-164.41915,124.35103)"
          clip-rule="evenodd"
-         id="path186" />
+         id="path185" />
     </clipPath>
   </defs>
   <sodipodi:namedview
@@ -1032,39 +1023,29 @@
   <text
      id="text182"
      xml:space="preserve"
-     transform="matrix(1.3333333,0,0,1.3333333,58.12728,295.35484)"
+     transform="matrix(1.3333333,0,0,1.3333333,57.65484,295.35484)"
      clip-path="url(#clipPath183)"><tspan
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       x="0 5.5639644 11.678321 14.180103 19.183668"
+       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0916px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       x="0 6.1659737 12.261306 14.784208 19.830013 22.352917 27.398722 29.921623 34.96743 40.013233"
        y="0"
        sodipodi:role="line"
-       id="tspan182">LP = </tspan></text>
+       id="tspan182">LP = 0.833</tspan></text>
   <text
      id="text183"
      xml:space="preserve"
-     transform="matrix(1.3333333,0,0,1.3333333,87.804467,295.35484)"
-     clip-path="url(#clipPath184)"><tspan
-       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0916px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       x="0 5.045805 7.5687075 12.614512 17.660318"
-       y="0"
-       sodipodi:role="line"
-       id="tspan183">0.833</tspan></text>
-  <text
-     id="text184"
-     xml:space="preserve"
      transform="matrix(1.3333333,0,0,1.3333333,206.24513,168.84416)"
-     clip-path="url(#clipPath185)"><tspan
+     clip-path="url(#clipPath184)"><tspan
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        x="0"
        y="0"
-       id="tspan184">M</tspan></text>
+       id="tspan183">M</tspan></text>
   <text
-     id="text185"
+     id="text184"
      xml:space="preserve"
      transform="matrix(1.3333333,0,0,1.3333333,219.22553,174.35596)"
-     clip-path="url(#clipPath186)"><tspan
+     clip-path="url(#clipPath185)"><tspan
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.00428px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        x="0"
        y="0"
-       id="tspan185">u</tspan></text>
+       id="tspan184">u</tspan></text>
 </svg>
