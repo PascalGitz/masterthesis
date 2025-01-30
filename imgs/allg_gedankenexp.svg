@@ -82,7 +82,7 @@
        id="clipPath56">
       <path
          d="M -0.00426,-0.00119 V 119.0563 H 425.20111 V -0.00119 H -0.00426"
-         transform="matrix(1,0,0,-1,-311.68938,32.897641)"
+         transform="matrix(1,0,0,-1,-311.68938,32.897633)"
          clip-rule="evenodd"
          id="path56" />
     </clipPath>
@@ -393,7 +393,7 @@
        id="tspan41">Biegeverhalten</tspan></text>
   <path
      id="path43"
-     d="M 112.28838,25.93861 93.155,26.12987 93.3766,48.62363 m 0.01256,1.27552 v 0 M 93.36403,47.3481 v 0 m -1.26296,1.28808 v 0 m 2.55104,-0.02513 v 0"
+     d="M 112.28838,25.9386 93.155,26.12987 93.3766,48.62363 m 0.01256,1.27552 v 0 M 93.36403,47.3481 v 0 m -1.26296,1.28808 v 0 m 2.55104,-0.02513 v 0"
      style="fill:none;stroke:#000000;stroke-width:0.3685;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
      transform="matrix(1.3333333,0,0,-1.3333333,0,158.74)" />
   <path
@@ -459,7 +459,7 @@
   <text
      id="text55"
      xml:space="preserve"
-     transform="matrix(1.3333333,0,0,1.3333333,415.58583,114.87648)"
+     transform="matrix(1.3333333,0,0,1.3333333,415.58583,114.87649)"
      clip-path="url(#clipPath56)"><tspan
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0071px;font-family:'Palatino Linotype';writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        x="0"

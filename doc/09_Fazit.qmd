@@ -30,6 +30,8 @@ Das Gelenkverhalten wird von der Ingenieurin oder dem Ingenieur festgelegt, was 
 
 Die einfache Modellbildung, die Verantwortung der Gelenkdefinition auf Seiten der Ingenieurin oder des Ingenieurs und die völlige Transparenz des Tragverhaltens führen zu fundierten Aussagen über das Tragverhalten.  
 
+Die Anwendung der Modellbildung hat auch deren Grenzen aufgezeigt. Speziell sind Interaktionen zwischen Schnittgrössen hervorzuheben. Diese sind softwarebedingt nicht modellierbar. Beispielsweise zeigt die angepasste Fliessfigur, @fig-quad_fliessfigur_axis, der Nachrechnung der Traglast der Quadratplatte die Problematik auf. Die nötige Interaktion zwischen Torsionsmoment und Biegemoment lässt sich nicht abbilden. Dazu wurde auf die quaderförmige Fliessfigur ausgewichen. 
+
 ## Ausblick  
 
 Die Thesis zeigt, dass das Tragverhalten der betrachteten Tragwerke mit dem NLFE-Modell gut beschrieben wird. Doch welche Vorteile bietet dieses vertiefte Verständnis des Tragverhaltens?  
